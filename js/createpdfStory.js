@@ -96,11 +96,13 @@ $("#controls").submit(function() {
         $('body').css('background-color', '#E0E0E0');
         $('body').css('font-family', 'Roboto');
         $('body').css('color', '#616161');
-        $('input').css('background-color', '#FFD200');
         $('input').css('border', '5px solid #FFD200');
         $('input').css('border-radius', '2px');
         $('input').css('color', '#616161');
-        $('input:hover').css('cursor', 'pointer');
+        $('input').css('background-color', 'pointer');
+        $('#btnOpenPDF').css('background-color', '#52E583');
+        $('#btnSavePDF').css('background-color', '#26C6DA');
+        $('#btnNewStory').css('background-color', '#FFD200');
       }
 
        
