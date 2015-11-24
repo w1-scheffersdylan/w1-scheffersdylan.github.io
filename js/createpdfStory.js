@@ -143,8 +143,12 @@ $("#controls").submit(function() {
 
               content: [
 
-                    
-                    
+                    {
+                      // you'll most often use dataURI images on the browser side
+                      // if no width/height/fit is provided, the original size will be used
+                      image: '../images/sablonoLogo.png'
+                    },
+                                    
                     
                                             
                     {
@@ -165,7 +169,7 @@ $("#controls").submit(function() {
                                  { text: 'CORR: \n' + '\n \n', colSpan: 2 }, '', 
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
-                                [{ text: [ 'STORY: \n \n', { text: storyDataDescription, style: 'mediumTextBold', alignment: 'center', image: '../images/sablonoLogo.png' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
+                                [{ text: [ 'STORY: \n \n', { text: storyDataDescription, style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text:'NOTES:\n \n \n \n \n \n \n \n ', colSpan: 6 }, '', '', '', '', ''],
 
                                 [{ text: 'ACCEPTANCE CRITERIA: \n \n' + requirementsArraz.join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
