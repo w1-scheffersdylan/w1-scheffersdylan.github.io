@@ -148,7 +148,7 @@ $("#controls").submit(function() {
                                             
                     {
                         color: '#444',
-                        image: './images/sablonoLogo.png',
+                        image: '../images/sablonoLogo.png',
                         table: {
                             widths: [ '5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%' ],
                             heights: [ '10%', '10%', '40%', '40%' ],
