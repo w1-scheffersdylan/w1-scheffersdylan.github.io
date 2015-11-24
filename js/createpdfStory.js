@@ -70,6 +70,8 @@ $("#controls").submit(function() {
       document.write("</table>");
 
       document.write("<br />");
+
+      document.write('<p><form id="addRequirement"> <input type="text" placeholder="Add requirement by hand to PDF"></input> <input type="submit"></input></form</p>')
       
 
       var requirementsArraz = [];
@@ -91,6 +93,11 @@ $("#controls").submit(function() {
       
       // init the looping
       fetchARequirement(1);
+
+
+
+
+
 
       if( storyDataName != "" ){
         $('body').css('background-color', '#E0E0E0');
