@@ -71,7 +71,7 @@ $("#controls").submit(function() {
 
       document.write("<br />");
 
-      document.write('<p> <input type="text" placeholder="Add requirement by hand to PDF" id="addRequirementValue"></input> <input type="submit" value="Add requirement" id="addRequirement"></input></p>')
+      document.write('<p> <input type="text" placeholder="Add requirement by hand to PDF" id="addRequirementValue" length="300"></input> <input type="submit" value="Add requirement" id="addRequirement"></input></p>')
       
 
       var requirementsArraz = [];
