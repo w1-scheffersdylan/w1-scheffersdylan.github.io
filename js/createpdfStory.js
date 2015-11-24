@@ -144,19 +144,10 @@ $("#controls").submit(function() {
               content: [
 
                     
-                             {
-                                // you'll most often use dataURI images on the browser side
-                                // if no width/height/fit is provided, the original size will be used
-                                image: './images/sablonoLogo.png',
-                                width: 150
-                              }        
-
-
-                    /*
                                             
                     {
                         color: '#444',
-                        image: '../images/sablonoLogo.png',
+                        //image: '../images/sablonoLogo.png',
                         table: {
                             widths: [ '5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%' ],
                             heights: [ '10%', '10%', '40%', '40%' ],
@@ -179,7 +170,9 @@ $("#controls").submit(function() {
                                  { text: 'DEFINITION OF DONE:\n\n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & beautify Code \n \n', colSpan: 6 }, '', '', '', '', ''],
                             ]
                         }
-                    }*/
+                    }
+
+
               ]
               ,
               styles: {
