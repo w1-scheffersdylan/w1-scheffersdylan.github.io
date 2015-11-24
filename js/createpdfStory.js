@@ -112,7 +112,7 @@ $("#controls").submit(function() {
         $('#btnOpenPDF').css('background-color', '#26BF59').css('border', '5px solid #26BF59').css('color', '#FFF');
         $('#btnSavePDF').css('background-color', '#26BF59').css('border', '5px solid #26BF59').css('color', '#FFF');
         $('#btnNewStory').css('background-color', '#FFD200').css('border', '5px solid #FFD200');
-        $('#addRequirementValue').css('background-color', '#E0E0E0').css('border', '0px solid #FFD200').css('border-bottom', '1px solid #616161').css('font-family', 'Roboto').css('width', '327px').css('color', '#FFF');
+        $('#addRequirementValue').css('background-color', '#E0E0E0').css('border', '0px solid #FFD200').css('border-bottom', '1px solid #616161').css('font-family', 'Roboto').css('width', '327px').css('color', '#FFF').css('cursor', 'auto');
       }
 
        
