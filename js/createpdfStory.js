@@ -146,14 +146,14 @@ $("#controls").submit(function() {
                     
                       // you'll most often use dataURI images on the browser side
                       // if no width/height/fit is provided, the original size will be used
-                      image: '../images/sablonoLogo.png',
+                      
                     
                                     
                     
                                             
                     {
                         color: '#444',
-                        
+                        image: '../images/sablonoLogo.png',
                         table: {
                             widths: [ '5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%' ],
                             heights: [ '10%', '10%', '40%', '40%' ],
