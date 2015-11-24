@@ -141,7 +141,7 @@ $("#controls").submit(function() {
           pageOrientation: 'landscape',
 
 
-              content: [
+              content: 
 
                     
                              {
@@ -181,7 +181,7 @@ $("#controls").submit(function() {
                         }
                     }*/
 
-              ],
+              ,
               styles: {
                 mediumText: {
                   fontSize: 19
