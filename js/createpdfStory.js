@@ -105,6 +105,8 @@ $("#controls").submit(function() {
         $('#btnOpenPDF').css('border', '5px solid #26C6DA');
         $('#btnSavePDF').css('border', '5px solid #26C6DA');
         $('#btnNewStory').css('border', '5px solid #FFD200');
+        $('#btnOpenPDF').css('color', '#FFF');
+        $('#btnSavePDF').css('color', '#FFF');
       }
 
        
