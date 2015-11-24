@@ -105,20 +105,11 @@ $("#controls").submit(function() {
 
 
       if( storyDataName != "" ){
-        $('body').css('background-color', '#E0E0E0');
-        $('body').css('font-family', 'Roboto');
-        $('body').css('color', '#616161');
-        $('input').css('border-radius', '2px');
-        $('input').css('color', '#616161');
-        $('input').css('cursor', 'pointer');
-        $('#btnOpenPDF').css('background-color', '#26BF59');
-        $('#btnSavePDF').css('background-color', '#26BF59');
-        $('#btnNewStory').css('background-color', '#FFD200');
-        $('#btnOpenPDF').css('border', '5px solid #26BF59');
-        $('#btnSavePDF').css('border', '5px solid #26BF59');
-        $('#btnNewStory').css('border', '5px solid #FFD200');
-        $('#btnOpenPDF').css('color', '#FFF');
-        $('#btnSavePDF').css('color', '#FFF');
+        $('body').css('background-color', '#E0E0E0').css('color', '#616161').css('font-family', 'Roboto');
+        $('input').css('border-radius', '2px').css('color', '#616161').css('cursor', 'pointer');
+        $('#btnOpenPDF').css('background-color', '#26BF59').css('border', '5px solid #26BF59').css('color', '#FFF');
+        $('#btnSavePDF').css('background-color', '#26BF59').css('border', '5px solid #26BF59').css('color', '#FFF');
+        $('#btnNewStory').css('background-color', '#FFD200').css('border', '5px solid #FFD200');
       }
 
        
