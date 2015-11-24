@@ -100,7 +100,7 @@ $("#controls").submit(function() {
         $('input').css('border', '5px solid #FFD200');
         $('input').css('border-radius', '2px');
         $('input').css('color', '#616161');
-        $('input:hover').css('cursor', 'pointer');
+        $('input').css('cursor', 'pointer');
       }
 
        
