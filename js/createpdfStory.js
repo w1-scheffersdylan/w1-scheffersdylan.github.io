@@ -99,7 +99,7 @@ $("#controls").submit(function() {
         $('input').css('border', '5px solid #FFD200');
         $('input').css('border-radius', '2px');
         $('input').css('color', '#616161');
-        $('input').css('background-color', 'pointer');
+        $('input').css('cursor', 'pointer');
         $('#btnOpenPDF').css('background-color', '#52E583');
         $('#btnSavePDF').css('background-color', '#26C6DA');
         $('#btnNewStory').css('background-color', '#FFD200');
