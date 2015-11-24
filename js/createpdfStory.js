@@ -138,7 +138,7 @@ $("#controls").submit(function() {
           var docDefinition = {
 
           pageSize: 'A4',
-          //pageOrientation: 'landscape',
+          pageOrientation: 'landscape',
 
 
               content: [
