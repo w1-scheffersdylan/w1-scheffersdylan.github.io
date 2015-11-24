@@ -71,7 +71,7 @@ $("#controls").submit(function() {
 
       document.write("<br />");
 
-      document.write('<p><form id="addRequirement"> <input type="text" placeholder="Add requirement by hand to PDF"></input> <input type="submit"></input></form</p>')
+      document.write('<p><form id="addRequirement"> <input type="text" placeholder="Add requirement by hand to PDF" id="addRequirementValue"></input> <input type="submit" value="Add requirement"></input></form</p>')
       
 
       var requirementsArraz = [];
@@ -96,6 +96,10 @@ $("#controls").submit(function() {
 
 
 
+      $("#addRequirement").submit(function() {
+         requirementsArraz.push($("#addRequirementValue").val());
+         alert($("#addRequirementValue").val());
+      });
 
 
 
