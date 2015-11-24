@@ -154,7 +154,7 @@ $("#controls").submit(function() {
                     {
                         color: '#444',
                         image: '../images/sablonoLogo.png',
-                        table: {
+                       /* table: {
                             widths: [ '5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%' ],
                             heights: [ '10%', '10%', '40%', '40%' ],
                             headerRows: 0,
@@ -175,7 +175,7 @@ $("#controls").submit(function() {
                                 [{ text: 'ACCEPTANCE CRITERIA: \n \n' + requirementsArraz.join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text: 'DEFINITION OF DONE:\n\n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & beautify Code \n \n', colSpan: 6 }, '', '', '', '', ''],
                             ]
-                        }
+                        }*/
                     }
 
               ],
