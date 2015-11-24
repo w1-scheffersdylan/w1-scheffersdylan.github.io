@@ -1,6 +1,6 @@
-var requirementsApp = angular.module('requirementsApp',['ngMaterial']);
+var ahapdfApp = angular.module('ahapdfApp',['ngMaterial']);
 
-requirementsApp.controller('homeController', function ($scope)
+ahapdfApp.controller('homeController', function ($scope)
 {
 
 }); // end controller     
