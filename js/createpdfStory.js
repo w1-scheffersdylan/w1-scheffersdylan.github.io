@@ -99,11 +99,11 @@ $("#controls").submit(function() {
         $('input').css('border-radius', '2px');
         $('input').css('color', '#616161');
         $('input').css('cursor', 'pointer');
-        $('#btnOpenPDF').css('background-color', '#26C6DA');
-        $('#btnSavePDF').css('background-color', '#26C6DA');
+        $('#btnOpenPDF').css('background-color', '#26BF59');
+        $('#btnSavePDF').css('background-color', '#26BF59');
         $('#btnNewStory').css('background-color', '#FFD200');
-        $('#btnOpenPDF').css('border', '5px solid #26C6DA');
-        $('#btnSavePDF').css('border', '5px solid #26C6DA');
+        $('#btnOpenPDF').css('border', '5px solid #26BF59');
+        $('#btnSavePDF').css('border', '5px solid #26BF59');
         $('#btnNewStory').css('border', '5px solid #FFD200');
         $('#btnOpenPDF').css('color', '#FFF');
         $('#btnSavePDF').css('color', '#FFF');
