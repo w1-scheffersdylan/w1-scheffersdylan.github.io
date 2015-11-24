@@ -98,7 +98,7 @@ $("#controls").submit(function() {
 
       $("#addRequirement").submit(function() {
          requirementsArraz.push($("#addRequirementValue").val());
-         alert($("#addRequirementValue").val());
+         alert(requirementsArraz);
       });
 
 
