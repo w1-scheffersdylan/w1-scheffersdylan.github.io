@@ -143,11 +143,11 @@ $("#controls").submit(function() {
 
               content: [
 
-                    {
+                    
                       // you'll most often use dataURI images on the browser side
                       // if no width/height/fit is provided, the original size will be used
                       image: '../images/sablonoLogo.png',
-                    },
+                    
                                     
                     
                                             
