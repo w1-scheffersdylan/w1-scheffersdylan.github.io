@@ -25,8 +25,8 @@ $("#controls").submit(function() {
     //alert(JSON.stringify(response, null, 4));
 
     // variables
-    var storyDataNumber = JSON.stringify(response.feature.reference_num);
-    console.log(storyDataName);
+    var storyDataNumber = JSON.parse(response.feature.reference_num);
+    console.log(storyDataNumber);
     console.log($.parseHTML(storyDataNumber).text);
     console.log($.parseHTML(storyDataNumber));
     var storyDataName = JSON.stringify(response.feature.name).slice(1, -1);
