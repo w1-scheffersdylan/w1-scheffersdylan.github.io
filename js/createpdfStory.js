@@ -56,7 +56,7 @@ $("#controls").submit(function() {
       document.write("<table>");
 
         document.write("<tr><td id='storynumberThing'>Story number:</td><td> (TICKET-ID)</td><td>");
-        document.write($.parseHTML(storyDataNumber).text + "</td><tr/>");
+       // document.write($.parseHTML(storyDataNumber) + "</td><tr/>");
 
         document.write("<tr><td>Story name:</td><td> (TITLE)</td><td>");
         document.write(storyDataName + "</td><tr/>");
