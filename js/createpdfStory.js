@@ -47,32 +47,31 @@ $("#controls").submit(function() {
               
     
      // show data of story
-     $('#successContainer').html('<img src="./images/sablonoLogo.png" class="sablonoLogo" /><p><input type="submit" class="btn right" id="btnOpenPDF" value="OPEN story as PDF"></input> <input type="submit" class="btn right" id="btnSavePDF" value="SAVE story as PDF"></input></p><p><input type="submit" class="btn right" id="btnNewStory" value="New story"></input></p>');
-    //  document.write('<img src="./images/sablonoLogo.png" class="sablonoLogo" /><p><input type="submit" class="btn right" id="btnOpenPDF" value="OPEN story as PDF"></input> <input type="submit" class="btn right" id="btnSavePDF" value="SAVE story as PDF"></input></p><p><input type="submit" class="btn right" id="btnNewStory" value="New story"></input></p>');
-    // document.write("<h2>Story details</h2>");
+     document.write('<img src="./images/sablonoLogo.png" style="position: absolute; top: 25px; right: 25px; width: 20%;" /><p><input type="submit" class="btn right" id="btnOpenPDF" value="OPEN story as PDF"></input> <input type="submit" class="btn right" id="btnSavePDF" value="SAVE story as PDF"></input></p><p><input type="submit" class="btn right" id="btnNewStory" value="New story"></input></p>');
+    document.write("<h2>Story details</h2>");
 
-    //   document.write("<table>");
+      document.write("<table>");
 
-    //     document.write("<tr><td>Story number:</td><td> (TICKET-ID)</td><td>");
-    //     document.write(storyDataNumber + "</td><tr/>");
+        document.write("<tr><td>Story number:</td><td> (TICKET-ID)</td><td>");
+        document.write(storyDataNumber + "</td><tr/>");
 
-    //     document.write("<tr><td>Story name:</td><td> (TITLE)</td><td>");
-    //     document.write(storyDataName + "</td><tr/>");
+        document.write("<tr><td>Story name:</td><td> (TITLE)</td><td>");
+        document.write(storyDataName + "</td><tr/>");
 
-    //     document.write("<tr><td>Story grooming: </td><td> (GROOM)</td><td>");
-    //     document.write(storyDataGroom + "</td><tr/>");
+        document.write("<tr><td>Story grooming: </td><td> (GROOM)</td><td>");
+        document.write(storyDataGroom + "</td><tr/>");
 
-    //     document.write("<tr><td>Story epic:</td><td> (EPIC)</td><td>");
-    //     document.write(storyDataEpic + "</td><tr/>");
+        document.write("<tr><td>Story epic:</td><td> (EPIC)</td><td>");
+        document.write(storyDataEpic + "</td><tr/>");
 
-    //     document.write("<tr><td>Story description:</td><td> (STORY)</td><td>");
-    //     document.write(storyDataDescription + "</td><tr/>");      
+        document.write("<tr><td>Story description:</td><td> (STORY)</td><td>");
+        document.write(storyDataDescription + "</td><tr/>");      
 
-    //   document.write("</table>");
+      document.write("</table>");
 
-    //   document.write("<br />");
+      document.write("<br />");
 
-    //   document.write('<p> <input type="text" placeholder="Add requirement by hand to PDF" id="addRequirementValue"></input> <input type="submit" value="Add requirement" id="addRequirement"></input></p>')
+      document.write('<p> <input type="text" placeholder="Add requirement by hand to PDF" id="addRequirementValue"></input> <input type="submit" value="Add requirement" id="addRequirement"></input></p>')
       
 
       var requirementsArraz = [];
@@ -81,8 +80,8 @@ $("#controls").submit(function() {
         api.get("/requirements/" + storyNumber + "-" + number, {}, function(response) {
 
           requirementsArraz.push(response.requirement.name);
-        //  document.write("<table><tr><td>Story requirements: (ACCEPTANCE CRITERIA)</td><td>");
-       //   document.write(response.requirement.name+ "</td><tr/></table>");
+          document.write("<table><tr><td>Story requirements: (ACCEPTANCE CRITERIA)</td><td>");
+          document.write(response.requirement.name+ "</td><tr/></table>");
 
           // console.log(requirementsArraz);
 
@@ -100,21 +99,21 @@ $("#controls").submit(function() {
       $("#addRequirement").click(function() {
         if( $("#addRequirementValue").val() != "" ) {
            requirementsArraz.push($("#addRequirementValue").val());
-         //  document.write("<table><tr><td>Story requirements: (ACCEPTANCE CRITERIA)</td><td>");
-       //    document.write(requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/></table>");
+           document.write("<table><tr><td>Story requirements: (ACCEPTANCE CRITERIA)</td><td>");
+           document.write(requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/></table>");
         }
       });
 
 
 
-      // if( storyDataName != "" ){
-      //   $('body').css('background-color', '#E0E0E0').css('color', '#616161').css('font-family', 'Roboto');
-      //   $('input').css('border-radius', '2px').css('color', '#616161').css('cursor', 'pointer');
-      //   $('#btnOpenPDF').css('background-color', '#26BF59').css('border', '5px solid #26BF59').css('color', '#FFF');
-      //   $('#btnSavePDF').css('background-color', '#26BF59').css('border', '5px solid #26BF59').css('color', '#FFF');
-      //   $('#btnNewStory').css('background-color', '#FFD200').css('border', '5px solid #FFD200');
-      //   $('#addRequirementValue').css('background-color', '#E0E0E0').css('border', '0px solid #FFD200').css('border-bottom', '1px solid #616161').css('font-family', 'Roboto').css('width', '327px').css('cursor', 'auto');
-      // }
+      if( storyDataName != "" ){
+        $('body').css('background-color', '#E0E0E0').css('color', '#616161').css('font-family', 'Roboto');
+        $('input').css('border-radius', '2px').css('color', '#616161').css('cursor', 'pointer');
+        $('#btnOpenPDF').css('background-color', '#26BF59').css('border', '5px solid #26BF59').css('color', '#FFF');
+        $('#btnSavePDF').css('background-color', '#26BF59').css('border', '5px solid #26BF59').css('color', '#FFF');
+        $('#btnNewStory').css('background-color', '#FFD200').css('border', '5px solid #FFD200');
+        $('#addRequirementValue').css('background-color', '#E0E0E0').css('border', '0px solid #FFD200').css('border-bottom', '1px solid #616161').css('font-family', 'Roboto').css('width', '327px').css('cursor', 'auto');
+      }
 
        
        $('#btnNewStory').click(function () {
