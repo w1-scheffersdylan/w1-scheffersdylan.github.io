@@ -21,7 +21,6 @@ $("#controls").submit(function() {
     //api.get("/features/" + storyNumber + "/requirements", {}, function(response){ 
               
     // Do something with the features.
-    console.log(response.typeOf);
     //alert(JSON.stringify(response, null, 4));
 
     // variables
@@ -41,7 +40,7 @@ $("#controls").submit(function() {
       var storyDataEpic = "";
     }
     else {
-      var storyDataEpic = JSON.stringify(response.feature.initiative.name).slice(1, -1);
+      var storyDataEpic =response.feature.initiative.name;
     }
 
               
@@ -53,7 +52,7 @@ $("#controls").submit(function() {
       document.write("<table>");
 
         document.write("<tr><td id='storynumberThing'>Story number:</td><td> (TICKET-ID)</td><td>");
-       // document.write($.parseHTML(storyDataNumber) + "</td><tr/>");
+        document.write(storyDataNumber + "</td><tr/>");
 
         document.write("<tr><td>Story name:</td><td> (TITLE)</td><td>");
         document.write(storyDataName + "</td><tr/>");
