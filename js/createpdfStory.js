@@ -27,7 +27,7 @@ $("#controls").submit(function() {
     // variables
     var responseObj = JSON.parse(response);
     console.log(responseObj);
-    var storyDataNumber = JSON.parse(response.feature.reference_num);
+   // var storyDataNumber = JSON.parse(response.feature.reference_num);
     console.log(storyDataNumber);
     console.log($.parseHTML(storyDataNumber).text);
     console.log($.parseHTML(storyDataNumber));
