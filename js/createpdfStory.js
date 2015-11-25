@@ -111,8 +111,8 @@ $("#controls").submit(function() {
       $("#addRequirement").click(function() {
         if( $("#addRequirementValue").val() != "" ) {
            requirementsArraz.push($("#addRequirementValue").val());
-           document.write("<table><tr><td>Story requirements: (ACCEPTANCE CRITERIA)</td><td>");
-           document.write(requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/></table>");
+           $('body').append("<table><tr><td>Story requirements: (ACCEPTANCE CRITERIA)</td><td>" + requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/></table>");
+
         }
       });
 
