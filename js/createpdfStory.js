@@ -26,9 +26,9 @@ $("#controls").submit(function() {
     // variables
     console.log(response.feature)
     var storyDataNumber = response.feature.reference_num;
-    var storyDataName =response.feature.name;
+    var storyDataName = response.feature.name;
     var storyDataGroom = response.feature.original_estimate.toString();
-    var storyDataDescription = response.feature.description.body;
+    var storyDataDescription = $.parseHTML(response.feature.description.body);
     //var storyDataEpic = JSON.stringify(response.feature.initiative.name).slice(1, -1);
 
     // check if the grooming has a number
@@ -183,7 +183,7 @@ $("#controls").submit(function() {
                                  { text: 'CORR: \n' + '\n \n', colSpan: 2 }, '', 
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
-                                [{ text: [ 'STORY: \n \n', { text: $.parseHTML(storyDataDescription), style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
+                                [{ text: [ 'STORY: \n \n', { text: storyDataDescription, style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text:'NOTES:\n \n \n \n \n \n \n \n ', colSpan: 6 }, '', '', '', '', ''],
 
                                 [{ text: 'ACCEPTANCE CRITERIA: \n \n' + requirementsArraz.join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
