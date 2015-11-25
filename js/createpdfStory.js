@@ -54,6 +54,10 @@ $("#controls").submit(function() {
     $("#step2Container").fadeIn("fast");
 
     $("#ticket-id").text(storyDataNumber);
+    $("#title").text(storyDataName);
+    $("#groom").text(storyDataGroom);
+    $("#epic").text(storyDataEpic);
+    $("#story").text(storyDataDescription);
     
      // show data of story
     //  document.write('<img src="./images/sablonoLogo.png" style="position: absolute; top: 25px; right: 25px; width: 20%;" /><p><input type="submit" class="btn right" id="btnOpenPDF" value="OPEN story as PDF"></input> <input type="submit" class="btn right" id="btnSavePDF" value="SAVE story as PDF"></input></p><p><input type="submit" class="btn right" id="btnNewStory" value="New story"></input></p>');
