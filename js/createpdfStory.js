@@ -106,14 +106,14 @@ $("#controls").submit(function() {
 
 
 
-      if( storyDataName != "" ){
-        $('body').css('background-color', '#E0E0E0').css('color', '#616161').css('font-family', 'Roboto');
-        $('input').css('border-radius', '2px').css('color', '#616161').css('cursor', 'pointer');
-        $('#btnOpenPDF').css('background-color', '#26BF59').css('border', '5px solid #26BF59').css('color', '#FFF');
-        $('#btnSavePDF').css('background-color', '#26BF59').css('border', '5px solid #26BF59').css('color', '#FFF');
-        $('#btnNewStory').css('background-color', '#FFD200').css('border', '5px solid #FFD200');
-        $('#addRequirementValue').css('background-color', '#E0E0E0').css('border', '0px solid #FFD200').css('border-bottom', '1px solid #616161').css('font-family', 'Roboto').css('width', '327px').css('cursor', 'auto');
-      }
+      // if( storyDataName != "" ){
+      //   $('body').css('background-color', '#E0E0E0').css('color', '#616161').css('font-family', 'Roboto');
+      //   $('input').css('border-radius', '2px').css('color', '#616161').css('cursor', 'pointer');
+      //   $('#btnOpenPDF').css('background-color', '#26BF59').css('border', '5px solid #26BF59').css('color', '#FFF');
+      //   $('#btnSavePDF').css('background-color', '#26BF59').css('border', '5px solid #26BF59').css('color', '#FFF');
+      //   $('#btnNewStory').css('background-color', '#FFD200').css('border', '5px solid #FFD200');
+      //   $('#addRequirementValue').css('background-color', '#E0E0E0').css('border', '0px solid #FFD200').css('border-bottom', '1px solid #616161').css('font-family', 'Roboto').css('width', '327px').css('cursor', 'auto');
+      // }
 
        
        $('#btnNewStory').click(function () {
@@ -147,6 +147,7 @@ $("#controls").submit(function() {
         }
           
 
+
           var docDefinition = {
 
           pageSize: 'A4',
@@ -159,7 +160,7 @@ $("#controls").submit(function() {
                                             
                     {
                         color: '#444',
-                        //image: '../images/sablonoLogo.png',
+                        image: '../images/sablonoLogo.png',
                         table: {
                             widths: [ '5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%' ],
                             heights: [ '10%', '10%', '40%', '40%' ],
