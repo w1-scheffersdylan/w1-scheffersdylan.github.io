@@ -47,31 +47,32 @@ $("#controls").submit(function() {
               
     
      // show data of story
-     document.write('<img src="./images/sablonoLogo.png" class="sablonoLogo" /><p><input type="submit" class="btn right" id="btnOpenPDF" value="OPEN story as PDF"></input> <input type="submit" class="btn right" id="btnSavePDF" value="SAVE story as PDF"></input></p><p><input type="submit" class="btn right" id="btnNewStory" value="New story"></input></p>');
-    document.write("<h2>Story details</h2>");
+     $('successContainer').html('<img src="./images/sablonoLogo.png" class="sablonoLogo" /><p><input type="submit" class="btn right" id="btnOpenPDF" value="OPEN story as PDF"></input> <input type="submit" class="btn right" id="btnSavePDF" value="SAVE story as PDF"></input></p><p><input type="submit" class="btn right" id="btnNewStory" value="New story"></input></p>');
+    //  document.write('<img src="./images/sablonoLogo.png" class="sablonoLogo" /><p><input type="submit" class="btn right" id="btnOpenPDF" value="OPEN story as PDF"></input> <input type="submit" class="btn right" id="btnSavePDF" value="SAVE story as PDF"></input></p><p><input type="submit" class="btn right" id="btnNewStory" value="New story"></input></p>');
+    // document.write("<h2>Story details</h2>");
 
-      document.write("<table>");
+    //   document.write("<table>");
 
-        document.write("<tr><td>Story number:</td><td> (TICKET-ID)</td><td>");
-        document.write(storyDataNumber + "</td><tr/>");
+    //     document.write("<tr><td>Story number:</td><td> (TICKET-ID)</td><td>");
+    //     document.write(storyDataNumber + "</td><tr/>");
 
-        document.write("<tr><td>Story name:</td><td> (TITLE)</td><td>");
-        document.write(storyDataName + "</td><tr/>");
+    //     document.write("<tr><td>Story name:</td><td> (TITLE)</td><td>");
+    //     document.write(storyDataName + "</td><tr/>");
 
-        document.write("<tr><td>Story grooming: </td><td> (GROOM)</td><td>");
-        document.write(storyDataGroom + "</td><tr/>");
+    //     document.write("<tr><td>Story grooming: </td><td> (GROOM)</td><td>");
+    //     document.write(storyDataGroom + "</td><tr/>");
 
-        document.write("<tr><td>Story epic:</td><td> (EPIC)</td><td>");
-        document.write(storyDataEpic + "</td><tr/>");
+    //     document.write("<tr><td>Story epic:</td><td> (EPIC)</td><td>");
+    //     document.write(storyDataEpic + "</td><tr/>");
 
-        document.write("<tr><td>Story description:</td><td> (STORY)</td><td>");
-        document.write(storyDataDescription + "</td><tr/>");      
+    //     document.write("<tr><td>Story description:</td><td> (STORY)</td><td>");
+    //     document.write(storyDataDescription + "</td><tr/>");      
 
-      document.write("</table>");
+    //   document.write("</table>");
 
-      document.write("<br />");
+    //   document.write("<br />");
 
-      document.write('<p> <input type="text" placeholder="Add requirement by hand to PDF" id="addRequirementValue"></input> <input type="submit" value="Add requirement" id="addRequirement"></input></p>')
+    //   document.write('<p> <input type="text" placeholder="Add requirement by hand to PDF" id="addRequirementValue"></input> <input type="submit" value="Add requirement" id="addRequirement"></input></p>')
       
 
       var requirementsArraz = [];
