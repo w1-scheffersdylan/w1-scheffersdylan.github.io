@@ -1,3 +1,18 @@
+function getInnerText(el) {
+    var sel, range, innerText = "";
+    if (typeof document.selection != "undefined" && typeof document.body.createTextRange != "undefined") {
+        range = document.body.createTextRange();
+        range.moveToElementText(el);
+        innerText = range.text;
+    } else if (typeof window.getSelection != "undefined" && typeof document.createRange != "undefined") {
+        sel = window.getSelection();
+        sel.selectAllChildren(el);
+        innerText = "" + sel;
+        sel.removeAllRanges();
+    }
+    return innerText;
+}
+
 $("#controls").submit(function() {
   new AhaApi({
     accountDomain: $("#subdomain").val(),
@@ -28,7 +43,7 @@ $("#controls").submit(function() {
     var storyDataNumber = response.feature.reference_num;
     var storyDataName = response.feature.name;
     var storyDataGroom = response.feature.original_estimate.toString();
-    var storyDataDescription = $.parseHTML(response.feature.description.body);
+    var storyDataDescription = getInnerText($.parseHTML(response.feature.description.body));
     //var storyDataEpic = JSON.stringify(response.feature.initiative.name).slice(1, -1);
 
     // check if the grooming has a number
