@@ -27,7 +27,7 @@ $("#controls").submit(function() {
     console.log(response.feature)
     var storyDataNumber = response.feature.reference_num;
     var storyDataName =response.feature.name;
-    var storyDataGroom = response.feature.original_estimate;
+    var storyDataGroom = response.feature.original_estimate.toString();
     var storyDataDescription = response.feature.description.body;
     //var storyDataEpic = JSON.stringify(response.feature.initiative.name).slice(1, -1);
 
