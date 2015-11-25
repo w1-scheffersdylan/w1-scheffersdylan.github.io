@@ -21,7 +21,7 @@ $("#controls").submit(function() {
     //api.get("/features/" + storyNumber + "/requirements", {}, function(response){ 
               
     // Do something with the features.
-    console.log(response);
+    console.log(response.typeOf);
     //alert(JSON.stringify(response, null, 4));
 
     // variables
