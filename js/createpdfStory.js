@@ -18,11 +18,7 @@ $("#controls").submit(function() {
     
     // Hide the controls.
     $("#controls").remove();
-    $("#step1Container").fadeOut();
-    $("#step2Container").fadeIn();
-
-
-    return false;
+   
     // get a single requirement (acceptance criteria)
      //api.get("/requirements/" + storyNumber + "-1", {}, function(response) {    
 
@@ -54,7 +50,11 @@ $("#controls").submit(function() {
       var storyDataEpic =response.feature.initiative.name;
     }
 
-              
+           $("#step1Container").fadeOut();
+    $("#step2Container").fadeIn();
+
+
+    return false;    
     
      // show data of story
      document.write('<img src="./images/sablonoLogo.png" style="position: absolute; top: 25px; right: 25px; width: 20%;" /><p><input type="submit" class="btn right" id="btnOpenPDF" value="OPEN story as PDF"></input> <input type="submit" class="btn right" id="btnSavePDF" value="SAVE story as PDF"></input></p><p><input type="submit" class="btn right" id="btnNewStory" value="New story"></input></p>');
