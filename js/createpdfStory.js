@@ -18,7 +18,8 @@ $("#controls").submit(function() {
     
     // Hide the controls.
     $("#controls").remove();
-
+    $("#step1Container").fadeOut();
+    $("#step2Container").fadeIn();
 
     // get a single requirement (acceptance criteria)
      //api.get("/requirements/" + storyNumber + "-1", {}, function(response) {    
