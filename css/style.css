@@ -45,6 +45,10 @@ a.md-button.md-primary.md-raised, a.md-button.md-primary.md-fab, .md-button.md-p
   height: 100%;
 }
 
+#step2Container {
+  display: none;
+}
+
 #storyDiv {
   position: absolute;
   top: 25px;
