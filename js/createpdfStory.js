@@ -26,9 +26,6 @@ $("#controls").submit(function() {
 
     // variables
     var storyDataNumber = $.parseHTML(JSON.stringify(response.feature.reference_num));
-
-    $("#storynumberThing").append(storyDataNumber);
-
     var storyDataName = JSON.stringify(response.feature.name).slice(1, -1);
     var storyDataGroom = JSON.stringify(response.feature.original_estimate);
     var storyDataDescription = JSON.stringify(response.feature.description.body).slice(4, -5);
