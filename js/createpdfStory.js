@@ -25,7 +25,10 @@ $("#controls").submit(function() {
     //alert(JSON.stringify(response, null, 4));
 
     // variables
-    var storyDataNumber = $.parseHTML(JSON.stringify(response.feature.reference_num)).text;
+    var storyDataNumber = $.parseHTML(JSON.stringify(response.feature.reference_num));
+
+    $("#storynumberThing").append(storyDataNumber);
+
     var storyDataName = JSON.stringify(response.feature.name).slice(1, -1);
     var storyDataGroom = JSON.stringify(response.feature.original_estimate);
     var storyDataDescription = JSON.stringify(response.feature.description.body).slice(4, -5);
@@ -52,7 +55,7 @@ $("#controls").submit(function() {
 
       document.write("<table>");
 
-        document.write("<tr><td>Story number:</td><td> (TICKET-ID)</td><td>");
+        document.write("<tr><td id='storynumberThing'>Story number:</td><td> (TICKET-ID)</td><td>");
         document.write(storyDataNumber + "</td><tr/>");
 
         document.write("<tr><td>Story name:</td><td> (TITLE)</td><td>");
