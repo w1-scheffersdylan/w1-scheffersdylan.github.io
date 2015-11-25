@@ -24,6 +24,7 @@ $("#controls").submit(function() {
     //alert(JSON.stringify(response, null, 4));
 
     // variables
+    console.log(response.feature)
     var storyDataNumber = response.feature.reference_num;
     var storyDataName =response.feature.name;
     var storyDataGroom = response.feature.original_estimate;
