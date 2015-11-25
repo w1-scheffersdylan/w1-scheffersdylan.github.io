@@ -18,7 +18,7 @@ $("#controls").submit(function() {
     
     // Hide the controls.
     $("#controls").remove();
-   
+
     // get a single requirement (acceptance criteria)
      //api.get("/requirements/" + storyNumber + "-1", {}, function(response) {    
 
@@ -50,59 +50,58 @@ $("#controls").submit(function() {
       var storyDataEpic =response.feature.initiative.name;
     }
 
-           $("#step1Container").fadeOut();
+    $("#step1Container").fadeOut();
     $("#step2Container").fadeIn();
 
 
-    return false;    
     
      // show data of story
-     document.write('<img src="./images/sablonoLogo.png" style="position: absolute; top: 25px; right: 25px; width: 20%;" /><p><input type="submit" class="btn right" id="btnOpenPDF" value="OPEN story as PDF"></input> <input type="submit" class="btn right" id="btnSavePDF" value="SAVE story as PDF"></input></p><p><input type="submit" class="btn right" id="btnNewStory" value="New story"></input></p>');
-    document.write("<h2>Story details</h2>");
+    //  document.write('<img src="./images/sablonoLogo.png" style="position: absolute; top: 25px; right: 25px; width: 20%;" /><p><input type="submit" class="btn right" id="btnOpenPDF" value="OPEN story as PDF"></input> <input type="submit" class="btn right" id="btnSavePDF" value="SAVE story as PDF"></input></p><p><input type="submit" class="btn right" id="btnNewStory" value="New story"></input></p>');
+    // document.write("<h2>Story details</h2>");
 
-      document.write("<table>");
+    //   document.write("<table>");
 
-        document.write("<tr><td id='storynumberThing'>Story number:</td><td> (TICKET-ID)</td><td>");
-        document.write(storyDataNumber + "</td><tr/>");
+    //     document.write("<tr><td id='storynumberThing'>Story number:</td><td> (TICKET-ID)</td><td>");
+    //     document.write(storyDataNumber + "</td><tr/>");
 
-        document.write("<tr><td>Story name:</td><td> (TITLE)</td><td>");
-        document.write(storyDataName + "</td><tr/>");
+    //     document.write("<tr><td>Story name:</td><td> (TITLE)</td><td>");
+    //     document.write(storyDataName + "</td><tr/>");
 
-        document.write("<tr><td>Story grooming: </td><td> (GROOM)</td><td>");
-        document.write(storyDataGroom + "</td><tr/>");
+    //     document.write("<tr><td>Story grooming: </td><td> (GROOM)</td><td>");
+    //     document.write(storyDataGroom + "</td><tr/>");
 
-        document.write("<tr><td>Story epic:</td><td> (EPIC)</td><td>");
-        document.write(storyDataEpic + "</td><tr/>");
+    //     document.write("<tr><td>Story epic:</td><td> (EPIC)</td><td>");
+    //     document.write(storyDataEpic + "</td><tr/>");
 
-        document.write("<tr><td>Story description:</td><td> (STORY)</td><td>");
-        document.write(storyDataDescription + "</td><tr/>");      
+    //     document.write("<tr><td>Story description:</td><td> (STORY)</td><td>");
+    //     document.write(storyDataDescription + "</td><tr/>");      
 
-      document.write("</table>");
+    //   document.write("</table>");
 
-      document.write("<br />");
+    //   document.write("<br />");
 
-      document.write('<p> <input type="text" placeholder="Add requirement by hand to PDF" id="addRequirementValue"></input> <input type="submit" value="Add requirement" id="addRequirement"></input></p>')
+    //   document.write('<p> <input type="text" placeholder="Add requirement by hand to PDF" id="addRequirementValue"></input> <input type="submit" value="Add requirement" id="addRequirement"></input></p>')
       
 
-      var requirementsArraz = [];
-      function fetchARequirement(number){
+    //   var requirementsArraz = [];
+    //   function fetchARequirement(number){
         
-        api.get("/requirements/" + storyNumber + "-" + number, {}, function(response) {
+    //     api.get("/requirements/" + storyNumber + "-" + number, {}, function(response) {
 
-          requirementsArraz.push(response.requirement.name);
-          document.write("<table><tr><td>Story requirements: (ACCEPTANCE CRITERIA)</td><td>");
-          document.write(response.requirement.name+ "</td><tr/></table>");
+    //       requirementsArraz.push(response.requirement.name);
+    //       document.write("<table><tr><td>Story requirements: (ACCEPTANCE CRITERIA)</td><td>");
+    //       document.write(response.requirement.name+ "</td><tr/></table>");
 
-          // console.log(requirementsArraz);
+    //       // console.log(requirementsArraz);
 
-          fetchARequirement(number + 1);
+    //       fetchARequirement(number + 1);
            
-        }); // close api.get 
+    //     }); // close api.get 
 
-      }
+    //   }
       
-      // init the looping
-      fetchARequirement(1);
+    //   // init the looping
+    //   fetchARequirement(1);
 
 
 
