@@ -87,25 +87,24 @@ $("#controls").submit(function() {
     //   document.write('<p> <input type="text" placeholder="Add requirement by hand to PDF" id="addRequirementValue"></input> <input type="submit" value="Add requirement" id="addRequirement"></input></p>')
       
 
-    //   var requirementsArraz = [];
-    //   function fetchARequirement(number){
+      var requirementsArraz = [];
+      function fetchARequirement(number){
         
-    //     api.get("/requirements/" + storyNumber + "-" + number, {}, function(response) {
+        api.get("/requirements/" + storyNumber + "-" + number, {}, function(response) {
 
-    //       requirementsArraz.push(response.requirement.name);
-    //       document.write("<table><tr><td>Story requirements: (ACCEPTANCE CRITERIA)</td><td>");
-    //       document.write(response.requirement.name+ "</td><tr/></table>");
+          requirementsArraz.push(response.requirement.name);
+          $('body').html("<table><tr><td>Story requirements: (ACCEPTANCE CRITERIA)</td><td>" + response.requirement.name+ "</td><tr/></table>");
 
-    //       // console.log(requirementsArraz);
+          // console.log(requirementsArraz);
 
-    //       fetchARequirement(number + 1);
+          fetchARequirement(number + 1);
            
-    //     }); // close api.get 
+        }); // close api.get 
 
-    //   }
+      }
       
-    //   // init the looping
-    //   fetchARequirement(1);
+      // init the looping
+      fetchARequirement(1);
 
 
 
