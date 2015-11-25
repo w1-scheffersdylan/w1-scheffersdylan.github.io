@@ -21,6 +21,8 @@ $("#controls").submit(function() {
     $("#step1Container").fadeOut();
     $("#step2Container").fadeIn();
 
+
+    return false;
     // get a single requirement (acceptance criteria)
      //api.get("/requirements/" + storyNumber + "-1", {}, function(response) {    
 
