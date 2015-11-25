@@ -47,7 +47,7 @@ $("#controls").submit(function() {
               
     
      // show data of story
-     $('successContainer').html('<img src="./images/sablonoLogo.png" class="sablonoLogo" /><p><input type="submit" class="btn right" id="btnOpenPDF" value="OPEN story as PDF"></input> <input type="submit" class="btn right" id="btnSavePDF" value="SAVE story as PDF"></input></p><p><input type="submit" class="btn right" id="btnNewStory" value="New story"></input></p>');
+     $('#successContainer').html('<img src="./images/sablonoLogo.png" class="sablonoLogo" /><p><input type="submit" class="btn right" id="btnOpenPDF" value="OPEN story as PDF"></input> <input type="submit" class="btn right" id="btnSavePDF" value="SAVE story as PDF"></input></p><p><input type="submit" class="btn right" id="btnNewStory" value="New story"></input></p>');
     //  document.write('<img src="./images/sablonoLogo.png" class="sablonoLogo" /><p><input type="submit" class="btn right" id="btnOpenPDF" value="OPEN story as PDF"></input> <input type="submit" class="btn right" id="btnSavePDF" value="SAVE story as PDF"></input></p><p><input type="submit" class="btn right" id="btnNewStory" value="New story"></input></p>');
     // document.write("<h2>Story details</h2>");
 
@@ -81,8 +81,8 @@ $("#controls").submit(function() {
         api.get("/requirements/" + storyNumber + "-" + number, {}, function(response) {
 
           requirementsArraz.push(response.requirement.name);
-          document.write("<table><tr><td>Story requirements: (ACCEPTANCE CRITERIA)</td><td>");
-          document.write(response.requirement.name+ "</td><tr/></table>");
+        //  document.write("<table><tr><td>Story requirements: (ACCEPTANCE CRITERIA)</td><td>");
+       //   document.write(response.requirement.name+ "</td><tr/></table>");
 
           // console.log(requirementsArraz);
 
@@ -100,8 +100,8 @@ $("#controls").submit(function() {
       $("#addRequirement").click(function() {
         if( $("#addRequirementValue").val() != "" ) {
            requirementsArraz.push($("#addRequirementValue").val());
-           document.write("<table><tr><td>Story requirements: (ACCEPTANCE CRITERIA)</td><td>");
-           document.write(requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/></table>");
+         //  document.write("<table><tr><td>Story requirements: (ACCEPTANCE CRITERIA)</td><td>");
+       //    document.write(requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/></table>");
         }
       });
 
