@@ -152,7 +152,7 @@ $("#controls").submit(function() {
 
           pageSize: 'A4',
           pageOrientation: 'landscape',
-          pageMargins: [ 40, 60, 40, 60 ],
+          pageMargins: 20,
 
               content: [
 
