@@ -25,15 +25,10 @@ $("#controls").submit(function() {
     //alert(JSON.stringify(response, null, 4));
 
     // variables
-    var responseObj = JSON.parse(response);
-    console.log(responseObj);
-   // var storyDataNumber = JSON.parse(response.feature.reference_num);
-    console.log(storyDataNumber);
-    console.log($.parseHTML(storyDataNumber).text);
-    console.log($.parseHTML(storyDataNumber));
-    var storyDataName = JSON.stringify(response.feature.name).slice(1, -1);
-    var storyDataGroom = JSON.stringify(response.feature.original_estimate);
-    var storyDataDescription = JSON.stringify(response.feature.description.body).slice(4, -5);
+    var storyDataNumber = response.feature.reference_num;
+    var storyDataName =response.feature.name;
+    var storyDataGroom = response.feature.original_estimate;
+    var storyDataDescription = response.feature.description.body;
     //var storyDataEpic = JSON.stringify(response.feature.initiative.name).slice(1, -1);
 
     // check if the grooming has a number
