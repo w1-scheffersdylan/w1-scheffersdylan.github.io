@@ -17,7 +17,7 @@ $("#controls").submit(function() {
     var storyNumber = $("#storyNumber").val();
     
     // Hide the controls.
-    $("#controls").remove();
+    // $("#controls").remove();
 
     // get a single requirement (acceptance criteria)
      //api.get("/requirements/" + storyNumber + "-1", {}, function(response) {    
