@@ -26,6 +26,10 @@ table tr td {
   float: right;
 }
 
+.paddingContainer {
+  padding: 25px;
+}
+
 .sablonoLogo {
   position: absolute;
   top: 25px;
@@ -77,8 +81,4 @@ a.md-button.md-primary.md-raised, a.md-button.md-primary.md-fab, .md-button.md-p
   padding: 8px 0;
   border-bottom: 1px solid #616161;
   outline: none;
-}
-
-#step1Container, #step2Container {
-  margin: 25px 0 0 25px;
 }
