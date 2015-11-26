@@ -93,7 +93,7 @@ $("#controls").submit(function() {
         api.get("/requirements/" + storyNumber + "-" + number, {}, function(response) {
 
           requirementsArraz.push(response.requirement.name);
-          $('#requirementsTable').append("<tr><td>Story requirements: </td><td> (ACCEPTANCE CRITERIA) </td><td>" + response.requirement.name+ "</td><tr/>");
+          $('#storyDataTable').append("<tr><td>Story requirements: </td><td> (ACCEPTANCE CRITERIA) </td><td>" + response.requirement.name+ "</td><tr/>");
 
           // console.log(requirementsArraz);
 
