@@ -34,7 +34,10 @@ $("#controls").submit(function() {
     var storyDataNumber = response.feature.reference_num;
     var storyDataName = response.feature.name;
     var storyDataGroom = response.feature.original_estimate.toString();
-    var storyDataDescription = response.feature.description.body;
+    var storyDataDescriptionOrginal = response.feature.description.body;
+
+    var storyDataDescription = storyDataDescriptionOrginal.replace(/(<([^>]+)>)/ig,"");
+
     //var storyDataEpic = JSON.stringify(response.feature.initiative.name).slice(1, -1);
 
     // check if the grooming has a number
