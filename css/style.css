@@ -44,14 +44,14 @@ button#btnNewStory, button#btnShowStory {
 }
 
 button#btnOpenPDF, button#btnSavePDF {
-  background-color: #FFD200;
-  color: #616161;
+  background-color: #26BF59;
+  color: #FFF;
   cursor: pointer;
 }
 
 button#addRequirement {
-  background-color: #FFD200;
-  color: #616161;
+  background-color: #00B4C8;
+  color: #FFF;
   cursor: pointer;
 }
 /*a.md-button.md-primary.md-raised.orangeBtn, a.md-button.md-primary.md-fab.orangeBtn, .md-button.md-primary.md-raised.orangeBtn, .md-button.md-primary.md-fab.orangeBtn, a.md-button.md-primary.md-raised.orangeBtn:not([disabled]):hover, a.md-button.md-primary.md-fab.orangeBtn:not([disabled]):hover, .md-button.md-primary.md-raised.orangeBtn:not([disabled]):hover, .md-button.md-primary.md-fab.orangeBtn:not([disabled]):hover {
