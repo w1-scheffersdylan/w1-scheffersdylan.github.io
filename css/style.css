@@ -7,7 +7,6 @@
 
 body {
   background-color: #E0E0E0;
-  padding: 25px;
 }
 
 h1 {
@@ -80,6 +79,6 @@ a.md-button.md-primary.md-raised, a.md-button.md-primary.md-fab, .md-button.md-p
   outline: none;
 }
 
-#storyDataDiv {
-
+#step1Container, #step2Container {
+  margin: 25px 0 0 25px;
 }
