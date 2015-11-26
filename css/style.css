@@ -111,7 +111,16 @@ a.md-button.md-primary.md-raised.blueBtn, a.md-button.md-primary.md-fab.blueBtn,
   border: 0;
   background-color: #E0E0E0;
   color: #616161;
-  padding: 8px 0;
   border-bottom: 1px solid #616161;
+  height: 36px;
+  outline: none;
+}
+
+#addRequirementValue {
+  width: 360px;
+  border: 0;
+  background-color: #E0E0E0;
+  border-bottom: 1px solid #616161;
+  height: 36px;
   outline: none;
 }
