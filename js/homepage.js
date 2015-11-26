@@ -1,3 +1,5 @@
+$("#step1Container").fadeIn();
+
 // button to switch between WEB and NOW story number
 $('#changeStoryNumberNOW').click(function () {
   $('#changeStoryNumberNOW').css("display","none");
