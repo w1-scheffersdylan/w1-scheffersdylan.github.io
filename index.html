@@ -16,7 +16,66 @@
 
   <img src="./images/sablonoLogo.png" class="sablonoLogo"/>
 
-  <div id="step1Container" class="paddingContainer">
+ 
+
+    <div id="step2Container" class="paddingContainer">
+
+      <p>
+        <md-button class="md-raised md-primary greenBtn" type="submit" id="btnOpenPDF">OPEN story as PDF</md-button> 
+        <md-button class="md-raised md-primary greenBtn" type="submit" id="btnSavePDF">SAVE story as PDF</md-button>
+      </p>
+      <br />
+      <p>
+        <md-button class="md-raised md-primary orangeBtn" type="submit" id="btnNewStory">New story</md-button>
+      </p>
+      <br />
+      <h2>Story details</h2>
+      <br />
+      <p>
+        <table>
+          <tr>
+            <td>Story number:</td>
+            <td>(TICKET-ID)</td>
+            <td id="ticket-id"></td>
+          </tr>
+          <tr>
+            <td>Story name:</td>
+            <td>(TITLE)</td>
+            <td id="title"></td>
+          </tr>
+          <tr>
+            <td>Story grooming:</td>
+            <td>(GROOM)</td>
+            <td id="groom"></td>
+          </tr>
+          <tr>
+            <td>Story epic:</td>
+            <td>(EPIC)</td>
+            <td id="epic"></td>
+          </tr>
+          <tr>
+            <td>Story description:</td>
+            <td>(STORY)</td>
+            <td id="story"></td>
+          </tr>
+        </table>
+      </p>
+
+      <p>
+        <table id="requirementsTable">
+
+        </table>
+      </p>
+      <br />
+      <p>
+        <input type="text" placeholder="Add requirement by hand to PDF" id="addRequirementValue"></input>
+        <md-button class="md-raised md-primary blueBtn" type="submit" id="addRequirement">Add requirement</md-button>
+      </p>
+      
+    </div> <!-- step 2 container -->
+
+
+ <div id="step1Container" class="paddingContainer">
       <!-- input fields to show story -->
       
       <div id="storyDiv">
@@ -80,65 +139,6 @@
         </form>
       </div>
     </div> <!-- step 1 container -->
-
-    <div id="step2Container" class="paddingContainer">
-
-      <p>
-        <md-button class="md-raised md-primary greenBtn" type="submit" id="btnOpenPDF">OPEN story as PDF</md-button> 
-        <md-button class="md-raised md-primary greenBtn" type="submit" id="btnSavePDF">SAVE story as PDF</md-button>
-      </p>
-      <br />
-      <p>
-        <md-button class="md-raised md-primary orangeBtn" type="submit" id="btnNewStory">New story</md-button>
-      </p>
-      <br />
-      <h2>Story details</h2>
-      <br />
-      <p>
-        <table>
-          <tr>
-            <td>Story number:</td>
-            <td>(TICKET-ID)</td>
-            <td id="ticket-id"></td>
-          </tr>
-          <tr>
-            <td>Story name:</td>
-            <td>(TITLE)</td>
-            <td id="title"></td>
-          </tr>
-          <tr>
-            <td>Story grooming:</td>
-            <td>(GROOM)</td>
-            <td id="groom"></td>
-          </tr>
-          <tr>
-            <td>Story epic:</td>
-            <td>(EPIC)</td>
-            <td id="epic"></td>
-          </tr>
-          <tr>
-            <td>Story description:</td>
-            <td>(STORY)</td>
-            <td id="story"></td>
-          </tr>
-        </table>
-      </p>
-
-      <p>
-        <table id="requirementsTable">
-
-        </table>
-      </p>
-      <br />
-      <p>
-        <input type="text" placeholder="Add requirement by hand to PDF" id="addRequirementValue"></input>
-        <md-button class="md-raised md-primary blueBtn" type="submit" id="addRequirement">Add requirement</md-button>
-      </p>
-      
-    </div> <!-- step 2 container -->
-
-
-
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
