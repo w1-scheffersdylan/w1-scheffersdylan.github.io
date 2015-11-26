@@ -54,23 +54,6 @@ button#addRequirement {
   color: #FFF;
   cursor: pointer;
 }
-/*a.md-button.md-primary.md-raised.orangeBtn, a.md-button.md-primary.md-fab.orangeBtn, .md-button.md-primary.md-raised.orangeBtn, .md-button.md-primary.md-fab.orangeBtn, a.md-button.md-primary.md-raised.orangeBtn:not([disabled]):hover, a.md-button.md-primary.md-fab.orangeBtn:not([disabled]):hover, .md-button.md-primary.md-raised.orangeBtn:not([disabled]):hover, .md-button.md-primary.md-fab.orangeBtn:not([disabled]):hover {
-  background-color: #FFD200;
-  color: #616161;
-  cursor: pointer;
-}
-*/
-/*a.md-button.md-primary.md-raised.greenBtn, a.md-button.md-primary.md-fab.greenBtn, .md-button.md-primary.md-raised.greenBtn, .md-button.md-primary.md-fab.greenBtn, a.md-button.md-primary.md-raised.greenBtn:not([disabled]):hover, a.md-button.md-primary.md-fab.greenBtn:not([disabled]):hover, .md-button.md-primary.md-raised.greenBtn:not([disabled]):hover, .md-button.md-primary.md-fab.greenBtn:not([disabled]):hover {
-  background-color: #26BF59;
-  color: #FFF;
-  cursor: pointer;
-}
-
-a.md-button.md-primary.md-raised.blueBtn, a.md-button.md-primary.md-fab.blueBtn, .md-button.md-primary.md-raised.blueBtn, .md-button.md-primary.md-fab.blueBtn, a.md-button.md-primary.md-raised.blueBtn:not([disabled]):hover, a.md-button.md-primary.md-fab.blueBtn:not([disabled]):hover, .md-button.md-primary.md-raised.blueBtn:not([disabled]):hover, .md-button.md-primary.md-fab.blueBtn:not([disabled]):hover {
-  background-color: #00B4C8;
-  color: #FFF;
-  cursor: pointer;
-}*/
 
 .showDataStory {
   background-color: red;

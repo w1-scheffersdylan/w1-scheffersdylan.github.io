@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="./css/style.css">
 
 
-
-
   </head>
   <body ng-controller="homeController">
 
@@ -19,7 +17,6 @@
  
     <!-- placed step2Container on the top, because of fade effect -->
     <div id="step2Container" class="paddingContainer">
-
       <p>
         <md-button class="md-raised md-primary" type="submit" id="btnOpenPDF">OPEN story as PDF</md-button> 
         <md-button class="md-raised md-primary" type="submit" id="btnSavePDF">SAVE story as PDF</md-button>
@@ -60,12 +57,6 @@
           </tr>
         </table>
       </p>
-
-<!--       <p>
-        <table id="requirementsTable">
-
-        </table>
-      </p> -->
       <br />
       <p>
         <input type="text" placeholder="Add requirement by hand to PDF" id="addRequirementValue"></input>
@@ -76,39 +67,34 @@
     </div> <!-- step 2 container -->
 
 
- <div id="step1Container" class="paddingContainer">
+    <div id="step1Container" class="paddingContainer">
       <!-- input fields to show story -->
-      
       <div id="storyDiv">
         <h1>Story</h1>
         <p> Please fill in a story number. </p>
         <form id="controls">
           <table>
             <tr>
-              <!--<td>Aha! subdomain </td>-->
+              <!-- Aha! subdomain -->
               <td><input type="text" placeholder="Aha! subdomain" id="subdomain" value="sablono" disabled></input></td>
             </tr>
             <tr>
-              <!--<td>Product key </td>-->
+              <!-- Product key -->
               <td><input type="text" placeholder="Product key" id="product-key" value="WEB" disabled></input></td>
             </tr>
             <tr>
-              <!--<td>Story Number  </td> -->
+              <!-- Story Number -->
               <td><input type="text" placeholder="Story number" id="storyNumber" value="WEB-313"></input></td>
-              <!--<td><md-button class="md-raised right" type="button" id="changeStoryNumberNOW">Change WEB to NOW</md-button><md-button type="button" class="btn right" id="changeStoryNumberWEB" style="display: none">Change NOW to WEB</md-button></td>-->
               <td><md-button class="md-raised md-primary right orangeBtn" id="btnShowStory" type="submit">Show story</md-button></td>
-           <!-- </tr>
-             <tr>
-              <td></td>
-              <td><md-button class="md-raised md-primary right" type="submit">Show story</md-button></td>
-            </tr> -->
           </table>
         </form>
       </div>
 
-      <div id="sprintDiv">
+
+      <!-- NOT DONE -->
+      <!-- <div id="sprintDiv">
         <hr/>
-        <!-- input fields to show sprint -->
+        
         <form id="controlsSprint">
           <table>
             <tr>
@@ -139,7 +125,7 @@
           </table>
         </form>
       </div>
-    </div> <!-- step 1 container -->
+    </div>  --><!-- step 1 container -->
 
 
     <!-- jQuery -->
