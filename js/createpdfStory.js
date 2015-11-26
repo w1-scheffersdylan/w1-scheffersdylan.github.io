@@ -117,7 +117,7 @@ $("#controls").submit(function() {
       });
 
 
-      $("#addRequirementValue").keypress(function(){
+      $("#addRequirementValue").keypress(function(e){
         var key = e.which;
         if( key == 13 ) { // the enter button
           requirementsArraz.push($("#addRequirementValue").val());
