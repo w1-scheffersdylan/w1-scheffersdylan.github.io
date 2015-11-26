@@ -130,7 +130,9 @@ $("#controls").submit(function() {
        
        $('#btnNewStory').click(function () {
           $("#step2Container").fadeOut();
+          location.reload();
           $("#step1Container").fadeIn();
+
        });
             
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
