@@ -36,12 +36,12 @@ $("#controls").submit(function() {
     var storyDataGroom = response.feature.original_estimate.toString();
     var storyDataDescriptionOrginal = response.feature.description.body;
 
-    var storyDataDescription = storyDataDescriptionOrginal.replace(/(<([^>]+)>)/ig,"");
+    var storyDataDescriptionNoHTML = storyDataDescriptionOrginal.replace(/(<([^>]+)>)/ig,"");
 
     //var storyDataEpic = JSON.stringify(response.feature.initiative.name).slice(1, -1);
 
     // check for &nbsp;
-    var storyDataDescription = storyDataDescriptionOrginal.replace(/&nbsp;/gi,'');
+    var storyDataDescription = storyDataDescriptionNoHTML.replace(/&nbsp;/gi,'');
 
     // check if the grooming has a number
     if(storyDataGroom == "null"){
