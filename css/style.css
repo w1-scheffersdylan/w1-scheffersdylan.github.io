@@ -37,7 +37,7 @@ table tr td {
   width: 20%;
 }
 
-a.md-button.orangeBtn {
+button.md-raised.md-primary.right.orangeBtn.md-button.md-default-theme {
   background-color: #FFD200;
   color: #616161;
   cursor: pointer;
