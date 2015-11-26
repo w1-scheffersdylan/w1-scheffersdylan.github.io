@@ -117,6 +117,15 @@ $("#controls").submit(function() {
       });
 
 
+      $("#addRequirementValue:focus").keypress(function(){
+        var key = e.which;
+        if( key == 13 ) { // the enter button
+          requirementsArraz.push($("#addRequirementValue").val());
+          $('#storyDataTable').append("<tr><td>Story requirements: </td><td> (ACCEPTANCE CRITERIA) </td><td>" + requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/>");
+          $("#addRequirementValue").val("");
+        }
+      });
+
        
        $('#btnNewStory').click(function () {
           $("#step2Container").fadeOut();
