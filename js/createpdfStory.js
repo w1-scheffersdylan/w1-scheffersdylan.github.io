@@ -111,21 +111,11 @@ $("#controls").submit(function() {
       $("#addRequirement").click(function() {
         if( $("#addRequirementValue").val() != "" ) {
            requirementsArraz.push($("#addRequirementValue").val());
-           $('#requirementsTable').append("<tr><td>Story requirements: (ACCEPTANCE CRITERIA)</td><td>" + requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/>");
+           $('#requirementsTable').append("<tr><td>Story requirements: </td><td> (ACCEPTANCE CRITERIA) </td><td>" + requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/>");
 
         }
       });
 
-
-
-      // if( storyDataName != "" ){
-      //   $('body').css('background-color', '#E0E0E0').css('color', '#616161').css('font-family', 'Roboto');
-      //   $('input').css('border-radius', '2px').css('color', '#616161').css('cursor', 'pointer');
-      //   $('#btnOpenPDF').css('background-color', '#26BF59').css('border', '5px solid #26BF59').css('color', '#FFF');
-      //   $('#btnSavePDF').css('background-color', '#26BF59').css('border', '5px solid #26BF59').css('color', '#FFF');
-      //   $('#btnNewStory').css('background-color', '#FFD200').css('border', '5px solid #FFD200');
-      //   $('#addRequirementValue').css('background-color', '#E0E0E0').css('border', '0px solid #FFD200').css('border-bottom', '1px solid #616161').css('font-family', 'Roboto').css('width', '327px').css('cursor', 'auto');
-      // }
 
        
        $('#btnNewStory').click(function () {
