@@ -78,6 +78,10 @@ a.md-button.md-primary.md-raised.blueBtn, a.md-button.md-primary.md-fab.blueBtn,
   height: 100%;*/
 }
 
+#addRequirementValue {
+  width: 360px;
+}
+
 #step1Container, #step2Container {
   display: none;
 }
