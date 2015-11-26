@@ -112,7 +112,7 @@ $("#controls").submit(function() {
         if( $("#addRequirementValue").val() != "" ) {
            requirementsArraz.push($("#addRequirementValue").val());
            $('#requirementsTable').append("<tr><td>Story requirements: </td><td> (ACCEPTANCE CRITERIA) </td><td>" + requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/>");
-           $("#addRequirementValue").val().empty();
+           $("#addRequirementValue").empty();
         }
       });
 
