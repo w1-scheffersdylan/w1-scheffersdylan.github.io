@@ -124,3 +124,8 @@ a.md-button.md-primary.md-raised.blueBtn, a.md-button.md-primary.md-fab.blueBtn,
   height: 36px;
   outline: none;
 }
+
+.infoText {
+  font-size: 10px;
+  font-style: italic;
+}
