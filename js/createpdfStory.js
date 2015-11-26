@@ -120,9 +120,11 @@ $("#controls").submit(function() {
       $("#addRequirementValue").keypress(function(e){
         var key = e.which;
         if( key == 13 ) { // the enter button
-          requirementsArraz.push($("#addRequirementValue").val());
-          $('#storyDataTable').append("<tr><td>Story requirements: </td><td> (ACCEPTANCE CRITERIA) </td><td>" + requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/>");
-          $("#addRequirementValue").val("");
+          if( $("#addRequirementValue").val() != "" ) {
+            requirementsArraz.push($("#addRequirementValue").val());
+            $('#storyDataTable').append("<tr><td>Story requirements: </td><td> (ACCEPTANCE CRITERIA) </td><td>" + requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/>");
+            $("#addRequirementValue").val("");
+          }
         }
       });
 
