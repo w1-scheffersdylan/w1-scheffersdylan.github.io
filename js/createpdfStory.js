@@ -50,8 +50,8 @@ $("#controls").submit(function() {
       var storyDataEpic =response.feature.initiative.name;
     }
 
-    $("#step1Container").fadeOut("slow");
-    $("#step2Container").fadeIn("fast");
+    $("#step1Container").fadeOut();
+    $("#step2Container").fadeIn();
 
     $("#ticket-id").text(storyDataNumber);
     $("#title").text(storyDataName);
