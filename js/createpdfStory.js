@@ -36,7 +36,7 @@ $("#controls").submit(function() {
     var storyDataGroom = response.feature.original_estimate.toString();
     var storyDataDescriptionOrginal = response.feature.description.body;
 
-    //var storyDataDescription = storyDataDescriptionOrginal.replace(/(<([^>]+)>)/ig,"");
+    var storyDataDescription = storyDataDescriptionOrginal.replace(/(<([^>]+)>)/ig,"");
 
     //var storyDataEpic = JSON.stringify(response.feature.initiative.name).slice(1, -1);
 
