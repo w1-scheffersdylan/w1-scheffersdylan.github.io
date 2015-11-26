@@ -41,7 +41,7 @@ $("#controls").submit(function() {
     //var storyDataEpic = JSON.stringify(response.feature.initiative.name).slice(1, -1);
 
     // check for &nbsp;
-    "storyDataDescription".replace('&nbsp;','HelloooooooooooooAOOOODODFS');
+    storyDataDescription.replace('&nbsp;','HelloooooooooooooAOOOODODFS');
 
     // check if the grooming has a number
     if(storyDataGroom == "null"){
