@@ -86,7 +86,6 @@ $("#controlsSprint").submit(function() {
         SprintDataStoryNumber.push(response.features[i]["reference_num"])
       }
 
-      alert(SprintDataStoryNumber);
 
 
 
@@ -113,6 +112,7 @@ $("#controlsSprint").submit(function() {
             SprintDataStoryEpic.push(response.feature.initiative.name);
           }
 
+          console.log(SprintDataStoryNumber[number]);
           console.log(SprintDataStoryGroom[number]);
           console.log(SprintDataStoryDescription[number]);
           console.log(SprintDataStoryEpic[number]);
