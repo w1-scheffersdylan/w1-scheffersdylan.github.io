@@ -163,8 +163,9 @@ $("#controlsSprint").submit(function() {
             
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+      var number = 0;
       // create PDF (using PDFmake)
-      $('#btnOpenPDFSprint').click(function () {
+      $('#btnOpenPDFSprint'[number]).click(function () {
           
       // // check if their are requirements (acceptance criteria) added to the story
       // if(requirementsArraz[0] == "" || requirementsArraz[0] == undefined || requirementsArraz[0] == null){
