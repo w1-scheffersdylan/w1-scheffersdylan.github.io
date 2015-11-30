@@ -163,10 +163,10 @@ $("#controlsSprint").submit(function() {
             
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-      
+      alert();
       var number = '#btnOpenPDFSprint0';
       // create PDF (using PDFmake)
-      $('#btnOpenPDFSprint0').click(function () {
+      $('#btnOpenPDFSprint1').click(function () {
 
         alert();
           
