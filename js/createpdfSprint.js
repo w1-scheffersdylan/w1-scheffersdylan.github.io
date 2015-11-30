@@ -63,7 +63,7 @@ $("#controlsSprint").submit(function() {
     // init the looping
     fectchSprintDataStoryResource(0);
 
-    console.log(SprintDataStoryResource[]);
+    console.log(SprintDataStoryResource);
       
 
      // show data of story
