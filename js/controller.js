@@ -3,6 +3,10 @@ var ahapdfApp = angular.module('ahapdfApp',['ngMaterial']);
 
 ahapdfApp.controller('homeController', function ($scope)
 {
-	this.userState = '';
-	this.states = ('WEB INSPECT').split(' ').map(function (state) { return { abbrev: state }; });
+	$scope.productKeys = [
+
+		{"name": "WEB"},
+		{"name": "INSPECT"}
+
+	];
 }); // end controller     
