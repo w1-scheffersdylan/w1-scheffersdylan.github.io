@@ -194,11 +194,11 @@ $("#controls").submit(function() {
 
               
 
-              addToPDF()
+              
 
 
               
-              ,
+              
               // some style for the webpage
               styles: {
                 mediumText: {
@@ -221,7 +221,7 @@ $("#controls").submit(function() {
 
               },
 
-              
+              addToPDF()
             } // close var docDefinition
 
             
