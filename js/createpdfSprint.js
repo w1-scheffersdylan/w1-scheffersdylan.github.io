@@ -48,8 +48,8 @@ $("#controlsSprint").submit(function() {
 
      // show data of story
      document.write('<p><input type="submit" class="btn right" id="btnOpenPDFSprint" value="Open sprint as PDF"></input> <input type="submit" class="btn right" id="btnSavePDFSprint" value="Save sprint as PDF"></input></p>');
-      document.write("<h2>Sprint details</h2>");
-      document.write("<table>");
+      // document.write("<h2>Sprint details</h2>");
+      // document.write("<table>");
 
         // document.write("<tr><td>Story number:</td><td> (TICKET-ID)</td><td>");
         // document.write(storyDataNumber + "</td><tr/>");
@@ -57,7 +57,7 @@ $("#controlsSprint").submit(function() {
 
         for( i = 0; i < response.features.length; i++ ){
           SprintDataStoryName.push(response.features[i]["name"])
-          document.write("<tr><td>Story name:</td><td> (TITLE)</td><td>" + SprintDataStoryName[i] + "</td></tr>");
+          // document.write("<tr><td>Story name:</td><td> (TITLE)</td><td>" + SprintDataStoryName[i] + "</td></tr>");
         }
 
 
@@ -69,9 +69,9 @@ $("#controlsSprint").submit(function() {
         // document.write("<tr><td>Story description:</td><td> (STORY)</td><td>");
         // document.write(storyDataDescription + "</td><tr/>");      
 
-      document.write("</table>");
+      // document.write("</table>");
 
-      document.write("<br />");
+      // document.write("<br />");
 
 
 
@@ -108,6 +108,11 @@ $("#controlsSprint").submit(function() {
             SprintDataStoryEpic.push(response.feature.initiative.name);
           }
 
+          document.write("<table><tr><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + "</td><tr/>");
+          document.write("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[number] + "</td><tr/>");
+          document.write("<tr><td> Story: </td><td>" + SprintDataStoryDescription[number] + "</td><tr/>");
+          document.write("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[number] + "</td><tr/></table>");
+
           console.log(SprintDataStoryNumber[number]);
           console.log(SprintDataStoryGroom[number]);
           console.log(SprintDataStoryDescription[number]);
@@ -119,6 +124,8 @@ $("#controlsSprint").submit(function() {
         }); // close api.get 
 
       }
+
+
       // init the looping
       fectchSprintDataStoryGroomDescription(0);
 
