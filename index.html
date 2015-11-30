@@ -83,7 +83,7 @@
               <td><!--<input type="text" placeholder="Product key" id="product-key" value="WEB"></input>-->
 
                   <md-input-container>
-                    <label>Product Key</label>
+                    <label>{{productKey.name}}</label>
                     <md-select ng-model="productKeys">
                       <md-option ng-repeat="productKey in productKeys" value="{{productKeys.name}}">
                         {{productKey.name}}
