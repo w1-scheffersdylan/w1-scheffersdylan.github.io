@@ -79,31 +79,11 @@ $("#controlsSprint").submit(function() {
         SprintDataStoryNumber.push(response.features[i]["reference_num"])
       }
 
+      alert(SprintDataStoryNumber);
 
 
 
 
-    var SprintDataStoryResource = [];
-
-    function fectchSprintDataStoryResource(number){
-        
-      api.get("/products/" + productKey + "/features/" + SprintDataStoryNumber[number], {}, function(response) {
-
-        SprintDataStoryResource.push(JSON.stringify(response.features.resource));
-
-        console.log(SprintDataStoryResource[number]);
-
-        // console.log(requirementsArraz);
-
-        fectchSprintDataStoryResource(number + 1);
-         
-      }); // close api.get 
-
-    }
-    // init the looping
-    fectchSprintDataStoryResource(1);
-
-    console.log(SprintDataStoryResource);
 
 
 
