@@ -219,7 +219,7 @@ $("#controls").submit(function() {
 
 
             // open the PDF in a new window
-            pdfMake.createPdf(docDefinition).open();
+            pdfMake.createPdf(docDefinition, docDefinition).open();
 
             
 
