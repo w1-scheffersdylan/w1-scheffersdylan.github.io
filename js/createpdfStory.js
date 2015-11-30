@@ -17,16 +17,7 @@ $("#controls").submit(function() {
     var storyNumber = $("#storyNumber").val();
 
     // check if story is in Aha!
-    $.ajax({
-        type: 'HEAD',
-        url: api.get("/products/" + productKey + "/features/" + storyNumber),
-    success: function() {
-            alert("YES");
-    },
-    error: function() {
-            alert("NO");
-    }
-    });
+
     
     // URL to story
     api.get("/products/" + productKey + "/features/" + storyNumber, {}, function(response) {
