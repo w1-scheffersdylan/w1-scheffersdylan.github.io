@@ -26,7 +26,7 @@ $("#controlsSprint").submit(function() {
 
               
     // alerts for test
-    alert(response.features);
+    alert(JSON.stringify(response.features);
     //alert( response.features[0]["name"] );
 
     //document.write(JSON.stringify(response.features));
@@ -81,6 +81,7 @@ $("#controlsSprint").submit(function() {
       var SprintDataStoryGroom = [];
       // get all story descriptions in a array
       var SprintDataStoryDescription = [];
+
       function fectchSprintDataStoryGroomDescription(number){
         
         api.get("/products/" + productKey + "/features/" + SprintDataStoryNumber[number], {}, function(response) {
