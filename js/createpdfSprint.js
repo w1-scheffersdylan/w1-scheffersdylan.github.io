@@ -73,7 +73,14 @@ $("#controlsSprint").submit(function() {
 
       document.write("<br />");
 
-      // put all ticket-id's in a array
+
+
+      //////////////////////////////////////////////////////////////////////////////////////////////////
+      // GET ALL DATA FROM STORIES
+
+
+
+      // put all ticket-id's in an array
       var SprintDataStoryNumber = [];
       for( i = 0; i < response.features.length; i++ ){
         SprintDataStoryNumber.push(response.features[i]["reference_num"])
@@ -84,29 +91,32 @@ $("#controlsSprint").submit(function() {
 
 
 
-
-
-
-
-
-
-
-      // get all grooming points in a array
+      // get all grooming points in an array
       var SprintDataStoryGroom = [];
-      // get all story descriptions in a array
+      // get all story descriptions in an array
       var SprintDataStoryDescription = [];
+      // get all epic in an array
+      var SprintDataStoryEpic = [];
 
       function fectchSprintDataStoryGroomDescription(number){
         
         api.get("/products/" + productKey + "/features/" + SprintDataStoryNumber[number], {}, function(response) {
 
-          SprintDataStoryGroom.push(JSON.stringify(response.feature.original_estimate));
-          SprintDataStoryDescription.push(JSON.stringify(response.feature.description.body).slice(4, -5));
+          SprintDataStoryGroom.push(response.feature.original_estimate.toString());
+          SprintDataStoryDescription.push(response.feature.description.body);
+
+          // check if their is a epic
+          if( typeof JSON.stringify(response.feature.initiative) === 'undefined'){
+            SprintDataStoryEpic.push("");
+          }
+          else {
+            SprintDataStoryEpic.push(response.feature.initiative.name);
+          }
 
           console.log(SprintDataStoryGroom[number]);
           console.log(SprintDataStoryDescription[number]);
+          console.log(SprintDataStoryEpic[number]);
 
-          // console.log(requirementsArraz);
 
           fectchSprintDataStoryGroomDescription(number + 1);
            
@@ -118,25 +128,27 @@ $("#controlsSprint").submit(function() {
 
 
 
-      var SprintDataStoryDescriptionRequirements = [];
-      function fetchSprintDataStoryDescriptionRequirements(number){
+
+
+      // var SprintDataStoryDescriptionRequirements = [];
+      // function fetchSprintDataStoryDescriptionRequirements(number){
         
-        api.get("/requirements/" + SprintDataStoryNumber[0] + "-" + number, {}, function(response) {
+      //   api.get("/requirements/" + SprintDataStoryNumber[0] + "-" + number, {}, function(response) {
 
-          SprintDataStoryDescriptionRequirements.push(response.requirement.name);
-          document.write("<table><tr><td>Story requirements: (ACCEPTANCE CRITERIA)</td><td>");
-          document.write(response.requirement.name+ "</td><tr/></table>");
+      //     SprintDataStoryDescriptionRequirements.push(response.requirement.name);
+      //     document.write("<table><tr><td>Story requirements: (ACCEPTANCE CRITERIA)</td><td>");
+      //     document.write(response.requirement.name+ "</td><tr/></table>");
 
-          // console.log(requirementsArraz);
+      //     // console.log(requirementsArraz);
 
-          fetchSprintDataStoryDescriptionRequirements(number + 1);
+      //     fetchSprintDataStoryDescriptionRequirements(number + 1);
            
-        }); // close api.get 
+      //   }); // close api.get 
 
-      }
+      // }
       
-      // init the looping
-      fetchSprintDataStoryDescriptionRequirements(1);
+      // // init the looping
+      // fetchSprintDataStoryDescriptionRequirements(1);
 
     
             
