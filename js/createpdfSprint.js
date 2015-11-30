@@ -47,8 +47,8 @@ $("#controlsSprint").submit(function() {
       
 
      // show data of story
-     // document.write('<p><input type="submit" class="btn right" id="btnOpenPDFSprint" value="Open sprint as PDF"></input> <input type="submit" class="btn right" id="btnSavePDFSprint" value="Save sprint as PDF"></input></p>');
-      // document.write("<h2>Sprint details</h2>");
+     document.write('<p><input type="submit" class="btn right" id="btnOpenPDFSprint" value="Open sprint as PDF"></input> <input type="submit" class="btn right" id="btnSavePDFSprint" value="Save sprint as PDF"></input></p>');
+      document.write("<h2>Sprint details</h2>");
       // document.write("<table>");
 
         // document.write("<tr><td>Story number:</td><td> (TICKET-ID)</td><td>");
@@ -111,17 +111,17 @@ $("#controlsSprint").submit(function() {
             SprintDataStoryEpic.push(response.feature.initiative.name);
           }
 
-          document.write("<table><tr><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + '<input type="submit" class="btn right" id="btnOpenPDFSprint'+[number]+'" value="OPEN story as PDF ' + [number] + ' "></input>' + "</td><tr/>");
+          document.write("<table><tr><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + "</td><tr/>");
           document.write("<tr><td> Title: </td><td>" + SprintDataStoryTitle[number] + "</td><tr/>");
           document.write("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[number] + "</td><tr/>");
           document.write("<tr><td> Story: </td><td>" + SprintDataStoryDescription[number] + "</td><tr/>");
           document.write("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[number] + "</td><tr/></table><br /><br />");
 
-          console.log(SprintDataStoryTitle);
-          console.log(SprintDataStoryNumber[number]);
-          console.log(SprintDataStoryGroom[number]);
-          console.log(SprintDataStoryDescription[number]);
-          console.log(SprintDataStoryEpic[number]);
+          // console.log(SprintDataStoryTitle);
+          // console.log(SprintDataStoryNumber[number]);
+          // console.log(SprintDataStoryGroom[number]);
+          // console.log(SprintDataStoryDescription[number]);
+          // console.log(SprintDataStoryEpic[number]);
 
 
           fectchSprintDataStoryGroomDescription(number + 1);
@@ -163,10 +163,9 @@ $("#controlsSprint").submit(function() {
             
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-      alert();
       var number = '#btnOpenPDFSprint0';
       // create PDF (using PDFmake)
-      $('#btnOpenPDFSprint1').click(function () {
+      $('#btnOpenPDFSprint').click(function () {
 
         alert();
           
