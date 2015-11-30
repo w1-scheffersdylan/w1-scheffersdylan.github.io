@@ -26,7 +26,7 @@ $("#controlsSprint").submit(function() {
 
               
     // alerts for test
-    alert(JSON.stringify(response.features));
+    //alert(JSON.stringify(response.features));
     //alert( response.features[0]["name"] );
 
     //document.write(JSON.stringify(response.features));
@@ -128,8 +128,10 @@ $("#controlsSprint").submit(function() {
 
       var SprintDataStoryRequirements = [];
       function fetchSprintDataStoryRequirements(number){
+
+        var numberRequirement = number++;
         
-        api.get("/requirements/" + SprintDataStoryNumber[number] + "-" + number++, {}, function(response) {
+        api.get("/requirements/" + SprintDataStoryNumber[number] + "-" + numberRequirement, {}, function(response) {
 
           SprintDataStoryRequirements.push(response.requirement.name);
 
