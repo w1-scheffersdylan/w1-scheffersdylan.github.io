@@ -111,7 +111,7 @@ $("#controlsSprint").submit(function() {
             SprintDataStoryEpic.push(response.feature.initiative.name);
           }
 
-          document.write("<table><tr><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + '<input type="submit" class="btn right" id="btnOpenPDFSprint'[number]'" value="Open sprint as PDF' [number]'"></input>' + "</td><tr/>");
+          document.write("<table><tr><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + '<input type="submit" class="btn right" id="btnOpenPDFSprint ' + [number] + ' " value="Open sprint as PDF ' + [number] + ' "></input>' + "</td><tr/>");
           document.write("<tr><td> Title: </td><td>" + SprintDataStoryTitle[number] + "</td><tr/>");
           document.write("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[number] + "</td><tr/>");
           document.write("<tr><td> Story: </td><td>" + SprintDataStoryDescription[number] + "</td><tr/>");
