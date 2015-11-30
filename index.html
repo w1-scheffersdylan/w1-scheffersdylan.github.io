@@ -83,9 +83,9 @@
               <td><!--<input type="text" placeholder="Product key" id="product-key" value="WEB"></input>-->
 
                   <md-input-container>
-                    <label>State</label>
-                      <md-select ng-model="ctrl.userState">
-                        <md-option ng-repeat="state in ctrl.states" value="{{state.abbrev}}">
+                    <label>States</label>
+                      <md-select ng-model="userState">
+                        <md-option ng-repeat="state in states" value="{{state.abbrev}}">
                           {{state.abbrev}}
                         </md-option>
                       </md-select>
