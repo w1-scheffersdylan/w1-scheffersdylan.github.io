@@ -111,6 +111,9 @@ $("#controlsSprint").submit(function() {
             SprintDataStoryEpic.push(response.feature.initiative.name);
           }
 
+          document.write('<p><input type="submit" class="btn right" id="btnOpenPDFSprint'+[number]+'" value="Open sprint as PDF"></input> <input type="submit" class="btn right" id="btnSavePDFSprint'+[number]+'" value="Save sprint as PDF"></input></p>');
+          document.write("<h2>Sprint details</h2>");
+
           document.write("<table><tr><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + "</td><tr/>");
           document.write("<tr><td> Title: </td><td>" + SprintDataStoryTitle[number] + "</td><tr/>");
           document.write("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[number] + "</td><tr/>");
@@ -162,10 +165,10 @@ $("#controlsSprint").submit(function() {
     
             
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+alert();
       var number = '#btnOpenPDFSprint0';
       // create PDF (using PDFmake)
-      $('#btnOpenPDFSprint').click(function () {
+      $('#btnOpenPDFSprint1').click(function () {
 
         alert();
           
