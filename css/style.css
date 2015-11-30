@@ -86,7 +86,7 @@ button#addRequirement {
   left: 0;
 }
 
- #subdomain, #sprintDiv {
+ #subdomain {
   display: none;
 }
 
