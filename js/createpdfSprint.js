@@ -86,10 +86,6 @@ $("#controlsSprint").submit(function() {
         SprintDataStoryNumber.push(response.features[i]["reference_num"])
       }
 
-
-
-
-
       // get all grooming points in an array
       var SprintDataStoryGroom = [];
       // get all story descriptions in an array
@@ -130,25 +126,24 @@ $("#controlsSprint").submit(function() {
 
 
 
-      // var SprintDataStoryDescriptionRequirements = [];
-      // function fetchSprintDataStoryDescriptionRequirements(number){
+      var SprintDataStoryRequirements = [];
+      function fetchSprintDataStoryRequirements(number){
         
-      //   api.get("/requirements/" + SprintDataStoryNumber[0] + "-" + number, {}, function(response) {
+        api.get("/requirements/" + SprintDataStoryNumber[number] + "-" + number++, {}, function(response) {
 
-      //     SprintDataStoryDescriptionRequirements.push(response.requirement.name);
-      //     document.write("<table><tr><td>Story requirements: (ACCEPTANCE CRITERIA)</td><td>");
-      //     document.write(response.requirement.name+ "</td><tr/></table>");
+          SprintDataStoryRequirements.push(response.requirement.name);
 
-      //     // console.log(requirementsArraz);
+          console.log(SprintDataStoryRequirements[number]);
 
-      //     fetchSprintDataStoryDescriptionRequirements(number + 1);
+
+          fetchSprintDataStoryRequirements(number + 1);
            
-      //   }); // close api.get 
+        }); // close api.get 
 
-      // }
+      }
       
-      // // init the looping
-      // fetchSprintDataStoryDescriptionRequirements(1);
+      // init the looping
+      fetchSprintDataStoryRequirements(0);
 
     
             
