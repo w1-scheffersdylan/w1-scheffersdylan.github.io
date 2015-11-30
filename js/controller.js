@@ -5,5 +5,5 @@ ahapdfApp.controller('homeController', function ($scope)
 {
 	$scope.userState = '';
 	$scope.select = {name: "WEB"};
-    $scope.states = ('WEB INSPECT').split(' ').map(function (state) { return { abbrev: state }; });
+    $scope.states = [{name: "WEB"}, {name: "INSPECT"}];
 }); // end controller     
