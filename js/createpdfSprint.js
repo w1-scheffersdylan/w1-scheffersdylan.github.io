@@ -138,32 +138,32 @@ $("#controlsSprint").submit(function() {
 
 
 
-      var SprintDataStoryRequirements = [];
-      function fetchSprintDataStoryRequirements(number){
+      // var SprintDataStoryRequirements = [];
+      // function fetchSprintDataStoryRequirements(number){
 
-        var numberRequirement = 1;
+      //   var numberRequirement = 1;
         
-        api.get("/requirements/" + SprintDataStoryNumber[number] + "-" + numberRequirement, {}, function(response) {
+      //   api.get("/requirements/" + SprintDataStoryNumber[number] + "-" + numberRequirement, {}, function(response) {
 
-          SprintDataStoryRequirements.push(response.requirement.name);
+      //     SprintDataStoryRequirements.push(response.requirement.name);
 
-          console.log(SprintDataStoryRequirements[number]);
+      //     console.log(SprintDataStoryRequirements[number]);
 
 
-          fetchSprintDataStoryRequirements(number + 1);
+      //     fetchSprintDataStoryRequirements(number + 1);
            
-        }); // close api.get 
+      //   }); // close api.get 
 
-      }
+      // }
       
-      // init the looping
-      fetchSprintDataStoryRequirements(2);
+      // // init the looping
+      // fetchSprintDataStoryRequirements(2);
 
     
             
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-      alert();
+      
       var number = '#btnOpenPDFSprint0';
       // create PDF (using PDFmake)
       $('#btnOpenPDFSprint0').click(function () {
@@ -210,34 +210,36 @@ $("#controlsSprint").submit(function() {
                     width: 120,
                     //fit: [100, 100]
                      
-                    },
-                                            
-                    {
-                        color: '#444', // not sure if this one is used
-                        
-                        table: {
-                            // grid system for the width 5% * 20 = 100%
-                            widths: [ '5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%' ],
-                            heights: [ '10%', '10%', '40%', '40%' ],
-                            headerRows: 0, // not sure if this one is used
-                            body: [
-                                [{ text: [ 'TICKET-ID: \n \n', { text: 'storyDataNumber', style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
-                                 { text: [ 'TITLE: \n \n', { text: 'storyDataName', style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text: 'PRIORITY:\n' + '\n \n', colSpan: 3, rowSpan: 2 }, '', ''],
-
-                                [{ text: [ 'EPIC:\n', { text: 'storyDataEpic', style: 'mediumText', alignment: 'center' }], colSpan: 11 }, '', '', '', '', '', '', '', '', '', '', 
-                                 { text: ['GROOM: \n', { text: 'storyDataGroom', style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
-                                 { text: 'CORR: \n' + '\n \n', colSpan: 2 }, '', 
-                                 { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
-
-                                [{ text: [ 'STORY: \n \n', { text: 'storyDataDescription', style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text:'NOTES:\n \n \n \n \n \n \n \n ', colSpan: 6 }, '', '', '', '', ''],
-
-                                [{ text: 'ACCEPTANCE CRITERIA: \n \n' + 'requirementsArraz.join("\n")', colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & beautify Code \n \n __ Quality assurance by PO' , colSpan: 6 }, '', '', '', '', ''],
-                            ]
-                        }
                     }
+
+                    //,
+                                            
+                    // {
+                    //     color: '#444', // not sure if this one is used
+                        
+                    //     table: {
+                    //         // grid system for the width 5% * 20 = 100%
+                    //         widths: [ '5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%' ],
+                    //         heights: [ '10%', '10%', '40%', '40%' ],
+                    //         headerRows: 0, // not sure if this one is used
+                    //         body: [
+                    //             [{ text: [ 'TICKET-ID: \n \n', { text: 'storyDataNumber', style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
+                    //              { text: [ 'TITLE: \n \n', { text: 'storyDataName', style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
+                    //              { text: 'PRIORITY:\n' + '\n \n', colSpan: 3, rowSpan: 2 }, '', ''],
+
+                    //             [{ text: [ 'EPIC:\n', { text: 'storyDataEpic', style: 'mediumText', alignment: 'center' }], colSpan: 11 }, '', '', '', '', '', '', '', '', '', '', 
+                    //              { text: ['GROOM: \n', { text: 'storyDataGroom', style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
+                    //              { text: 'CORR: \n' + '\n \n', colSpan: 2 }, '', 
+                    //              { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
+
+                    //             [{ text: [ 'STORY: \n \n', { text: 'storyDataDescription', style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
+                    //              { text:'NOTES:\n \n \n \n \n \n \n \n ', colSpan: 6 }, '', '', '', '', ''],
+
+                    //             [{ text: 'ACCEPTANCE CRITERIA: \n \n' + 'requirementsArraz.join("\n")', colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
+                    //              { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & beautify Code \n \n __ Quality assurance by PO' , colSpan: 6 }, '', '', '', '', ''],
+                    //         ]
+                    //     }
+                    // }
 
 
               ]
