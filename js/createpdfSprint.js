@@ -166,7 +166,7 @@ $("#controlsSprint").submit(function() {
       alert();
       var number = '#btnOpenPDFSprint0';
       // create PDF (using PDFmake)
-      $(number).click(function () {
+      $('#btnOpenPDFSprint0').click(function () {
 
         alert();
           
