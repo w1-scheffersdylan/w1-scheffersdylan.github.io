@@ -26,8 +26,8 @@ $("#controlsSprint").submit(function() {
 
               
     // alerts for test
-    // alert(JSON.stringify(response, null, 4));
-    // alert( response.features[0]["name"] );
+    alert(response);
+    //alert( response.features[0]["name"] );
 
     //document.write(JSON.stringify(response.features));
 
