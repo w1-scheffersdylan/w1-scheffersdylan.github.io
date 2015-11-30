@@ -66,7 +66,7 @@ $("#controls").submit(function() {
         api.get("/requirements/" + storyNumber + "-" + number, {}, function(response) {
 
           requirementsArraz.push(response.requirement.name);
-          $('#storyDataTable').append("<tr><td>Story requirements: </td><td> (ACCEPTANCE CRITERIA) </td><td>" + response.requirement.name+ "</td><tr/>");
+          $('#storyDataTable').append("<tr><td> Acceptance criteria: </td><td>" + response.requirement.name+ "</td><tr/>");
 
           // console.log(requirementsArraz);
 
@@ -84,7 +84,7 @@ $("#controls").submit(function() {
       $("#addRequirement").click(function() {
         if( $("#addRequirementValue").val() != "" ) {
            requirementsArraz.push($("#addRequirementValue").val());
-           $('#storyDataTable').append("<tr><td>Story requirements: </td><td> (ACCEPTANCE CRITERIA) </td><td>" + requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/>");
+           $('#storyDataTable').append("<tr><td> Acceptance criteria: </td><td>" + requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/>");
            $("#addRequirementValue").val("");
         }
       });
@@ -95,7 +95,7 @@ $("#controls").submit(function() {
         if( key == 13 ) { // the enter button
           if( $("#addRequirementValue").val() != "" ) {
             requirementsArraz.push($("#addRequirementValue").val());
-            $('#storyDataTable').append("<tr><td>Story requirements: </td><td> (ACCEPTANCE CRITERIA) </td><td>" + requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/>");
+            $('#storyDataTable').append("<tr><td> Acceptance criteria: </td><td>" + requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/>");
             $("#addRequirementValue").val("");
           }
         }
