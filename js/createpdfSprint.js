@@ -115,7 +115,7 @@ $("#controlsSprint").submit(function() {
           document.write("<tr><td> Title: </td><td>" + SprintDataStoryTitle[number] + "</td><tr/>");
           document.write("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[number] + "</td><tr/>");
           document.write("<tr><td> Story: </td><td>" + SprintDataStoryDescription[number] + "</td><tr/>");
-          document.write("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[number] + "</td><tr/></table>");
+          document.write("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[number] + "</td><tr/></table><br /><br />");
 
           console.log(SprintDataStoryTitle);
           console.log(SprintDataStoryNumber[number]);
