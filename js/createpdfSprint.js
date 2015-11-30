@@ -47,7 +47,7 @@ $("#controlsSprint").submit(function() {
       
 
      // show data of story
-     document.write('<p><input type="submit" class="btn right" id="btnOpenPDFSprint" value="Open sprint as PDF"></input> <input type="submit" class="btn right" id="btnSavePDFSprint" value="Save sprint as PDF"></input></p>');
+     // document.write('<p><input type="submit" class="btn right" id="btnOpenPDFSprint" value="Open sprint as PDF"></input> <input type="submit" class="btn right" id="btnSavePDFSprint" value="Save sprint as PDF"></input></p>');
       // document.write("<h2>Sprint details</h2>");
       // document.write("<table>");
 
@@ -111,7 +111,7 @@ $("#controlsSprint").submit(function() {
             SprintDataStoryEpic.push(response.feature.initiative.name);
           }
 
-          document.write("<table><tr><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + "</td><tr/>");
+          document.write("<table><tr><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + '<input type="submit" class="btn right" id="btnOpenPDFSprint'[number]'" value="Open sprint as PDF' [number]'"></input>' + "</td><tr/>");
           document.write("<tr><td> Title: </td><td>" + SprintDataStoryTitle[number] + "</td><tr/>");
           document.write("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[number] + "</td><tr/>");
           document.write("<tr><td> Story: </td><td>" + SprintDataStoryDescription[number] + "</td><tr/>");
