@@ -92,6 +92,8 @@ $("#controlsSprint").submit(function() {
       var SprintDataStoryDescription = [];
       // get all epic in an array
       var SprintDataStoryEpic = [];
+      // get all title in an array
+      var SprintDataStoryTitle = [];
 
       function fectchSprintDataStoryGroomDescription(number){
         
@@ -99,6 +101,7 @@ $("#controlsSprint").submit(function() {
 
           SprintDataStoryGroom.push(response.feature.original_estimate.toString());
           SprintDataStoryDescription.push(response.feature.description.body);
+          SprintDataStoryTitle.push(response.feature.name);
 
           // check if their is a epic
           if( typeof JSON.stringify(response.feature.initiative) === 'undefined'){
@@ -109,10 +112,12 @@ $("#controlsSprint").submit(function() {
           }
 
           document.write("<table><tr><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + "</td><tr/>");
+          document.write("<tr><td> Title: </td><td>" + SprintDataStoryTitle[number] + "</td><tr/>");
           document.write("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[number] + "</td><tr/>");
           document.write("<tr><td> Story: </td><td>" + SprintDataStoryDescription[number] + "</td><tr/>");
           document.write("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[number] + "</td><tr/></table>");
 
+          console.log(SprintDataStoryTitle);
           console.log(SprintDataStoryNumber[number]);
           console.log(SprintDataStoryGroom[number]);
           console.log(SprintDataStoryDescription[number]);
