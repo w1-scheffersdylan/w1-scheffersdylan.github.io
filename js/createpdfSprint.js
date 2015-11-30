@@ -129,7 +129,7 @@ $("#controlsSprint").submit(function() {
       var SprintDataStoryRequirements = [];
       function fetchSprintDataStoryRequirements(number){
 
-        var numberRequirement = number++;
+        var numberRequirement = 1;
         
         api.get("/requirements/" + SprintDataStoryNumber[number] + "-" + numberRequirement, {}, function(response) {
 
