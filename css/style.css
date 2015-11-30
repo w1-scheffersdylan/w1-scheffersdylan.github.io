@@ -86,7 +86,7 @@ button#addRequirement {
   left: 0;
 }
 
-#product-key, #subdomain, #sprintDiv {
+ #subdomain, #sprintDiv {
   display: none;
 }
 
