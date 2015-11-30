@@ -194,7 +194,7 @@ $("#controls").submit(function() {
 
               
 
-              addToPDF();
+              addToPDF()
 
 
               
