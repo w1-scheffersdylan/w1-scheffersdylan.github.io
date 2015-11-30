@@ -85,8 +85,8 @@
                   <md-input-container>
                     <label>Product Key</label>
                       <md-select ng-model="userState">
-                        <md-option ng-repeat="state in states" value="{{state.abbrev}}" selected="{{ state.abbrev === select.name ? 'selected' : '' }}">
-                          {{state.abbrev}}
+                        <md-option ng-repeat="state in states" value="{{state.name}}" selected="{{ state.name === select.name ? 'selected' : '' }}">
+                          {{state.name}}
                         </md-option>
                       </md-select>
                   </md-input-container>
