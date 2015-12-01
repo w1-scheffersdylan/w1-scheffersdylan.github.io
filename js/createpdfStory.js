@@ -25,6 +25,7 @@ $("#controls").submit(function() {
     var storyDataName = response.feature.name;
     var storyDataGroom = response.feature.original_estimate;
 
+    // check if the grooming has a number
     if(storyDataGroom != "null"){
       storyDataGroom.toString();
     }
@@ -37,11 +38,7 @@ $("#controls").submit(function() {
     // remove all HTML and &nbsp; from storyDataDescriptionOrginal
     var storyDataDescriptionNoHTML = storyDataDescriptionOrginal.replace(/(<([^>]+)>)/ig,"");
     var storyDataDescription = storyDataDescriptionNoHTML.replace(/&nbsp;/gi,'');   
-
-    // check if the grooming has a number
-    // if(storyDataGroom == "null"){
-    //   storyDataGroom = "";
-    // }
+ 
 
     // check if their is a epic
     if( typeof JSON.stringify(response.feature.initiative) === 'undefined'){
