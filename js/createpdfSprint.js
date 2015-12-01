@@ -180,6 +180,12 @@ $("#controlsSprint").submit(function() {
           
           console.log(SprintDataStoryRequirements);
 
+          for(var i = 0; i < SprintDataStoryRequirements.length; i++){
+            SprintDataStoryRequirements[i].shift();
+          }
+
+          console.log(SprintDataStoryRequirements);
+
           var docDefinition = {
 
        
