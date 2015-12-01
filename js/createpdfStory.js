@@ -26,7 +26,7 @@ $("#controls").submit(function() {
     var storyDataGroom = response.feature.original_estimate;
 
     // check if the grooming has a number
-    if(storyDataGroom != "null"){
+    if(storyDataGroom != null){
       storyDataGroom.toString();
     }
     else{
