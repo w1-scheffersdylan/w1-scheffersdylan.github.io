@@ -138,30 +138,33 @@ $("#controlsSprint").submit(function() {
       fectchSprintDataStoryGroomDescription(0);
 
 
-
-
-
-      var SprintDataStoryRequirements1 = [];
-      function fetchSprintDataStoryRequirements(number){
-
-        
-        api.get("/requirements/" + SprintDataStoryNumber[0] + "-" + number, {}, function(response) {
-
-          SprintDataStoryRequirements1.push(response.requirement.name);
-
-          document.write(SprintDataStoryRequirements1[number - 1]);
-
-
-          fetchSprintDataStoryRequirements(number + 1);
-           
-        }); // close api.get 
-
+      var SprintDataStoryRequirements = [];
+      for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
+        SprintDataStoryRequirements.push([i]);
       }
       
-      // init the looping
-      fetchSprintDataStoryRequirements(1);
+
+      console.log(SprintDataStoryRequirements);
+      // function fetchSprintDataStoryRequirements(number){
+
+        
+      //   api.get("/requirements/" + SprintDataStoryNumber[0] + "-" + number, {}, function(response) {
+
+      //     SprintDataStoryRequirements1.push(response.requirement.name);
+
+      //     document.write(SprintDataStoryRequirements1[number - 1]);
 
 
+      //     fetchSprintDataStoryRequirements(number + 1);
+           
+      //   }); // close api.get 
+
+      // }
+      
+      // // init the looping
+      // fetchSprintDataStoryRequirements(1);
+
+      alert();
                                                                                                                                                                                                                                                      
             
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
