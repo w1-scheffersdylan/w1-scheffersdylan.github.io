@@ -162,13 +162,13 @@ $("#controls").submit(function() {
                     },
                                             
                     {
-                        color: '#444', // not sure if this one is used
+                        color: '#444', // looks better than black
                         
                         table: {
                             // grid system for the width 5% * 20 = 100%
                             widths: [ '5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%' ],
                             heights: [ '10%', '10%', '40%', '40%' ],
-                            headerRows: 0, // not sure if this one is used
+
                             body: [
                                 [{ text: [ 'TICKET-ID: \n \n', { text: storyDataNumber, style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
                                  { text: [ 'TITLE: \n \n', { text: storyDataName, style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
@@ -280,13 +280,13 @@ $("#controls").submit(function() {
                     },
                                             
                     {
-                        //color: '#444', // not sure if this one is used
+                        color: '#444', // looks better than black
                         
                         table: {
                             // grid system for the width 5% * 20 = 100%
                             widths: [ '5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%' ],
                             heights: [ '10%', '10%', '40%', '40%' ],
-                            //headerRows: 0, // not sure if this one is used
+
                             body: [
                                 [{ text: [ 'TICKET-ID: \n \n', { text: storyDataNumber, style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
                                  { text: [ 'TITLE: \n \n', { text: storyDataName, style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
@@ -400,13 +400,13 @@ $("#controls").submit(function() {
                     },
                                             
                     {
-                        color: '#444', // not sure if this one is used
+                        color: '#444', // looks better than black
                         
                         table: {
                             // grid system for the width 5% * 20 = 100%
                             widths: [ '5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%' ],
                             heights: [ '10%', '10%', '40%', '40%' ],
-                            headerRows: 0, // not sure if this one is used
+
                             body: [
                                 [{ text: [ 'TICKET-ID: \n \n', { text: storyDataNumber, style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
                                  { text: [ 'TITLE: \n \n', { text: storyDataName, style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
@@ -421,7 +421,7 @@ $("#controls").submit(function() {
                                  { text:'NOTES:\n \n \n \n \n \n \n \n ', colSpan: 6 }, '', '', '', '', ''],
 
                                 [{ text: 'ACCEPTANCE CRITERIA: \n \n' + requirementsArraz.join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & beautify Code \n \n' , colSpan: 6 }, '', '', '', '', ''],
+                                 { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & beautify Code \n \n __ Quality assurance by PO' , colSpan: 6 }, '', '', '', '', ''],
                             ]
                         }
                     }
