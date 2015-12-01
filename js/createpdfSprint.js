@@ -140,7 +140,7 @@ $("#controlsSprint").submit(function() {
 
       var SprintDataStoryRequirements = [];
       for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
-        SprintDataStoryRequirements.push([i]);
+        SprintDataStoryRequirements.push(SprintDataStoryNumber[i]);
       }
       
 
@@ -149,7 +149,7 @@ $("#controlsSprint").submit(function() {
       function fetchSprintDataStoryRequirements(storyNumber, requirementNumber){
 
         
-        api.get("/requirements/" + SprintDataStoryRequirements + "-" + requirementNumber, {}, function(response) {
+        api.get("/requirements/" + SprintDataStoryRequirements[storyNumber] + "-" + requirementNumber, {}, function(response) {
 
           SprintDataStoryRequirements.push([response.requirement.name]);
 
