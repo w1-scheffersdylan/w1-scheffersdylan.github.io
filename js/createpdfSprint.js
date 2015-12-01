@@ -178,7 +178,7 @@ $("#controlsSprint").submit(function() {
       // create PDF (using PDFmake)
       $('#btnOpenPDFSprint').click(function () {
           
-          console.log(SprintDataStoryNumber[][]);
+          console.log(SprintDataStoryNumber);
 
           var docDefinition = {
 
