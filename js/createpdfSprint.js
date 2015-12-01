@@ -216,19 +216,6 @@ $("#controlsSprint").submit(function() {
                     }
 
                     ,
-                          var  = [];
-      for( i = 0; i < response.features.length; i++ ){
-        SprintDataStoryNumber.push(response.features[i]["reference_num"])
-      }
-
-      // get all grooming points in an array
-      var SprintDataStoryGroom = [];
-      // get all story descriptions in an array
-      var SprintDataStoryDescription = [];
-      // get all epic in an array
-      var SprintDataStoryEpic = [];
-      // get all title in an array
-      var SprintDataStoryTitle = [];
                                             
                     {
                         color: '#444', // not sure if this one is used
