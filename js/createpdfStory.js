@@ -1,10 +1,4 @@
-//WIP
-// function strip(html)
-// {
-//    var tmp = document.createElement("DIV");
-//    tmp.innerHTML = html;
-//    return tmp.textContent || tmp.innerText || "";
-// }
+
 $("#controls").submit(function() {
   new AhaApi({
     accountDomain: $("#subdomain").val(),
@@ -378,7 +372,7 @@ $("#controls").submit(function() {
           
 
 
-                    // put everything in the PDF
+          // put everything in the PDF
           var docDefinition = {
 
           pageSize: 'A4',
@@ -470,5 +464,6 @@ $("#controls").submit(function() {
 
 
   }); // close authenticate 
+  alert("Ik ken het verhaal niet.");
   return false;
 });
