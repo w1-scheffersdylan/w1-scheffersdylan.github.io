@@ -1,4 +1,8 @@
-
+if ( termos() ) {
+  // when its true
+} else {
+ $("#error").text("Could not find the story, try another story number please.")
+}
 $("#controls").submit(function() {
   new AhaApi({
     accountDomain: $("#subdomain").val(),
@@ -469,8 +473,3 @@ $("#controls").submit(function() {
   
 });
 
-if ( termos() ) {
-  // when its true
-} else {
- $("#error").text("Could not find the story, try another story number please.")
-}
