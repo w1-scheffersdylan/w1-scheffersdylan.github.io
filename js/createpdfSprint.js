@@ -153,7 +153,7 @@ $("#controlsSprint").submit(function() {
 
           SprintDataStoryRequirements.push(JSON.stringify([storyNumber][response.requirement.name]));
 
-          console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
+          console.log(SprintDataStoryRequirements[0][1]);
 
 
           fetchSprintDataStoryRequirements(requirementNumber + 1);
