@@ -140,7 +140,7 @@ $("#controlsSprint").submit(function() {
 
       var SprintDataStoryRequirements = [];
       for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
-        SprintDataStoryRequirements.push(SprintDataStoryNumber[i]);
+        SprintDataStoryRequirements.push([SprintDataStoryNumber[i]]);
       }
       
 
