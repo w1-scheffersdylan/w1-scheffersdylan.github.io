@@ -141,26 +141,25 @@ $("#controlsSprint").submit(function() {
 
 
 
-      // var SprintDataStoryRequirements = [];
-      // function fetchSprintDataStoryRequirements(number){
+      var SprintDataStoryRequirements1 = [];
+      function fetchSprintDataStoryRequirements(number){
 
-      //   var numberRequirement = 1;
         
-      //   api.get("/requirements/" + SprintDataStoryNumber[number] + "-" + numberRequirement, {}, function(response) {
+        api.get("/requirements/" + SprintDataStoryNumber[0] + "-" + number, {}, function(response) {
 
-      //     SprintDataStoryRequirements.push(response.requirement.name);
+          SprintDataStoryRequirements1.push(response.requirement.name);
 
-      //     console.log(SprintDataStoryRequirements[number]);
+          console.log(SprintDataStoryRequirements1[number]);
 
 
-      //     fetchSprintDataStoryRequirements(number + 1);
+          fetchSprintDataStoryRequirements(number + 1);
            
-      //   }); // close api.get 
+        }); // close api.get 
 
-      // }
+      }
       
-      // // init the looping
-      // fetchSprintDataStoryRequirements(2);
+      // init the looping
+      fetchSprintDataStoryRequirements(1);
 
       alert();
                                                                                                                                                                                                                                                           
