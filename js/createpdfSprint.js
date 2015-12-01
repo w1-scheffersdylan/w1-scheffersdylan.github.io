@@ -166,11 +166,10 @@ $("#controlsSprint").submit(function() {
       }
       
       // init the looping
-      fetchSprintDataStoryRequirements(0, 1);
-      fetchSprintDataStoryRequirements(1, 1);
-      fetchSprintDataStoryRequirements(2, 1);
-      fetchSprintDataStoryRequirements(3, 1);
-      fetchSprintDataStoryRequirements(4, 1);
+      for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
+        fetchSprintDataStoryRequirements(i, 1);
+      }
+
                                                                                                                                                                                                                                                      
             
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
