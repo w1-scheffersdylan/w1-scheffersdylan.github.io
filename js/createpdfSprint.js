@@ -171,12 +171,7 @@ $("#controlsSprint").submit(function() {
       for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
         fetchSprintDataStoryRequirements(i, 1);
       }
-
-      var storyDataDescriptionOrginal = SprintDataStoryDescription;
-
-      // remove all HTML and &nbsp; from storyDataDescriptionOrginal
-      var storyDataDescriptionNoHTML = storyDataDescriptionOrginal.replace(/(<([^>]+)>)/ig,"");
-      var SprintDataStoryDescription = storyDataDescriptionNoHTML.replace(/&nbsp;/gi,'');                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                             
             
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
