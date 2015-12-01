@@ -26,7 +26,7 @@ $("#controls").submit(function() {
     var storyDataGroom = response.feature.original_estimate;
 
     if(storyDataGroom != null){
-      storyDataGroom = response.feature.original_estimate.toString()
+      storyDataGroom = response.feature.original_estimate.toString();
     }
 
     var storyDataDescriptionOrginal = response.feature.description.body;
