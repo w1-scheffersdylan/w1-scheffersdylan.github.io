@@ -162,7 +162,7 @@ $("#controlsSprint").submit(function() {
       fetchSprintDataStoryRequirements(1);
 
 
-             alert();                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                     
             
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -221,7 +221,7 @@ $("#controlsSprint").submit(function() {
                                             
                     {
                         color: '#444', // not sure if this one is used
-                        pageBreak: i !== SprintDataStoryNumber - 1 ? 'after' : undefined,
+                        pageBreak: i !== SprintDataStoryNumber.length - 1 ? 'after' : undefined,
                         table: {
                             // grid system for the width 5% * 20 = 100%
                             widths: [ '5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%' ],
