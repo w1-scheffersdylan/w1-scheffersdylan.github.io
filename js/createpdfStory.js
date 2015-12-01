@@ -466,5 +466,11 @@ $("#controls").submit(function() {
   }); // close authenticate 
   
   return false;
-  $("#error").text("Could not find the story, try another story number please.")
+  
 });
+
+if ( termos() ) {
+  // when its true
+} else {
+ $("#error").text("Could not find the story, try another story number please.")
+}
