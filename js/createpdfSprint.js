@@ -164,7 +164,7 @@ $("#controlsSprint").submit(function() {
       
       // init the looping
       fetchSprintDataStoryRequirements(0, 1);
-console.log(SprintDataStoryRequirements);
+console.log(SprintDataStoryRequirements[0][0]);
 
                                                                                                                                                                                                                                                      
             
