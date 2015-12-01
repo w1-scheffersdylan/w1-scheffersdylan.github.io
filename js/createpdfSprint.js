@@ -138,6 +138,7 @@ $("#controlsSprint").submit(function() {
       fectchSprintDataStoryGroomDescription(0);
 
 
+
       var SprintDataStoryRequirements = [];
       for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
         SprintDataStoryRequirements.push([SprintDataStoryNumber[i]]);
@@ -149,11 +150,13 @@ $("#controlsSprint").submit(function() {
       function fetchSprintDataStoryRequirements(storyNumber, requirementNumber){
 
         
-        api.get("/requirements/" + SprintDataStoryRequirements[0][0] + "-" + 1, {}, function(response) {
+        api.get("/requirements/" + SprintDataStoryRequirements[storyNumber] + "-" + 1, {}, function(response) {
 
           SprintDataStoryRequirements.push([response.requirement.name]);
 
-          console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
+          console.log(SprintDataStoryRequirements[storyNumber]);
+
+          //console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
 
 
           fetchSprintDataStoryRequirements(requirementNumber + 1);
