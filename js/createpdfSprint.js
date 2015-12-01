@@ -162,9 +162,9 @@ $("#controlsSprint").submit(function() {
       // // init the looping
       // fetchSprintDataStoryRequirements(2);
 
-
+      var hello = function(){SprintDataStoryGroom[1]};
                                                                                                                                                                                                                                                       
-            
+            alert();  
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -205,7 +205,7 @@ $("#controlsSprint").submit(function() {
                             heights: [ '10%', '10%', '40%', '40%' ],
                             headerRows: 0, // not sure if this one is used
                             body: [
-                                [{ text: [ 'TICKET-ID: \n \n', { text: SprintDataStoryNumber[0], style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
+                                [{ text: [ 'TICKET-ID: \n \n', { text: hello, style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
                                  { text: [ 'TITLE: \n \n', { text: SprintDataStoryTitle[0], style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text: 'PRIORITY:\n' + '\n \n', colSpan: 3, rowSpan: 2 }, '', ''],
 
