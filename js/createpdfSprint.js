@@ -165,12 +165,18 @@ $("#controlsSprint").submit(function() {
 
       }
       
+
+
       // init the looping
       for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
         fetchSprintDataStoryRequirements(i, 1);
       }
 
-                                                                                                                                                                                                                                                     
+      var storyDataDescriptionOrginal = SprintDataStoryDescription;
+
+      // remove all HTML and &nbsp; from storyDataDescriptionOrginal
+      var storyDataDescriptionNoHTML = storyDataDescriptionOrginal.replace(/(<([^>]+)>)/ig,"");
+      var SprintDataStoryDescription = storyDataDescriptionNoHTML.replace(/&nbsp;/gi,'');                                                                                                                                                                                                                                                 
             
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -182,13 +188,6 @@ $("#controlsSprint").submit(function() {
         // remove ticket id from array of requirements
         for(var i = 0; i < SprintDataStoryRequirements.length; i++){
           SprintDataStoryRequirements[i].shift();
-          if(SprintDataStoryRequirements[i].match("/__/g")){
-          }
-          else{
-            for(var i=0; i < SprintDataStoryRequirements.length; i++){
-             SprintDataStoryRequirements[i] = " __ " + SprintDataStoryRequirements[i];
-            }
-          }
         }    
 
 
