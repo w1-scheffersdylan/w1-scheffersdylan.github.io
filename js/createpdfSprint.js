@@ -165,7 +165,10 @@ $("#controlsSprint").submit(function() {
 
       }
       
-
+      for( var i = 0; i < SprintDataStoryDescription.length; i++){
+        SprintDataStoryDescription[i].replace(/(<([^>]+)>)/ig,"");
+      }
+      
 
       // init the looping
       for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
