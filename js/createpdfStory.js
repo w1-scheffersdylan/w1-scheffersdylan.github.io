@@ -464,6 +464,6 @@ $("#controls").submit(function() {
 
 
   }); // close authenticate 
-  alert("Ik ken het verhaal niet.");
+  $("#error").text("Could not find the story, try another story number please.")
   return false;
 });
