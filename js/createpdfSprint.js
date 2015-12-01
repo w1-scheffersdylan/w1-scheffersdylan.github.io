@@ -248,7 +248,7 @@ $("#controlsSprint").submit(function() {
                                 [{ text: [ 'STORY: \n \n', { text: SprintDataStoryDescription[i], style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text:'NOTES:\n \n \n \n \n \n \n \n ', colSpan: 6 }, '', '', '', '', ''],
 
-                                [{ text: 'ACCEPTANCE CRITERIA: \n \n' + { text: SprintDataStoryRequirements[i][i].join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
+                                [{ text: 'ACCEPTANCE CRITERIA: \n \n'}, { text: SprintDataStoryRequirements[i][i].join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & beautify Code \n \n __ Quality assurance by PO' , colSpan: 6 }, '', '', '', '', ''],
                             ]
                         }
