@@ -280,13 +280,13 @@ $("#controls").submit(function() {
                     },
                                             
                     {
-                        color: '#444', // not sure if this one is used
+                        //color: '#444', // not sure if this one is used
                         
                         table: {
                             // grid system for the width 5% * 20 = 100%
                             widths: [ '5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%' ],
                             heights: [ '10%', '10%', '40%', '40%' ],
-                            headerRows: 0, // not sure if this one is used
+                            //headerRows: 0, // not sure if this one is used
                             body: [
                                 [{ text: [ 'TICKET-ID: \n \n', { text: storyDataNumber, style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
                                  { text: [ 'TITLE: \n \n', { text: storyDataName, style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
