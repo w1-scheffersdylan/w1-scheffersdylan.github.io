@@ -195,7 +195,7 @@ $("#controlsSprint").submit(function() {
         if(dashCheck.match(/__/g)){
         }
         else{
-          for(var i=0; i < SprintDataStoryRequirements.length; i++){
+          for(var i=0; i < SprintDataStoryRequirements[i].length; i++){
              SprintDataStoryRequirements[i] = " __ " + SprintDataStoryRequirements[i];
           }
         }
