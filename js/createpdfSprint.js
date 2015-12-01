@@ -149,7 +149,7 @@ $("#controlsSprint").submit(function() {
       function fetchSprintDataStoryRequirements(storyNumber, requirementNumber){
 
         
-        api.get("/requirements/" + SprintDataStoryRequirements[0] + "-" + number, {}, function(response) {
+        api.get("/requirements/" + SprintDataStoryRequirements[0] + "-" + requirementNumber, {}, function(response) {
 
           SprintDataStoryRequirements.push([storyNumber][response.requirement.name]);
 
