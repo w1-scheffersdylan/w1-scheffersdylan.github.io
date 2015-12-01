@@ -209,7 +209,7 @@ $("#controls").submit(function() {
                   fontSize: 26
                 }
 
-              },
+              }
 
               
             } // close var docDefinition
@@ -219,7 +219,7 @@ $("#controls").submit(function() {
 
 
             // open the PDF in a new window
-            pdfMake.createPdf(docDefinition).open();
+            pdfMake.createPdf(docDefinition).print();
 
             
 

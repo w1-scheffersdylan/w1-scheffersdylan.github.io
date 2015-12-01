@@ -162,7 +162,7 @@ $("#controlsSprint").submit(function() {
       // // init the looping
       // fetchSprintDataStoryRequirements(2);
 
-
+      alert();
                                                                                                                                                                                                                                                           
             
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -252,10 +252,10 @@ $("#controlsSprint").submit(function() {
        
           
 
-            for(i=0; i < 3; i++){
-              // open the PDF in a new window
-              pdfMake.createPdf(docDefinition).open();
-            }
+
+            // open the PDF in a new window
+            pdfMake.createPdf(docDefinition).open();
+            
             
             
             
