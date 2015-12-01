@@ -182,7 +182,7 @@ $("#controlsSprint").submit(function() {
         // remove ticket id from array of requirements
         for(var i = 0; i < SprintDataStoryRequirements.length; i++){
           SprintDataStoryRequirements[i].shift();
-          if(SprintDataStoryRequirements.match(/__/g)){
+          if(SprintDataStoryRequirements[i].match("/__/g")){
           }
           else{
             for(var i=0; i < SprintDataStoryRequirements.length; i++){
