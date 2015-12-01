@@ -149,7 +149,7 @@ $("#controlsSprint").submit(function() {
 
           SprintDataStoryRequirements1.push(response.requirement.name);
 
-          document.write(SprintDataStoryRequirements1[number]);
+          document.write(SprintDataStoryRequirements1[number - 1]);
 
 
           fetchSprintDataStoryRequirements(number + 1);
@@ -159,7 +159,7 @@ $("#controlsSprint").submit(function() {
       }
       
       // init the looping
-      fetchSprintDataStoryRequirements(0);
+      fetchSprintDataStoryRequirements(1);
 
       alert();
                                                                                                                                                                                                                                                           
