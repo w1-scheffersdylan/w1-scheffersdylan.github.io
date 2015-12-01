@@ -293,7 +293,7 @@ $("#controls").submit(function() {
                                  { text: 'PRIORITY:\n' + '\n \n', colSpan: 3, rowSpan: 2 }, '', ''],
 
                                 [{ text: [ 'EPIC:\n', { text: storyDataEpic, style: 'mediumText', alignment: 'center' }], colSpan: 11 }, '', '', '', '', '', '', '', '', '', '', 
-                                 { text: ['GROOM: \n', { text: storyDataGroom, style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
+                                 { text: ['GROOM: \n', { text: storyDataGroom.toString(), style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
                                  { text: 'CORR: \n' + '\n \n', colSpan: 2 }, '', 
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
@@ -413,7 +413,7 @@ $("#controls").submit(function() {
                                  { text: 'PRIORITY:\n' + '\n \n', colSpan: 3, rowSpan: 2 }, '', ''],
 
                                 [{ text: [ 'EPIC:\n', { text: storyDataEpic, style: 'mediumText', alignment: 'center' }], colSpan: 11 }, '', '', '', '', '', '', '', '', '', '', 
-                                 { text: ['GROOM: \n', { text: storyDataGroom, style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
+                                 { text: ['GROOM: \n', { text: storyDataGroom.toString(), style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
                                  { text: 'CORR: \n' + '\n \n', colSpan: 2 }, '', 
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
