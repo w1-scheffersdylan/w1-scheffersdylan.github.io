@@ -120,9 +120,9 @@ $("#controls").submit(function() {
       $('#btnPrintPDF').click(function () {
           
       // check if their are requirements (acceptance criteria) added to the story
-      if(requirementsArraz[0] == "" || requirementsArraz[0] == undefined || requirementsArraz[0] == null){
-        requirementsArraz.push("__");
-      }
+      // if(requirementsArraz[0] == "" || requirementsArraz[0] == undefined || requirementsArraz[0] == null){
+      //   requirementsArraz.push("__");
+      // }
 
 
         // add a dash before every requirement (acceptance criteria)  
@@ -238,9 +238,9 @@ $("#controls").submit(function() {
       $('#btnOpenPDF').click(function () {
           
       // check if their are requirements (acceptance criteria) added to the story
-      if(requirementsArraz[0] == "" || requirementsArraz[0] == undefined || requirementsArraz[0] == null){
-        requirementsArraz.push("__");
-      }
+      // if(requirementsArraz[0] == "" || requirementsArraz[0] == undefined || requirementsArraz[0] == null){
+      //   requirementsArraz.push("__");
+      // }
 
 
         // add a dash before every requirement (acceptance criteria)  
@@ -355,10 +355,10 @@ $("#controls").submit(function() {
       // create PDF (using PDFmake)
       $('#btnSavePDF').click(function () {
 
-       // check if their are requirements (acceptance criteria) added to the story
-      if(requirementsArraz[0] == "" || requirementsArraz[0] == undefined || requirementsArraz[0] == null){
-        requirementsArraz.push("__");
-      }
+        // check if their are requirements (acceptance criteria) added to the story
+      // if(requirementsArraz[0] == "" || requirementsArraz[0] == undefined || requirementsArraz[0] == null){
+      //   requirementsArraz.push("__");
+      // }
 
 
         // add a dash before every requirement (acceptance criteria)  
@@ -375,8 +375,6 @@ $("#controls").submit(function() {
         if(requirementsArraz[0] == "__"){
           requirementsArraz.splice(0, 1, "");
         }
-          
-
 
           // put everything in the PDF
           var docDefinition = {
