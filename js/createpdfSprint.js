@@ -182,29 +182,14 @@ $("#controlsSprint").submit(function() {
         // remove ticket id from array of requirements
         for(var i = 0; i < SprintDataStoryRequirements.length; i++){
           SprintDataStoryRequirements[i].shift();
-        }
-
-
-        // check if their are requirements (acceptance criteria) added to the story
-        if(SprintDataStoryRequirements[0] == "" || SprintDataStoryRequirements[0] == undefined || SprintDataStoryRequirements[0] == null){
-          SprintDataStoryRequirements.push("__");
-        }
-
-        // add a dash before every requirement (acceptance criteria)  
-        var dashCheck = SprintDataStoryRequirements[0];
-        if(dashCheck.match(/__/g)){
-        }
-        else{
-          for(var i=0; i < SprintDataStoryRequirements.length; i++){
-             SprintDataStoryRequirements[i] = " __ " + SprintDataStoryRequirements[i];
+          if(SprintDataStoryRequirements[i].match(/__/g)){
           }
-        }
-          
-        // make first array variable empty  
-        if(SprintDataStoryRequirements[0] == "__"){
-          SprintDataStoryRequirements.splice(0, 1, "");
-        }
-          
+          else{
+            for(var i=0; i < SprintDataStoryRequirements.length; i++){
+             SprintDataStoryRequirements[i] = " __ " + SprintDataStoryRequirements[i];
+            }
+          }
+        }    
 
 
           var docDefinition = {
