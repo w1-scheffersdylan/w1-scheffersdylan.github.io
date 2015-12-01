@@ -159,7 +159,7 @@ $("#controlsSprint").submit(function() {
           //console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
 
 
-          fetchSprintDataStoryRequirements(0, requirementNumber + 1);
+          fetchSprintDataStoryRequirements(storyNumber++, requirementNumber++);
            
         }); // close api.get 
 
