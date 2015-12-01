@@ -25,8 +25,8 @@ $("#controls").submit(function() {
     var storyDataName = response.feature.name;
     var storyDataGroom = response.feature.original_estimate;
 
-    if(storyDataGroom != null){
-      storyDataGroom = response.feature.original_estimate.toString();
+    if(storyDataGroom != "null"){
+      storyDataGroom.toString();
     }
     else{
       storyDataGroom = "";
