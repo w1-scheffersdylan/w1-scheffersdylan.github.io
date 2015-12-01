@@ -464,6 +464,7 @@ $("#controls").submit(function() {
 
 
   }); // close authenticate 
-  $("#error").text("Could not find the story, try another story number please.")
+  
   return false;
+  $("#error").text("Could not find the story, try another story number please.")
 });
