@@ -23,7 +23,12 @@ $("#controls").submit(function() {
     //console.log(response.feature)
     var storyDataNumber = response.feature.reference_num;
     var storyDataName = response.feature.name;
-    var storyDataGroom = response.feature.original_estimate.toString();
+    var storyDataGroom = response.feature.original_estimate;
+
+    if(storyDataGroom != null){
+      storyDataGroom = response.feature.original_estimate.toString()
+    }
+
     var storyDataDescriptionOrginal = response.feature.description.body;
 
     // remove all HTML and &nbsp; from storyDataDescriptionOrginal
