@@ -162,7 +162,7 @@ $("#controlsSprint").submit(function() {
       // // init the looping
       // fetchSprintDataStoryRequirements(2);
 
-    alert();
+
           
             
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -215,34 +215,47 @@ $("#controlsSprint").submit(function() {
                      
                     }
 
-                    //,
+                    ,
+                          var  = [];
+      for( i = 0; i < response.features.length; i++ ){
+        SprintDataStoryNumber.push(response.features[i]["reference_num"])
+      }
+
+      // get all grooming points in an array
+      var SprintDataStoryGroom = [];
+      // get all story descriptions in an array
+      var SprintDataStoryDescription = [];
+      // get all epic in an array
+      var SprintDataStoryEpic = [];
+      // get all title in an array
+      var SprintDataStoryTitle = [];
                                             
-                    // {
-                    //     color: '#444', // not sure if this one is used
+                    {
+                        color: '#444', // not sure if this one is used
                         
-                    //     table: {
-                    //         // grid system for the width 5% * 20 = 100%
-                    //         widths: [ '5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%' ],
-                    //         heights: [ '10%', '10%', '40%', '40%' ],
-                    //         headerRows: 0, // not sure if this one is used
-                    //         body: [
-                    //             [{ text: [ 'TICKET-ID: \n \n', { text: 'storyDataNumber', style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
-                    //              { text: [ 'TITLE: \n \n', { text: 'storyDataName', style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                    //              { text: 'PRIORITY:\n' + '\n \n', colSpan: 3, rowSpan: 2 }, '', ''],
+                        table: {
+                            // grid system for the width 5% * 20 = 100%
+                            widths: [ '5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%' ],
+                            heights: [ '10%', '10%', '40%', '40%' ],
+                            headerRows: 0, // not sure if this one is used
+                            body: [
+                                [{ text: [ 'TICKET-ID: \n \n', { text: SprintDataStoryNumber[0], style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
+                                 { text: [ 'TITLE: \n \n', { text: SprintDataStoryTitle[0], style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
+                                 { text: 'PRIORITY:\n' + '\n \n', colSpan: 3, rowSpan: 2 }, '', ''],
 
-                    //             [{ text: [ 'EPIC:\n', { text: 'storyDataEpic', style: 'mediumText', alignment: 'center' }], colSpan: 11 }, '', '', '', '', '', '', '', '', '', '', 
-                    //              { text: ['GROOM: \n', { text: 'storyDataGroom', style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
-                    //              { text: 'CORR: \n' + '\n \n', colSpan: 2 }, '', 
-                    //              { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
+                                [{ text: [ 'EPIC:\n', { text: SprintDataStoryEpic[0], style: 'mediumText', alignment: 'center' }], colSpan: 11 }, '', '', '', '', '', '', '', '', '', '', 
+                                 { text: ['GROOM: \n', { text: SprintDataStoryGroom[0], style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
+                                 { text: 'CORR: \n' + '\n \n', colSpan: 2 }, '', 
+                                 { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
-                    //             [{ text: [ 'STORY: \n \n', { text: 'storyDataDescription', style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                    //              { text:'NOTES:\n \n \n \n \n \n \n \n ', colSpan: 6 }, '', '', '', '', ''],
+                                [{ text: [ 'STORY: \n \n', { text: SprintDataStoryDescription[0], style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
+                                 { text:'NOTES:\n \n \n \n \n \n \n \n ', colSpan: 6 }, '', '', '', '', ''],
 
-                    //             [{ text: 'ACCEPTANCE CRITERIA: \n \n' + 'requirementsArraz.join("\n")', colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                    //              { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & beautify Code \n \n __ Quality assurance by PO' , colSpan: 6 }, '', '', '', '', ''],
-                    //         ]
-                    //     }
-                    // }
+                                [{ text: 'ACCEPTANCE CRITERIA: \n \n' + 'requirementsArraz.join("\n")', colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
+                                 { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & beautify Code \n \n __ Quality assurance by PO' , colSpan: 6 }, '', '', '', '', ''],
+                            ]
+                        }
+                    }
 
 
               ]
@@ -277,7 +290,6 @@ $("#controlsSprint").submit(function() {
 
 
             // open the PDF in a new window
-            pdfMake.createPdf(docDefinition).open();
             pdfMake.createPdf(docDefinition).open();
             
 
