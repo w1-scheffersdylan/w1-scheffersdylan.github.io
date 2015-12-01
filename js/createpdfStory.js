@@ -25,6 +25,8 @@ $("#controls").submit(function() {
     var storyDataName = response.feature.name;
     var storyDataGroom = response.feature.original_estimate;
 
+    alert(storyDataGroom);
+
     // check if the grooming has a number
     if(storyDataGroom != null){
       storyDataGroom.toString();
@@ -32,6 +34,8 @@ $("#controls").submit(function() {
     else{
       storyDataGroom = "";
     }
+
+    alert(storyDataGroom);
 
     var storyDataDescriptionOrginal = response.feature.description.body;
 
