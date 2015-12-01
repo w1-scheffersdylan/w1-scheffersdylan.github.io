@@ -152,7 +152,7 @@ $("#controlsSprint").submit(function() {
         
         api.get("/requirements/" + SprintDataStoryRequirements[storyNumber] + "-" + requirementNumber, {}, function(response) {
 
-          SprintDataStoryRequirements[storyNumber].push([response.requirement.name]);
+          SprintDataStoryRequirements[storyNumber].push(response.requirement.name);
 
           console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
 
