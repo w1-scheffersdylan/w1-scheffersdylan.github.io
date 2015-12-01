@@ -155,7 +155,7 @@ $("#controlsSprint").submit(function() {
           SprintDataStoryRequirements[storyNumber].push(response.requirement.name);
 
           console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
-
+          console.log(SprintDataStoryRequirements);
           //console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
 
 
