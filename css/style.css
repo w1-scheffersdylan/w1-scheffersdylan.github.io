@@ -43,7 +43,7 @@ button#btnNewStory, button#btnShowStory {
   cursor: pointer;
 }
 
-button#btnOpenPDF, button#btnSavePDF {
+button#btnOpenPDF, button#btnSavePDF, button#btnPrintPDF {
   background-color: #26BF59;
   color: #FFF;
   cursor: pointer;
