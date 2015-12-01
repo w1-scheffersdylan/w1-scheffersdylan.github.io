@@ -162,13 +162,14 @@ $("#controlsSprint").submit(function() {
       // // init the looping
       // fetchSprintDataStoryRequirements(2);
 
-    
+    alert();
+          
             
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
       // create PDF (using PDFmake)
-      $('#btnOpenPDFSprint1').click(function () {
+      $('#btnOpenPDFSprint').click(function () {
 
         alert();
           
