@@ -189,12 +189,10 @@ $("#controlsSprint").submit(function() {
         }    
         alert(SprintDataStoryRequirements);
 
-        for( var i = 0; i < SprintDataStoryRequirements.length; i++ ){
-          for(var k = 0; k < SprintDataStoryRequirements[i].length; i++){
-           // SprintDataStoryRequirements[i].shift();
-           SprintDataStoryRequirements[i][k] = " __ " + SprintDataStoryRequirements[i][k];
-          }   
-        }
+        for(var i = 0; i < SprintDataStoryRequirements[0].length; i++){
+         // SprintDataStoryRequirements[i].shift();
+         SprintDataStoryRequirements[i] = " __ " + SprintDataStoryRequirements[i];
+        }   
 
 
 alert(SprintDataStoryRequirements);
