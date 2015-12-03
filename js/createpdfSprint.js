@@ -184,10 +184,10 @@ $("#controlsSprint").submit(function() {
 
         // remove ticket id from array of requirements
         for(var i = 0; i < SprintDataStoryRequirements.length; i++){
-          // SprintDataStoryRequirements[i].shift();
-          SprintDataStoryRequirements[i] = " __ " + SprintDataStoryRequirements[i];
+          SprintDataStoryRequirements[i].shift();
+          //SprintDataStoryRequirements[i] = " __ " + SprintDataStoryRequirements[i];
         }    
-
+alert(SprintDataStoryRequirements);
 
           var docDefinition = {
 
