@@ -187,6 +187,12 @@ $("#controlsSprint").submit(function() {
         }    
 
 
+        // add a dash before every requirement (acceptance criteria)  
+        for(var i=0; i < SprintDataStoryRequirements.length; i++){
+           SprintDataStoryRequirements[i] = " __ " + SprintDataStoryRequirements[i];
+        }
+
+
           var docDefinition = {
 
        
