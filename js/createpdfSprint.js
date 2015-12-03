@@ -189,7 +189,7 @@ $("#controlsSprint").submit(function() {
         }    
         alert(SprintDataStoryRequirements);
 
-        for(var i = 0; i < SprintDataStoryRequirements[0].length; i++){
+        for(var i = 0; i < SprintDataStoryRequirements[2].length; i++){
          // SprintDataStoryRequirements[i].shift();
          SprintDataStoryRequirements[i] = " __ " + SprintDataStoryRequirements[i];
         }   
