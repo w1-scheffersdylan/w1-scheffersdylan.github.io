@@ -100,7 +100,7 @@ $("#controlsSprint").submit(function() {
         api.get("/products/" + productKey + "/features/" + SprintDataStoryNumber[number], {}, function(response) {
 
           SprintDataStoryGroom.push(response.feature.original_estimate.toString());
-          SprintDataStoryDescription.push(response.feature.description.body.replace(/(<([^>]+)>)/ig,""));
+          SprintDataStoryDescription.push(response.feature.description.body.replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,''));
           SprintDataStoryTitle.push(response.feature.name);
 
           // check if their is a epic
