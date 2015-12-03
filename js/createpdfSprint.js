@@ -100,7 +100,7 @@ $("#controlsSprint").submit(function() {
         api.get("/products/" + productKey + "/features/" + SprintDataStoryNumber[number], {}, function(response) {
 
           SprintDataStoryGroom.push(response.feature.original_estimate.toString());
-          SprintDataStoryDescription.push(response.feature.description.body);
+          SprintDataStoryDescription.push(response.feature.description.body).replace(/(<([^>]+)>)/ig,"");
           SprintDataStoryTitle.push(response.feature.name);
 
           // check if their is a epic
@@ -138,6 +138,10 @@ $("#controlsSprint").submit(function() {
       fectchSprintDataStoryGroomDescription(0);
 
 
+      // remove all html
+      console.log("story zonder html tags" + SprintDataStoryDescription);
+
+
 
       var SprintDataStoryRequirements = [];
       for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
@@ -163,12 +167,7 @@ $("#controlsSprint").submit(function() {
            
         }); // close api.get 
 
-      }
-      
-      for( var i = 0; i < SprintDataStoryDescription.length; i++){
-        SprintDataStoryDescription[i].replace(/(<([^>]+)>)/ig,"");
-      }
-      
+      }      
 
       // init the looping
       for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
