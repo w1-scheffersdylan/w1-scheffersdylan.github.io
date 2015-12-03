@@ -124,10 +124,7 @@ $("#controlsSprint").submit(function() {
           // console.log(SprintDataStoryNumber[number]);
           // console.log(SprintDataStoryGroom[number]);
           // console.log(SprintDataStoryDescription[number]);
-          // console.log(SprintDataStoryEpic[number]);
-
-// remove all html
-      console.log("story zonder html tags 2 " + SprintDataStoryDescription[number]);
+          // console.log(SprintDataStoryEpic[number])
 
 
           fectchSprintDataStoryGroomDescription(number + 1);
