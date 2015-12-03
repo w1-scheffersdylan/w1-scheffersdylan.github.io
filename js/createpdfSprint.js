@@ -126,6 +126,9 @@ $("#controlsSprint").submit(function() {
           // console.log(SprintDataStoryDescription[number]);
           // console.log(SprintDataStoryEpic[number]);
 
+// remove all html
+      console.log("story zonder html tags" + SprintDataStoryDescription[number]);
+
 
           fectchSprintDataStoryGroomDescription(number + 1);
            
@@ -138,8 +141,7 @@ $("#controlsSprint").submit(function() {
       fectchSprintDataStoryGroomDescription(0);
 
 
-      // remove all html
-      console.log("story zonder html tags" + SprintDataStoryDescription);
+
 
 
 
