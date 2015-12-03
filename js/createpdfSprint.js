@@ -127,7 +127,7 @@ $("#controlsSprint").submit(function() {
           // console.log(SprintDataStoryEpic[number]);
 
 // remove all html
-      console.log("story zonder html tags" + SprintDataStoryDescription[number]);
+      console.log("story zonder html tags 2 " + SprintDataStoryDescription[number]);
 
 
           fectchSprintDataStoryGroomDescription(number + 1);
