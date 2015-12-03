@@ -180,7 +180,8 @@ $("#controlsSprint").submit(function() {
       // create PDF (using PDFmake)
       $('#btnOpenPDFSprint').click(function () {
           
-   
+        alert(SprintDataStoryRequirements);
+
         // remove ticket id from array of requirements
         for(var i = 0; i < SprintDataStoryRequirements.length; i++){
           SprintDataStoryRequirements[i].shift();
