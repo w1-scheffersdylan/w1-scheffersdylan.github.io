@@ -492,7 +492,7 @@ $("#controlsSprint").submit(function() {
                 }
 
             // open the PDF in a new window
-            pdfMake.createPdf(docDefinition).download("Story_" + storyDataNumber + ".pdf");
+            pdfMake.createPdf(docDefinition).download("Sprint_" + sprintNumber + ".pdf");
 
 
           
