@@ -155,7 +155,7 @@ $("#controlsSprint").submit(function() {
         
         api.get("/requirements/" + SprintDataStoryRequirements[storyNumber][0] + "-" + requirementNumber, {}, function(response) {
 
-          SprintDataStoryRequirements[storyNumber].push(response.requirement.name);
+          SprintDataStoryRequirements[storyNumber].push(" __ " + response.requirement.name);
 
           console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
           console.log(SprintDataStoryRequirements);
@@ -180,23 +180,12 @@ $("#controlsSprint").submit(function() {
       // create PDF (using PDFmake)
       $('#btnOpenPDFSprint').click(function () {
           
-        alert(SprintDataStoryRequirements);
 
         // remove ticket id from array of requirements
         for(var i = 0; i < SprintDataStoryRequirements.length; i++){
           SprintDataStoryRequirements[i].shift();
           //SprintDataStoryRequirements[i] = " __ " + SprintDataStoryRequirements[i];
         }    
-        alert(SprintDataStoryRequirements);
-
-        for(var i = 0; i < SprintDataStoryRequirements[2].length; i++){
-         // SprintDataStoryRequirements[i].shift();
-         SprintDataStoryRequirements[i] = " __ " + SprintDataStoryRequirements[i];
-        }   
-
-
-alert(SprintDataStoryRequirements);
-
 
 
 
