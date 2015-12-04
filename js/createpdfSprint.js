@@ -116,7 +116,7 @@ $("#controlsSprint").submit(function() {
           // document.write('<p><input type="button" class="btn right" id="btnOpenPDFSprint'+[number]+'" value="Open sprint as PDF"></input> <input type="button" class="btn right" id="btnSavePDFSprint'+[number]+'" value="Save sprint as PDF"></input></p>');
           // document.write("<h2>Sprint details</h2>");
 
-          $("#sprintDetails").append("<tr><td></td><td></td></tr><tr><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + "</td><tr/>");
+          $("#sprintDetails").append("<tr><td><hr/></td><td><hr/></td></tr><tr><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + "</td><tr/>");
           $("#sprintDetails").append("<tr><td> Title: </td><td>" + SprintDataStoryTitle[number] + "</td><tr/>");
           $("#sprintDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[number] + "</td><tr/>");
           $("#sprintDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[number] + "</td><tr/>");
