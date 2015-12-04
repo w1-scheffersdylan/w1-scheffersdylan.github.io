@@ -27,7 +27,7 @@
       </p>
       <br />
       <p>
-        <md-button class="md-raised md-primary" type="submit" id="btnNewStory">New story</md-button>
+        <md-button class="md-raised md-primary" type="submit" class="btnNewStory">New story</md-button>
       </p>
       <br />
       <h2>Story details</h2>
@@ -73,6 +73,63 @@
       <p>You can add a requirement by hand if not all of the requirements were found by the website.</p>
       
     </div> <!-- step 2 container -->
+
+
+    <!-- placed sprintstep2Container on the top, because of fade effect -->
+    <div id="sprintstep2Container" class="paddingContainer">
+      <p>
+        <md-button class="md-raised md-primary" type="submit" id="btnPrintPDFSprint">PRINT story as PDF</md-button> 
+        <md-button class="md-raised md-primary" type="submit" id="btnOpenPDFSprint">OPEN story as PDF</md-button> 
+        <md-button class="md-raised md-primary" type="submit" id="btnSavePDFSprint">SAVE story as PDF</md-button>
+      </p>
+      <br />
+      <p>
+        <md-button class="md-raised md-primary" type="submit" class="btnNewStory">New story</md-button>
+      </p>
+      <br />
+      <h2>Story details</h2>
+      <br />
+      <p>
+        <table id="storyDataTable">
+          <tr>
+            <!--<td>Story number:</td>-->
+            <td>Ticket-ID:</td>
+            <td id="ticket-id"></td>
+          </tr>
+          <tr>
+            <!--<td>Story name:</td>-->
+            <td>Title:</td>
+            <td id="title"></td>
+          </tr>
+          <tr>
+            <!--<td>Story grooming:</td>-->
+            <td>Groom:</td>
+            <td id="groom"></td>
+          </tr>
+          <tr>
+            <!--<td>Story epic:</td>-->
+            <td>Epic:</td>
+            <td id="epic"></td>
+          </tr>
+          <tr>
+            <!--<td>Story description:</td>-->
+            <td>Story:</td>
+            <td id="story"></td>
+          </tr>
+        </table>
+      </p>
+      <br />
+      
+      <p>
+        <input type="text" placeholder="Add requirement by hand to PDF" id="addRequirementValue"></input>
+        <md-button class="md-raised md-primary" type="submit" id="addRequirement">Add requirement</md-button>
+        <br />
+        <span class="infoText">*The by hand added requirement would not be added to the Aha! user story requirements.</span>
+      </p>
+      <br />
+      <p>You can add a requirement by hand if not all of the requirements were found by the website.</p>
+      
+    </div> <!-- sprint step 2 container -->
 
 
     <div id="step1Container" class="paddingContainer">
@@ -145,38 +202,6 @@
           </form>
       </div>
 
-      <!-- NOT DONE -
-      <div id="sprintDiv">
-        <hr/>
-        
-        <form id="controlsSprint">
-          <table>
-            <tr>
-              <th>
-                Sprint
-              </th>
-            </tr>
-            <tr>
-              <td>Aha! subdomain </td>
-              <td><input type="text" placeholder="Aha! subdomain" id="subdomain" value="sablono" disabled></input></td>
-            </tr>
-            <tr>
-              <td>Product key </td>
-              <td><input type="text" placeholder="Product key" id="product-key" value="WEB" disabled></input></td>
-            </tr>
-            <tr>
-              <td>Sprint Number  </td>
-              <td><input type="text" placeholder="Story number" id="sprintNumber" value="WEB-R-42"></input></td>
-              <td><input type="button" class="btn right" id="" value="Change WEB to NOW"></input></td>
-            </tr>
-             <tr>
-              <td></td>
-              <td><input type="submit" class="btn right orangeBtn" value="Show sprint"></input></td>
-            </tr>
-          </table>
-        </form>
-      </div>
-    </div> -> <!-- step 1 container -->
 
 
     <!-- jQuery -->

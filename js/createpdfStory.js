@@ -101,7 +101,7 @@ $("#controls").submit(function() {
 
        
        // fade effect to go back to fill in a new story
-       $('#btnNewStory').click(function () {
+       $('.btnNewStory').click(function () {
           $("#step2Container").fadeOut();
           location.reload();
           $("#step1Container").fadeIn();

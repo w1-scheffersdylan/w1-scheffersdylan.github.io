@@ -172,6 +172,14 @@ $("#controlsSprint").submit(function() {
       for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
         fetchSprintDataStoryRequirements(i, 1);
       }
+
+
+      // fade effect to go back to fill in a new story
+       $('.btnNewStory').click(function () {
+          $("#sprinstep2Container").fadeOut();
+          location.reload();
+          $("#step1Container").fadeIn();
+       });
                                                                                                                                                                                                                                              
             
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
