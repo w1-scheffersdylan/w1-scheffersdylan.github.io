@@ -97,51 +97,6 @@ $("#controlsSprint").submit(function() {
       // get all title in an array
       var SprintDataStoryTitle = [];
 
-      function fectchSprintDataStoryGroomDescription(number){
-        
-        api.get("/products/" + productKey + "/features/" + SprintDataStoryNumber[number], {}, function(response) {
-
-          SprintDataStoryGroom.push(response.feature.original_estimate.toString());
-          SprintDataStoryDescription.push(response.feature.description.body.replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' '));
-          SprintDataStoryTitle.push(response.feature.name);
-
-          // check if their is a epic
-          if( typeof JSON.stringify(response.feature.initiative) === 'undefined'){
-            SprintDataStoryEpic.push("");
-          }
-          else {
-            SprintDataStoryEpic.push(response.feature.initiative.name);
-          }
-
-          // document.write('<p><input type="button" class="btn right" id="btnOpenPDFSprint'+[number]+'" value="Open sprint as PDF"></input> <input type="button" class="btn right" id="btnSavePDFSprint'+[number]+'" value="Save sprint as PDF"></input></p>');
-          // document.write("<h2>Sprint details</h2>");
-
-          $("#sprintDetails").append("<tr class='borderTable'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + "</td><tr/>");
-          $("#sprintDetails").append("<tr><td> Title: </td><td>" + SprintDataStoryTitle[number] + "</td><tr/>");
-          $("#sprintDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[number] + "</td><tr/>");
-          $("#sprintDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[number] + "</td><tr/>");
-          $("#sprintDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[number] + "</td><tr/>");
-
-          // console.log(SprintDataStoryTitle);
-          // console.log(SprintDataStoryNumber[number]);
-          // console.log(SprintDataStoryGroom[number]);
-          // console.log(SprintDataStoryDescription[number]);
-          // console.log(SprintDataStoryEpic[number])
-
-
-          fectchSprintDataStoryGroomDescription(number + 1);
-           
-        }); // close api.get 
-
-      }
-
-
-      // init the looping
-      fectchSprintDataStoryGroomDescription(0);
-
-
-
-
 
 
       var SprintDataStoryRequirements = [];
@@ -162,19 +117,73 @@ $("#controlsSprint").submit(function() {
           console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
           console.log(SprintDataStoryRequirements);
           //console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
-          $("#requirementsDetails").append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][requirementNumber] + "</td><tr/>");
+          
 
 
           fetchSprintDataStoryRequirements(storyNumber, requirementNumber + 1);
            
         }); // close api.get 
 
-      }      
+      }    
+
+
+      function fectchSprintDataStoryGroomDescription(number){
+        
+        api.get("/products/" + productKey + "/features/" + SprintDataStoryNumber[number], {}, function(response) {
+
+          SprintDataStoryGroom.push(response.feature.original_estimate.toString());
+          SprintDataStoryDescription.push(response.feature.description.body.replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' '));
+          SprintDataStoryTitle.push(response.feature.name);
+
+          // check if their is a epic
+          if( typeof JSON.stringify(response.feature.initiative) === 'undefined'){
+            SprintDataStoryEpic.push("");
+          }
+          else {
+            SprintDataStoryEpic.push(response.feature.initiative.name);
+          }
+
+          // document.write('<p><input type="button" class="btn right" id="btnOpenPDFSprint'+[number]+'" value="Open sprint as PDF"></input> <input type="button" class="btn right" id="btnSavePDFSprint'+[number]+'" value="Save sprint as PDF"></input></p>');
+          // document.write("<h2>Sprint details</h2>");
+
+          // init the looping
+          for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
+            fetchSprintDataStoryRequirements(i, 1);
+          }
+
+          $("#sprintDetails").append("table><tr class='borderTable'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + "</td><tr/>");
+          $("#sprintDetails").append("<tr><td> Title: </td><td>" + SprintDataStoryTitle[number] + "</td><tr/>");
+          $("#sprintDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[number] + "</td><tr/>");
+          $("#sprintDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[number] + "</td><tr/>");
+          $("#sprintDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[number] + "</td><tr/>");
+          $("#sprintDetails").append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][requirementNumber] + "</td><tr/>");
+
+          // console.log(SprintDataStoryTitle);
+          // console.log(SprintDataStoryNumber[number]);
+          // console.log(SprintDataStoryGroom[number]);
+          // console.log(SprintDataStoryDescription[number]);
+          // console.log(SprintDataStoryEpic[number])
+     
+
+
+          fectchSprintDataStoryGroomDescription(number + 1);
+           
+        }); // close api.get 
+
+      }
+
 
       // init the looping
-      for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
-        fetchSprintDataStoryRequirements(i, 1);
-      }
+      fectchSprintDataStoryGroomDescription(0);
+
+
+
+
+
+
+  
+
+
 
 
       
