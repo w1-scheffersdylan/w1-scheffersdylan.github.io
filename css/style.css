@@ -37,13 +37,13 @@ table tr td {
   width: 20%;
 }
 
-button#btnNewStory, button#btnShowStory {
+button#btnNewStory, button#btnShowStory, button#btnNewSprint {
   background-color: #FFD200;
   color: #616161;
   cursor: pointer;
 }
 
-button#btnOpenPDF, button#btnSavePDF, button#btnPrintPDF {
+button#btnOpenPDF, button#btnSavePDF, button#btnPrintPDF, button#btnPrintPDFSprint, button#btnOpenPDFSprint, button#btnSavePDFSprint {
   background-color: #26BF59;
   color: #FFF;
   cursor: pointer;
