@@ -162,6 +162,7 @@ $("#controlsSprint").submit(function() {
           console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
           console.log(SprintDataStoryRequirements);
           //console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
+          $("#sprintDetails").append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][requirementNumber] + "</td><tr/>");
 
 
           fetchSprintDataStoryRequirements(storyNumber, requirementNumber + 1);
@@ -180,7 +181,7 @@ $("#controlsSprint").submit(function() {
 
       // fade effect to go back to fill in a new story
        $('#btnNewSprint').click(function () {
-          $("#sprinstep2Container").fadeOut();
+          $("#sprintstep2Container").fadeOut();
           location.reload();
           $("#step1Container").fadeIn();
        });
