@@ -120,7 +120,7 @@ $("#controlsSprint").submit(function() {
           $("#sprintDetails").append("<tr><td> Title: </td><td>" + SprintDataStoryTitle[number] + "</td><tr/>");
           $("#sprintDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[number] + "</td><tr/>");
           $("#sprintDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[number] + "</td><tr/>");
-          $("#sprintDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[number] + "<br /><br /></td><tr/>");
+          $("#sprintDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[number] + "</td><tr/><br /><br />");
 
           // console.log(SprintDataStoryTitle);
           // console.log(SprintDataStoryNumber[number]);
