@@ -110,6 +110,42 @@
       </div>
 
 
+      <div id="step1Container" class="paddingContainer">
+      <hr/>
+      <!-- input fields to show story -->
+      <div id="controlsSprint">
+          <h1>Sprint</h1>
+          <p> Please fill in a Sprint number. </p>
+          <form id="controls">
+            <table>
+              <tr>
+                <!-- Aha! subdomain -->
+                <td><input type="text" placeholder="Aha! subdomain" id="subdomain" value="sablono" disabled></input></td>
+              </tr>
+              <!-- Product key -->
+              <!--<tr>
+                <!--<input type="text" placeholder="Product key" id="product-key" value="WEB"></input>-->
+                <!-- <td>
+                    <md-input-container>
+                      <label>Product Key</label>
+                        <md-select ng-model="userState">
+                          <md-option ng-repeat="state in states" value="{{state.name}}" selected="{{ state.name === select.name ? 'selected' : '' }}">
+                            {{state.name}}
+                          </md-option>
+                        </md-select>
+                    </md-input-container>
+                </td> 
+              </tr>-->
+              <tr>
+                <!-- Story Number -->
+                <td><input type="text" placeholder="Sprint number" id="sprintNumber" value="WEB-R-42"></input></td>
+                <td><md-button class="md-raised md-primary right orangeBtn" id="btnShowStory" type="submit">Show story</md-button></td>
+
+              </tr>
+            </table>
+          </form>
+      </div>
+
       <!-- NOT DONE -->
       <div id="sprintDiv">
         <hr/>
@@ -132,7 +168,7 @@
             <tr>
               <td>Sprint Number  </td>
               <td><input type="text" placeholder="Story number" id="sprintNumber" value="WEB-R-42"></input></td>
-              <td><input type="button" class="btn right" id="changeStoryNumberNOWsprint" value="Change WEB to NOW"></input></td>
+              <td><input type="button" class="btn right" id="" value="Change WEB to NOW"></input></td>
             </tr>
              <tr>
               <td></td>
