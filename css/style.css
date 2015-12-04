@@ -112,6 +112,6 @@ button#addRequirement {
   font-style: italic;
 }
 
-.borderTable {
+.borderTable, .borderTable td {
   border-top: 1px solid #616161;
 }
