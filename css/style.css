@@ -111,3 +111,7 @@ button#addRequirement {
   font-size: 10px;
   font-style: italic;
 }
+
+.borderTable {
+  border-top: 1px solid #616161;
+}
