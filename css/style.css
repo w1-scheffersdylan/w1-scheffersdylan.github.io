@@ -65,7 +65,7 @@ button#addRequirement {
   width: 360px;
 }
 
-#step1Container, #step2Container {
+#step1Container, #step2Container, #sprintstep2Container {
   display: none;
 }
 
