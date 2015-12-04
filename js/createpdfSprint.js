@@ -23,7 +23,9 @@ $("#controlsSprint").submit(function() {
     api.get("/releases/" + sprintNumber + "/features/", {}, function(response) {
     //api.get("/features/" + storyNumber + "/requirements", {}, function(response){ 
 
-
+      // fade effect if you pressed the "show story" button
+      $("#step1Container").fadeOut();
+      $("#sprintstep2Container").fadeIn();
               
     // alerts for test
     //alert(JSON.stringify(response.features));
@@ -174,9 +176,7 @@ $("#controlsSprint").submit(function() {
       }
 
 
-      // fade effect if you pressed the "show story" button
-      $("#step1Container").fadeOut();
-      $("#sprintstep2Container").fadeIn();
+      
 
       // fade effect to go back to fill in a new story
        $('.btnNewStory').click(function () {
