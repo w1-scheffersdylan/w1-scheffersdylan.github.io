@@ -80,6 +80,7 @@ button#addRequirement {
 }
 
 #sprintDiv {
+  border-top: 2px solid #616161;
   position: absolute;
   left: 25px;
   top: 210px;
