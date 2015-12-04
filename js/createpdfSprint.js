@@ -162,7 +162,7 @@ $("#controlsSprint").submit(function() {
           console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
           console.log(SprintDataStoryRequirements);
           //console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
-          $("#sprintDetails").append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][requirementNumber] + "</td><tr/>");
+          $("#requirementsDetails").append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][requirementNumber] + "</td><tr/>");
 
 
           fetchSprintDataStoryRequirements(storyNumber, requirementNumber + 1);
