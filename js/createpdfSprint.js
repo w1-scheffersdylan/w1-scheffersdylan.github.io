@@ -16,7 +16,7 @@ $("#controlsSprint").submit(function() {
     var sprintNumber = $("#sprintNumber").val();
     
     // Hide the controls.
-    $("#controlsSprint", "#controls").remove();
+    // $("#controlsSprint", "#controls").remove();
 
 
     //api.get("/products/" + productKey + "/features/WEB-296", {}, function(response) {
@@ -173,6 +173,10 @@ $("#controlsSprint").submit(function() {
         fetchSprintDataStoryRequirements(i, 1);
       }
 
+
+      // fade effect if you pressed the "show story" button
+      $("#step1Container").fadeOut();
+      $("#sprintstep2Container").fadeIn();
 
       // fade effect to go back to fill in a new story
        $('.btnNewStory').click(function () {
