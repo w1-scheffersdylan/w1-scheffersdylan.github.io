@@ -179,7 +179,7 @@ $("#controlsSprint").submit(function() {
       
 
       // fade effect to go back to fill in a new story
-       $('.btnNewStory').click(function () {
+       $('#btnNewSprint').click(function () {
           $("#sprinstep2Container").fadeOut();
           location.reload();
           $("#step1Container").fadeIn();
