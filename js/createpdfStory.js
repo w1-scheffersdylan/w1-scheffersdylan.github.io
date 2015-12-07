@@ -18,6 +18,7 @@ $("#controls").submit(function() {
 
               
     // alert for testing only
+    alert(response);
     alert(JSON.stringify(response));
     alert(JSON.stringify(response.feature.requirements.url));
 
