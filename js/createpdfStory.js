@@ -32,7 +32,7 @@ $("#controls").submit(function() {
       storyDataGroom = "";
     }
 
-    var storyDataDescriptionOrginal = response.feature.description.body;
+    var storyDataDescriptionOrginal = response.description.body;
 
     // remove all HTML and &nbsp; from storyDataDescriptionOrginal
     var storyDataDescriptionNoHTML = storyDataDescriptionOrginal.replace(/(<([^>]+)>)/ig,"");
