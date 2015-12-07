@@ -18,9 +18,9 @@ $("#controls").submit(function() {
 
               
     // alert for testing only
-    alert(response);
+    console.log(JSON.stringify(response));
     alert(JSON.stringify(response));
-    alert(JSON.stringify(response.feature.requirements.url));
+    alert(JSON.stringify(response.feature.requirements));
 
     // variables
     //console.log(response.feature)
