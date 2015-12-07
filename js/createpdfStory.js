@@ -73,7 +73,7 @@ $("#controls").submit(function() {
       for( var i = 0; i < response.feature.requirements.length; i++){
         console.log(JSON.stringify(response.feature.requirements[i]['reference_num']));
         requirementsArraz.push(JSON.stringify(response.feature.requirements[i]['reference_num']));
-        $('#storyDataTable').append("<tr><td> Acceptance criteria: </td><td>" + response.requirement.name+ "</td><tr/>");
+        $('#storyDataTable').append("<tr><td> Acceptance criteria: </td><td>" + requirementsArraz[i] + "</td><tr/>");
       }
 
 
