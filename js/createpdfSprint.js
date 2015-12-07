@@ -160,7 +160,7 @@ $("#controlsSprint").submit(function() {
         
         api.get("/products/" + productKey + "/features/" + SprintDataStoryNumber[number], {}, function(response) {
 
-          SprintDataStoryGroom.push(response.feature.original_estimate.toString());
+          //SprintDataStoryGroom.push(response.feature.original_estimate.toString());
           SprintDataStoryDescription.push(response.feature.description.body.replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' '));
           SprintDataStoryTitle.push(response.feature.name);
 
@@ -182,7 +182,7 @@ $("#controlsSprint").submit(function() {
 
           $("#sprintDetails").append("table><tr class='borderTable'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + "</td><tr/>");
           $("#sprintDetails").append("<tr><td> Title: </td><td>" + SprintDataStoryTitle[number] + "</td><tr/>");
-          $("#sprintDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[number] + "</td><tr/>");
+          //$("#sprintDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[number] + "</td><tr/>");
           $("#sprintDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[number] + "</td><tr/>");
           $("#sprintDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[number] + "</td><tr/>");
 
