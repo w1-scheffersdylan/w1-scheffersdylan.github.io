@@ -33,7 +33,7 @@ $("#controls").submit(function() {
       storyDataGroom = "";
     }
 
-    var storyDataDescriptionOrginal = response.description.body;
+    var storyDataDescriptionOrginal = response.feature.description.body;
 
     // remove all HTML and &nbsp; from storyDataDescriptionOrginal
     var storyDataDescriptionNoHTML = storyDataDescriptionOrginal.replace(/(<([^>]+)>)/ig,"");
