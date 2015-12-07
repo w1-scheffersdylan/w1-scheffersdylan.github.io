@@ -119,7 +119,7 @@ $("#controlsSprint").submit(function() {
           for( var i = 0; i < response.feature.requirements.length; i++){
             //console.log(JSON.stringify(response.feature.requirements[i]['reference_num']));
             SprintDataStoryRequirements[storyNumber].push(response.feature.requirements[i]['name']);
-            $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][i + 1] + "</td><tr/><hr />");
+            //$('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][i + 1] + "</td><tr/>");
 
           }
 
@@ -175,7 +175,7 @@ $("#controlsSprint").submit(function() {
           // document.write('<p><input type="button" class="btn right" id="btnOpenPDFSprint'+[number]+'" value="Open sprint as PDF"></input> <input type="button" class="btn right" id="btnSavePDFSprint'+[number]+'" value="Save sprint as PDF"></input></p>');
           // document.write("<h2>Sprint details</h2>");
 
-          // init the looping
+          //init the looping
           for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
             fetchSprintDataStoryRequirements(i);
           }
