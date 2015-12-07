@@ -128,8 +128,6 @@ $("#controlsSprint").submit(function() {
           //console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
           //console.log(SprintDataStoryRequirements);         
 
-          alert(SprintDataStoryRequirements[storyNumber] + "<br />");
-
           fetchSprintDataStoryRequirements(storyNumber + 1);
            
         }); // close api.get 
@@ -186,7 +184,8 @@ $("#controlsSprint").submit(function() {
           $("#sprintDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[number] + "</td><tr/>");
           $("#sprintDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[number] + "</td><tr/>");
           $("#sprintDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[number] + "</td><tr/>");
-          $("#sprintDetails").append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][requirementNumber] + "</td><tr/>");
+          
+          $("#sprintDetails").append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber] + "</td><tr/>");
 
           // console.log(SprintDataStoryTitle);
           // console.log(SprintDataStoryNumber[number]);
