@@ -122,7 +122,7 @@ $("#controlsSprint").submit(function() {
             $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][i + 1] + "</td><tr/>");
           }
 
-
+          $('#requirementsDetails').append("<br /> <hr /> <br />");
           //SprintDataStoryRequirements[storyNumber].push(" __ " + response.requirement.name);
 
           //console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
@@ -184,7 +184,7 @@ $("#controlsSprint").submit(function() {
           $("#sprintDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[number] + "</td><tr/>");
           $("#sprintDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[number] + "</td><tr/>");
           $("#sprintDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[number] + "</td><tr/>");
-          
+
           $("#sprintDetails").append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber] + "</td><tr/>");
 
           // console.log(SprintDataStoryTitle);
