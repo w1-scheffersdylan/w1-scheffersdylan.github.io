@@ -166,7 +166,7 @@ $("#controlsSprint").submit(function() {
         api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {
         //api.get("/requirements/" + SprintDataStoryRequirements[storyNumber][0] + "-" + requirementNumber, {}, function(response) {
           
-          $('#requirementsDetails').append("<tr class='borderTable bold'><td></td><td></td></tr><tr><td> Story Title: </td><td>" + SprintDataStoryTitle[storyNumber] + "</td><tr/>");
+          $('#requirementsDetails').append("<tr class='borderTable'><td></td><td></td></tr><tr class='bold'><td> Story Title: </td><td>" + SprintDataStoryTitle[storyNumber] + "</td><tr/>");
 
           for( var i = 0; i < response.feature.requirements.length; i++){
             //console.log(JSON.stringify(response.feature.requirements[i]['reference_num']));
