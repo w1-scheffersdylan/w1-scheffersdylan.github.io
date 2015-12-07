@@ -181,6 +181,7 @@ $("#controlsSprint").submit(function() {
 
           }
        
+          $("#requirementsDetails").append("<tr><td> &nbsp; </td><td> &nbsp; </td><tr/>");
 
           fetchSprintDataStoryRequirements(storyNumber + 1);
            
