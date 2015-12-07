@@ -107,36 +107,6 @@ $("#controlsSprint").submit(function() {
       }
       
 
-      //console.log(SprintDataStoryRequirements);
-
-
-
-      function fetchSprintDataStoryRequirements(storyNumber){
-
-        api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {
-        //api.get("/requirements/" + SprintDataStoryRequirements[storyNumber][0] + "-" + requirementNumber, {}, function(response) {
-          
-          $('#requirementsDetails').append("<tr><td><hr></td><td><hr></td></tr><tr><td> Story Title: </td><td>" + SprintDataStoryTitle[storyNumber][i + 1] + "</td><tr/>");
-
-          for( var i = 0; i < response.feature.requirements.length; i++){
-            //console.log(JSON.stringify(response.feature.requirements[i]['reference_num']));
-            SprintDataStoryRequirements[storyNumber].push(response.feature.requirements[i]['name']);
-            $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][i + 1] + "</td><tr/>");
-
-          }
-
-          
-          //SprintDataStoryRequirements[storyNumber].push(" __ " + response.requirement.name);
-
-          //console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
-          //console.log(SprintDataStoryRequirements);         
-
-          fetchSprintDataStoryRequirements(storyNumber + 1);
-           
-        }); // close api.get 
-
-      }
-
       
       // get all data from all stories in the sprint
       function fectchSprintDataStoryGroomDescription(number){
@@ -188,6 +158,34 @@ $("#controlsSprint").submit(function() {
 
       // init the looping
       fectchSprintDataStoryGroomDescription(0);
+
+
+      // get all requirements
+      function fetchSprintDataStoryRequirements(storyNumber){
+
+        api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {
+        //api.get("/requirements/" + SprintDataStoryRequirements[storyNumber][0] + "-" + requirementNumber, {}, function(response) {
+          
+          $('#requirementsDetails').append("<tr><td><hr></td><td><hr></td></tr><tr><td> Story Title: </td><td>" + SprintDataStoryTitle[storyNumber][i + 1] + "</td><tr/>");
+
+          for( var i = 0; i < response.feature.requirements.length; i++){
+            //console.log(JSON.stringify(response.feature.requirements[i]['reference_num']));
+            SprintDataStoryRequirements[storyNumber].push(response.feature.requirements[i]['name']);
+            $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][i + 1] + "</td><tr/>");
+
+          }
+
+          
+          //SprintDataStoryRequirements[storyNumber].push(" __ " + response.requirement.name);
+
+          //console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
+          //console.log(SprintDataStoryRequirements);         
+
+          fetchSprintDataStoryRequirements(storyNumber + 1);
+           
+        }); // close api.get 
+
+      }
 
       // init requirement looping
       fetchSprintDataStoryRequirements(0);
