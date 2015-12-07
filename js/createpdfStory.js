@@ -19,7 +19,7 @@ $("#controls").submit(function() {
               
     // alert for testing only
     alert(JSON.stringify(response.feature.requirements));
-    console.log(JSON.stringify(response.feature.requirements['reference_num']));
+    console.log(JSON.stringify(response.feature.requirements[0]['reference_num']));
     // console.log(response.feature.requirements.reference_num);
     // alert(JSON.stringify(response));
     // alert(JSON.stringify(response.feature.requirements));
