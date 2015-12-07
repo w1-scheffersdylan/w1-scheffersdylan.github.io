@@ -133,7 +133,7 @@ $("#controlsSprint").submit(function() {
           //   fetchSprintDataStoryRequirements(i);
           // }
 
-          $("#sprintDetails").append("<tr class='borderTable'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + "</td><tr/>");
+          $("#sprintDetails").append("<tr class='borderTable'><td class='bold'> Ticket-ID: </td><td class='bold'>" + SprintDataStoryNumber[number] + "</td><tr/>");
           $("#sprintDetails").append("<tr><td> Title: </td><td>" + SprintDataStoryTitle[number] + "</td><tr/>");
           //$("#sprintDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[number] + "</td><tr/>");
           $("#sprintDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[number] + "</td><tr/>");

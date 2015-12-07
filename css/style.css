@@ -116,3 +116,7 @@ button#addRequirement {
 .borderTable, .borderTable td {
   border-top: 1px solid #616161;
 }
+
+.bold {
+  font-weight: bold;
+}
