@@ -129,7 +129,7 @@ $("#controlsSprint").submit(function() {
             SprintDataStoryGroom.push("");
           }
           else {
-            SprintDataStoryGroom.push(response.feature.original_estimate.toString());
+            SprintDataStoryGroom.push(response.feature.original_estimate);
           }
      
 
