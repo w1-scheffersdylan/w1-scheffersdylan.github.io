@@ -184,7 +184,7 @@ $("#controlsSprint").submit(function() {
 
   
 
-
+      console.log(SprintDataStoryRequirements);
 
 
       
