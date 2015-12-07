@@ -110,23 +110,31 @@ $("#controlsSprint").submit(function() {
 
 
 
-      // function fetchSprintDataStoryRequirements(storyNumber, requirementNumber){
+      function fetchSprintDataStoryRequirements(storyNumber){
 
-      //   api.get("/products/" + productKey + "/features/" + storyNumber, {}, function(response) {
-      //   api.get("/requirements/" + SprintDataStoryRequirements[storyNumber][0] + "-" + requirementNumber, {}, function(response) {
-
-      //     SprintDataStoryRequirements[storyNumber].push(" __ " + response.requirement.name);
-
-      //     //console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
-      //     //console.log(SprintDataStoryRequirements);         
+        api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {
+        //api.get("/requirements/" + SprintDataStoryRequirements[storyNumber][0] + "-" + requirementNumber, {}, function(response) {
 
 
-      //     fetchSprintDataStoryRequirements(storyNumber, requirementNumber + 1);
+          for( var i = 0; i < response.feature.requirements.length; i++){
+            //console.log(JSON.stringify(response.feature.requirements[i]['reference_num']));
+            SprintDataStoryRequirements[storyNumber].push(response.feature.requirements[i]['name']);
+            $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][i + 1] + "</td><tr/>");
+          }
+
+
+          //SprintDataStoryRequirements[storyNumber].push(" __ " + response.requirement.name);
+
+          //console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
+          //console.log(SprintDataStoryRequirements);         
+
+          alert(SprintDataStoryRequirements[storyNumber] + "<br />");
+
+          fetchSprintDataStoryRequirements(storyNumber + 1);
            
-      //   }); // close api.get 
+        }); // close api.get 
 
-      // }
-
+      }
 
 
       // function fetchSprintDataStoryRequirements(storyNumber, requirementNumber){
@@ -170,7 +178,7 @@ $("#controlsSprint").submit(function() {
 
           // init the looping
           for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
-            fetchSprintDataStoryRequirements(i, 1);
+            fetchSprintDataStoryRequirements(i);
           }
 
           $("#sprintDetails").append("table><tr class='borderTable'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + "</td><tr/>");
