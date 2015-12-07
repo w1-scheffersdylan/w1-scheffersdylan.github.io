@@ -136,6 +136,8 @@ $("#controlsSprint").submit(function() {
 
       }
 
+      fetchSprintDataStoryRequirements(0);
+
 
       // function fetchSprintDataStoryRequirements(storyNumber, requirementNumber){
 
