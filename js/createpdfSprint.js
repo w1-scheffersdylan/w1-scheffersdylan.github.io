@@ -19,9 +19,8 @@ $("#controlsSprint").submit(function() {
     // $("#controlsSprint", "#controls").remove();
 
 
-    //api.get("/releases/" + sprintNumber + "/features/", {}, function(response) {
-    api.get("/features?tag=" + sprintNumber , {}, function(response) {
-
+    //api.get("/products/" + productKey + "/features/WEB-296", {}, function(response) {
+    api.get("/releases/" + sprintNumber + "/features/", {}, function(response) {
     //api.get("/features/" + storyNumber + "/requirements", {}, function(response){ 
 
       // fade effect if you pressed the "show story" button
@@ -29,8 +28,8 @@ $("#controlsSprint").submit(function() {
       $("#sprintstep2Container").fadeIn();
               
     // alerts for test
-    alert(JSON.stringify(response));
-    alert(JSON.stringify(response.features));
+    //alert(JSON.stringify(response.features));
+    //alert( response.features[0]["name"] );
 
     //document.write(JSON.stringify(response.features));
 

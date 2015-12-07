@@ -13,11 +13,13 @@ $("#controls").submit(function() {
 
     
     // URL to story
-    api.get("/products/" + productKey + "/features/" + storyNumber, {}, function(response) {
+    // api.get("/products/" + productKey + "/features/" + storyNumber, {}, function(response) {
+    api.get("/features?tag=" + storyNumber, {}, function(response) {
 
               
     // alert for testing only
-    //alert(JSON.stringify(response, null, 4));
+    alert(JSON.stringify(response));
+    alert(JSON.stringify(response.feature));
 
     // variables
     //console.log(response.feature)
