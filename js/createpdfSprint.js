@@ -110,22 +110,22 @@ $("#controlsSprint").submit(function() {
 
 
 
-      function fetchSprintDataStoryRequirements(storyNumber, requirementNumber){
+      // function fetchSprintDataStoryRequirements(storyNumber, requirementNumber){
 
-        api.get("/products/" + productKey + "/features/" + storyNumber, {}, function(response) {
-        api.get("/requirements/" + SprintDataStoryRequirements[storyNumber][0] + "-" + requirementNumber, {}, function(response) {
+      //   api.get("/products/" + productKey + "/features/" + storyNumber, {}, function(response) {
+      //   api.get("/requirements/" + SprintDataStoryRequirements[storyNumber][0] + "-" + requirementNumber, {}, function(response) {
 
-          SprintDataStoryRequirements[storyNumber].push(" __ " + response.requirement.name);
+      //     SprintDataStoryRequirements[storyNumber].push(" __ " + response.requirement.name);
 
-          //console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
-          //console.log(SprintDataStoryRequirements);         
+      //     //console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
+      //     //console.log(SprintDataStoryRequirements);         
 
 
-          fetchSprintDataStoryRequirements(storyNumber, requirementNumber + 1);
+      //     fetchSprintDataStoryRequirements(storyNumber, requirementNumber + 1);
            
-        }); // close api.get 
+      //   }); // close api.get 
 
-      }
+      // }
 
 
 
