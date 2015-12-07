@@ -18,10 +18,10 @@ $("#controls").submit(function() {
 
               
     // alert for testing only
-    console.log(JSON.stringify(response.feature.requirements['reference_num']));
+    console.log(response.feature.requirements['reference_num']);
     console.log(response.feature.requirements.reference_num);
-    alert(JSON.stringify(response));
-    alert(JSON.stringify(response.feature.requirements));
+    // alert(JSON.stringify(response));
+    // alert(JSON.stringify(response.feature.requirements));
 
     // variables
     //console.log(response.feature)
