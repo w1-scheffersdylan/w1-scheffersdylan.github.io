@@ -14,7 +14,7 @@ $("#controls").submit(function() {
     
     // URL to story
     // api.get("/products/" + productKey + "/features/" + storyNumber, {}, function(response) {
-    api.get("/products/" + productKey + "/features", {}, function(response) {
+    api.get("/products/" + productKey + "/features/" + storyNumber, {}, function(response) {
 
               
     // alert for testing only
