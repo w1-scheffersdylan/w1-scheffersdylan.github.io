@@ -101,10 +101,6 @@ $("#controlsSprint").submit(function() {
 
 
 
-      var SprintDataStoryRequirements = [];
-      for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
-        SprintDataStoryRequirements.push([SprintDataStoryNumber[i]]);
-      }
       
 
       
@@ -142,6 +138,14 @@ $("#controlsSprint").submit(function() {
       // init the looping
       fectchSprintDataStoryGroomDescription(0);
 
+
+
+
+      var SprintDataStoryRequirements = [];
+      for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
+        SprintDataStoryRequirements.push([SprintDataStoryNumber[i]]);
+      }
+      
 
       // get all requirements
       function fetchSprintDataStoryRequirements(storyNumber){
