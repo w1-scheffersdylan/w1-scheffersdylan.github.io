@@ -133,7 +133,7 @@ $("#controlsSprint").submit(function() {
           //   fetchSprintDataStoryRequirements(i);
           // }
 
-          $("#sprintDetails").append("table><tr class='borderTable'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + "</td><tr/>");
+          $("#sprintDetails").append("<tr class='borderTable'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + "</td><tr/>");
           $("#sprintDetails").append("<tr><td> Title: </td><td>" + SprintDataStoryTitle[number] + "</td><tr/>");
           //$("#sprintDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[number] + "</td><tr/>");
           $("#sprintDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[number] + "</td><tr/>");
@@ -166,7 +166,7 @@ $("#controlsSprint").submit(function() {
         api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {
         //api.get("/requirements/" + SprintDataStoryRequirements[storyNumber][0] + "-" + requirementNumber, {}, function(response) {
           
-          $('#requirementsDetails').append("<tr><td><hr></td><td><hr></td></tr><tr><td> Story Title: </td><td>" + SprintDataStoryTitle[storyNumber][i + 1] + "</td><tr/>");
+          $('#requirementsDetails').append("<tr class='borderTable'><td></td><td></td></tr><tr><td> Story Title: </td><td>" + SprintDataStoryTitle[storyNumber][i + 1] + "</td><tr/>");
 
           for( var i = 0; i < response.feature.requirements.length; i++){
             //console.log(JSON.stringify(response.feature.requirements[i]['reference_num']));
