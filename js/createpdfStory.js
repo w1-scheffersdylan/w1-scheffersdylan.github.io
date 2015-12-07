@@ -18,15 +18,8 @@ $("#controls").submit(function() {
 
               
     // alert for testing only
-    alert(JSON.stringify(response.feature.requirements));
+    //alert(JSON.stringify(response.feature.requirements));
 
-    for( var i = 0; i < response.feature.requirements.length; i++){
-      console.log(JSON.stringify(response.feature.requirements[i]['reference_num']));
-    }
-    
-    // console.log(response.feature.requirements.reference_num);
-    // alert(JSON.stringify(response));
-    // alert(JSON.stringify(response.feature.requirements));
 
     // variables
     //console.log(response.feature)
@@ -77,53 +70,32 @@ $("#controls").submit(function() {
       }
 
 
+      // // add requirement by hand ("add requirement" button press)
+      // $("#addRequirement").click(function() {
+      //   if( $("#addRequirementValue").val() != "" ) {
+      //      requirementsArraz.push($("#addRequirementValue").val());
+      //      $('#storyDataTable').append("<tr><td> Acceptance criteria: </td><td>" + requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/>");
+      //      $("#addRequirementValue").val("");
+      //   }
+      // });
 
-      // function fetchARequirement(number){
-        
-      //   api.get("/requirements/" + storyNumber + "-" + number, {}, function(response) {
-
-      //     requirementsArraz.push(response.requirement.name);
-      //     $('#storyDataTable').append("<tr><td> Acceptance criteria: </td><td>" + response.requirement.name+ "</td><tr/>");
-
-      //     // console.log(requirementsArraz);
-
-      //     fetchARequirement(number + 1);
-           
-      //   }); // close api.get 
-
-      // }
-      
-      // // init the looping
-      // fetchARequirement(1);
-
-
-      // add requirement by hand ("add requirement" button press)
-      $("#addRequirement").click(function() {
-        if( $("#addRequirementValue").val() != "" ) {
-           requirementsArraz.push($("#addRequirementValue").val());
-           $('#storyDataTable').append("<tr><td> Acceptance criteria: </td><td>" + requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/>");
-           $("#addRequirementValue").val("");
-        }
-      });
-
-      // add requirement by hand (enter button press)
-      $("#addRequirementValue").keypress(function(e){
-        var key = e.which;
-        if( key == 13 ) { // the enter button
-          if( $("#addRequirementValue").val() != "" ) {
-            requirementsArraz.push($("#addRequirementValue").val());
-            $('#storyDataTable').append("<tr><td> Acceptance criteria: </td><td>" + requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/>");
-            $("#addRequirementValue").val("");
-          }
-        }
-      });
+      // // add requirement by hand (enter button press)
+      // $("#addRequirementValue").keypress(function(e){
+      //   var key = e.which;
+      //   if( key == 13 ) { // the enter button
+      //     if( $("#addRequirementValue").val() != "" ) {
+      //       requirementsArraz.push($("#addRequirementValue").val());
+      //       $('#storyDataTable').append("<tr><td> Acceptance criteria: </td><td>" + requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/>");
+      //       $("#addRequirementValue").val("");
+      //     }
+      //   }
+      // });
 
        
        // fade effect to go back to fill in a new story
        $('#btnNewStory').click(function () {
-          $("#step2Container").fadeOut();
+          $("#step2Container").fadeOut("slow");
           location.reload();
-          $("#step1Container").fadeIn();
        });
             
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
