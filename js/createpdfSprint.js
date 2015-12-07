@@ -166,11 +166,11 @@ $("#controlsSprint").submit(function() {
         api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {
 
           
-          $("#requirementsDetails").append("<tr class='borderTable bold'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + "</td></tr>");
+          $("#requirementsDetails").append("<tr class='borderTable bold'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[storyNumber] + "</td></tr>");
           $('#requirementsDetails').append("<tr><td> Story Title: </td><td>" + SprintDataStoryTitle[storyNumber] + "</td><tr/>");
           //$("#requirementsDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[number] + "</td><tr/>");
-          $("#requirementsDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[number] + "</td><tr/>");
-          $("#requirementsDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[number] + "</td><tr/>");
+          $("#requirementsDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[storyNumber] + "</td><tr/>");
+          $("#requirementsDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[storyNumber] + "</td><tr/>");
 
 
 
