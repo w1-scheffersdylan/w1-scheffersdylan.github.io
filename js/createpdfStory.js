@@ -68,23 +68,33 @@ $("#controls").submit(function() {
         
       // get all of the requirements
       var requirementsArraz = [];
-      function fetchARequirement(number){
-        
-        api.get("/requirements/" + storyNumber + "-" + number, {}, function(response) {
 
-          requirementsArraz.push(response.requirement.name);
-          $('#storyDataTable').append("<tr><td> Acceptance criteria: </td><td>" + response.requirement.name+ "</td><tr/>");
 
-          // console.log(requirementsArraz);
-
-          fetchARequirement(number + 1);
-           
-        }); // close api.get 
-
+      for( var i = 0; i < response.feature.requirements.length; i++){
+        console.log(JSON.stringify(response.feature.requirements[i]['reference_num']));
+        requirementsArraz.push(JSON.stringify(response.feature.requirements[i]['reference_num']));
+        $('#storyDataTable').append("<tr><td> Acceptance criteria: </td><td>" + response.requirement.name+ "</td><tr/>");
       }
+
+
+
+      // function fetchARequirement(number){
+        
+      //   api.get("/requirements/" + storyNumber + "-" + number, {}, function(response) {
+
+      //     requirementsArraz.push(response.requirement.name);
+      //     $('#storyDataTable').append("<tr><td> Acceptance criteria: </td><td>" + response.requirement.name+ "</td><tr/>");
+
+      //     // console.log(requirementsArraz);
+
+      //     fetchARequirement(number + 1);
+           
+      //   }); // close api.get 
+
+      // }
       
-      // init the looping
-      fetchARequirement(1);
+      // // init the looping
+      // fetchARequirement(1);
 
 
       // add requirement by hand ("add requirement" button press)
