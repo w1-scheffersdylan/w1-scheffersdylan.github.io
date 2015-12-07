@@ -112,14 +112,14 @@ $("#controlsSprint").submit(function() {
 
       function fetchSprintDataStoryRequirements(storyNumber){
 
-        api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber], {}, function(response) {
+        api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {
         //api.get("/requirements/" + SprintDataStoryRequirements[storyNumber][0] + "-" + requirementNumber, {}, function(response) {
 
 
           for( var i = 0; i < response.feature.requirements.length; i++){
             //console.log(JSON.stringify(response.feature.requirements[i]['reference_num']));
             SprintDataStoryRequirements[storyNumber].push(response.feature.requirements[i]['name']);
-            //$('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][i + 1] + "</td><tr/>");
+            $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][i + 1] + "</td><tr/>");
 
           }
 
@@ -176,9 +176,9 @@ $("#controlsSprint").submit(function() {
           // document.write("<h2>Sprint details</h2>");
 
           //init the looping
-          for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
-            fetchSprintDataStoryRequirements(i);
-          }
+          // for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
+          //   fetchSprintDataStoryRequirements(i);
+          // }
 
           $("#sprintDetails").append("table><tr class='borderTable'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + "</td><tr/>");
           $("#sprintDetails").append("<tr><td> Title: </td><td>" + SprintDataStoryTitle[number] + "</td><tr/>");
@@ -186,7 +186,7 @@ $("#controlsSprint").submit(function() {
           $("#sprintDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[number] + "</td><tr/>");
           $("#sprintDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[number] + "</td><tr/>");
 
-          $("#sprintDetails").append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber] + "</td><tr/>");
+          // $("#sprintDetails").append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber] + "</td><tr/>");
 
           // console.log(SprintDataStoryTitle);
           // console.log(SprintDataStoryNumber[number]);
