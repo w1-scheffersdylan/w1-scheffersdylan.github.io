@@ -112,7 +112,7 @@ $("#controlsSprint").submit(function() {
 
       function fetchSprintDataStoryRequirements(storyNumber){
 
-        api.get("/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {
+        api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber], {}, function(response) {
         //api.get("/requirements/" + SprintDataStoryRequirements[storyNumber][0] + "-" + requirementNumber, {}, function(response) {
 
 
