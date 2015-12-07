@@ -59,7 +59,7 @@ $("#controlsSprint").submit(function() {
         var SprintDataStoryName = [];
 
         for( i = 0; i < response.features.length; i++ ){
-          SprintDataStoryName.push(response.features[i]["name"])
+          SprintDataStoryName.push(response.features[i]["name"]);
           // document.write("<tr><td>Story name:</td><td> (TITLE)</td><td>" + SprintDataStoryName[i] + "</td></tr>");
         }
 
@@ -86,7 +86,7 @@ $("#controlsSprint").submit(function() {
       // put all ticket-id's in an array
       var SprintDataStoryNumber = [];
       for( i = 0; i < response.features.length; i++ ){
-        SprintDataStoryNumber.push(response.features[i]["reference_num"])
+        SprintDataStoryNumber.push(response.features[i]["reference_num"]);
         console.log(SprintDataStoryNumber);
       }
 
@@ -242,7 +242,7 @@ $("#controlsSprint").submit(function() {
 
               }
               
-            }
+            };
 
             for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
                docDefinition.content.push({
@@ -286,7 +286,7 @@ $("#controlsSprint").submit(function() {
                             ]
                         }
                     }
-                  )
+                  );
 
 
                 }
@@ -354,7 +354,7 @@ $("#controlsSprint").submit(function() {
 
               }
               
-            }
+            };
 
             for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
                docDefinition.content.push({
@@ -398,7 +398,7 @@ $("#controlsSprint").submit(function() {
                             ]
                         }
                     }
-                  )
+                  );
 
 
                 }
@@ -464,7 +464,7 @@ $("#controlsSprint").submit(function() {
 
               }
               
-            }
+            };
 
             for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
                docDefinition.content.push({
@@ -508,7 +508,7 @@ $("#controlsSprint").submit(function() {
                             ]
                         }
                     }
-                  )
+                  );
 
 
                 }
