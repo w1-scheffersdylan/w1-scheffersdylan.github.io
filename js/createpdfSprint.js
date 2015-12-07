@@ -86,6 +86,7 @@ $("#controlsSprint").submit(function() {
       var SprintDataStoryNumber = [];
       for( i = 0; i < response.features.length; i++ ){
         SprintDataStoryNumber.push(response.features[i]["reference_num"])
+        console.log(SprintDataStoryNumber);
       }
 
       // get all grooming points in an array
@@ -105,26 +106,47 @@ $("#controlsSprint").submit(function() {
       }
       
 
-      console.log(SprintDataStoryRequirements);
+      //console.log(SprintDataStoryRequirements);
+
+
 
       function fetchSprintDataStoryRequirements(storyNumber, requirementNumber){
 
-        
+        api.get("/products/" + productKey + "/features/" + storyNumber, {}, function(response) {
         api.get("/requirements/" + SprintDataStoryRequirements[storyNumber][0] + "-" + requirementNumber, {}, function(response) {
 
           SprintDataStoryRequirements[storyNumber].push(" __ " + response.requirement.name);
 
-          console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
-          console.log(SprintDataStoryRequirements);
           //console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
-          
+          //console.log(SprintDataStoryRequirements);         
 
 
           fetchSprintDataStoryRequirements(storyNumber, requirementNumber + 1);
            
         }); // close api.get 
 
-      }    
+      }
+
+
+
+      // function fetchSprintDataStoryRequirements(storyNumber, requirementNumber){
+
+        
+      //   api.get("/requirements/" + SprintDataStoryRequirements[storyNumber][0] + "-" + requirementNumber, {}, function(response) {
+
+      //     SprintDataStoryRequirements[storyNumber].push(" __ " + response.requirement.name);
+
+      //     console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
+      //     console.log(SprintDataStoryRequirements);
+      //     //console.log(SprintDataStoryRequirements[storyNumber][requirementNumber]);
+          
+
+
+      //     fetchSprintDataStoryRequirements(storyNumber, requirementNumber + 1);
+           
+      //   }); // close api.get 
+
+      // }    
 
 
       function fectchSprintDataStoryGroomDescription(number){
