@@ -50,12 +50,6 @@ button#btnOpenPDF, button#btnSavePDF, button#btnPrintPDF, button#btnPrintPDFSpri
   cursor: pointer;
 }
 
-button#addRequirement {
-  background-color: #00B4C8;
-  color: #FFF;
-  cursor: pointer;
-}
-
 .showDataStory {
   background-color: red;
   /*width: 100%;
@@ -94,15 +88,6 @@ button#addRequirement {
   border: 0;
   background-color: #E0E0E0;
   color: #616161;
-  border-bottom: 1px solid #616161;
-  height: 36px;
-  outline: none;
-}
-
-#addRequirementValue {
-  width: 360px;
-  border: 0;
-  background-color: #E0E0E0;
   border-bottom: 1px solid #616161;
   height: 36px;
   outline: none;
