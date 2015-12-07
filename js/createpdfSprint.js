@@ -190,7 +190,7 @@ $("#controlsSprint").submit(function() {
 
       // fade effect to go back to fill in a new story
        $('#btnNewSprint').click(function () {
-          $("#sprintstep2Container").fadeOut("slow");
+          $("#sprintstep2Container").fadeOut("fast");
           location.reload();
        });
                                                                                                                                                                                                                                              

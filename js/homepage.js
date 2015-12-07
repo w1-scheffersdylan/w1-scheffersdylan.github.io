@@ -1,2 +1,2 @@
 // fade effect if page loads
-$("#step1Container").fadeIn("fast");
+$("#step1Container").fadeIn();
