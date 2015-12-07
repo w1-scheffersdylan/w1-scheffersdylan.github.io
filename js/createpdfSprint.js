@@ -120,7 +120,7 @@ $("#controlsSprint").submit(function() {
             //console.log(JSON.stringify(response.feature.requirements[i]['reference_num']));
             SprintDataStoryRequirements[storyNumber].push(response.feature.requirements[i]['name']);
             $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][i + 1] + "</td><tr/>");
-            $('#requirementsDetails').append("<br /> <hr /> <br />");
+            
           }
 
           
@@ -134,7 +134,7 @@ $("#controlsSprint").submit(function() {
         }); // close api.get 
 
       }
-
+$('#requirementsDetails').append("<br /> <hr /> <br />");
 
       // function fetchSprintDataStoryRequirements(storyNumber, requirementNumber){
 
