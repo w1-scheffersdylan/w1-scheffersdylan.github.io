@@ -387,7 +387,7 @@ $("#controlsSprint").submit(function() {
 
               }
               
-            }
+            };
 
             
 
