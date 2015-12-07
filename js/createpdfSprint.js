@@ -242,7 +242,7 @@ $("#controlsSprint").submit(function() {
 
               }
               
-            };
+            }
 
             for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
                docDefinition.content.push({
@@ -354,7 +354,7 @@ $("#controlsSprint").submit(function() {
 
               }
               
-            };
+            }
 
             for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
                docDefinition.content.push({
@@ -464,7 +464,7 @@ $("#controlsSprint").submit(function() {
 
               }
               
-            };
+            }
 
             for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
                docDefinition.content.push({
