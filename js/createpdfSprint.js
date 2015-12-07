@@ -12,7 +12,8 @@ $("#controlsSprint").submit(function() {
     // Replace this with your redirect URL.
     redirectUri: "https://w1-scheffersdylan.github.io/"
   }).authenticate(function(api, success, message) {
-    var productKey = $("#product-key").val();
+    //var productKey = $("#product-key").val();
+    var productKey = "WEB";
     var sprintNumber = $("#sprintNumber").val();
     
     // Hide the controls.
