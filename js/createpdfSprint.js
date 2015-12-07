@@ -113,7 +113,6 @@ $("#controlsSprint").submit(function() {
         
         api.get("/products/" + productKey + "/features/" + SprintDataStoryNumber[number], {}, function(response) {
 
-          SprintDataStoryGroom.push(response.feature.original_estimate.toString());
           SprintDataStoryDescription.push(response.feature.description.body.replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' '));
           SprintDataStoryTitle.push(response.feature.name);
 
@@ -125,27 +124,13 @@ $("#controlsSprint").submit(function() {
             SprintDataStoryEpic.push(response.feature.initiative.name);
           }
 
-          // document.write('<p><input type="button" class="btn right" id="btnOpenPDFSprint'+[number]+'" value="Open sprint as PDF"></input> <input type="button" class="btn right" id="btnSavePDFSprint'+[number]+'" value="Save sprint as PDF"></input></p>');
-          // document.write("<h2>Sprint details</h2>");
-
-          //init the looping
-          // for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
-          //   fetchSprintDataStoryRequirements(i);
-          // }
-
-          // $("#sprintDetails").append("<tr class='borderTable'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[number] + "</td></tr>");
-          // $("#sprintDetails").append("<tr><td> Title: </td><td>" + SprintDataStoryTitle[number] + "</td><tr/>");
-          // $("#sprintDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[number] + "</td><tr/>");
-          // $("#sprintDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[number] + "</td><tr/>");
-          // $("#sprintDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[number] + "</td><tr/>");
-
-          // $("#sprintDetails").append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber] + "</td><tr/>");
-
-          // console.log(SprintDataStoryTitle);
-          // console.log(SprintDataStoryNumber[number]);
-          // console.log(SprintDataStoryGroom[number]);
-          // console.log(SprintDataStoryDescription[number]);
-          // console.log(SprintDataStoryEpic[number])
+          // check if their is a grooming point
+          if( typeof JSON.stringify(response.feature.initiative) === null){
+            SprintDataStoryGroom.push("");
+          }
+          else {
+            SprintDataStoryGroom.push(response.feature.original_estimate.toString());
+          }
      
 
 
