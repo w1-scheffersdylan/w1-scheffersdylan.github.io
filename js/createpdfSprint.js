@@ -145,8 +145,10 @@ $("#controlsSprint").submit(function() {
 
 
       var SprintDataStoryRequirements = [];
+      var SprintDataStoryNotes = [];
       for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
         SprintDataStoryRequirements.push([SprintDataStoryNumber[i]]);
+        SprintDataStoryNotes.push([SprintDataStoryNumber[i]]);
       }
       
 
@@ -198,17 +200,15 @@ $("#controlsSprint").submit(function() {
 
 
 
-
-      var notesArraz = [];
       // get all comments from a story
       function fectchDataStoryComments(number){
         
-        api.get("/features/" + SprintDataStoryRequirements[number][0] + "/comments", {}, function(response) {
+        api.get("/features/" + SprintDataStoryNotes[number][0] + "/comments", {}, function(response) {
 
          
           
           for( var i = 0; i < response.comments.length; i++){
-            notesArraz.push(" __ " + JSON.stringify(response.comments[i]['body']).replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' ').replace(/&amp;/gi,' ').replace(/"/gi,' '));
+            SprintDataStoryNotes.push(" __ " + JSON.stringify(response.comments[i]['body']).replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' ').replace(/&amp;/gi,' ').replace(/"/gi,' '));
           }
 
           console.log(notesArraz);
