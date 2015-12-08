@@ -355,19 +355,19 @@ $("#controlsSprint").submit(function() {
                             heights: [ '10%', '10%', '40%', '40%' ],
 
                             body: [
-                                [{ text: [ 'TICKET-ID: \n \n', { text: SprintDataStoryNumber[0], style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
-                                 { text: [ 'TITLE: \n \n', { text: SprintDataStoryTitle[0], style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
+                                [{ text: [ 'TICKET-ID: \n \n', { text: SprintDataStoryNumber[1], style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
+                                 { text: [ 'TITLE: \n \n', { text: SprintDataStoryTitle[1], style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text: 'PRIORITY:\n' + '\n \n', colSpan: 3, rowSpan: 2 }, '', ''],
 
-                                [{ text: [ 'EPIC:\n', { text: SprintDataStoryEpic[0], style: 'mediumText', alignment: 'center' }], colSpan: 11 }, '', '', '', '', '', '', '', '', '', '', 
+                                [{ text: [ 'EPIC:\n', { text: SprintDataStoryEpic[1], style: 'mediumText', alignment: 'center' }], colSpan: 11 }, '', '', '', '', '', '', '', '', '', '', 
                                  { text: ['GROOM: \n', { text: 'SprintDataStoryGroom[0]', style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
                                  { text: 'CORR: \n' + '\n \n', colSpan: 2 }, '', 
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
-                                [{ text: [ 'STORY: \n \n', { text: SprintDataStoryDescription[0], style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
+                                [{ text: [ 'STORY: \n \n', { text: SprintDataStoryDescription[1], style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text:'NOTES:\n \n \n \n \n \n \n \n ', colSpan: 6 }, '', '', '', '', ''],
 
-                                [{ text: 'ACCEPTANCE CRITERIA: \n \n' + SprintDataStoryRequirements[0].join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
+                                [{ text: 'ACCEPTANCE CRITERIA: \n \n' + SprintDataStoryRequirements[1].join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & Beautify Code \n \n __ Quality assurance by PO' , colSpan: 6 }, '', '', '', '', ''],
                             ]
                         }
