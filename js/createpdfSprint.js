@@ -173,9 +173,22 @@ $("#controlsSprint").submit(function() {
        
           $("#requirementsDetails").append("<tr><td> &nbsp; </td><td> &nbsp; </td><tr/>");
 
-          fetchSprintDataStoryRequirements(storyNumber + 1);
            
         }); // close api.get 
+
+        var notesArraz = [];
+        // get all comments from a story
+        api.get("/features/" + SprintDataStoryRequirements[storyNumber][0] + "/comments", {}, function(response) {
+          
+          for( var i = 0; i < response.comments.length; i++){
+            notesArraz.push(" __ " + JSON.stringify(response.comments[i]['body']).replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' ').replace(/&amp;/gi,' ').replace(/"/gi,' '));
+          }
+
+          console.log(notesArraz);
+           
+        }); // close api.get 
+
+        fetchSprintDataStoryRequirements(storyNumber + 1);
 
       }
 
