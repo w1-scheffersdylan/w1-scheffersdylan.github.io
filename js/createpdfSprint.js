@@ -251,9 +251,9 @@ $("#controlsSprint").submit(function() {
         }    
 
         // remove ticket id from array of notes
-        for(var i = 0; i < SprintDataStoryNotes.length; i++){
-          SprintDataStoryNotes[i].shift();
-        } 
+        // for(var i = 0; i < SprintDataStoryNotes.length; i++){
+        //   SprintDataStoryNotes[i].shift();
+        // } 
 
 
 
