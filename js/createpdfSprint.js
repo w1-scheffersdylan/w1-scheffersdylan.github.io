@@ -164,7 +164,7 @@ $("#controlsSprint").submit(function() {
 
           for( var i = 0; i < response.feature.requirements.length; i++){
             //console.log(JSON.stringify(response.feature.requirements[i]['reference_num']));
-            SprintDataStoryRequirements[storyNumber].push(response.feature.requirements[i]['name']);
+            SprintDataStoryRequirements[storyNumber].push( " __ " + response.feature.requirements[i]['name']);
             $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][i + 1] + "</td><tr/>");
 
           }
