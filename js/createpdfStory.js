@@ -79,7 +79,7 @@ $("#controls").submit(function() {
 
          
           
-          notesArraz.push(JSON.stringify(response.comments[number]['body']).replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' ').replace(/&amp;/gi,' '));
+          notesArraz.push(JSON.stringify(response.comments[number]['body']).replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' ').replace(/&amp;/gi,' ').replace(/"/gi,' '));
 
           console.log(notesArraz);
       
