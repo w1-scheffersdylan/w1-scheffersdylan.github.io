@@ -354,12 +354,15 @@ $("#controlsSprint").submit(function() {
       // create PDF (using PDFmake)
       $('#btnOpenPDFSprint').click(function () {
           
-        // remove ticket id from array of requirements
+       // remove ticket id from array of requirements
         for(var i = 0; i < SprintDataStoryRequirements.length; i++){
           SprintDataStoryRequirements[i].shift();
-          //SprintDataStoryRequirements[i] = " __ " + SprintDataStoryRequirements[i];
         }    
 
+        // remove ticket id from array of notes
+        for(var i = 0; i < SprintDataStoryNotes.length; i++){
+          SprintDataStoryNotes[i].shift();
+        } 
 
 
 
@@ -429,7 +432,7 @@ $("#controlsSprint").submit(function() {
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
                                 [{ text: [ 'STORY: \n \n', { text: SprintDataStoryDescription[i], style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text: ['NOTES:\n \n', { text: 'notesArraz[i].join("\n")' }, '\n \n'], colSpan: 6 }, '', '', '', '', ''],
+                                 { text: ['NOTES:\n \n', { text: SprintDataStoryNotes[i].join("\n") }, '\n \n \n \n'], colSpan: 6 }, '', '', '', '', ''],
 
                                 [{ text: 'ACCEPTANCE CRITERIA: \n \n' + SprintDataStoryRequirements[i].join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & Beautify Code \n \n __ Quality assurance by PO' , colSpan: 6 }, '', '', '', '', ''],
@@ -463,13 +466,15 @@ $("#controlsSprint").submit(function() {
       // create PDF (using PDFmake)
       $('#btnSavePDFSprint').click(function () {
  
-
         // remove ticket id from array of requirements
         for(var i = 0; i < SprintDataStoryRequirements.length; i++){
           SprintDataStoryRequirements[i].shift();
-          //SprintDataStoryRequirements[i] = " __ " + SprintDataStoryRequirements[i];
         }    
 
+        // remove ticket id from array of notes
+        for(var i = 0; i < SprintDataStoryNotes.length; i++){
+          SprintDataStoryNotes[i].shift();
+        } 
 
 
 
@@ -539,7 +544,7 @@ $("#controlsSprint").submit(function() {
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
                                 [{ text: [ 'STORY: \n \n', { text: SprintDataStoryDescription[i], style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text:'NOTES:\n \n \n \n \n \n \n \n ', colSpan: 6 }, '', '', '', '', ''],
+                                 { text: ['NOTES:\n \n', { text: SprintDataStoryNotes[i].join("\n") }, '\n \n \n \n'], colSpan: 6 }, '', '', '', '', ''],
 
                                 [{ text: 'ACCEPTANCE CRITERIA: \n \n' + SprintDataStoryRequirements[i].join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & Beautify Code \n \n __ Quality assurance by PO' , colSpan: 6 }, '', '', '', '', ''],
@@ -550,6 +555,8 @@ $("#controlsSprint").submit(function() {
 
 
                 }
+
+
             // open the PDF in a new window
             pdfMake.createPdf(docDefinition).download("Sprint_" + sprintNumber + ".pdf");
 
