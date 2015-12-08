@@ -36,7 +36,7 @@ $("#controls").submit(function() {
 
     // remove all HTML and &nbsp; from storyDataDescriptionOrginal
     var storyDataDescriptionNoHTML = storyDataDescriptionOrginal.replace(/(<([^>]+)>)/ig,"");
-    var storyDataDescription = storyDataDescriptionNoHTML.replace(/&nbsp;/gi,' ');   
+    var storyDataDescription = storyDataDescriptionNoHTML.replace(/&nbsp;/gi,' ').replace(/&amp;/gi,' ');   
  
 
     // check if their is a epic
