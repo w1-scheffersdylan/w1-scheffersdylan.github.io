@@ -1,9 +1,3 @@
-
-
-
-// old and random code
-
-
 $("#controlsSprint").submit(function() {
   new AhaApi({
     accountDomain: $("#subdomain").val(),
@@ -22,66 +16,24 @@ $("#controlsSprint").submit(function() {
 
     //api.get("/products/" + productKey + "/features/WEB-296", {}, function(response) {
     api.get("/releases/" + sprintNumber + "/features/", {}, function(response) {
-    //api.get("/features/" + storyNumber + "/requirements", {}, function(response){ 
 
-      // fade effect if you pressed the "show story" button
-      $("#step1Container").fadeOut();
-      $("#sprintstep2Container").fadeIn();
+    // fade effect if you pressed the "show story" button
+    $("#step1Container").fadeOut();
+    $("#sprintstep2Container").fadeIn();
               
     // alerts for test
     //alert(JSON.stringify(response.features));
     //alert( response.features[0]["name"] );
 
-    //document.write(JSON.stringify(response.features));
-
-    // variables
-    // var storyDataNumber = response.features[0]["name"];
-    //var storyDataName = response.features[0]["name"];
-    // var storyDataGroom = response.features[0]["name"];
-    // var storyDataDescription = response.features[0]["name"];
-
-
-    // check if the grooming has a number
-    // if(storyDataGroom == "null"){
-    //   storyDataGroom = "";
-    // }
-
-
-      
-
-     // show data of story
-     // document.write('<p> <input type="submit" class="btn right" id="btnPrintPDFSprint" value="PRINT sprint as PDF"></input> <input type="submit" class="btn right" id="btnOpenPDFSprint" value="Open sprint as PDF"></input> <input type="submit" class="btn right" id="btnSavePDFSprint" value="Save sprint as PDF"></input></p>');
-     //  document.write("<h2>Sprint details</h2>");
-      // document.write("<table>");
-
-        // document.write("<tr><td>Story number:</td><td> (TICKET-ID)</td><td>");
-        // document.write(storyDataNumber + "</td><tr/>");
-        var SprintDataStoryName = [];
-
-        for( i = 0; i < response.features.length; i++ ){
-          SprintDataStoryName.push(response.features[i]["name"]);
-          // document.write("<tr><td>Story name:</td><td> (TITLE)</td><td>" + SprintDataStoryName[i] + "</td></tr>");
-        }
-
-
-        
-
-        // document.write("<tr><td>Story grooming: </td><td> (GROOM)</td><td>");
-        // document.write(storyDataGroom + "</td><tr/>");
-
-        // document.write("<tr><td>Story description:</td><td> (STORY)</td><td>");
-        // document.write(storyDataDescription + "</td><tr/>");      
-
-      // document.write("</table>");
-
-      // document.write("<br />");
-
-
 
       //////////////////////////////////////////////////////////////////////////////////////////////////
       // GET ALL DATA FROM STORIES
 
-     //alert();
+      // Get all names from the stories
+      var SprintDataStoryName = [];
+      for( i = 0; i < response.features.length; i++ ){
+        SprintDataStoryName.push(response.features[i]["name"]);
+      }
 
       // put all ticket-id's in an array
       var SprintDataStoryNumber = [];
@@ -98,10 +50,6 @@ $("#controlsSprint").submit(function() {
       var SprintDataStoryEpic = [];
       // get all title in an array
       var SprintDataStoryTitle = [];
-
-
-
-      
 
       
       // get all data from all stories in the sprint
@@ -129,8 +77,6 @@ $("#controlsSprint").submit(function() {
             SprintDataStoryGroom.push(response.feature.original_estimate.toString());
           }
 
-          // console.log(SprintDataStoryGroom);
-     
           fectchSprintDataStoryGroomDescription(number + 1);
            
         }); // close api.get 
@@ -143,7 +89,7 @@ $("#controlsSprint").submit(function() {
 
 
 
-
+      // add story numbers to requirement and notes array
       var SprintDataStoryRequirements = [];
       var SprintDataStoryNotes = [];
       for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
@@ -152,12 +98,12 @@ $("#controlsSprint").submit(function() {
       }
       
 
-      // get all requirements
+      // Show all data and get all requirements
       function fetchSprintDataStoryRequirements(storyNumber){
 
         api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {
 
-          
+          // show all data on webpage
           $("#requirementsDetails").append("<tr class='bold'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[storyNumber] + "</td></tr>");
           $('#requirementsDetails').append("<tr><td> Story Title: </td><td>" + SprintDataStoryTitle[storyNumber] + "</td><tr/>");
           $("#requirementsDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[storyNumber] + "</td><tr/>");
@@ -165,32 +111,19 @@ $("#controlsSprint").submit(function() {
           $("#requirementsDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[storyNumber] + "</td><tr/>");
 
 
-
+          // get all requirements and show them
           for( var i = 0; i < response.feature.requirements.length; i++){
-            //console.log(JSON.stringify(response.feature.requirements[i]['reference_num']));
             SprintDataStoryRequirements[storyNumber].push( " __ " + response.feature.requirements[i]['name']);
             $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][i + 1] + "</td><tr/>");
 
           }
        
+          // empty table row for better overview
           $("#requirementsDetails").append("<tr><td> &nbsp; </td><td> &nbsp; </td><tr/>");
 
            fetchSprintDataStoryRequirements(storyNumber + 1);
 
         }); // close api.get 
-
-        // var notesArraz = [];
-        // // get all comments from a story
-        // api.get("/features/" + SprintDataStoryRequirements[storyNumber][0] + "/comments", {}, function(response) {
-          
-        //   for( var i = 0; i < response.comments.length; i++){
-        //     notesArraz.push(" __ " + JSON.stringify(response.comments[i]['body']).replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' ').replace(/&amp;/gi,' ').replace(/"/gi,' '));
-        //   }
-
-        //   console.log(notesArraz);
-           
-        // }); // close api.get 
-
         
 
       }
@@ -206,13 +139,10 @@ $("#controlsSprint").submit(function() {
         api.get("/features/" + SprintDataStoryNotes[number][0] + "/comments", {}, function(response) {
 
          
-          
+          // get all comments
           for( var i = 0; i < response.comments.length; i++){
             SprintDataStoryNotes[number].push(" __ " + response.comments[i]['body'].replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' ').replace(/&amp;/gi,' '));
-          }
-
-          console.log(SprintDataStoryNotes[number]);
-      
+          }      
      
           fectchDataStoryComments(number + 1);
            
@@ -223,21 +153,16 @@ $("#controlsSprint").submit(function() {
       // init the looping
       fectchDataStoryComments(0);
 
-  
+       
 
-      console.log(SprintDataStoryRequirements);
-
-
-      
-
-      // fade effect to go back to fill in a new story
+      // fade effect to go back to fill in a new story/sprint
        $('#btnNewSprint').click(function () {
           $("#sprintstep2Container").fadeOut();
           location.reload();
        });
                                                                                                                                                                                                                                              
             
-//////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////STEP 3: CREATING THE PDF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -264,7 +189,7 @@ $("#controlsSprint").submit(function() {
           pageOrientation: 'landscape',
           pageMargins: 20,
           content:[],
-              // some style for the webpage
+              // some style for the PDF
               styles: {
                 mediumText: {
                   fontSize: 19
@@ -288,6 +213,7 @@ $("#controlsSprint").submit(function() {
               
             }
 
+            // for loop to get all of the stories one by one and show them all on a different page in the PDF
             for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
                docDefinition.content.push({
                     
@@ -305,13 +231,13 @@ $("#controlsSprint").submit(function() {
                     
                                             
                     {
-                        color: '#444', // not sure if this one is used
+                        color: '#444', // looks better than black
                         pageBreak: i !== SprintDataStoryNumber.length - 1 ? 'after' : undefined,
                         table: {
                             // grid system for the width 5% * 20 = 100%
                             widths: [ '5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%' ],
                             heights: [ '10%', '10%', '40%', '40%' ],
-                            headerRows: 0, // not sure if this one is used
+                            
                             body: [
                                 [{ text: [ 'TICKET-ID: \n \n', { text: SprintDataStoryNumber[i], style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
                                  { text: [ 'TITLE: \n \n', { text: SprintDataStoryTitle[i], style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
@@ -339,7 +265,7 @@ $("#controlsSprint").submit(function() {
 
 
 
-            // open the PDF in a new window
+            // Print the PDF
             pdfMake.createPdf(docDefinition).print();
             
             
@@ -354,7 +280,7 @@ $("#controlsSprint").submit(function() {
       // create PDF (using PDFmake)
       $('#btnOpenPDFSprint').click(function () {
           
-       // remove ticket id from array of requirements
+               // remove ticket id from array of requirements
         for(var i = 0; i < SprintDataStoryRequirements.length; i++){
           SprintDataStoryRequirements[i].shift();
         }    
@@ -373,7 +299,7 @@ $("#controlsSprint").submit(function() {
           pageOrientation: 'landscape',
           pageMargins: 20,
           content:[],
-              // some style for the webpage
+              // some style for the PDF
               styles: {
                 mediumText: {
                   fontSize: 19
@@ -397,6 +323,7 @@ $("#controlsSprint").submit(function() {
               
             }
 
+            // for loop to get all of the stories one by one and show them all on a different page in the PDF
             for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
                docDefinition.content.push({
                     
@@ -414,13 +341,13 @@ $("#controlsSprint").submit(function() {
                     
                                             
                     {
-                        color: '#444', // not sure if this one is used
+                        color: '#444', // looks better than black
                         pageBreak: i !== SprintDataStoryNumber.length - 1 ? 'after' : undefined,
                         table: {
                             // grid system for the width 5% * 20 = 100%
                             widths: [ '5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%' ],
                             heights: [ '10%', '10%', '40%', '40%' ],
-                            headerRows: 0, // not sure if this one is used
+                            
                             body: [
                                 [{ text: [ 'TICKET-ID: \n \n', { text: SprintDataStoryNumber[i], style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
                                  { text: [ 'TITLE: \n \n', { text: SprintDataStoryTitle[i], style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
@@ -442,9 +369,7 @@ $("#controlsSprint").submit(function() {
                   );
 
 
-                }
-            
-
+                }        
 
 
 
@@ -466,7 +391,7 @@ $("#controlsSprint").submit(function() {
       // create PDF (using PDFmake)
       $('#btnSavePDFSprint').click(function () {
  
-        // remove ticket id from array of requirements
+               // remove ticket id from array of requirements
         for(var i = 0; i < SprintDataStoryRequirements.length; i++){
           SprintDataStoryRequirements[i].shift();
         }    
@@ -485,7 +410,7 @@ $("#controlsSprint").submit(function() {
           pageOrientation: 'landscape',
           pageMargins: 20,
           content:[],
-              // some style for the webpage
+              // some style for the PDF
               styles: {
                 mediumText: {
                   fontSize: 19
@@ -509,6 +434,7 @@ $("#controlsSprint").submit(function() {
               
             }
 
+            // for loop to get all of the stories one by one and show them all on a different page in the PDF
             for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
                docDefinition.content.push({
                     
@@ -526,13 +452,13 @@ $("#controlsSprint").submit(function() {
                     
                                             
                     {
-                        color: '#444', // not sure if this one is used
+                        color: '#444', // looks better than black
                         pageBreak: i !== SprintDataStoryNumber.length - 1 ? 'after' : undefined,
                         table: {
                             // grid system for the width 5% * 20 = 100%
                             widths: [ '5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%' ],
                             heights: [ '10%', '10%', '40%', '40%' ],
-                            headerRows: 0, // not sure if this one is used
+                            
                             body: [
                                 [{ text: [ 'TICKET-ID: \n \n', { text: SprintDataStoryNumber[i], style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
                                  { text: [ 'TITLE: \n \n', { text: SprintDataStoryTitle[i], style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
@@ -555,9 +481,10 @@ $("#controlsSprint").submit(function() {
 
 
                 }
+            
 
 
-            // open the PDF in a new window
+            // Save the PDF
             pdfMake.createPdf(docDefinition).download("Sprint_" + sprintNumber + ".pdf");
 
 

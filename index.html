@@ -14,6 +14,7 @@
   </head>
   <body ng-controller="homeController">
 
+    <!-- Sablono logo with link to Sablono website -->
     <a href="http://www.sablono.com" target="_blank">
         <img src="./images/sablonoLogo.png" class="sablonoLogo"/>
     </a>
@@ -33,45 +34,30 @@
       <h2>Story details</h2>
       <br />
       <p>
+        <!-- this table is filled in if you typed in a story number -->
         <table id="storyDataTable">
           <tr>
-            <!--<td>Story number:</td>-->
             <td>Ticket-ID:</td>
             <td id="ticket-id"></td>
           </tr>
           <tr>
-            <!--<td>Story name:</td>-->
             <td>Title:</td>
             <td id="title"></td>
           </tr>
           <tr>
-            <!--<td>Story grooming:</td>-->
             <td>Groom:</td>
             <td id="groom"></td>
           </tr>
           <tr>
-            <!--<td>Story epic:</td>-->
             <td>Epic:</td>
             <td id="epic"></td>
           </tr>
           <tr>
-            <!--<td>Story description:</td>-->
             <td>Story:</td>
             <td id="story"></td>
           </tr>
         </table>
       </p>
-     <!--  <br />
-      
-      <p>
-        <input type="text" placeholder="Add requirement by hand to PDF" id="addRequirementValue"></input>
-        <md-button class="md-raised md-primary" type="submit" id="addRequirement">Add requirement</md-button>
-        <br />
-        <span class="infoText">*The by hand added requirement would not be added to the Aha! user story requirements.</span>
-      </p>
-      <br />
-      <p>You can add a requirement by hand if not all of the requirements were found by the website.</p>
-       -->
     </div> <!-- step 2 container -->
 
 
@@ -90,22 +76,10 @@
       <h2>Sprint details</h2>
       <br />
       <p >
-        <table id="sprintDetails">
-        </table>
+        <!-- this table is filled in when you have chosen a Sprint number -->
         <table id="requirementsDetails">
         </table>
       </p>
-     <!--  <br />
-      
-      <p>
-        <input type="text" placeholder="Add requirement by hand to PDF" id="addRequirementValue"></input>
-        <md-button class="md-raised md-primary" type="submit" id="addRequirement">Add requirement</md-button>
-        <br />
-        <span class="infoText">*The by hand added requirement would not be added to the Aha! user story requirements.</span>
-      </p>
-      <br />
-      <p>You can add a requirement by hand if not all of the requirements were found by the website.</p> -->
-      
     </div> <!-- sprint step 2 container -->
 
 
@@ -120,7 +94,7 @@
               <!-- Aha! subdomain -->
               <td><input type="text" placeholder="Aha! subdomain" id="subdomain" value="sablono" disabled></input></td>
             </tr>
-            <!-- Product key -->
+            <!-- Product key (keep as comment) -->
             <!--<tr>
               <!--<input type="text" placeholder="Product key" id="product-key" value="WEB"></input>-->
               <!-- <td>
@@ -145,7 +119,7 @@
 
 
       <div id="sprintDiv">
-      <!-- input fields to show story -->
+      <!-- input fields to show sprint -->
       <div id="controlsSprint">
           <h1>Sprint</h1>
           <p> Please fill in a sprint number. See url in Aha! for the sprint number.</p>
@@ -155,7 +129,7 @@
                 <!-- Aha! subdomain -->
                 <td><input type="text" placeholder="Aha! subdomain" id="subdomain" value="sablono" disabled></input></td>
               </tr>
-              <!-- Product key -->
+              <!-- Product key (keep as comment)-->
               <!--<tr>
                 <!--<input type="text" placeholder="Product key" id="product-key" value="WEB"></input>-->
                 <!-- <td>
@@ -170,7 +144,7 @@
                 </td> 
               </tr>-->
               <tr>
-                <!-- Story Number -->
+                <!-- Sprint Number -->
                 <td><input type="text" placeholder="Sprint number" id="sprintNumber" value="WEB-R-"></input></td>
                 <td><md-button class="md-raised md-primary right orangeBtn" id="btnShowStory" type="submit">Show sprint</md-button></td>
 
