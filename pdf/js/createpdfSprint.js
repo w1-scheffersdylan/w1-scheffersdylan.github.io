@@ -4,7 +4,7 @@ $("#controlsSprint").submit(function() {
     // Replace this with your client ID.
     clientId: "f5bc99e0ae866bc03dd5a49b7bcb0ff3a2686eb216c2b339aa4dd1f44688efd2", 
     // Replace this with your redirect URL.
-    redirectUri: "https://w1-scheffersdylan.github.io/"
+    redirectUri: "https://w1-scheffersdylan.github.io/pdf/"
   }).authenticate(function(api, success, message) {
     //var productKey = $("#product-key").val();
     var productKey = "WEB";
