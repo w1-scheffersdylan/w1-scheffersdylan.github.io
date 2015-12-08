@@ -78,8 +78,10 @@ $("#controls").submit(function() {
         
         api.get("/features/" + storyNumber + "/comments", {}, function(response) {
 
-          var storyDataComment = response.comments["body"];
-          console.log(storyDataComment);
+          //var storyDataComment = response.comments["body"];
+          console.log(response.comments["body"]);
+          console.log(response.comments.body);
+          console.log(response.comments[1])
 
           // console.log(SprintDataStoryGroom);
      
