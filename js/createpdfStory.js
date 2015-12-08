@@ -74,19 +74,18 @@ $("#controls").submit(function() {
 
 
       // get all comments from a story
-      function fectchDataStoryComments(){
+      function fectchDataStoryComments(number){
         
         api.get("/features/" + storyNumber + "/comments", {}, function(response) {
 
           //var storyDataComment = response.comments["body"];
           alert(JSON.stringify(response));
-          alert(JSON.stringify(response.comments[0]['body']));
+          console.log(JSON.stringify(response.comments[number]['body']));
           // console.log(response[0].body);
-          console.log(response.comments.current_page);
-          console.log(response['comments'].body);
 
           // console.log(SprintDataStoryGroom);
      
+          fectchDataStoryComments(number + 1);
            
         }); // close api.get 
 
@@ -94,7 +93,7 @@ $("#controls").submit(function() {
 
 
       // init the looping
-      fectchDataStoryComments();
+      fectchDataStoryComments(0);
 
 
 
