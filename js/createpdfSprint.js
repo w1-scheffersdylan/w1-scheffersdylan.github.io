@@ -120,13 +120,13 @@ $("#controlsSprint").submit(function() {
             SprintDataStoryEpic.push(response.feature.initiative.name);
           }
 
-          var emptyString;
+
           // check if their is a grooming point
           if( response.feature.original_estimate === null ){
-            SprintDataStoryGroom.push(emptyString);
+            SprintDataStoryGroom.push('');
           }
           else {
-            SprintDataStoryGroom.push(response.feature.original_estimate);
+            SprintDataStoryGroom.push(response.feature.original_estimate.toString());
           }
 
           console.log(SprintDataStoryGroom);
