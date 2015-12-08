@@ -80,8 +80,9 @@ $("#controls").submit(function() {
 
           //var storyDataComment = response.comments["body"];
           console.log(response);
-          console.log(comments.body);
-          console.log(comments[1]);
+          console.log(response[0].body);
+          console.log(response.body);
+          console.log(response['body']);
 
           // console.log(SprintDataStoryGroom);
      
