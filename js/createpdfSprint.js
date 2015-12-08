@@ -121,7 +121,7 @@ $("#controlsSprint").submit(function() {
           }
 
           // check if their is a grooming point
-          if( typeof JSON.stringify(response.feature.original_estimate) === 'null' ){
+          if(JSON.stringify(response.feature.original_estimate) === 'null' ){
             SprintDataStoryGroom.push("");
           }
           else {
