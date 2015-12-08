@@ -14,13 +14,11 @@ $("#controls").submit(function() {
     
     // URL to story
     // api.get("/products/" + productKey + "/features/" + storyNumber, {}, function(response) {
-    api.get("/features/" + storyNumber + "/comments", {}, function(response) {
+    api.get("/products/" + productKey + "/features/" + storyNumber, {}, function(response) {
 
               
     // alert for testing only
-    alert(JSON.stringify(response));
-    alert(JSON.stringify(response.feature));
-    alert(JSON.stringify(response.comment));
+    //alert(JSON.stringify(response));
 
 
     // variables
@@ -72,26 +70,29 @@ $("#controls").submit(function() {
       }
 
 
-      // // add requirement by hand ("add requirement" button press)
-      // $("#addRequirement").click(function() {
-      //   if( $("#addRequirementValue").val() != "" ) {
-      //      requirementsArraz.push($("#addRequirementValue").val());
-      //      $('#storyDataTable').append("<tr><td> Acceptance criteria: </td><td>" + requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/>");
-      //      $("#addRequirementValue").val("");
-      //   }
-      // });
 
-      // // add requirement by hand (enter button press)
-      // $("#addRequirementValue").keypress(function(e){
-      //   var key = e.which;
-      //   if( key == 13 ) { // the enter button
-      //     if( $("#addRequirementValue").val() != "" ) {
-      //       requirementsArraz.push($("#addRequirementValue").val());
-      //       $('#storyDataTable').append("<tr><td> Acceptance criteria: </td><td>" + requirementsArraz[requirementsArraz.length - 1]+ "</td><tr/>");
-      //       $("#addRequirementValue").val("");
-      //     }
-      //   }
-      // });
+
+
+      // get all comments from a story
+      function fectchDataStoryComments(){
+        
+        api.get("/features/" + storyNumber + "/comments", {}, function(response) {
+
+          var storyDataComment = response.comments["body"];
+          console.log(storyDataComment);
+
+          // console.log(SprintDataStoryGroom);
+     
+           
+        }); // close api.get 
+
+      }
+
+
+      // init the looping
+      fectchDataStoryComments();
+
+
 
        
        // fade effect to go back to fill in a new story
