@@ -1,7 +1,7 @@
 $("#controls").submit(function() {
 
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://api.leantesting.com", false);
+  xhr.open("GET", "https://leantesting.com/login/oauth/authorize", false);
   xhr.send();
 
   console.log(xhr.status);
