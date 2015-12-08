@@ -173,22 +173,23 @@ $("#controlsSprint").submit(function() {
        
           $("#requirementsDetails").append("<tr><td> &nbsp; </td><td> &nbsp; </td><tr/>");
 
+           fetchSprintDataStoryRequirements(storyNumber + 1);
            
         }); // close api.get 
 
-        var notesArraz = [];
-        // get all comments from a story
-        api.get("/features/" + SprintDataStoryRequirements[storyNumber][0] + "/comments", {}, function(response) {
+        // var notesArraz = [];
+        // // get all comments from a story
+        // api.get("/features/" + SprintDataStoryRequirements[storyNumber][0] + "/comments", {}, function(response) {
           
-          for( var i = 0; i < response.comments.length; i++){
-            notesArraz.push(" __ " + JSON.stringify(response.comments[i]['body']).replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' ').replace(/&amp;/gi,' ').replace(/"/gi,' '));
-          }
+        //   for( var i = 0; i < response.comments.length; i++){
+        //     notesArraz.push(" __ " + JSON.stringify(response.comments[i]['body']).replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' ').replace(/&amp;/gi,' ').replace(/"/gi,' '));
+        //   }
 
-          console.log(notesArraz);
+        //   console.log(notesArraz);
            
-        }); // close api.get 
+        // }); // close api.get 
 
-        fetchSprintDataStoryRequirements(storyNumber + 1);
+        
 
       }
 
@@ -197,6 +198,30 @@ $("#controlsSprint").submit(function() {
 
 
 
+
+      var notesArraz = [];
+      // get all comments from a story
+      function fectchDataStoryComments(number){
+        
+        api.get("/features/" + SprintDataStoryRequirements[number][0] + "/comments", {}, function(response) {
+
+         
+          
+          for( var i = 0; i < response.comments.length; i++){
+            notesArraz.push(" __ " + JSON.stringify(response.comments[i]['body']).replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' ').replace(/&amp;/gi,' ').replace(/"/gi,' '));
+          }
+
+          console.log(notesArraz);
+      
+     
+          fectchDataStoryComments(number + 1);
+           
+        }); // close api.get 
+
+      }
+
+      // init the looping
+      fectchDataStoryComments(0);
 
   
 
