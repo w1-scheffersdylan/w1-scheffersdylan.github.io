@@ -122,12 +122,12 @@ $("#controlsSprint").submit(function() {
           }
 
           // check if their is a grooming point
-          if( JSON.stringify(response.feature.original_estimate) == 'null'){
-            SprintDataStoryGroom.push("");
-          }
-          else {
-            SprintDataStoryGroom.push(response.feature.original_estimate);
-          }
+          // if( JSON.stringify(response.feature.original_estimate) == 'null'){
+          //   SprintDataStoryGroom.push("");
+          // }
+          // else {
+          //   SprintDataStoryGroom.push(response.feature.original_estimate);
+          // }
      
           fectchSprintDataStoryGroomDescription(number + 1);
            
@@ -156,7 +156,7 @@ $("#controlsSprint").submit(function() {
           
           $("#requirementsDetails").append("<tr class='bold'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[storyNumber] + "</td></tr>");
           $('#requirementsDetails').append("<tr><td> Story Title: </td><td>" + SprintDataStoryTitle[storyNumber] + "</td><tr/>");
-          $("#requirementsDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[storyNumber] + "</td><tr/>");
+          //$("#requirementsDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[storyNumber] + "</td><tr/>");
           $("#requirementsDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[storyNumber] + "</td><tr/>");
           $("#requirementsDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[storyNumber] + "</td><tr/>");
 
@@ -360,7 +360,7 @@ $("#controlsSprint").submit(function() {
                                  { text: 'PRIORITY:\n' + '\n \n', colSpan: 3, rowSpan: 2 }, '', ''],
 
                                 [{ text: [ 'EPIC:\n', { text: SprintDataStoryEpic[0], style: 'mediumText', alignment: 'center' }], colSpan: 11 }, '', '', '', '', '', '', '', '', '', '', 
-                                 { text: ['GROOM: \n', { text: SprintDataStoryGroom[0], style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
+                                 { text: ['GROOM: \n', { text: 'SprintDataStoryGroom[0]', style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
                                  { text: 'CORR: \n' + '\n \n', colSpan: 2 }, '', 
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
