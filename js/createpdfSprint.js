@@ -110,7 +110,6 @@ $("#controlsSprint").submit(function() {
         api.get("/products/" + productKey + "/features/" + SprintDataStoryNumber[number], {}, function(response) {
 
           SprintDataStoryDescription.push(response.feature.description.body.replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' '));
-          //SprintDataStoryDescription.push(response.feature.description.body);
           SprintDataStoryTitle.push(response.feature.name);
 
           // check if their is a epic
@@ -122,12 +121,12 @@ $("#controlsSprint").submit(function() {
           }
 
           // check if their is a grooming point
-          // if( JSON.stringify(response.feature.original_estimate) == 'null'){
-          //   SprintDataStoryGroom.push("");
-          // }
-          // else {
-          //   SprintDataStoryGroom.push(response.feature.original_estimate);
-          // }
+          if( JSON.stringify(response.feature.original_estimate) == 'null' || JSON.stringify(response.feature.original_estimate) == '' || JSON.stringify(response.feature.original_estimate) == 'undefined'){
+            SprintDataStoryGroom.push("");
+          }
+          else {
+            SprintDataStoryGroom.push(response.feature.original_estimate);
+          }
      
           fectchSprintDataStoryGroomDescription(number + 1);
            
@@ -360,7 +359,7 @@ $("#controlsSprint").submit(function() {
                                  { text: 'PRIORITY:\n' + '\n \n', colSpan: 3, rowSpan: 2 }, '', ''],
 
                                 [{ text: [ 'EPIC:\n', { text: SprintDataStoryEpic[1], style: 'mediumText', alignment: 'center' }], colSpan: 11 }, '', '', '', '', '', '', '', '', '', '', 
-                                 { text: ['GROOM: \n', { text: '1', style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
+                                 { text: ['GROOM: \n', { text: SprintDataStoryGroom[1], style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
                                  { text: 'CORR: \n' + '\n \n', colSpan: 2 }, '', 
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
