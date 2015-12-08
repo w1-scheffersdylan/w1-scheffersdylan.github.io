@@ -61,28 +61,6 @@
     </div> <!-- step 2 container -->
 
 
-    <!-- placed sprintstep2Container on the top, because of fade effect -->
-    <div id="sprintstep2Container" class="paddingContainer">
-      <p>
-        <md-button class="md-raised md-primary" type="submit" id="btnPrintPDFSprint">PRINT sprint as PDF</md-button> 
-        <md-button class="md-raised md-primary" type="submit" id="btnOpenPDFSprint">OPEN sprint as PDF</md-button> 
-        <md-button class="md-raised md-primary" type="submit" id="btnSavePDFSprint">SAVE sprint as PDF</md-button>
-      </p>
-      <br />
-      <p>
-        <md-button class="md-raised md-primary" type="submit" id="btnNewSprint">New sprint</md-button>
-      </p>
-      <br />
-      <h2>Sprint details</h2>
-      <br />
-      <p >
-        <!-- this table is filled in when you have chosen a Sprint number -->
-        <table id="requirementsDetails">
-        </table>
-      </p>
-    </div> <!-- sprint step 2 container -->
-
-
     <div id="step1Container" class="paddingContainer">
       <!-- input fields to show story -->
       <div id="storyDiv">
@@ -117,41 +95,6 @@
         </form>
       </div>
 
-
-      <div id="sprintDiv">
-      <!-- input fields to show sprint -->
-      <div id="controlsSprint">
-          <h1>Sprint</h1>
-          <p> Please fill in a sprint number. See url in Aha! for the sprint number.</p>
-          <form id="controls">
-            <table>
-              <tr>
-                <!-- Aha! subdomain -->
-                <td><input type="text" placeholder="Aha! subdomain" id="subdomain" value="sablono" disabled></input></td>
-              </tr>
-              <!-- Product key (keep as comment)-->
-              <!--<tr>
-                <!--<input type="text" placeholder="Product key" id="product-key" value="WEB"></input>-->
-                <!-- <td>
-                    <md-input-container>
-                      <label>Product Key</label>
-                        <md-select ng-model="userState">
-                          <md-option ng-repeat="state in states" value="{{state.name}}" selected="{{ state.name === select.name ? 'selected' : '' }}">
-                            {{state.name}}
-                          </md-option>
-                        </md-select>
-                    </md-input-container>
-                </td> 
-              </tr>-->
-              <tr>
-                <!-- Sprint Number -->
-                <td><input type="text" placeholder="Sprint number" id="sprintNumber" value="WEB-R-"></input></td>
-                <td><md-button class="md-raised md-primary right orangeBtn" id="btnShowStory" type="submit">Show sprint</md-button></td>
-
-              </tr>
-            </table>
-          </form>
-      </div>
 
 
 
