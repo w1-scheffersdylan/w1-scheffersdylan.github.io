@@ -80,7 +80,7 @@ $("#controls").submit(function() {
 
           //var storyDataComment = response.comments["body"];
           console.log(response);
-          console.log(response[0].body);
+          // console.log(response[0].body);
           console.log(response.body);
           console.log(response['body']);
 
