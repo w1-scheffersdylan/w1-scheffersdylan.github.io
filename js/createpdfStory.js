@@ -62,7 +62,6 @@ $("#controls").submit(function() {
       // get all of the requirements
       var requirementsArraz = [];
 
-
       for( var i = 0; i < response.feature.requirements.length; i++){
         //console.log(JSON.stringify(response.feature.requirements[i]['reference_num']));
         requirementsArraz.push(response.feature.requirements[i]['name']);
@@ -71,26 +70,25 @@ $("#controls").submit(function() {
 
 
 
-
+      var notesArraz = [];
 
       // get all comments from a story
       function fectchDataStoryComments(number){
         
         api.get("/features/" + storyNumber + "/comments", {}, function(response) {
 
-          //var storyDataComment = response.comments["body"];
-          alert(JSON.stringify(response));
+         
           console.log(JSON.stringify(response.comments[number]['body']));
-          // console.log(response[0].body);
+          notesArraz.push(JSON.stringify(response.comments[number]['body']))
 
-          // console.log(SprintDataStoryGroom);
+
+      
      
           fectchDataStoryComments(number + 1);
            
         }); // close api.get 
 
       }
-
 
       // init the looping
       fectchDataStoryComments(0);
@@ -172,7 +170,7 @@ $("#controls").submit(function() {
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
                                 [{ text: [ 'STORY: \n \n', { text: storyDataDescription, style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text:'NOTES:\n \n \n \n \n \n \n \n ', colSpan: 6 }, '', '', '', '', ''],
+                                 { text:'NOTES:\n \n \n \n \n \n \n \n ', text: notesArraz.join("\n"), colSpan: 6 }, '', '', '', '', ''],
 
                                 [{ text: 'ACCEPTANCE CRITERIA: \n \n' + requirementsArraz.join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & Beautify Code \n \n __ Quality assurance by PO' , colSpan: 6 }, '', '', '', '', ''],
@@ -290,7 +288,7 @@ $("#controls").submit(function() {
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
                                 [{ text: [ 'STORY: \n \n', { text: storyDataDescription, style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text:'NOTES:\n \n \n \n \n \n \n \n ', colSpan: 6 }, '', '', '', '', ''],
+                                 { text:'NOTES:\n \n \n \n \n \n \n \n ', text: notesArraz.join("\n"), colSpan: 6 }, '', '', '', '', ''],
 
                                 [{ text: 'ACCEPTANCE CRITERIA: \n \n' + requirementsArraz.join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & Beautify Code \n \n __ Quality assurance by PO' , colSpan: 6 }, '', '', '', '', ''],
@@ -408,7 +406,7 @@ $("#controls").submit(function() {
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
                                 [{ text: [ 'STORY: \n \n', { text: storyDataDescription, style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text:'NOTES:\n \n \n \n \n \n \n \n ', colSpan: 6 }, '', '', '', '', ''],
+                                 { text:'NOTES:\n \n \n \n \n \n \n \n ', text: notesArraz.join("\n"), colSpan: 6 }, '', '', '', '', ''],
 
                                 [{ text: 'ACCEPTANCE CRITERIA: \n \n' + requirementsArraz.join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & Beautify Code \n \n __ Quality assurance by PO' , colSpan: 6 }, '', '', '', '', ''],
