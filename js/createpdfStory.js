@@ -78,10 +78,10 @@ $("#controls").submit(function() {
         api.get("/features/" + storyNumber + "/comments", {}, function(response) {
 
          
-          console.log(JSON.stringify(response.comments[number]['body']));
-          notesArraz.push(JSON.stringify(response.comments[number]['body']))
+          
+          notesArraz.push(JSON.stringify(response.comments[number]['body']).replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' ').replace(/&amp;/gi,' '));
 
-
+          console.log(notesArraz);
       
      
           fectchDataStoryComments(number + 1);
