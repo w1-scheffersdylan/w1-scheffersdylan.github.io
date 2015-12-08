@@ -406,7 +406,7 @@ $("#controls").submit(function() {
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
                                 [{ text: [ 'STORY: \n \n', { text: storyDataDescription, style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text: ['NOTES:\n \n', { text: notesArraz.join("\n") }, '\n \n \n \n \n \n \n \n'], colSpan: 6 }, '', '', '', '', ''],
+                                 { text: ['NOTES:\n \n', { text: notesArraz.join("\n") }, '\n \n'], colSpan: 6 }, '', '', '', '', ''],
 
                                 [{ text: 'ACCEPTANCE CRITERIA: \n \n' + requirementsArraz.join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & Beautify Code \n \n __ Quality assurance by PO' , colSpan: 6 }, '', '', '', '', ''],
