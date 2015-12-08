@@ -81,7 +81,7 @@ $("#controlsSprint").submit(function() {
       //////////////////////////////////////////////////////////////////////////////////////////////////
       // GET ALL DATA FROM STORIES
 
-     alert();
+     //alert();
 
       // put all ticket-id's in an array
       var SprintDataStoryNumber = [];
@@ -317,11 +317,11 @@ $("#controlsSprint").submit(function() {
       $('#btnOpenPDFSprint').click(function () {
           
 
-        // remove ticket id from array of requirements
-        // for(var i = 0; i < SprintDataStoryRequirements.length; i++){
-        //   SprintDataStoryRequirements[i].shift();
-        //   //SprintDataStoryRequirements[i] = " __ " + SprintDataStoryRequirements[i];
-        // }    
+        remove ticket id from array of requirements
+        for(var i = 0; i < SprintDataStoryRequirements.length; i++){
+          SprintDataStoryRequirements[i].shift();
+          //SprintDataStoryRequirements[i] = " __ " + SprintDataStoryRequirements[i];
+        }    
 
 
 
@@ -360,7 +360,7 @@ $("#controlsSprint").submit(function() {
                                  { text: 'PRIORITY:\n' + '\n \n', colSpan: 3, rowSpan: 2 }, '', ''],
 
                                 [{ text: [ 'EPIC:\n', { text: SprintDataStoryEpic[1], style: 'mediumText', alignment: 'center' }], colSpan: 11 }, '', '', '', '', '', '', '', '', '', '', 
-                                 { text: ['GROOM: \n', { text: 'SprintDataStoryGroom[0]', style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
+                                 { text: ['GROOM: \n', { text: '1', style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
                                  { text: 'CORR: \n' + '\n \n', colSpan: 2 }, '', 
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
