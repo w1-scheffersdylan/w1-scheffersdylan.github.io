@@ -1,0 +1,105 @@
+/*
+ littlebit of styling for the webpage
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Verdana;
+}
+
+body, html {
+  background-color: #E0E0E0;
+  height: auto !important;
+}
+
+h1 {
+  font-size: 40px;
+  color: #616161;
+}
+
+p {
+  color: #616161;
+}
+
+table tr td {
+  padding: 0px 10px;
+}
+
+.right {
+  float: right;
+}
+
+.paddingContainer {
+  padding: 25px;
+}
+
+.sablonoLogo {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 20%;
+}
+
+button#btnNewStory, button#btnShowStory, button#btnNewSprint {
+  background-color: #FFD200;
+  color: #616161;
+  cursor: pointer;
+}
+
+button#btnOpenPDF, button#btnSavePDF, button#btnPrintPDF, button#btnPrintPDFSprint, button#btnOpenPDFSprint, button#btnSavePDFSprint {
+  background-color: #26BF59;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.showDataStory {
+  background-color: red;
+}
+
+#addRequirementValue {
+  width: 360px;
+}
+
+#step1Container, #step2Container, #sprintstep2Container {
+  display: none;
+}
+
+#storyDiv {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+#controls {
+  margin-top: 25px;
+}
+
+#sprintDiv {
+  position: absolute;
+  left: 25px;
+  top: 210px;
+}
+
+ #subdomain {
+  display: none;
+}
+
+#storyNumber, #sprintNumber {
+  border: 0;
+  background-color: #E0E0E0;
+  color: #616161;
+  border-bottom: 1px solid #616161;
+  height: 36px;
+  outline: none;
+}
+
+.infoText {
+  font-size: 10px;
+  font-style: italic;
+}
+
+
+.bold {
+  font-weight: bold;
+}
