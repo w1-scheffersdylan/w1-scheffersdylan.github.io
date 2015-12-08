@@ -81,7 +81,7 @@ $("#controlsSprint").submit(function() {
       //////////////////////////////////////////////////////////////////////////////////////////////////
       // GET ALL DATA FROM STORIES
 
-     // alert();
+     alert();
 
       // put all ticket-id's in an array
       var SprintDataStoryNumber = [];
