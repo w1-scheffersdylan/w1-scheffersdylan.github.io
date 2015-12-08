@@ -317,7 +317,7 @@ $("#controlsSprint").submit(function() {
       $('#btnOpenPDFSprint').click(function () {
           
 
-        remove ticket id from array of requirements
+        //remove ticket id from array of requirements
         for(var i = 0; i < SprintDataStoryRequirements.length; i++){
           SprintDataStoryRequirements[i].shift();
           //SprintDataStoryRequirements[i] = " __ " + SprintDataStoryRequirements[i];
