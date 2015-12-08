@@ -81,7 +81,7 @@ $("#controlsSprint").submit(function() {
       //////////////////////////////////////////////////////////////////////////////////////////////////
       // GET ALL DATA FROM STORIES
 
-      alert();
+     // alert();
 
       // put all ticket-id's in an array
       var SprintDataStoryNumber = [];
@@ -109,13 +109,8 @@ $("#controlsSprint").submit(function() {
         
         api.get("/products/" + productKey + "/features/" + SprintDataStoryNumber[number], {}, function(response) {
 
-          if(response.feature.description.body != 'null'){
-            SprintDataStoryDescription.push(response.feature.description.body.replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' '));
-          }
-          else {
-            SprintDataStoryDescription.push(response.feature.description.body);
-          }
-          
+          // SprintDataStoryDescription.push(response.feature.description.body.replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' '));
+          SprintDataStoryDescription.push(response.feature.description.body;
           SprintDataStoryTitle.push(response.feature.name);
 
           // check if their is a epic
