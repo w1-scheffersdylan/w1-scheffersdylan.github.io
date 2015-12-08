@@ -317,10 +317,10 @@ $("#controlsSprint").submit(function() {
           
 
         // remove ticket id from array of requirements
-        for(var i = 0; i < SprintDataStoryRequirements.length; i++){
-          SprintDataStoryRequirements[i].shift();
-          //SprintDataStoryRequirements[i] = " __ " + SprintDataStoryRequirements[i];
-        }    
+        // for(var i = 0; i < SprintDataStoryRequirements.length; i++){
+        //   SprintDataStoryRequirements[i].shift();
+        //   //SprintDataStoryRequirements[i] = " __ " + SprintDataStoryRequirements[i];
+        // }    
 
 
 
@@ -354,19 +354,19 @@ $("#controlsSprint").submit(function() {
                             heights: [ '10%', '10%', '40%', '40%' ],
 
                             body: [
-                                [{ text: [ 'TICKET-ID: \n \n', { text: storyDataNumber, style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
-                                 { text: [ 'TITLE: \n \n', { text: storyDataName, style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
+                                [{ text: [ 'TICKET-ID: \n \n', { text: 'storyDataNumber', style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
+                                 { text: [ 'TITLE: \n \n', { text: 'storyDataName', style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text: 'PRIORITY:\n' + '\n \n', colSpan: 3, rowSpan: 2 }, '', ''],
 
-                                [{ text: [ 'EPIC:\n', { text: storyDataEpic, style: 'mediumText', alignment: 'center' }], colSpan: 11 }, '', '', '', '', '', '', '', '', '', '', 
-                                 { text: ['GROOM: \n', { text: storyDataGroom.toString(), style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
+                                [{ text: [ 'EPIC:\n', { text: 'storyDataEpic', style: 'mediumText', alignment: 'center' }], colSpan: 11 }, '', '', '', '', '', '', '', '', '', '', 
+                                 { text: ['GROOM: \n', { text: 'storyDataGroom', style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
                                  { text: 'CORR: \n' + '\n \n', colSpan: 2 }, '', 
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
-                                [{ text: [ 'STORY: \n \n', { text: storyDataDescription, style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
+                                [{ text: [ 'STORY: \n \n', { text: 'storyDataDescription', style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text:'NOTES:\n \n \n \n \n \n \n \n ', colSpan: 6 }, '', '', '', '', ''],
 
-                                [{ text: 'ACCEPTANCE CRITERIA: \n \n' + requirementsArraz.join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
+                                [{ text: 'ACCEPTANCE CRITERIA: \n \n' + 'requirementsArraz', colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & Beautify Code \n \n __ Quality assurance by PO' , colSpan: 6 }, '', '', '', '', ''],
                             ]
                         }
