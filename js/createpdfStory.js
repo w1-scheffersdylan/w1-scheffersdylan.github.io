@@ -79,7 +79,7 @@ $("#controls").submit(function() {
         api.get("/features/" + storyNumber + "/comments", {}, function(response) {
 
           //var storyDataComment = response.comments["body"];
-          console.log(comments["body"]);
+          console.log(response);
           console.log(comments.body);
           console.log(comments[1]);
 
