@@ -208,10 +208,10 @@ $("#controlsSprint").submit(function() {
          
           
           for( var i = 0; i < response.comments.length; i++){
-            SprintDataStoryNotes.push(" __ " + JSON.stringify(response.comments[i]['body']).replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' ').replace(/&amp;/gi,' ').replace(/"/gi,' '));
+            SprintDataStoryNotes[number].push(" __ " + response.comments[i]['body'].replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' ').replace(/&amp;/gi,' '));
           }
 
-          console.log(notesArraz);
+          console.log(SprintDataStoryNotes[number]);
       
      
           fectchDataStoryComments(number + 1);
