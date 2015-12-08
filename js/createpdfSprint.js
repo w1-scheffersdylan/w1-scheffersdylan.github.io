@@ -121,12 +121,15 @@ $("#controlsSprint").submit(function() {
           }
 
           // check if their is a grooming point
-          if( typeof response.feature.original_estimate == null ){
-            SprintDataStoryGroom.push("");
-          }
-          else {
-            SprintDataStoryGroom.push(response.feature.original_estimate);
-          }
+          // if( typeof response.feature.original_estimate == null ){
+          //   SprintDataStoryGroom.push("");
+          // }
+          // else {
+          //   SprintDataStoryGroom.push(response.feature.original_estimate);
+          // }
+
+          SprintDataStoryGroom.push(response.feature.original_estimate);
+          console.log(SprintDataStoryGroom);
      
           fectchSprintDataStoryGroomDescription(number + 1);
            
