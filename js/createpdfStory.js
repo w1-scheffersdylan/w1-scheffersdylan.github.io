@@ -82,7 +82,7 @@ $("#controls").submit(function() {
           alert(JSON.stringify(response));
           alert(JSON.stringify(response.comments['body']));
           // console.log(response[0].body);
-          console.log(response['comments']['body']);
+          console.log(response.comments.current_page);
           console.log(response['comments'].body);
 
           // console.log(SprintDataStoryGroom);
