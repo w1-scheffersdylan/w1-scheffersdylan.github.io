@@ -27,5 +27,5 @@
   
 // });
 var a = "5";
-var a = parseInt(a);
+var a = parseFloat(a);
 console.log(a);
