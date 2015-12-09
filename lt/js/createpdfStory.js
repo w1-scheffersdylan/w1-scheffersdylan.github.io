@@ -26,4 +26,6 @@
 //     client.send();
   
 // });
-
+var a = "5";
+var a = parseInt(a);
+console.log(a);
