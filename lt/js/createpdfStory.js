@@ -1,13 +1,29 @@
 $("#controls").submit(function() {
 
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://leantesting.com/login/oauth/authorize/Jvu68zct2aG1Xx4bEefGibq33izoUdsenIW6fO29", false);
-  xhr.send();
+    function processData(data) {
+      // taking care of data
+    }
 
-  console.log(xhr.status);
-  console.log(xhr.statusText);
+    function handler() {
+      if(this.status == 200 &&
+        this.responseXML != null &&
+        this.responseXML.getElementById('test').textContent) {
+        // success!
+        processData(this.responseXML.getElementById('test').textContent);
+      } else {
+        // something went wrong
+        …
+      }
+    }
 
-  return false;
+    // with angular use $http
+    // with jQuery use jQuery.ajax
+    // with plain html5 use XMLHttpRequest
+
+    var client = new XMLHttpRequest();
+    client.onload = handler;
+    client.open("GET", "");
+    client.send();
   
 });
 
