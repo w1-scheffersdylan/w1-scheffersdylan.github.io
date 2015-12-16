@@ -164,7 +164,7 @@ $("#controlsSprint").submit(function() {
             
 //////////////STEP 3: CREATING THE PDF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
+var docDefinition;
 
 function stateChange(newState) {
     setTimeout(function () {
@@ -173,7 +173,7 @@ function stateChange(newState) {
 
 
 
-              
+
 var docDefinition = {
 
        
@@ -259,7 +259,7 @@ var docDefinition = {
 
 
         }
-    }, 5000);
+    }, 10000); // 10 seconds
 }
 
 
