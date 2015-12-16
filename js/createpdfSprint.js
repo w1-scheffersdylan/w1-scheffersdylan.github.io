@@ -372,12 +372,12 @@ $("#controlsSprint").submit(function() {
                 }        
 
 
-            alert("Please wait...")
+            
             // open the PDF in a new window
             pdfMake.createPdf(docDefinition).open();
             
             
-            
+            alert("Please wait...")
           
 
       }); // close btnOpenPDF
