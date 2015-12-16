@@ -376,7 +376,7 @@ $("#controlsSprint").submit(function() {
           function stateChange(newState) {
               setTimeout(function () {
                   if (newState == -1) {
-                      pdfMake.open();
+                      pdfMake(docDefinition).open();
                   }
               }, 15000);
           }
