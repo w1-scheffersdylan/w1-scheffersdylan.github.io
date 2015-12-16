@@ -203,7 +203,7 @@ var docDefinition = {
 
               }
               
-            }
+            
 
             // for loop to get all of the stories one by one and show them all on a different page in the PDF
             for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
@@ -252,6 +252,8 @@ var docDefinition = {
 
 
                 }
+
+              }
             
 
 
