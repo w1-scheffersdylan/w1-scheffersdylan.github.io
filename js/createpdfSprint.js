@@ -166,9 +166,6 @@ $("#controlsSprint").submit(function() {
 
 
 
-alert();
-
-
 function stateChange(newState) {
     setTimeout(function () {
         if (newState == -1) {
@@ -181,7 +178,6 @@ stateChange(-1);
 
 
 
-if()
 
   var docDefinition = {
 
