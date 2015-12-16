@@ -169,8 +169,21 @@ $("#controlsSprint").submit(function() {
 alert();
 
 
+function stateChange(newState) {
+    setTimeout(function () {
+        if (newState == -1) {
+            alert('VIDEO HAS STOPPED');
+        }
+    }, 5000);
+}
 
-var docDefinition = {
+stateChange(-1);
+
+
+
+if()
+
+  var docDefinition = {
 
        
           pageSize: 'A4',
