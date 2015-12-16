@@ -371,14 +371,18 @@ $("#controlsSprint").submit(function() {
                 }        
 
 
-        // open the PDF in a new window
-        $('#btnOpenPDFSprint').dblclick(function () {
-
-          pdfMake.createPdf(docDefinition).open();
-
-        }); // close btnOpenPDF
-            
           
+
+          function stateChange(newState) {
+              setTimeout(function () {
+                  if (newState == -1) {
+                      pdfMake.createPdf(docDefinition).open();
+                  }
+              }, 5000);
+          }
+
+          stateChange(-1);
+
 
       }); // close btnOpenPDF
 
