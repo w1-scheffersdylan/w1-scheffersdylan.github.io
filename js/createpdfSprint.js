@@ -162,7 +162,7 @@ $("#controlsSprint").submit(function() {
        });
                 
 
-      $("#creatingTime").append("When you click on one of the buttons it will take " + SprintDataStoryNumber.length + " seconds to create the PDF.");                                                                                                                                                                                                                             
+      $("#creatingTime").append("When you click on one of the buttons it will take ca." + SprintDataStoryNumber.length + " seconds to create the PDF.");                                                                                                                                                                                                                             
             
 //////////////STEP 3: CREATING THE PDF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
