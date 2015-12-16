@@ -373,15 +373,17 @@ $("#controlsSprint").submit(function() {
 
           
 
-          function stateChange(newState) {
-              setTimeout(function () {
-                  if (newState == -1) {
-                      pdfMake.createPdf(docDefinition).open();
-                  }
-              }, 5000);
-          }
+          // function stateChange(newState) {
+          //     setTimeout(function () {
+          //         if (newState == -1) {
+          //             pdfMake.createPdf(docDefinition).open();
+          //         }
+          //     }, 5000);
+          // }
 
-          stateChange(-1);
+          // stateChange(-1);
+
+          pdfMake.createPdf(docDefinition).open();
 
 
       }); // close btnOpenPDF
