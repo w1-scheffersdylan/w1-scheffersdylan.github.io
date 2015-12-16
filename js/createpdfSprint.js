@@ -160,7 +160,9 @@ $("#controlsSprint").submit(function() {
           $("#sprintstep2Container").fadeOut();
           location.reload();
        });
-                                                                                                                                                                                                                                             
+                
+
+      $("#creatingTime").append("When you click on one of the buttons it will take " + SprintDataStoryNumber.length + " seconds to create the PDF.");                                                                                                                                                                                                                             
             
 //////////////STEP 3: CREATING THE PDF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -371,7 +373,7 @@ $("#controlsSprint").submit(function() {
                 }        
 
 
-          pdfMake.createPdf(docDefinition).open().alert();
+          pdfMake.createPdf(docDefinition).open();
 
 
 
