@@ -371,17 +371,8 @@ $("#controlsSprint").submit(function() {
                 }        
 
 
-          var pdfThing = pdfMake.createPdf(docDefinition);
+          pdfMake.createPdf(docDefinition).open().alert();
 
-          function stateChange(newState) {
-              setTimeout(function () {
-                  if (newState == -1) {
-                      pdfThing.open();
-                  }
-              }, 15000);
-          }
-
-          stateChange(-1);
 
 
 
