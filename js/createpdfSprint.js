@@ -171,7 +171,7 @@ function stateChange(newState) {
         if (newState == -1) {
             alert('VIDEO HAS STOPPED');
 
-
+var docDefinition = {
        
           pageSize: 'A4',
           pageOrientation: 'landscape',
@@ -199,7 +199,7 @@ function stateChange(newState) {
 
               }
               
-            
+            }
 
             // for loop to get all of the stories one by one and show them all on a different page in the PDF
             for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
