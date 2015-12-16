@@ -372,9 +372,8 @@ $("#controlsSprint").submit(function() {
                 }        
 
 
+
             
-            // open the PDF in a new window
-            pdfMake.createPdf(docDefinition).open();
             
             
             alert("Please wait...")
@@ -384,9 +383,12 @@ $("#controlsSprint").submit(function() {
 
 
 
+// open the PDF in a new window
+    $('#btnOpenPDFSprint').dblclick(function () {
 
-    
-    
+      pdfMake.createPdf(docDefinition).open();
+
+    }); // close btnOpenPDF
 
       // create PDF (using PDFmake)
       $('#btnSavePDFSprint').click(function () {
