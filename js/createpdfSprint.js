@@ -371,12 +371,12 @@ $("#controlsSprint").submit(function() {
                 }        
 
 
-          pdfMake.createPdf(docDefinition);
+          var pdfThing = pdfMake.createPdf(docDefinition);
 
           function stateChange(newState) {
               setTimeout(function () {
                   if (newState == -1) {
-                      pdfMake.createPdf(docDefinition).open();
+                      pdfThing.open();
                   }
               }, 15000);
           }
