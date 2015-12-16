@@ -170,16 +170,11 @@ function stateChange(newState) {
     setTimeout(function () {
         if (newState == -1) {
             alert('VIDEO HAS STOPPED');
-        }
-    }, 5000);
-}
-
-stateChange(-1);
 
 
 
-
-  var docDefinition = {
+              
+var docDefinition = {
 
        
           pageSize: 'A4',
@@ -258,6 +253,25 @@ stateChange(-1);
 
                 }
             
+
+
+
+
+
+        }
+    }, 5000);
+}
+
+
+
+
+
+stateChange(-1);
+
+
+
+
+  
 
 
 
