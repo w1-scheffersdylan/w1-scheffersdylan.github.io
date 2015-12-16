@@ -275,6 +275,7 @@ $("#controlsSprint").submit(function() {
       }); // close btnOpenPDF
 
 
+var docDefinition;
 
 
       // create PDF (using PDFmake)
@@ -374,9 +375,6 @@ $("#controlsSprint").submit(function() {
 
 
             
-            
-            
-            alert("Please wait...")
           
 
       }); // close btnOpenPDF
