@@ -275,8 +275,6 @@ $("#controlsSprint").submit(function() {
       }); // close btnOpenPDF
 
 
-var docDefinition;
-
 
       // create PDF (using PDFmake)
       $('#btnOpenPDFSprint').click(function () {
@@ -373,7 +371,12 @@ var docDefinition;
                 }        
 
 
+        // open the PDF in a new window
+        $('#btnOpenPDFSprint').dblclick(function () {
 
+          pdfMake.createPdf(docDefinition).open();
+
+        }); // close btnOpenPDF
             
           
 
@@ -381,12 +384,7 @@ var docDefinition;
 
 
 
-// open the PDF in a new window
-    $('#btnOpenPDFSprint').dblclick(function () {
 
-      pdfMake.createPdf(docDefinition).open();
-
-    }); // close btnOpenPDF
 
       // create PDF (using PDFmake)
       $('#btnSavePDFSprint').click(function () {
