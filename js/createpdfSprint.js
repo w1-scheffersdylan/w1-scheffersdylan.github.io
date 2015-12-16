@@ -172,10 +172,6 @@ function stateChange(newState) {
             alert('VIDEO HAS STOPPED');
 
 
-
-
-var docDefinition = {
-
        
           pageSize: 'A4',
           pageOrientation: 'landscape',
@@ -201,7 +197,7 @@ var docDefinition = {
                   fontSize: 26
                 }
 
-              },
+              }
               
             
 
@@ -253,7 +249,7 @@ var docDefinition = {
 
                 }
 
-              }
+              
             
 
 
@@ -268,7 +264,7 @@ var docDefinition = {
 
 
 
-stateChange(-1);
+
 
 
 
@@ -316,7 +312,7 @@ stateChange(-1);
 
 
         // Print the PDF
-        pdfMake.createPdf(docDefinition).print();
+        pdfMake.createPdf(stateChange(-1)).print();
             
             
             
