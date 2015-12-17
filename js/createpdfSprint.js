@@ -64,9 +64,7 @@ $("#controlsSprint").submit(function() {
 
           SprintDataStoryDescription.push(response.feature.description.body.replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' ').replace(/&amp;/gi,' '));
           SprintDataStoryTitle.push(response.feature.name);
-          storyPosition.push(response.feature.position);
-          console.log(response.feature.position);
-          console.log(response.feature.positions);
+          storyPosition.push(response.feature.positions);
 
 
           // check if their is a epic
@@ -112,7 +110,7 @@ $("#controlsSprint").submit(function() {
         //api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {         
 
           //var currentStoryPosition = response.feature.position; // eq 2
-console.log(storyPosition[1]);
+        console.log(storyPosition);
          
        for( var i = 1; i <= storyPosition.length; i++){
             //if( storyPosition.indexOf(i) == i){
