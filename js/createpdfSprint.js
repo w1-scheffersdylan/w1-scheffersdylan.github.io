@@ -51,6 +51,9 @@ $("#controlsSprint").submit(function() {
       // get all title in an array
       var SprintDataStoryTitle = [];
 
+      // get positions of stories in sprint
+      var storyPosition = [];
+
       
       // get all data from all stories in the sprint
       function fectchSprintDataStoryGroomDescription(number){
@@ -61,7 +64,8 @@ $("#controlsSprint").submit(function() {
 
           SprintDataStoryDescription.push(response.feature.description.body.replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' ').replace(/&amp;/gi,' '));
           SprintDataStoryTitle.push(response.feature.name);
-          
+          storyPosition.push(response.feature.position)
+
 
           // check if their is a epic
           if( typeof JSON.stringify(response.feature.initiative) === 'undefined'){
@@ -105,24 +109,24 @@ $("#controlsSprint").submit(function() {
 
         api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {         
 
-          var storyPosition = response.feature.position;
+          var currentStoryPosition = response.feature.position; // eq 2
 
-          for( var i = 0; i < SprintDataStoryNumber.length; i++){
-            if( storyPosition == i){
+          for( var i = 0; i < storyPosition.length; i++){
+            if( storyPosition.indexOf(currentStoryPosition) == i){
 
 
 
                 // show all data on webpage
-                $("#requirementsDetails").append("<tr class='bold'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[storyPosition - 1] + "</td></tr>");
-                $('#requirementsDetails').append("<tr><td> Story Title: </td><td>" + SprintDataStoryTitle[storyPosition - 1] + "</td><tr/>");
-                $("#requirementsDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[storyPosition - 1] + "</td><tr/>");
-                $("#requirementsDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[storyPosition - 1] + "</td><tr/>");
-                $("#requirementsDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[storyPosition - 1] + "</td><tr/>");
+                $("#requirementsDetails").append("<tr class='bold'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[i] + "</td></tr>");
+                $('#requirementsDetails').append("<tr><td> Story Title: </td><td>" + SprintDataStoryTitle[i] + "</td><tr/>");
+                $("#requirementsDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[i] + "</td><tr/>");
+                $("#requirementsDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[i] + "</td><tr/>");
+                $("#requirementsDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[i] + "</td><tr/>");
 
 
                 // get all requirements and show them
                 for( var y = 0; y < response.feature.requirements.length; y++){
-                  SprintDataStoryRequirements[storyPosition - 1].push( " __ " + response.feature.requirements[y]['name']);
+                  SprintDataStoryRequirements[i].push( " __ " + response.feature.requirements[y]['name']);
                   $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][y + 1] + "</td><tr/>");
 
                 }
