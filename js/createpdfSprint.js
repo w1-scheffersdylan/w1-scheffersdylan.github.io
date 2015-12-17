@@ -107,13 +107,14 @@ $("#controlsSprint").submit(function() {
 
       // Show all data and get all requirements
       function fetchSprintDataStoryRequirements(){
-
+      setTimeout(
+        function() {
         //api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {         
 
           //var currentStoryPosition = response.feature.position; // eq 2
-        console.log(storyPosition.length);
+            console.log(storyPosition.length);
          
-       for( var i = 1; i <= storyPosition.length; i++){
+            for( var i = 1; i <= storyPosition.length; i++){
             //if( storyPosition.indexOf(i) == i){
 
                 console.log(storyPosition);
@@ -145,10 +146,11 @@ $("#controlsSprint").submit(function() {
 
 
 
-           //} // end if
-         } // end for
+                //} // end if
+             } // end for
         
           
+          }, 5000);
 
           // fetchSprintDataStoryRequirements(storyNumber + 1);
 
