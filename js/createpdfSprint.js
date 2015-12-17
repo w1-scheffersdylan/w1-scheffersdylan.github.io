@@ -110,7 +110,7 @@ $("#controlsSprint").submit(function() {
         //api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {         
 
           //var currentStoryPosition = response.feature.position; // eq 2
-console.log(storyPosition);
+console.log(storyPosition[1]);
          
        for( var i = 1; i <= storyPosition.length; i++){
             //if( storyPosition.indexOf(i) == i){
