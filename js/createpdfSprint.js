@@ -132,7 +132,20 @@ $("#controlsSprint").submit(function() {
 
       // Show all data and get all requirements
       function fetchSprintDataStoryRequirements(){
-      $("#requirementsDetails").append("<tr class='bold'><td> Please wait... </td></tr>");
+      //$("#requirementsDetails").append("<tr class='bold'><td> Please wait " + SprintDataStoryName.length / 2 + " </td></tr>");
+
+      var counter = math.round(SprintDataStoryName.length / 2);
+      var interval = setInterval(function() {
+          counter--;
+          // Display 'counter' wherever you want to display it.
+          if (counter == 0) {
+              // Display a login box
+              clearInterval(interval);
+          }
+      }, 1000);
+
+
+
       setTimeout(
         function() {
                
