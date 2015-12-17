@@ -50,7 +50,8 @@ $("#controlsSprint").submit(function() {
       var SprintDataStoryEpic = [];
       // get all title in an array
       var SprintDataStoryTitle = [];
-
+      // get position of story in sprint
+      var SprintDataStoryPosition = [];
       
       // get all data from all stories in the sprint
       function fectchSprintDataStoryGroomDescription(number){
@@ -61,6 +62,7 @@ $("#controlsSprint").submit(function() {
 
           SprintDataStoryDescription.push(response.feature.description.body.replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' ').replace(/&amp;/gi,' '));
           SprintDataStoryTitle.push(response.feature.name);
+          SprintDataStoryPosition.push(response.feature.position);
 
           // check if their is a epic
           if( typeof JSON.stringify(response.feature.initiative) === 'undefined'){
@@ -219,6 +221,7 @@ $("#controlsSprint").submit(function() {
 
             // for loop to get all of the stories one by one and show them all on a different page in the PDF
             for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
+
                docDefinition.content.push({
                     
                     // sablono logo
@@ -328,6 +331,7 @@ $("#controlsSprint").submit(function() {
 
             // for loop to get all of the stories one by one and show them all on a different page in the PDF
             for( var i = 0; i < SprintDataStoryNumber.length; i++ ){
+            if(SprintDataStoryPosition[i] == i){
                docDefinition.content.push({
                     
                     // sablono logo
@@ -371,7 +375,7 @@ $("#controlsSprint").submit(function() {
                     }
                   );
 
-
+                }
                 }        
 
 
