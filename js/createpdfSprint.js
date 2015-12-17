@@ -115,6 +115,8 @@ $("#controlsSprint").submit(function() {
        for( var i = 1; i <= storyPosition.length; i++){
             //if( storyPosition.indexOf(i) == i){
 
+                console.log(storyPosition);
+
                 var storyPositionArray = storyPosition.indexOf(i);
 
                 console.log(storyPositionArray);
