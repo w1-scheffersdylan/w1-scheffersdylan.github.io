@@ -137,7 +137,7 @@ $("#controlsSprint").submit(function() {
       var counter = seconds.toFixed(0)
       var interval = setInterval(function() {
           counter--;
-          // Display 'counter' wherever you want to display it.
+          $("#requirementsDetails").append("<tr class='bold'><td> Please wait " + counter + " seconds</td></tr>");
           if (counter == 0) {
               // Display a login box
               clearInterval(interval);
