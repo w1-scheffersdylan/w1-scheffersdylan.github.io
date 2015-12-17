@@ -157,10 +157,10 @@ $("#controlsSprint").submit(function() {
                 $("#requirementsDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[storyPositionArray] + "</td><tr/>");
                 $("#requirementsDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[storyPositionArray] + "</td><tr/>");
                 // show requirements
-                for( var y = 0; y < SprintDataStoryRequirements[storyPositionArray].length; y++){
-                  console.log(SprintDataStoryRequirements[storyPositionArray].length);
-                  $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyPositionArray][y + 1] + "</td><tr/>");
-                }
+                // for( var y = 0; y < SprintDataStoryRequirements[storyPositionArray].length; y++){
+                //   console.log(SprintDataStoryRequirements[storyPositionArray].length);
+                //   $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyPositionArray][y + 1] + "</td><tr/>");
+                // }
              
 
 
