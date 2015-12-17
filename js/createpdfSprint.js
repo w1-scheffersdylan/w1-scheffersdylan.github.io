@@ -141,7 +141,7 @@ $("#controlsSprint").submit(function() {
 
 
 
-                  
+
 
                   // get all requirements and show them
                   for( var y = 0; y < response.feature.requirements.length; y++){
@@ -149,11 +149,17 @@ $("#controlsSprint").submit(function() {
                     $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyPositionArray][y + 1] + "</td><tr/>");
 
                   }
+
+
+
+                  // empty table row for better overview
+                  $("#requirementsDetails").append("<tr><td> &nbsp; </td><td> &nbsp; </td><tr/>");
+
+                  
              
                 }); // close api.get 
 
-                // empty table row for better overview
-                $("#requirementsDetails").append("<tr><td> &nbsp; </td><td> &nbsp; </td><tr/>");
+                
 
 
 
