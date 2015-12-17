@@ -105,9 +105,9 @@ $("#controlsSprint").submit(function() {
       
 
       // Show all data and get all requirements
-      function fetchSprintDataStoryRequirements(storyNumber){
+      function fetchSprintDataStoryRequirements(){
 
-        api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {         
+        //api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {         
 
           //var currentStoryPosition = response.feature.position; // eq 2
 
@@ -147,15 +147,15 @@ $("#controlsSprint").submit(function() {
         
           
 
-           fetchSprintDataStoryRequirements(storyNumber + 1);
+          // fetchSprintDataStoryRequirements(storyNumber + 1);
 
-        }); // close api.get 
+       // }); // close api.get 
         
 
       }
 
       // init requirement looping
-      fetchSprintDataStoryRequirements(14);
+      fetchSprintDataStoryRequirements();
 
 
 
