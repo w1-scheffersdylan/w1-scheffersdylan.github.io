@@ -1,8 +1,3 @@
-
-var ahapdfApp = angular.module('ahapdfApp',['ngMaterial']);
-
-        ahapdfApp.controller('homeController', homeController);       
-
 $("#controlsSprint").submit(function() {
   new AhaApi({
     accountDomain: $("#subdomain").val(),
@@ -182,7 +177,7 @@ $("#controlsSprint").submit(function() {
              } // end for
         
           
-          }, 500 * SprintDataStoryName.length);
+          }, 500 * SprintDataStoryName);
 
           // fetchSprintDataStoryRequirements(storyNumber + 1);
 
@@ -223,15 +218,8 @@ $("#controlsSprint").submit(function() {
 
 
 
-      function homeController ($timeout, $q, $log) {
-        this.loading = false;
-        this.simulateLoading = function () {
-          this.loading = true;
-          $timeout(function () {
-            this.loading = false;
-          }.bind(this), 5000);
-        };
-      }
+
+
 
 
 
@@ -589,12 +577,3 @@ $("#controlsSprint").submit(function() {
   }); // close authenticate 
   return false;
 });
-
-
-
-
-
-
-
-
-            
