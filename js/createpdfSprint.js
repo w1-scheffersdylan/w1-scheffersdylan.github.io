@@ -66,7 +66,7 @@ $("#controlsSprint").submit(function() {
           SprintDataStoryTitle.push(response.feature.name);
           storyPosition.push(response.feature.positions);
           console.log(response.feature.positions);
-          alert(response.feature);
+          console.log(response.feature);
 
 
           // check if their is a epic
