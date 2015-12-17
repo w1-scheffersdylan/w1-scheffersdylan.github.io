@@ -132,20 +132,6 @@ $("#controlsSprint").submit(function() {
 
       // Show all data and get all requirements
       function fetchSprintDataStoryRequirements(){
-      //$("#requirementsDetails").append("<tr class='bold'><td> Please wait " + SprintDataStoryName.length / 2 + " </td></tr>");
-      var seconds = SprintDataStoryName.length / 2
-      var counter = seconds.toFixed(0)
-      var interval = setInterval(function() {
-          counter--;
-          $("#requirementsDetails").append("<tr class='bold'><td> Please wait " + counter + " seconds</td></tr>");
-          if (counter == 0) {
-              // Display a login box
-              clearInterval(interval);
-          }
-      }, 1000);
-
-
-
       setTimeout(
         function() {
                
@@ -234,7 +220,16 @@ $("#controlsSprint").submit(function() {
 
 
 
-
+var seconds = SprintDataStoryName.length / 2;
+      var counter = seconds.toFixed(0);
+      var interval = setInterval(function() {
+          counter--;
+          $("#requirementsDetails").append("<tr class='bold'><td> Please wait " + counter + " seconds</td></tr>");
+          if (counter == 0) {
+              // Display a login box
+              clearInterval(interval);
+          }
+      }, 1000);
 
 
 
