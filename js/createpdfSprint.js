@@ -1,8 +1,7 @@
 
 var ahapdfApp = angular.module('ahapdfApp',['ngMaterial']);
 
-        ahapdfApp.controller('homeController', function ($scope, $interval)
-        {
+        ahapdfApp.controller('homeController' homeController);       
 
 $("#controlsSprint").submit(function() {
   new AhaApi({
@@ -224,7 +223,7 @@ $("#controlsSprint").submit(function() {
 
 
 
-      function DemoCtrl ($timeout, $q, $log) {
+      function homeController ($timeout, $q, $log) {
         this.loading = false;
         this.simulateLoading = function () {
           this.loading = true;
@@ -599,4 +598,3 @@ $("#controlsSprint").submit(function() {
 
 
             
-}); // end controller  
