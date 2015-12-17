@@ -224,9 +224,7 @@ $("#controlsSprint").submit(function() {
 
 
 
-        
-
-    determinateValue = 300;
+      
 
 
 
