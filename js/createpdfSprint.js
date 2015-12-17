@@ -109,7 +109,7 @@ $("#controlsSprint").submit(function() {
       function fetchSprintDataStoryRequirements(){
       setTimeout(
         function() {
-        //api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {         
+               
 
           //var currentStoryPosition = response.feature.position; // eq 2
             console.log(storyPosition.length);
@@ -133,14 +133,17 @@ $("#controlsSprint").submit(function() {
                 $("#requirementsDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[storyPositionArray] + "</td><tr/>");
                 $("#requirementsDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[storyPositionArray] + "</td><tr/>");
 
+                api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyPositionArray][0], {}, function(response) {  
+                  
+                  // get all requirements and show them
+                  for( var y = 0; y < response.feature.requirements.length; y++){
+                    SprintDataStoryRequirements[storyPositionArray].push( " __ " + response.feature.requirements[y]['name']);
+                    $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][y + 1] + "</td><tr/>");
 
-                // get all requirements and show them
-                for( var y = 0; y < response.feature.requirements.length; y++){
-                  SprintDataStoryRequirements[storyPositionArray].push( " __ " + response.feature.requirements[y]['name']);
-                  $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][y + 1] + "</td><tr/>");
-
-                }
+                  }
              
+                }); // close api.get 
+
                 // empty table row for better overview
                 $("#requirementsDetails").append("<tr><td> &nbsp; </td><td> &nbsp; </td><tr/>");
 
@@ -156,7 +159,7 @@ $("#controlsSprint").submit(function() {
 
           // fetchSprintDataStoryRequirements(storyNumber + 1);
 
-       // }); // close api.get 
+      
         
 
       }
