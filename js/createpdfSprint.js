@@ -220,14 +220,15 @@ $("#controlsSprint").submit(function() {
 
 
 
-var seconds = SprintDataStoryName.length / 2;
+var seconds = (SprintDataStoryName.length / 2) - 1;
       var counter = seconds.toFixed(0);
       var interval = setInterval(function() {
           counter--;
-          $("#requirementsDetails").append("<tr class='bold'><td> Please wait " + counter + " seconds</td></tr>");
+          $("#requirementsDetails").text("<tr class='bold'><td> Please wait " + counter + " seconds</td></tr>");
           if (counter == 0) {
               // Display a login box
               clearInterval(interval);
+              $("#requirementsDetails").empty();
           }
       }, 1000);
 
