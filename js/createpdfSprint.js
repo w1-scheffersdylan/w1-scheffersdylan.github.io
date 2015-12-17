@@ -1,3 +1,9 @@
+
+var ahapdfApp = angular.module('ahapdfApp',['ngMaterial']);
+
+        ahapdfApp.controller('homeController', function ($scope, $interval)
+        {
+
 $("#controlsSprint").submit(function() {
   new AhaApi({
     accountDomain: $("#subdomain").val(),
@@ -218,20 +224,11 @@ $("#controlsSprint").submit(function() {
 
 
 
-        var ahapdfApp = angular.module('ahapdfApp',['ngMaterial']);
-
-        ahapdfApp.controller('homeController', function ($scope, $interval)
-        {
+        
 
             
 
-              var self = this, j= 0, counter = 0;
-              self.mode = 'query';
-              self.activated = true;
-              self.determinateValue = 0.5 * SprintDataStoryName.length;
-            
-        }); // end controller  
-
+              
 
 
 
@@ -589,3 +586,16 @@ $("#controlsSprint").submit(function() {
   }); // close authenticate 
   return false;
 });
+
+
+
+
+
+
+
+var self = this, j= 0, counter = 0;
+self.mode = 'query';
+self.activated = true;
+self.determinateValue = 0.5 * SprintDataStoryName.length;
+            
+}); // end controller  
