@@ -128,7 +128,7 @@ $("#controlsSprint").submit(function() {
 
                 
 
-              //  api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyPositionArray][0], {}, function(response) {  
+              //  
 
 
 
@@ -140,15 +140,15 @@ $("#controlsSprint").submit(function() {
                 $("#requirementsDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[storyPositionArray] + "</td><tr/>");
 
 
-
+              api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyPositionArray][0], {}, function(response) {  
 
 
                   // get all requirements and show them
-                  // for( var y = 0; y < response.feature.requirements.length; y++){
-                  //   SprintDataStoryRequirements[storyPositionArray].push( " __ " + response.feature.requirements[y]['name']);
-                  //   $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyPositionArray][y + 1] + "</td><tr/>");
+                  for( var y = 0; y < response.feature.requirements.length; y++){
+                    SprintDataStoryRequirements[storyPositionArray].push( " __ " + response.feature.requirements[y]['name']);
+                    $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyPositionArray][y + 1] + "</td><tr/>");
 
-                  // }
+                  }
 
 
 
@@ -156,7 +156,7 @@ $("#controlsSprint").submit(function() {
 
 
              
-            //    }); // close api.get 
+               }); // close api.get 
 
                 
 
