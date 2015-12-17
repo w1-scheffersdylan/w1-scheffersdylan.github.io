@@ -28,14 +28,10 @@ table tr td {
 
 .overlap {
   z-index: 9999999999999999999999999;
-  position: absolute;
-  bottom: 0;
 }
 
 .layout-align-space-around, .layout-align-space-around-center, .layout-align-space-around-end, .layout-align-space-around-start {
     z-index: 0;
-    position: absolute;
-    bottom: 0;
 }
 
 .right {
