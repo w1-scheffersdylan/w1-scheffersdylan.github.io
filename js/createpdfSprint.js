@@ -104,12 +104,30 @@ $("#controlsSprint").submit(function() {
         SprintDataStoryNotes.push([SprintDataStoryNumber[i]]);
       }
 
-      // get all requirements
-      api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyPositionArray][0], {}, function(response) {  
-          for( var y = 0; y < response.feature.requirements.length; y++){
-            SprintDataStoryRequirements[storyPositionArray].push( " __ " + response.feature.requirements[y]['name']);
+
+      // Show all data and get all requirements
+      function fetchSprintDataStoryRequirements(storyNumber){
+
+        api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {
+
+          // get all requirements and show them
+          for( var i = 0; i < response.feature.requirements.length; i++){
+            SprintDataStoryRequirements[storyNumber].push( " __ " + response.feature.requirements[i]['name']);
+
           }
-      }); // close api.get 
+
+           fetchSprintDataStoryRequirements(storyNumber + 1);
+
+        }); // close api.get 
+        
+
+      }
+
+      // init requirement looping
+      fetchSprintDataStoryRequirements(0);
+
+
+
       
 
       // Show all data and get all requirements
