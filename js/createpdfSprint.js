@@ -225,7 +225,10 @@ $("#controlsSprint").submit(function() {
 
 
         
-
+var self = this, j= 0, counter = 0;
+self.mode = 'query';
+self.activated = true;
+self.determinateValue = 0.5 * SprintDataStoryName.length;
             
 
               
@@ -593,9 +596,6 @@ $("#controlsSprint").submit(function() {
 
 
 
-var self = this, j= 0, counter = 0;
-self.mode = 'query';
-self.activated = true;
-self.determinateValue = 0.5 * SprintDataStoryName.length;
+
             
 }); // end controller  
