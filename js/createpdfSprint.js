@@ -144,11 +144,11 @@ $("#controlsSprint").submit(function() {
 
 
                   // get all requirements and show them
-                  for( var y = 0; y < response.feature.requirements.length; y++){
-                    SprintDataStoryRequirements[storyPositionArray].push( " __ " + response.feature.requirements[y]['name']);
-                    $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyPositionArray][y + 1] + "</td><tr/>");
+                  // for( var y = 0; y < response.feature.requirements.length; y++){
+                  //   SprintDataStoryRequirements[storyPositionArray].push( " __ " + response.feature.requirements[y]['name']);
+                  //   $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyPositionArray][y + 1] + "</td><tr/>");
 
-                  }
+                  // }
 
 
 
