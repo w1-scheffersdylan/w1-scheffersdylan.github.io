@@ -107,7 +107,7 @@ $("#controlsSprint").submit(function() {
 
           var storyPosition = response.feature.position;
 
-          for( var i = 1; i < SprintDataStoryNumber.length; i++){
+          for( var i = 0; i < SprintDataStoryNumber.length; i++){
             if( storyPosition == i){
 
 
