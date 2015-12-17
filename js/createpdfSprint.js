@@ -135,7 +135,7 @@ $("#controlsSprint").submit(function() {
       setTimeout(
         function() {
                
-            $("#requirementsDetails").empty();
+            //$("#requirementsDetails").empty();
             console.log(storyPosition.length);
          
             for( var i = 1; i <= storyPosition.length; i++){
