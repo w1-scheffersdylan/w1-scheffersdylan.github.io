@@ -128,7 +128,7 @@ $("#controlsSprint").submit(function() {
 
                 
 
-                api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyPositionArray][0], {}, function(response) {  
+              //  api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyPositionArray][0], {}, function(response) {  
 
 
 
@@ -156,7 +156,7 @@ $("#controlsSprint").submit(function() {
 
 
              
-                }); // close api.get 
+            //    }); // close api.get 
 
                 
 
