@@ -112,7 +112,7 @@ $("#controlsSprint").submit(function() {
           //var currentStoryPosition = response.feature.position; // eq 2
 
          
-       for( var i = 1; i < storyPosition.length; i++){
+       for( var i = 1; i <= storyPosition.length; i++){
             //if( storyPosition.indexOf(i) == i){
 
                 var storyPositionArray = storyPosition.indexOf(i);
@@ -155,7 +155,7 @@ $("#controlsSprint").submit(function() {
       }
 
       // init requirement looping
-      fetchSprintDataStoryRequirements(0);
+      fetchSprintDataStoryRequirements(15);
 
 
 
@@ -198,7 +198,7 @@ $("#controlsSprint").submit(function() {
 
 
 
-       
+
 
       // fade effect to go back to fill in a new story/sprint
        $('#btnNewSprint').click(function () {
