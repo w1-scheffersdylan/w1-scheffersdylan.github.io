@@ -26,6 +26,12 @@ table tr td {
   padding: 0px 10px;
 }
 
+.overlap {
+  z-index: 9999999999999999999999999;
+  position: absolute;
+  bottom: 0;
+}
+
 .right {
   float: right;
 }
