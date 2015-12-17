@@ -111,13 +111,13 @@ $("#controlsSprint").submit(function() {
 
           var currentStoryPosition = response.feature.position; // eq 2
 
-          console.log(currentStoryPosition);
-          console.log(storyPosition);
+         
 
-          for( var i = 0; i < response.features.length; i++){
+          for( var i = 0; i < storyPosition.length; i++){
             if( storyPosition.indexOf(currentStoryPosition) == i){
 
-
+ console.log(currentStoryPosition);
+          console.log(storyPosition);
 
                 // show all data on webpage
                 $("#requirementsDetails").append("<tr class='bold'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[i] + "</td></tr>");
