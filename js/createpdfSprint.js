@@ -50,8 +50,6 @@ $("#controlsSprint").submit(function() {
       var SprintDataStoryEpic = [];
       // get all title in an array
       var SprintDataStoryTitle = [];
-      // get position of story in sprint
-      var SprintDataStoryPosition = [];
 
       
       // get all data from all stories in the sprint
@@ -63,7 +61,7 @@ $("#controlsSprint").submit(function() {
 
           SprintDataStoryDescription.push(response.feature.description.body.replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' ').replace(/&amp;/gi,' '));
           SprintDataStoryTitle.push(response.feature.name);
-          SprintDataStoryPosition.push(response.feature.position);
+          
 
           // check if their is a epic
           if( typeof JSON.stringify(response.feature.initiative) === 'undefined'){
@@ -92,7 +90,6 @@ $("#controlsSprint").submit(function() {
       // init the looping
       fectchSprintDataStoryGroomDescription(0);
 
-      console.log(SprintDataStoryPosition.length);
 
       // add story numbers to requirement and notes array
       var SprintDataStoryRequirements = [];
@@ -108,8 +105,10 @@ $("#controlsSprint").submit(function() {
 
         api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {         
 
-          for( var i = 0; i < SprintDataStoryPosition.length; i++){
-            if( SprintDataStoryPosition.indexOf(storyNumber + 1) == i){
+          var storyPosition = response.feature.position;
+
+          for( var i = 0; i < SprintDataStoryRequirements.length; i++){
+            if( storyPosition == i){
 
 
 
