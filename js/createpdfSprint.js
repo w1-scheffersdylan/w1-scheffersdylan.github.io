@@ -224,11 +224,10 @@ var seconds = (SprintDataStoryName.length / 2) - 1;
       var counter = seconds.toFixed(0);
       var interval = setInterval(function() {
           counter--;
-          $("#requirementsDetails").text("<tr class='bold'><td> Please wait " + counter + " seconds</td></tr>");
+          $("#requirementsDetails").text("Please wait " + counter + " seconds");
           if (counter == 0) {
               // Display a login box
               clearInterval(interval);
-              $("#requirementsDetails").empty();
           }
       }, 1000);
 
