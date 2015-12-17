@@ -107,8 +107,8 @@ $("#controlsSprint").submit(function() {
 
           var storyPosition = response.feature.position;
 
-          // for( var i = 0; i < SprintDataStoryRequirements.length; i++){
-            if( storyPosition == (storyNumber + 1)){
+          for( var i = 0; i < SprintDataStoryNumber.length; i++){
+            if( storyPosition == (storyNumber + i)){
 
 
 
@@ -135,7 +135,7 @@ $("#controlsSprint").submit(function() {
 
 
             } // end if
-          // } // end for
+          } // end for
           
 
            fetchSprintDataStoryRequirements(storyNumber + 1);
