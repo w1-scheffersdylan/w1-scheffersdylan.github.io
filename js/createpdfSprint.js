@@ -22,7 +22,7 @@ $("#controlsSprint").submit(function() {
     $("#sprintstep2Container").fadeIn();
               
     // alerts for test
-    //alert(JSON.stringify(response.features));
+    alert(JSON.stringify(response.features));
     //alert( response.features[0]["name"] );
 
 
