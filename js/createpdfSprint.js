@@ -132,10 +132,11 @@ $("#controlsSprint").submit(function() {
 
       // Show all data and get all requirements
       function fetchSprintDataStoryRequirements(){
+      $("#requirementsDetails").append("<tr class='bold'><td> Please wait... </td></tr>");
       setTimeout(
         function() {
                
-
+            $("#requirementsDetails").empty();
             console.log(storyPosition.length);
          
             for( var i = 1; i <= storyPosition.length; i++){
