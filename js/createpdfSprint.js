@@ -1,7 +1,7 @@
 
 var ahapdfApp = angular.module('ahapdfApp',['ngMaterial']);
 
-        ahapdfApp.controller('homeController' homeController);       
+        ahapdfApp.controller('homeController', homeController);       
 
 $("#controlsSprint").submit(function() {
   new AhaApi({
