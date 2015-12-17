@@ -103,6 +103,13 @@ $("#controlsSprint").submit(function() {
         SprintDataStoryRequirements.push([SprintDataStoryNumber[i]]);
         SprintDataStoryNotes.push([SprintDataStoryNumber[i]]);
       }
+
+      // get all requirements
+      api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyPositionArray][0], {}, function(response) {  
+          for( var y = 0; y < response.feature.requirements.length; y++){
+            SprintDataStoryRequirements[storyPositionArray].push( " __ " + response.feature.requirements[y]['name']);
+          }
+      }); // close api.get 
       
 
       // Show all data and get all requirements
@@ -128,29 +135,17 @@ $("#controlsSprint").submit(function() {
                   // show all data on webpage
                 $("#requirementsDetails").append("<tr class='bold'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[storyPositionArray] + "</td></tr>");
                 $('#requirementsDetails').append("<tr><td> Story Title: </td><td>" + SprintDataStoryTitle[storyPositionArray] + "</td><tr/>");
-
- api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyPositionArray][0], {}, function(response) {  
-                for( var y = 0; y < response.feature.requirements.length; y++){
-                    SprintDataStoryRequirements[storyPositionArray].push( " __ " + response.feature.requirements[y]['name']);
-                    $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyPositionArray][y + 1] + "</td><tr/>");
-
-                  }
-
-             
-               }); // close api.get 
-
-
-
-
                 $("#requirementsDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[storyPositionArray] + "</td><tr/>");
                 $("#requirementsDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[storyPositionArray] + "</td><tr/>");
                 $("#requirementsDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[storyPositionArray] + "</td><tr/>");
-
-
+                // show requirements
+                for( var y = 0; y < SprintDataStoryRequirements[storyPositionArray].length; y++){
+                  $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyPositionArray][y + 1] + "</td><tr/>");
+                }
              
 
 
-                  // get all requirements and show them
+                  
                   
 
                 
