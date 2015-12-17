@@ -112,7 +112,38 @@ $("#controlsSprint").submit(function() {
           //var currentStoryPosition = response.feature.position; // eq 2
 
          
+       for( var i = 1; i < storyPosition.length; i++){
+            //if( storyPosition.indexOf(i) == i){
 
+                var storyPositionArray = storyPosition.indexOf(i);
+
+                console.log(storyPositionArray);
+                console.log(storyPosition);
+
+                // show all data on webpage
+                $("#requirementsDetails").append("<tr class='bold'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[storyPositionArray] + "</td></tr>");
+                $('#requirementsDetails').append("<tr><td> Story Title: </td><td>" + SprintDataStoryTitle[storyPositionArray] + "</td><tr/>");
+                $("#requirementsDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[storyPositionArray] + "</td><tr/>");
+                $("#requirementsDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[storyPositionArray] + "</td><tr/>");
+                $("#requirementsDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[storyPositionArray] + "</td><tr/>");
+
+
+                // get all requirements and show them
+                // for( var y = 0; y < response.feature.requirements.length; y++){
+                //   SprintDataStoryRequirements[storyPositionArray].push( " __ " + response.feature.requirements[y]['name']);
+                //   $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][y + 1] + "</td><tr/>");
+
+                // }
+             
+                // empty table row for better overview
+                $("#requirementsDetails").append("<tr><td> &nbsp; </td><td> &nbsp; </td><tr/>");
+
+
+
+
+
+           //} // end if
+         } // end for
         
           
 
@@ -155,38 +186,7 @@ $("#controlsSprint").submit(function() {
 
 
 
-       for( var i = 1; i < storyPosition.length; i++){
-            //if( storyPosition.indexOf(i) == i){
 
-                var storyPositionArray = storyPosition.indexOf(i);
-
-                console.log(storyPositionArray);
-                console.log(storyPosition);
-
-                // show all data on webpage
-                $("#requirementsDetails").append("<tr class='bold'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[storyPositionArray] + "</td></tr>");
-                $('#requirementsDetails').append("<tr><td> Story Title: </td><td>" + SprintDataStoryTitle[storyPositionArray] + "</td><tr/>");
-                $("#requirementsDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[storyPositionArray] + "</td><tr/>");
-                $("#requirementsDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[storyPositionArray] + "</td><tr/>");
-                $("#requirementsDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[storyPositionArray] + "</td><tr/>");
-
-
-                // get all requirements and show them
-                // for( var y = 0; y < response.feature.requirements.length; y++){
-                //   SprintDataStoryRequirements[storyPositionArray].push( " __ " + response.feature.requirements[y]['name']);
-                //   $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][y + 1] + "</td><tr/>");
-
-                // }
-             
-                // empty table row for better overview
-                $("#requirementsDetails").append("<tr><td> &nbsp; </td><td> &nbsp; </td><tr/>");
-
-
-
-
-
-           //} // end if
-         } // end for
 
 
 
