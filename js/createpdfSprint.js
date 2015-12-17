@@ -153,9 +153,9 @@ $("#controlsSprint").submit(function() {
 
 
                   // empty table row for better overview
-                  $("#requirementsDetails").append("<tr><td> &nbsp; </td><td> &nbsp; </td><tr/>");
+                  //$("#requirementsDetails").append("<tr><td> &nbsp; </td><td> &nbsp; </td><tr/>");
 
-                  
+
              
                 }); // close api.get 
 
