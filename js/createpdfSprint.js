@@ -228,6 +228,7 @@ var seconds = (SprintDataStoryName.length / 2) - 1;
           if (counter == 0) {
               // Display a login box
               clearInterval(interval);
+              $("#requirementsDetails").text("");
           }
       }, 1000);
 
