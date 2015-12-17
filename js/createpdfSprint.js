@@ -126,15 +126,23 @@ $("#controlsSprint").submit(function() {
                 // console.log(storyPositionArray);
                 // console.log(storyPosition);
 
-                // show all data on webpage
+                
+
+                api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyPositionArray][0], {}, function(response) {  
+
+
+
+                  // show all data on webpage
                 $("#requirementsDetails").append("<tr class='bold'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[storyPositionArray] + "</td></tr>");
                 $('#requirementsDetails').append("<tr><td> Story Title: </td><td>" + SprintDataStoryTitle[storyPositionArray] + "</td><tr/>");
                 $("#requirementsDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[storyPositionArray] + "</td><tr/>");
                 $("#requirementsDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[storyPositionArray] + "</td><tr/>");
                 $("#requirementsDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[storyPositionArray] + "</td><tr/>");
 
-                api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyPositionArray][0], {}, function(response) {  
+
+
                   
+
                   // get all requirements and show them
                   for( var y = 0; y < response.feature.requirements.length; y++){
                     SprintDataStoryRequirements[storyPositionArray].push( " __ " + response.feature.requirements[y]['name']);
