@@ -155,7 +155,7 @@ $("#controlsSprint").submit(function() {
       }
 
       // init requirement looping
-      fetchSprintDataStoryRequirements(15);
+      fetchSprintDataStoryRequirements(14);
 
 
 
