@@ -96,7 +96,6 @@ $("#controlsSprint").submit(function() {
       // init the looping
       fectchSprintDataStoryGroomDescription(0);
       
-console.log(storyPosition);
       // add story numbers to requirement and notes array
       var SprintDataStoryRequirements = [];
       var SprintDataStoryNotes = [];
@@ -112,7 +111,7 @@ console.log(storyPosition);
         //api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {         
 
           //var currentStoryPosition = response.feature.position; // eq 2
-        console.log(storyPosition);
+        console.log(storyPosition.length);
          
        for( var i = 1; i <= storyPosition.length; i++){
             //if( storyPosition.indexOf(i) == i){
