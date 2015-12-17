@@ -64,7 +64,7 @@ $("#controlsSprint").submit(function() {
 
           SprintDataStoryDescription.push(response.feature.description.body.replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' ').replace(/&amp;/gi,' '));
           SprintDataStoryTitle.push(response.feature.name);
-          storyPosition.push(response.feature.position)
+          storyPosition.push(response.feature.position);
 
 
           // check if their is a epic
