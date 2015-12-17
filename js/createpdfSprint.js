@@ -107,22 +107,22 @@ $("#controlsSprint").submit(function() {
 
           var storyPosition = response.feature.position;
 
-          for( var i = 0; i < SprintDataStoryNumber.length; i++){
+          for( var i = 1; i < SprintDataStoryNumber.length; i++){
             if( storyPosition == i){
 
 
 
                 // show all data on webpage
-                $("#requirementsDetails").append("<tr class='bold'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[storyPosition] + "</td></tr>");
-                $('#requirementsDetails').append("<tr><td> Story Title: </td><td>" + SprintDataStoryTitle[storyPosition] + "</td><tr/>");
-                $("#requirementsDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[storyPosition] + "</td><tr/>");
-                $("#requirementsDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[storyPosition] + "</td><tr/>");
-                $("#requirementsDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[storyPosition] + "</td><tr/>");
+                $("#requirementsDetails").append("<tr class='bold'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[storyPosition - 1] + "</td></tr>");
+                $('#requirementsDetails').append("<tr><td> Story Title: </td><td>" + SprintDataStoryTitle[storyPosition - 1] + "</td><tr/>");
+                $("#requirementsDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[storyPosition - 1] + "</td><tr/>");
+                $("#requirementsDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[storyPosition - 1] + "</td><tr/>");
+                $("#requirementsDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[storyPosition - 1] + "</td><tr/>");
 
 
                 // get all requirements and show them
                 for( var y = 0; y < response.feature.requirements.length; y++){
-                  SprintDataStoryRequirements[storyPosition].push( " __ " + response.feature.requirements[y]['name']);
+                  SprintDataStoryRequirements[storyPosition - 1].push( " __ " + response.feature.requirements[y]['name']);
                   $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][y + 1] + "</td><tr/>");
 
                 }
