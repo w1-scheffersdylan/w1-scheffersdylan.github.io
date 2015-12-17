@@ -52,13 +52,14 @@ $("#controlsSprint").submit(function() {
       var SprintDataStoryTitle = [];
       // get position of story in sprint
       var SprintDataStoryPosition = [];
+
       
       // get all data from all stories in the sprint
       function fectchSprintDataStoryGroomDescription(number){
         
         api.get("/products/" + productKey + "/features/" + SprintDataStoryNumber[number], {}, function(response) {
 
-          alert(JSON.stringify(response.feature));
+          //alert(JSON.stringify(response.feature));
 
           SprintDataStoryDescription.push(response.feature.description.body.replace(/(<([^>]+)>)/ig,"").replace(/&nbsp;/gi,' ').replace(/&amp;/gi,' '));
           SprintDataStoryTitle.push(response.feature.name);
@@ -105,25 +106,38 @@ $("#controlsSprint").submit(function() {
       // Show all data and get all requirements
       function fetchSprintDataStoryRequirements(storyNumber){
 
-        api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {
+        api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {         
 
-          // show all data on webpage
-          $("#requirementsDetails").append("<tr class='bold'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[storyNumber] + "</td></tr>");
-          $('#requirementsDetails').append("<tr><td> Story Title: </td><td>" + SprintDataStoryTitle[storyNumber] + "</td><tr/>");
-          $("#requirementsDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[storyNumber] + "</td><tr/>");
-          $("#requirementsDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[storyNumber] + "</td><tr/>");
-          $("#requirementsDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[storyNumber] + "</td><tr/>");
+          for( var i = 0; i < SprintDataStoryPosition.length; i++){
+            if( SprintDataStoryPosition.indexOf("1") == i ){
 
 
-          // get all requirements and show them
-          for( var i = 0; i < response.feature.requirements.length; i++){
-            SprintDataStoryRequirements[storyNumber].push( " __ " + response.feature.requirements[i]['name']);
-            $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][i + 1] + "</td><tr/>");
 
-          }
-       
-          // empty table row for better overview
-          $("#requirementsDetails").append("<tr><td> &nbsp; </td><td> &nbsp; </td><tr/>");
+                // show all data on webpage
+                $("#requirementsDetails").append("<tr class='bold'><td> Ticket-ID: </td><td>" + SprintDataStoryNumber[storyNumber] + "</td></tr>");
+                $('#requirementsDetails').append("<tr><td> Story Title: </td><td>" + SprintDataStoryTitle[storyNumber] + "</td><tr/>");
+                $("#requirementsDetails").append("<tr><td> Groom: </td><td>" + SprintDataStoryGroom[storyNumber] + "</td><tr/>");
+                $("#requirementsDetails").append("<tr><td> Story: </td><td>" + SprintDataStoryDescription[storyNumber] + "</td><tr/>");
+                $("#requirementsDetails").append("<tr><td> Epic: </td><td>" + SprintDataStoryEpic[storyNumber] + "</td><tr/>");
+
+
+                // get all requirements and show them
+                for( var i = 0; i < response.feature.requirements.length; i++){
+                  SprintDataStoryRequirements[storyNumber].push( " __ " + response.feature.requirements[i]['name']);
+                  $('#requirementsDetails').append("<tr><td> Acceptance criteria: </td><td>" + SprintDataStoryRequirements[storyNumber][i + 1] + "</td><tr/>");
+
+                }
+             
+                // empty table row for better overview
+                $("#requirementsDetails").append("<tr><td> &nbsp; </td><td> &nbsp; </td><tr/>");
+
+
+
+
+
+            } // end if
+          } // end for
+          
 
            fetchSprintDataStoryRequirements(storyNumber + 1);
 
