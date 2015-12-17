@@ -11,5 +11,12 @@ ahapdfApp.controller('homeController', function ($scope)
     self.determinateValue = 30;
     self.modes = [ ];
 
+    self.toggleActivation = function() {
+        if ( !self.activated ) self.modes = [ ];
+        if (  self.activated ) {
+          j = counter = 0;
+          self.determinateValue = 30;
+        }
+    };
 
 }); // end controller     
