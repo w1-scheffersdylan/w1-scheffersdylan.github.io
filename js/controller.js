@@ -10,13 +10,6 @@ ahapdfApp.controller('homeController', function ($scope, $interval)
       self.modes = [ ];
       self.activated = true;
       self.determinateValue = 30;
-      /**
-       * Turn off or on the 5 themed loaders
-       */
-      self.toggleActivation = function() {
-          if ( !self.activated ) self.modes = [ ];
-          if (  self.activated ) j = counter = 0;
-      };
       // Iterate every 100ms, non-stop
       $interval(function() {
         // Increment the Determinate loader
