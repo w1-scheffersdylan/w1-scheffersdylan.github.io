@@ -114,7 +114,7 @@ $("#controlsSprint").submit(function() {
           console.log(currentStoryPosition);
           console.log(storyPosition);
 
-          for( var i = 0; i < storyPosition.length; i++){
+          for( var i = 0; i < response.features.length; i++){
             if( storyPosition.indexOf(currentStoryPosition) == i){
 
 
