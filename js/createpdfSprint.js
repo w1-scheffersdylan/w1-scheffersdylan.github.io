@@ -22,7 +22,7 @@ $("#controlsSprint").submit(function() {
     $("#sprintstep2Container").fadeIn();
               
     // alerts for test
-    alert(JSON.stringify(response.features));
+    // alert(JSON.stringify(response.features));
     //alert( response.features[0]["name"] );
 
 
@@ -179,7 +179,7 @@ $("#controlsSprint").submit(function() {
           
           }, 500 * SprintDataStoryName);
 
-          // fetchSprintDataStoryRequirements(storyNumber + 1);
+        
 
       
         
@@ -220,16 +220,16 @@ $("#controlsSprint").submit(function() {
 
 
 
-var seconds = (SprintDataStoryName.length / 2) - 1;
-      var counter = seconds.toFixed(0);
-      var interval = setInterval(function() {
-          counter--;
-          $("#requirementsDetails").text("Please wait " + counter + " seconds");
-          if (counter == 0) {
-              // Display a login box
-              clearInterval(interval);
-          }
-      }, 1000);
+// var seconds = (SprintDataStoryName.length / 2) - 1;
+//       var counter = seconds.toFixed(0);
+//       var interval = setInterval(function() {
+//           counter--;
+//           $("#requirementsDetails").text("Please wait " + counter + " seconds");
+//           if (counter == 0) {
+//               // Display a login box
+//               clearInterval(interval);
+//           }
+//       }, 1000);
 
 
 
