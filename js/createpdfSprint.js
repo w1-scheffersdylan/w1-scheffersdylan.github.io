@@ -109,7 +109,7 @@ $("#controlsSprint").submit(function() {
         api.get("/products/" + productKey + "/features/" + SprintDataStoryRequirements[storyNumber][0], {}, function(response) {         
 
           for( var i = 0; i < SprintDataStoryPosition.length; i++){
-            if( SprintDataStoryPosition.indexOf(parseInt(1)) == i ){
+            if( SprintDataStoryPosition.indexOf(parseInt(1)) === i ){
 
 
 
