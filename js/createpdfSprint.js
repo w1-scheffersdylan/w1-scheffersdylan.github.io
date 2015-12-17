@@ -177,7 +177,7 @@ $("#controlsSprint").submit(function() {
              } // end for
         
           
-          }, 5000);
+          }, 500 * SprintDataStoryName.length);
 
           // fetchSprintDataStoryRequirements(storyNumber + 1);
 
