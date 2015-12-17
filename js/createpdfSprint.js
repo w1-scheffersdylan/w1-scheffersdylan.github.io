@@ -92,7 +92,7 @@ $("#controlsSprint").submit(function() {
       // init the looping
       fectchSprintDataStoryGroomDescription(0);
 
-
+      console.log(SprintDataStoryPosition);
 
       // add story numbers to requirement and notes array
       var SprintDataStoryRequirements = [];
