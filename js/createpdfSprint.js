@@ -134,6 +134,8 @@ $("#controlsSprint").submit(function() {
       function fetchSprintDataStoryRequirements(){
       setTimeout(
         function() {
+
+            $("#requirementsDetails").text("");
                
             //$("#requirementsDetails").empty();
             console.log(storyPosition.length);
