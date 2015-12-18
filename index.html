@@ -79,9 +79,7 @@
       <h2>Sprint details</h2>
       <br />
       <div class="loadingIndicator">
-         <div layout="row" layout-sm="column" layout-align="space-around">
-            <md-progress-circular md-mode="indeterminate"></md-progress-circular>
-          </div>
+         <md-progress-linear md-mode="determinate" value="{{vm.determinateValue}}"></md-progress-linear>
       </div>
       <!-- this table is filled in when you have chosen a Sprint number -->
       <table id="requirementsDetails">
