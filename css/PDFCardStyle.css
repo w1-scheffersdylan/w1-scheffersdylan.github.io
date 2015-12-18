@@ -72,6 +72,7 @@
 	height: 50px;
 }
 
+/* row 3 */
 .PDFCard #PDFCard8 {
 	position: absolute;
 	width: calc(100% / 20 * 14);
@@ -88,4 +89,23 @@
 	top: 150px;
 	background-color: aqua;
 	height: 200px;
+}
+
+/* row 4 */
+.PDFCard #PDFCard10 {
+	position: absolute;
+	width: calc(100% / 20 * 14);
+	left: 0;
+	top: 350px;
+	background-color: dark blue;
+	height: 350px;
+}
+
+.PDFCard #PDFCard11 {
+	position: absolute;
+	width: calc(100% / 20 * 6);
+	left: calc(100% / 20 * 14);
+	top: 350px;
+	background-color: yellow;
+	height: 350px;
 }
