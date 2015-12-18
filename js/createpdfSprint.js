@@ -220,7 +220,7 @@ $("#controlsSprint").submit(function() {
 
 
 
-var seconds = (SprintDataStoryName.length / 2) - 1;
+var seconds = (SprintDataStoryName.length / 2) - 0.5;
       var counter = seconds.toFixed(0);
       var interval = setInterval(function() {
           counter--;
