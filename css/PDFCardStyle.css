@@ -6,7 +6,7 @@
 	position: relative;
 }
 
-.PDFCard #1 {
+.PDFCard #PDFCard1 {
 	position: absolute;
 	width: 100% / 20 * 3;
 	height: auto;
@@ -15,7 +15,7 @@
 	background-color: red;
 }
 
-.PDFCard #2 {
+.PDFCard #PDFCard2 {
 	position: absolute;
 	width: 100% / 20 * 14;
 	height: auto;
@@ -24,7 +24,7 @@
 	background-color: blue;
 }
 
-.PDFCard #3 {
+.PDFCard #PDFCard3 {
 	position: absolute;
 	width: 100% / 20 * 3;
 	height: auto;
