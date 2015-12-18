@@ -138,6 +138,7 @@ $("#controlsSprint").submit(function() {
             // this one is important, because it removes the "please wait" text and the stories are not showed twice
             $(".loadingIndicator").remove();
             $("#requirementsDetails").text("");
+            $("#creatingTime").append("When you click on one of the buttons it will take <b>ca. " + (SprintDataStoryNumber.length + 2) + " seconds </b>to create the PDF.");  
                
             //$("#requirementsDetails").empty();
             console.log(storyPosition.length);
@@ -257,7 +258,7 @@ $("#controlsSprint").submit(function() {
        });
                 
 
-      $("#creatingTime").append("When you click on one of the buttons it will take <b>ca. " + (SprintDataStoryNumber.length + 2) + " seconds </b>to create the PDF.");                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                 
             
 //////////////STEP 3: CREATING THE PDF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
