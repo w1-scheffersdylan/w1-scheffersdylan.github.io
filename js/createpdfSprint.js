@@ -135,6 +135,7 @@ $("#controlsSprint").submit(function() {
       setTimeout(
         function() {
 
+            // this one is important, because it removes the "please wait" text and the stories are not showed twice
             $("#requirementsDetails").text("");
                
             //$("#requirementsDetails").empty();
