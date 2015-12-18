@@ -8,7 +8,7 @@
 
 .PDFCard #PDFCard1 {
 	position: relative;
-	width: 100% / 20 * 3;
+	width: (100 / 20 * 3)%;
 	height: auto;
 	background-color: red;
 }
