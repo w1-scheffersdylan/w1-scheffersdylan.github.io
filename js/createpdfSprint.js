@@ -136,7 +136,7 @@ $("#controlsSprint").submit(function() {
         function() {
 
             // this one is important, because it removes the "please wait" text and the stories are not showed twice
-            $(".loadingIndicator").empty();
+            $(".loadingIndicator").remove();
             $("#requirementsDetails").text("");
                
             //$("#requirementsDetails").empty();
