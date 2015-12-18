@@ -421,7 +421,6 @@ $("#controlsSprint").submit(function() {
             var storyPositionArray = storyPosition.indexOf(i);
 
 
-            if(SprintDataStoryPosition[i] == i){
                docDefinition.content.push({
                     
                     // sablono logo
@@ -439,7 +438,7 @@ $("#controlsSprint").submit(function() {
                                             
                     {
                         color: '#444', // looks better than black
-                        pageBreak: i !== SprintDataStoryNumber.length ? 'after' : undefined,
+                        pageBreak: i !== storyPosition.length ? 'after' : undefined,
                         table: {
                             // grid system for the width 5% * 20 = 100%
                             widths: [ '5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%' ],
@@ -550,7 +549,7 @@ $("#controlsSprint").submit(function() {
                                             
                     {
                         color: '#444', // looks better than black
-                        pageBreak: i !== SprintDataStoryNumber.length ? 'after' : undefined,
+                        pageBreak: i !== storyPosition.length ? 'after' : undefined,
                         table: {
                             // grid system for the width 5% * 20 = 100%
                             widths: [ '5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%' ],
