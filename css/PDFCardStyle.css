@@ -8,21 +8,21 @@
 
 .PDFCard #PDFCard1 {
 	position: relative;
-	width: (100 / 20 * 3)%;
+	width: Calc(100% / 20 * 3);
 	height: auto;
 	background-color: red;
 }
 
 .PDFCard #PDFCard2 {
 	position: relative;
-	width: 100% / 20 * 14;
+	width: Calc(100% / 20 * 14);
 	height: auto;
 	background-color: blue;
 }
 
 .PDFCard #PDFCard3 {
 	position: relative;
-	width: 100% / 20 * 3;
+	width: Calc(100% / 20 * 3);
 	height: auto;
 	background-color: green;
 }
