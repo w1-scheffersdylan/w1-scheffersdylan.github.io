@@ -11,7 +11,6 @@
 .PDFCard #PDFCard1 {
 	position: absolute;
 	width: calc(100% / 20 * 3);
-	height: auto;
 	left: 0;
 	top: 0;
 	background-color: red;
@@ -21,7 +20,6 @@
 .PDFCard #PDFCard2 {
 	position: absolute;
 	width: calc(100% / 20 * 14);
-	height: auto;
 	left: calc(100% / 20 * 3);
 	top: 0;
 	background-color: blue;
@@ -31,7 +29,6 @@
 .PDFCard #PDFCard3 {
 	position: absolute;
 	width: calc(100% / 20 * 3);
-	height: auto;
 	left: calc(100% / 20 * 17);
 	top: 0;
 	background-color: green;
@@ -42,7 +39,6 @@
 .PDFCard #PDFCard4 {
 	position: absolute;
 	width: calc(100% / 20 * 11);
-	height: auto;
 	left: 0;
 	top: 100px;
 	background-color: black;
@@ -52,17 +48,15 @@
 .PDFCard #PDFCard5 {
 	position: absolute;
 	width: calc(100% / 20 * 2);
-	height: auto;
 	left: calc(100% / 20 * 11);
 	top: 100px;
 	background-color: orange;
 	height: 50px;
 }
 
-.PDFCard #PDFCard6{
+.PDFCard #PDFCard6 {
 	position: absolute;
 	width: calc(100% / 20 * 2);
-	height: auto;
 	left: calc(100% / 20 * 13);
 	top: 100px;
 	background-color: purple;
@@ -72,10 +66,26 @@
 .PDFCard #PDFCard7 {
 	position: absolute;
 	width: calc(100% / 20 * 2);
-	height: auto;
 	left: calc(100% / 20 * 15);
 	top: 100px;
 	background-color: brown;
 	height: 50px;
 }
 
+.PDFCard #PDFCard8 {
+	position: absolute;
+	width: calc(100% / 20 * 14);
+	left: 0;
+	top: 150px;
+	background-color: pink;
+	height: 150px;
+}
+
+.PDFCard #PDFCard9 {
+	position: absolute;
+	width: calc(100% / 20 * 6);
+	left: calc(100% / 20 * 14);
+	top: 150px;
+	background-color: aqua;
+	height: 150px;
+}
