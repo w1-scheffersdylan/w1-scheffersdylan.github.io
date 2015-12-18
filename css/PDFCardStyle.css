@@ -78,7 +78,7 @@
 	left: 0;
 	top: 150px;
 	background-color: pink;
-	height: 150px;
+	height: 200px;
 }
 
 .PDFCard #PDFCard9 {
@@ -87,5 +87,5 @@
 	left: calc(100% / 20 * 14);
 	top: 150px;
 	background-color: aqua;
-	height: 150px;
+	height: 200px;
 }
