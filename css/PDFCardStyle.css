@@ -7,29 +7,23 @@
 }
 
 .PDFCard #PDFCard1 {
-	position: absolute;
+	position: relative;
 	width: 100% / 20 * 3;
 	height: auto;
-	left: 0;
-	top: 0;
 	background-color: red;
 }
 
 .PDFCard #PDFCard2 {
-	position: absolute;
+	position: relative;
 	width: 100% / 20 * 14;
 	height: auto;
-	left: 100% / 20 * 3;
-	top: 0;
 	background-color: blue;
 }
 
 .PDFCard #PDFCard3 {
-	position: absolute;
+	position: relative;
 	width: 100% / 20 * 3;
 	height: auto;
-	left: 100% / 20 * 17;
-	top: 0;
 	background-color: green;
 }
 
