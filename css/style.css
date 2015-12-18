@@ -26,6 +26,21 @@ table tr td {
   padding: 0px 10px;
 }
 
+.greyBG {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #616161;
+  opacity: 0.5;
+  z-index: 5;
+}
+
+.loadingIndicator {
+  z-index: 15;
+}
+
 .overlap {
   z-index: 9999999999999999999999999;
 }
