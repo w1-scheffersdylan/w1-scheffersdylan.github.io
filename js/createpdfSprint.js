@@ -188,7 +188,7 @@ $("#controlsSprint").submit(function() {
 
 
 
-          $("#requirementsDetails").html('"<md-progress-circular md-mode="determinate" value="{{vm.determinateValue}}"></md-progress-circular>"');
+          $("#requirementsDetails").append('"<md-progress-circular md-mode="determinate" value="{{vm.determinateValue}}"></md-progress-circular>"');
         
 
       }
