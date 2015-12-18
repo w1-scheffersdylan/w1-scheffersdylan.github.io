@@ -27,6 +27,11 @@ table tr td {
 }
 
 
+table#storyDataTable, table#storyDataTable th, table#storyDataTable td {
+    border: 1px solid #444;
+}
+
+
 md-progress-circular .md-inner .md-gap {
   border-top-color: #00B4C8;
   border-bottom-color: #00B4C8;
