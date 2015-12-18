@@ -137,7 +137,7 @@ $("#controlsSprint").submit(function() {
 
             // this one is important, because it removes the "please wait" text and the stories are not showed twice
             $(".loadingIndicator").remove();
-            $("#requirementsDetails").text("");
+            $("#requirementsDetails, #creatingTime").text("");
             $("#creatingTime").append("When you click on one of the buttons it will take <b>ca. " + (SprintDataStoryNumber.length + 2) + " seconds </b>to create the PDF.");  
                
             //$("#requirementsDetails").empty();
