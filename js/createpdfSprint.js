@@ -372,7 +372,7 @@ $("#controlsSprint").submit(function() {
       // create PDF (using PDFmake)
       $('#btnOpenPDFSprint').click(function () {
           
-               // remove ticket id from array of requirements
+       // remove ticket id from array of requirements
         for(var i = 0; i < SprintDataStoryRequirements.length; i++){
           SprintDataStoryRequirements[i].shift();
         }    
@@ -464,8 +464,8 @@ $("#controlsSprint").submit(function() {
                     }
                   );
 
-                }
-                }        
+
+                }       
 
 
           pdfMake.createPdf(docDefinition).open();
@@ -483,7 +483,7 @@ $("#controlsSprint").submit(function() {
       // create PDF (using PDFmake)
       $('#btnSavePDFSprint').click(function () {
  
-               // remove ticket id from array of requirements
+        // remove ticket id from array of requirements
         for(var i = 0; i < SprintDataStoryRequirements.length; i++){
           SprintDataStoryRequirements[i].shift();
         }    
