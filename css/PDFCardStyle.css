@@ -1,0 +1,66 @@
+/* md card, PDFCard layout */
+.PDFCard {
+	width: 100%;
+	height: auto;
+	background-color: yellow;
+	position: relative;
+}
+
+#1 {
+	position: absolute;
+	width: 100% / 20 * 3;
+	height: auto;
+	left: 0;
+	top: 0;
+	background-color: red;
+}
+
+#2 {
+	position: absolute;
+	width: 100% / 20 * 14;
+	height: auto;
+	left: 100% / 20 * 3;
+	top: 0;
+	background-color: blue;
+}
+
+#3 {
+	position: absolute;
+	width: 100% / 20 * 3;
+	height: auto;
+	left: 100% / 20 * 17;
+	top: 0;
+	background-color: green;
+}
+
+#4 {
+	
+}
+
+#5 {
+	
+}
+
+#6 {
+	
+}
+
+#7 {
+	
+}
+
+#8 {
+	
+}
+
+#9 {
+	
+}
+
+#10 {
+	
+}
+
+#11 {
+	
+}
