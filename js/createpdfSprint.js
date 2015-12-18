@@ -136,6 +136,7 @@ $("#controlsSprint").submit(function() {
         function() {
 
             // this one is important, because it removes the "please wait" text and the stories are not showed twice
+            $(".loadingIndicator").empty();
             $("#requirementsDetails").text("");
                
             //$("#requirementsDetails").empty();
@@ -188,7 +189,7 @@ $("#controlsSprint").submit(function() {
 
 
 
-          $("#requirementsDetails").append('"<md-progress-circular md-mode="determinate" value="{{vm.determinateValue}}"></md-progress-circular>"');
+        
         
 
       }

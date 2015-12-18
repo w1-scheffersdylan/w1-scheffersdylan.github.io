@@ -78,11 +78,12 @@
       <br />
       <h2>Sprint details</h2>
       <br />
-      <p >
-        <!-- this table is filled in when you have chosen a Sprint number -->
-        <table id="requirementsDetails">
-        </table>
+      <p class="loadingIndicator">
+        <md-progress-circular md-mode="determinate" value="{{vm.determinateValue}}"></md-progress-circular>
       </p>
+      <!-- this table is filled in when you have chosen a Sprint number -->
+      <table id="requirementsDetails">
+      </table>
     </div> <!-- sprint step 2 container -->
 
 
