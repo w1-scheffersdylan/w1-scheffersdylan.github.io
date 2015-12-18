@@ -184,7 +184,11 @@ $("#controlsSprint").submit(function() {
 
         
 
-          $("#requirementsDetails").text("Please wait...");
+
+
+
+
+          $("#requirementsDetails").html('"<md-progress-circular md-mode="determinate" value="{{vm.determinateValue}}"></md-progress-circular>"');
         
 
       }
@@ -252,7 +256,7 @@ $("#controlsSprint").submit(function() {
        });
                 
 
-      $("#creatingTime").append("When you click on one of the buttons it will take <b>ca. " + (SprintDataStoryNumber.length + 1) + " seconds </b>to create the PDF.");                                                                                                                                                                                                                             
+      $("#creatingTime").append("When you click on one of the buttons it will take <b>ca. " + (SprintDataStoryNumber.length + 2) + " seconds </b>to create the PDF.");                                                                                                                                                                                                                             
             
 //////////////STEP 3: CREATING THE PDF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
