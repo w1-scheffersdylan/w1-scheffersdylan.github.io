@@ -325,7 +325,7 @@ $("#controlsSprint").submit(function() {
                                             
                     {
                         color: '#444', // looks better than black
-                        pageBreak: i !== storyPosition.length - 1 ? 'after' : undefined,
+                        pageBreak: i !== storyPosition.length ? 'after' : undefined,
                         table: {
                             // grid system for the width 5% * 20 = 100%
                             widths: [ '5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%','5%' ],
