@@ -36,13 +36,13 @@ md-progress-circular .md-inner .md-left .md-half-circle {
   border-left-color: #00B4C8;
 }
 
-/*md-progress-circular .md-inner .md-left .md-half-circle {
+md-progress-circular .md-inner .md-left .md-half-circle {
   border-top-color: #00B4C8;
 }
 
 md-progress-circular .md-inner .md-right .md-half-circle {
   border-right-color: #00B4C8;
-}*/
+}
 
 md-progress-circular .md-inner .md-right .md-half-circle {
   border-top-color: #00B4C8;
