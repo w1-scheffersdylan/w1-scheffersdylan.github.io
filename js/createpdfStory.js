@@ -65,7 +65,7 @@ $("#controls").submit(function() {
       for( var i = 0; i < response.feature.requirements.length; i++){
         //console.log(JSON.stringify(response.feature.requirements[i]['reference_num']));
         requirementsArraz.push(response.feature.requirements[i]['name']);
-        $('#storyDataTable').append("<tr><td>" + requirementsArraz[i] + "</td><tr/>");
+        $('#storyDataTable').append("<tr><td>Acceptance Criteria: </td></tr><tr><td>" + requirementsArraz[i] + "</td><tr/>");
       }
 
 
