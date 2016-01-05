@@ -49,8 +49,10 @@ md-progress-circular .md-inner .md-right .md-half-circle {
 }
 
 .sablonoLoader {
-  margin: 0 auto ;
-
+  margin: 0 auto;
+  width: 50%;
+  height: 100%;
+  background-color: black;
 }
 
 
