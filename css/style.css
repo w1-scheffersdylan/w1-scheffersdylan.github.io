@@ -30,14 +30,10 @@ table tr td {
 md-progress-circular .md-inner .md-gap {
   border-top-color: #00B4C8;
   border-bottom-color: #00B4C8;
-  width: 500px;
-  height: 500px;
 }
 
 md-progress-circular .md-inner .md-left .md-half-circle {
   border-left-color: #00B4C8;
-    width: 500px;
-  height: 500px;
 }
 
 /*md-progress-circular .md-inner .md-left .md-half-circle {
@@ -50,8 +46,6 @@ md-progress-circular .md-inner .md-right .md-half-circle {
 
 md-progress-circular .md-inner .md-right .md-half-circle {
   border-top-color: #00B4C8;
-    width: 500px;
-  height: 500px;
 }
 
 .sablonoLoader {
