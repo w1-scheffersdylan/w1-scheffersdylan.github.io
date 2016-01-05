@@ -26,28 +26,39 @@ table tr td {
   padding: 0px 10px;
 }
 
+
 md-progress-circular .md-inner .md-gap {
   border-top-color: #00B4C8;
   border-bottom-color: #00B4C8;
-
+  width: 500px;
+  height: 500px;
 }
 
 md-progress-circular .md-inner .md-left .md-half-circle {
   border-left-color: #00B4C8;
+    width: 500px;
+  height: 500px;
 }
 
-md-progress-circular .md-inner .md-left .md-half-circle {
+/*md-progress-circular .md-inner .md-left .md-half-circle {
   border-top-color: #00B4C8;
 }
 
 md-progress-circular .md-inner .md-right .md-half-circle {
   border-right-color: #00B4C8;
-}
+}*/
 
 md-progress-circular .md-inner .md-right .md-half-circle {
   border-top-color: #00B4C8;
+    width: 500px;
+  height: 500px;
 }
 
+.sablonoLoader {
+  margin: 0 auto;
+  margin-top: 200px;
+  width: 20%;
+}
 
 
 .overlap {
