@@ -327,10 +327,7 @@ $("#controls").submit(function() {
 
 
             // open the PDF in a new window
-            //pdfMake.createPdf(docDefinition).open();
-
-
-            var TESTPDF = new PDFObject(pdfMake.createPdf(docDefinition)).embed("#pdfview");
+            pdfMake.createPdf(docDefinition).open();
             
 
 
