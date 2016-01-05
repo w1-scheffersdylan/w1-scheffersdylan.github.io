@@ -51,6 +51,9 @@ md-progress-circular .md-inner .md-right .md-half-circle {
 .sablonoLoader {
   margin: 200px auto 0;
   width: 20%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 
