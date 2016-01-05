@@ -20,6 +20,8 @@ $("#controlsSprint").submit(function() {
     // fade effect if you pressed the "show story" button
     $("#step1Container").fadeOut();
     $("#sprintstep2Container").fadeIn();
+    // hide buttons + text; so that only logo and loading indicator are visible
+    $("#btnPrintPDFSprint, #btnOpenPDFSprint, #btnSavePDFSprint, h2").hide();
               
     // alerts for test
     // alert(JSON.stringify(response.features));
@@ -129,7 +131,7 @@ $("#controlsSprint").submit(function() {
 
 
       
-
+      
       // Show all data and get all requirements
       function fetchSprintDataStoryRequirements(){
       setTimeout(
@@ -138,6 +140,7 @@ $("#controlsSprint").submit(function() {
             // this one is important, because it removes the "please wait" text and the stories are not showed twice
             $(".loadingIndicator").remove();
             $("#requirementsDetails, #creatingTime").text("");
+            $("#btnPrintPDFSprint, #btnOpenPDFSprint, #btnSavePDFSprint, h2").show();
             $("#creatingTime").append("When you click on one of the buttons it will take <b>ca. " + (SprintDataStoryNumber.length + 2) + " seconds </b>to create the PDF.");  
                
             //$("#requirementsDetails").empty();
