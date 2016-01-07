@@ -213,34 +213,6 @@ $("#controlsSprint").submit(function() {
        
 
 
-
-
-
-
-
-
-// var seconds = (SprintDataStoryName.length / 2) - 0.5;
-//       var counter = seconds.toFixed(0);
-//       var interval = setInterval(function() {
-//           counter--;
-//           $("#requirementsDetails").text("Please wait " + counter + " seconds");
-//           if (counter == 0) {
-//               // Display a login box
-//               clearInterval(interval);
-//               $("#requirementsDetails").text("");
-//           }
-//       }, 1000);
-
-
-
-
-
-
-
-
-
-
-
       // fade effect to go back to fill in a new story/sprint
        $('#btnNewSprint').click(function () {
           $("#sprintstep2Container").fadeOut();
