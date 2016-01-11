@@ -117,7 +117,7 @@ $("#controlsSprint").submit(function() {
             SprintDataStoryRequirements[storyNumber].push( " __ " + response.feature.requirements[i]['name']);
 
           }
-
+          console.log(SprintDataStoryRequirements);
            fetchSprintDataStoryRequirements(storyNumber + 1);
 
         }); // close api.get 
@@ -129,7 +129,7 @@ $("#controlsSprint").submit(function() {
       fetchSprintDataStoryRequirements(0);
 
 
-      console.log(SprintDataStoryRequirements);
+
       
       
       // Show all data and get all requirements
