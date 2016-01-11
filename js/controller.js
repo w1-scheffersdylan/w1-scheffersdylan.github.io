@@ -25,8 +25,8 @@ ahapdfApp.controller('homeController', function ($scope, $interval)
         cb2: true
       };
 
-      if(data.cb1 === true){
-        data.cb2 = false;
+      if($scope.data.cb1 === true){
+        $scope.data.cb2 = false;
       }
     
 }); // end controller     
