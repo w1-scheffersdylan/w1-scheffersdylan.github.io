@@ -90,7 +90,7 @@ button#btnOpenPDF, button#btnSavePDF, button#btnPrintPDF, button#btnPrintPDFSpri
   cursor: pointer;
 }
 
-button#btnStoryFontSize, button#btnNotesFontSize, button#btnDeleteNotes, button#btnAutoNumber {
+button#btnStoryFontSize, button#btnNotesFontSize, button#btnDeleteNotes, button#btnPriorityNumber {
   background-color: #00B4C8;
   color: #FFF;
   cursor: pointer;
