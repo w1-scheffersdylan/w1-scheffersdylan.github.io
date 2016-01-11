@@ -137,6 +137,11 @@ button#btnStoryFontSize, button#btnNotesFontSize, button#btnDeleteNotes, button#
   outline: none;
 }
 
+/* checkbox */
+md-switch.md-checked .md-bar, md-switch.md-checked .md-thumb{
+  background-color: #26BF59;
+}
+
 .infoText {
   font-size: 10px;
   font-style: italic;
