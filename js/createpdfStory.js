@@ -104,10 +104,10 @@ $("#controls").submit(function() {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // EXTRA OPTIONS
-      var storyFontSize;
-       $('#btnStoryFontSize').click(function () {
-          var storyFontSize = parseFloat($("#storyFontSize").val());
-       });
+      // var storyFontSize;
+      //  $('#btnStoryFontSize').click(function () {
+          
+      //  });
 
             
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -116,6 +116,9 @@ $("#controls").submit(function() {
 
       // create PDF (using PDFmake)
       $('#btnPrintPDF').click(function () {
+
+
+
           
       // check if their are requirements (acceptance criteria) added to the story
       if(requirementsArraz[0] == "" || requirementsArraz[0] == undefined || requirementsArraz[0] == null){
@@ -234,6 +237,9 @@ $("#controls").submit(function() {
 
       // create PDF (using PDFmake)
       $('#btnOpenPDF').click(function () {
+
+        // EXTRA OPTIONS
+        var storyFontSize = parseFloat($("#storyFontSize").val());
           
       // check if their are requirements (acceptance criteria) added to the story
       if(requirementsArraz[0] == "" || requirementsArraz[0] == undefined || requirementsArraz[0] == null){
