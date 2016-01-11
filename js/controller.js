@@ -18,6 +18,11 @@ ahapdfApp.controller('homeController', function ($scope, $interval)
         }
         if ( counter++ % 4 == 0 ) j++;
       }, 100, 0, true);
+
+
+      $scope.data = {
+        cb1: false
+      };
     
     
 }); // end controller     
