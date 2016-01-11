@@ -106,7 +106,7 @@ $("#controls").submit(function() {
 // EXTRA OPTIONS
       var storyFontSize;
        $('#btnStoryFontSize').click(function () {
-          var storyFontSize = $("#storyFontSize").val();
+          var storyFontSize = parseFloat($("#storyFontSize").val());
        });
 
             
@@ -313,7 +313,7 @@ $("#controls").submit(function() {
                   fontSize: 19
                 },
                 mediumTextBold: {
-                  fontSize: parseFloat(storyFontSize),
+                  fontSize: storyFontSize,
                   bold: true
                 },
                 bigText: {
