@@ -78,7 +78,7 @@ md-progress-circular .md-inner .md-right .md-half-circle {
   width: 20%;
 }
 
-button#btnNewStory, button#btnShowStory, button#btnNewSprint {
+button#btnNewStory, button#btnShowStory, button#btnNewSprint, button#btnStoryFontSize, button#btnNotesFontSize, button#btnDeleteNotes, button#btnAutoNumber {
   background-color: #FFD200;
   color: #616161;
   cursor: pointer;
