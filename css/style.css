@@ -128,7 +128,7 @@ button#btnStoryFontSize, button#btnNotesFontSize, button#btnDeleteNotes, button#
   display: none;
 }
 
-#storyNumber, #sprintNumber,  #storyFontSize, #notesFontSize {
+#storyNumber, #sprintNumber,  #storyFontSize, #notesFontSize, #priorityNumber {
   border: 0;
   background-color: #E0E0E0;
   color: #616161;
