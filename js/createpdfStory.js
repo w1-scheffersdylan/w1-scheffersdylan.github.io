@@ -99,6 +99,15 @@ $("#controls").submit(function() {
           $("#step2Container").fadeOut();
           location.reload();
        });
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// EXTRA OPTIONS
+       $('#btnStoryFontSize').click(function () {
+          var storyFontSize = $("#storyFontSize").val();
+       });
+
             
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -303,7 +312,7 @@ $("#controls").submit(function() {
                   fontSize: 19
                 },
                 mediumTextBold: {
-                  fontSize: 19,
+                  fontSize: parseFloat(storyFontSize),
                   bold: true
                 },
                 bigText: {
@@ -329,7 +338,6 @@ $("#controls").submit(function() {
             // open the PDF in a new window
             pdfMake.createPdf(docDefinition).open();
             
-
 
       }); // close btnOpenPDF
 
