@@ -185,7 +185,7 @@ $("#controls").submit(function() {
                   fontSize: 19
                 },
                 mediumTextBold: {
-                  fontSize: 17,
+                  fontSize: 17, // was 19
                   bold: true
                 },
                 bigText: {

@@ -129,7 +129,7 @@ $("#controlsSprint").submit(function() {
       fetchSprintDataStoryRequirements(0);
 
 
-
+      console.log(SprintDataStoryRequirements);
       
       
       // Show all data and get all requirements
