@@ -134,7 +134,7 @@ $("#controlsSprint").submit(function() {
       
       
       // Show all data and get all requirements
-      function fetchSprintDataStoryRequirements(){
+      function showAllDataOnWebpage(){
       setTimeout(
         function() {
 
@@ -187,7 +187,7 @@ $("#controlsSprint").submit(function() {
       }
 
       // init requirement looping
-      fetchSprintDataStoryRequirements();
+      showAllDataOnWebpage();
 
 
 
