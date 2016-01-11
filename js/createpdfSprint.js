@@ -41,7 +41,7 @@ $("#controlsSprint").submit(function() {
       var SprintDataStoryNumber = [];
       for( i = 0; i < response.features.length; i++ ){
         SprintDataStoryNumber.push(response.features[i]["reference_num"]);
-        console.log(SprintDataStoryNumber);
+        //console.log(SprintDataStoryNumber);
       }
 
       // get all grooming points in an array
@@ -115,10 +115,7 @@ $("#controlsSprint").submit(function() {
           // get all requirements and show them
           for( var i = 0; i < response.feature.requirements.length; i++){
             SprintDataStoryRequirements[storyNumber].push( " __ " + response.feature.requirements[i]['name']);
-            console.log("for loop" + response.feature.requirements);
           }
-          console.log(SprintDataStoryRequirements);
-          console.log("out of loop" + response.feature.requirements);
            fetchSprintDataStoryRequirements(storyNumber + 1);
 
         }); // close api.get 
@@ -145,7 +142,7 @@ $("#controlsSprint").submit(function() {
             $("#creatingTime").append("When you click on one of the buttons it will take <b>ca. " + (SprintDataStoryNumber.length + 2) + " seconds </b>to create the PDF.");  
                
             //$("#requirementsDetails").empty();
-            console.log(storyPosition.length);
+            //console.log(storyPosition.length);
          
             for( var i = 1; i <= storyPosition.length; i++){
                 
