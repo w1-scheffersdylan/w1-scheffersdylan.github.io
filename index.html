@@ -55,8 +55,8 @@
       <p>
         
         
-        <md-switch ng-model="data.cb1">
-          <md-button class="md-raised md-primary" id="btnDeleteNotes" type="submit">Delete all notes from PDF</md-button>
+        <md-switch ng-model="data.cb1" ng-model="deleteNotesCheckbox">
+          <md-button class="md-raised md-primary" id="btnDeleteNotes" ng-disabled="!isCheckboxChecked()"  type="submit">Delete all notes from PDF</md-button>
         </md-switch>
        
       </p>          

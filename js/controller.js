@@ -23,6 +23,11 @@ ahapdfApp.controller('homeController', function ($scope, $interval)
       $scope.data = {
         cb1: false
       };
+
+
+      $scope.isCheckboxChecked = function() {
+          return ($scope.deleteNotesCheckbox);
+      }
     
     
 }); // end controller     
