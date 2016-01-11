@@ -115,7 +115,7 @@ $("#controlsSprint").submit(function() {
           // get all requirements and show them
           for( var i = 0; i < response.feature.requirements.length; i++){
             SprintDataStoryRequirements[storyNumber].push( " __ " + response.feature.requirements[i]['name']);
-            console.log(response.feature)
+            console.log(response.feature);
           }
           console.log(SprintDataStoryRequirements);
            fetchSprintDataStoryRequirements(storyNumber + 1);
