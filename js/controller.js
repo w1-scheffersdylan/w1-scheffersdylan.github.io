@@ -19,15 +19,4 @@ ahapdfApp.controller('homeController', function ($scope, $interval)
         if ( counter++ % 4 == 0 ) j++;
       }, 100, 0, true);
 
-
-      $scope.data = {
-        cb1: false,
-        cb2: true
-      };
-
-      function switchClicked(){
-        if($scope.data.cb1 === true){
-          $scope.data.cb2 = false;
-        }
-      }
 }); // end controller     
