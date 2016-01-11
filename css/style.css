@@ -122,7 +122,7 @@ button#btnOpenPDF, button#btnSavePDF, button#btnPrintPDF, button#btnPrintPDFSpri
   display: none;
 }
 
-#storyNumber, #sprintNumber {
+#storyNumber, #sprintNumber,  #storyFontSize, #notesFontSize {
   border: 0;
   background-color: #E0E0E0;
   color: #616161;
