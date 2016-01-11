@@ -115,9 +115,10 @@ $("#controlsSprint").submit(function() {
           // get all requirements and show them
           for( var i = 0; i < response.feature.requirements.length; i++){
             SprintDataStoryRequirements[storyNumber].push( " __ " + response.feature.requirements[i]['name']);
-            console.log(response.feature);
+            console.log("for loop" + response.feature.requirements);
           }
           console.log(SprintDataStoryRequirements);
+          console.log("out of loop" + response.feature.requirements);
            fetchSprintDataStoryRequirements(storyNumber + 1);
 
         }); // close api.get 
