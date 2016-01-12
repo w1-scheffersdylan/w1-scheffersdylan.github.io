@@ -106,7 +106,7 @@ $("#controls").submit(function() {
 // EXTRA OPTIONS
       $("#btnDeleteNotes").click(function(){
         notesArraz.splice(0, notesArraz.length);
-        $(this).attr('ng-disabled="true"')
+        $("#btnDeleteNotes, #chechboxDeleteNotes").attr('ng-disabled="true"');
       });
 
             
