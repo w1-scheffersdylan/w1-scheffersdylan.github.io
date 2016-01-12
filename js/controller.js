@@ -22,10 +22,12 @@ ahapdfApp.controller('homeController', function ($scope, $interval)
 
 
       $scope.checkbox = false;
-      if($scope.checkbox == true){
-        $("#btnDeleteNotes").show();
-      }
-      else{
-         $("#btnDeleteNotes").hide();
+      function showCheckbox(){
+        if($scope.checkbox == true){
+          $("#btnDeleteNotes").show();
+        }
+        else{
+           $("#btnDeleteNotes").hide();
+        }
       }
 }); // end controller     
