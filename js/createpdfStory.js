@@ -240,6 +240,12 @@ $("#controls").submit(function() {
 
         // EXTRA OPTIONS
         var storyFontSize = parseFloat($("#storyFontSize").val());
+        var notesFontSize = parseFloat($("#notesFontSize").val());
+        var storyNumberChoose = $("#priorityNumber").val();
+
+        $("#btnDeleteNotes").click(function(){
+          notesArraz.splice(0, notesArraz.length);
+        });
           
       // check if their are requirements (acceptance criteria) added to the story
       if(requirementsArraz[0] == "" || requirementsArraz[0] == undefined || requirementsArraz[0] == null){
@@ -294,7 +300,7 @@ $("#controls").submit(function() {
                             body: [
                                 [{ text: [ 'TICKET-ID: \n \n', { text: storyDataNumber, style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
                                  { text: [ 'TITLE: \n \n', { text: storyDataName, style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text: 'PRIORITY:\n' + '\n \n', colSpan: 3, rowSpan: 2 }, '', ''],
+                                 { text: 'PRIORITY:\n', { text: storyNumberChoose, style: 'bigTextBold', alignment: 'center'} + '\n \n', colSpan: 3, rowSpan: 2 }, '', ''],
 
                                 [{ text: [ 'EPIC:\n', { text: storyDataEpic, style: 'mediumText', alignment: 'center' }], colSpan: 11 }, '', '', '', '', '', '', '', '', '', '', 
                                  { text: ['GROOM: \n', { text: storyDataGroom.toString(), style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
@@ -302,7 +308,7 @@ $("#controls").submit(function() {
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
                                 [{ text: [ 'STORY: \n \n', { text: storyDataDescription, style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text: ['NOTES:\n \n', { text: notesArraz.join("\n") }], colSpan: 6 }, '', '', '', '', ''],
+                                 { text: ['NOTES:\n \n', { text: notesArraz.join("\n"), style: 'defaultText' }], colSpan: 6 }, '', '', '', '', ''],
 
                                 [{ text: 'ACCEPTANCE CRITERIA: \n \n' + requirementsArraz.join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & Beautify Code \n \n __ Quality assurance by PO \n \n __ Create pull request' , colSpan: 6 }, '', '', '', '', ''],
@@ -315,8 +321,11 @@ $("#controls").submit(function() {
               ,
               // some style for the PDF
               styles: {
+                defaultText: {
+                  fontSize: 12
+                },
                 mediumText: {
-                  fontSize: 19
+                  fontSize: notesFontSize
                 },
                 mediumTextBold: {
                   fontSize: storyFontSize,
