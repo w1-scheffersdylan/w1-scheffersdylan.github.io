@@ -111,9 +111,13 @@ $("#controls").submit(function() {
       });
 
       $("#storyFontSize, #notesFontSize").change(function(){
-        if( $("#storyFontSize, #notesFontSize").val() == "" ){
+        if( $("#storyFontSize, #notesFontSize").val() == "" || isNaN($("#storyFontSize, #notesFontSize").val()) ){
           $("#btnPrintPDF, #btnOpenPDF, #btnSavePDF").hide();
           $("#fontSizeAlert").show();
+        }
+        else{
+          $("#btnPrintPDF, #btnOpenPDF, #btnSavePDF").show();
+          $("#fontSizeAlert").hide();
         }
       });
 
