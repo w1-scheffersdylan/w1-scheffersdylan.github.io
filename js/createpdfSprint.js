@@ -236,6 +236,12 @@ $("#controlsSprint").submit(function() {
           $("#sprintfontSizeAlert").hide();
         }
       });
+
+      $("md-checkbox#sprintautoNumber").click(function(){
+        if( $("md-checkbox#sprintautoNumber").hasClass("md-checked") ){
+          alert();
+        }
+      });
                                                                                                                                                                                                                                  
             
 //////////////STEP 3: CREATING THE PDF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
