@@ -110,6 +110,12 @@ $("#controls").submit(function() {
         $("#deleteNotesDone").show();
       });
 
+      $("#storyFontSize, #notesFontSize").change(function(){
+        if( $("#storyFontSize, #notesFontSize").val() == "" ){
+          alert();
+        }
+      });
+
             
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -376,7 +382,7 @@ $("#controls").submit(function() {
       // create PDF (using PDFmake)
       $('#btnSavePDF').click(function () {
 
-        
+
         // EXTRA OPTIONS
         var storyFontSize = parseFloat($("#storyFontSize").val());
         var notesFontSize = parseFloat($("#notesFontSize").val());
