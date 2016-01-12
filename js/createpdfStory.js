@@ -104,10 +104,9 @@ $("#controls").submit(function() {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // EXTRA OPTIONS
-      // var storyFontSize;
-      //  $('#btnStoryFontSize').click(function () {
-          
-      //  });
+      $("#btnDeleteNotes").click(function(){
+        notesArraz.splice(0, notesArraz.length);
+      });
 
             
 //////////////STEP 3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -242,10 +241,6 @@ $("#controls").submit(function() {
         var storyFontSize = parseFloat($("#storyFontSize").val());
         var notesFontSize = parseFloat($("#notesFontSize").val());
         var storyNumberChoose = $("#priorityNumber").val();
-
-        $("#btnDeleteNotes").click(function(){
-          notesArraz.splice(0, notesArraz.length);
-        });
           
       // check if their are requirements (acceptance criteria) added to the story
       if(requirementsArraz[0] == "" || requirementsArraz[0] == undefined || requirementsArraz[0] == null){
