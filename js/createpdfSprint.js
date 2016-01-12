@@ -184,6 +184,7 @@ $("#controlsSprint").submit(function() {
               for(var i = 1; i < storyPosition.length; i++){
                 autonumber.push("");
               }
+              console.log(autonumber);
         
           
           }, 500 * SprintDataStoryName.length);
@@ -262,7 +263,7 @@ $("#controlsSprint").submit(function() {
         }
         console.log(autonumber);
       });
-console.log(autonumber);
+
 
                                                                                                                                                                                                                                  
             
