@@ -181,7 +181,7 @@ $("#controlsSprint").submit(function() {
 
              // empty numbers
 
-              for(var i = 1; i < storyPosition.length; i++){
+              for(var i = 1; i <= storyPosition.length; i++){
                 autonumber.push("");
               }
               console.log(autonumber);
@@ -252,12 +252,12 @@ $("#controlsSprint").submit(function() {
       $("md-checkbox#sprintautoNumber").click(function(){
         autonumber= [];
         if( $("md-checkbox#sprintautoNumber").hasClass("md-checked") ){
-          for(var i = 1; i < storyPosition.length; i++){
+          for(var i = 1; i <= storyPosition.length; i++){
             autonumber.push(i.toString());
           }
         }
         else{
-          for(var i = 1; i < storyPosition.length; i++){
+          for(var i = 1; i <= storyPosition.length; i++){
             autonumber.push("");
           }
         }
@@ -413,11 +413,17 @@ $("#controlsSprint").submit(function() {
           content:[],
               // some style for the PDF
               styles: {
+                bigNumber: {
+                  fontSize: 85
+                },
+                notesText: {
+                  fontSize: notesFontSize
+                },
                 mediumText: {
                   fontSize: 19
                 },
                 mediumTextBold: {
-                  fontSize: 19,
+                  fontSize: storyFontSize,
                   bold: true
                 },
                 bigText: {
@@ -430,7 +436,6 @@ $("#controlsSprint").submit(function() {
                 biggerText: {
                   fontSize: 26
                 }
-
               }
               
             }
@@ -467,7 +472,7 @@ $("#controlsSprint").submit(function() {
                             body: [
                                 [{ text: [ 'TICKET-ID: \n \n', { text: SprintDataStoryNumber[storyPositionArray], style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
                                  { text: [ 'TITLE: \n \n', { text: SprintDataStoryTitle[storyPositionArray], style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text: [ 'PRIORITY:\n', { text: autonumber[storyPositionArray], alignment: 'center'} ], colSpan: 3, rowSpan: 2 }, '', ''],
+                                 { text: [ 'PRIORITY:\n', { text: storyNumberChoose, style: 'bigNumber', alignment: 'center'} ], colSpan: 3, rowSpan: 2 }, '', ''],
 
                                 [{ text: [ 'EPIC:\n', { text: SprintDataStoryEpic[storyPositionArray], style: 'mediumText', alignment: 'center' }], colSpan: 11 }, '', '', '', '', '', '', '', '', '', '', 
                                  { text: ['GROOM: \n', { text: SprintDataStoryGroom[storyPositionArray], style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
