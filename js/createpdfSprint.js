@@ -242,11 +242,12 @@ $("#controlsSprint").submit(function() {
         if( $("md-checkbox#sprintautoNumber").hasClass("md-checked") ){
           for(var i = 1; i <= storyNumber.length; i++){
             autonumber.push(i);
+            console.log(autonumber);
           }
         }
       });
 
-      console.log(autonumber);
+
                                                                                                                                                                                                                                  
             
 //////////////STEP 3: CREATING THE PDF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
