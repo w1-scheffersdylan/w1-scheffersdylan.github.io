@@ -319,7 +319,7 @@ $("#controls").submit(function() {
               // some style for the PDF
               styles: {
                 bigNumber: {
-                  fontSize: 90
+                  fontSize: 80
                 },
                 notesText: {
                   fontSize: notesFontSize
