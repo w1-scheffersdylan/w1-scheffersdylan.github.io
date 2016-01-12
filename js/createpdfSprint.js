@@ -232,7 +232,7 @@ $("#controlsSprint").submit(function() {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // EXTRA OPTIONS
       $("#sprintbtnDeleteNotes").click(function(){
-        notesArraz.splice(0, notesArraz.length);
+        SprintDataStoryNotes.splice(0, SprintDataStoryNotes.length);
         $("#sprintbtnDeleteNotes, #sprintchechboxDeleteNotes").hide();
         $("#sprintdeleteNotesDone").show();
       });
