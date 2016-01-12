@@ -239,14 +239,13 @@ $("#controlsSprint").submit(function() {
 
       var autonumber = [];
       $("md-checkbox#sprintautoNumber").click(function(){
-        autonumber.slice(0, storyPosition.length);
+        autonumber.slice(0, autonumber.length);
         if( $("md-checkbox#sprintautoNumber").hasClass("md-checked") ){
           for(var i = 1; i < storyPosition.length; i++){
             autonumber.push(i);
             
           }
         }
-        console.log(autonumber);
       });
 
 
