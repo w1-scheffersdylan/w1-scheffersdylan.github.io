@@ -243,9 +243,10 @@ $("#controlsSprint").submit(function() {
         if( $("md-checkbox#sprintautoNumber").hasClass("md-checked") ){
           for(var i = 1; i < storyPosition.length; i++){
             autonumber.push(i);
-            console.log(autonumber);
+            
           }
         }
+        console.log(autonumber);
       });
 
 
