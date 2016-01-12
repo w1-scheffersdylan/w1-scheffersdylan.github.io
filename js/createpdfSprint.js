@@ -238,16 +238,19 @@ $("#controlsSprint").submit(function() {
       });
 
       var autonumber = [];
+      for(var i = 1; i < storyPosition.length; i++){
+        autonumber.push("");
+      }
       $("md-checkbox#sprintautoNumber").click(function(){
         autonumber= [];
         if( $("md-checkbox#sprintautoNumber").hasClass("md-checked") ){
           for(var i = 1; i < storyPosition.length; i++){
-            autonumber.push(i);
+            autonumber.push(i).toString;
           }
         }
-        console.log(autonumber)
+        console.log(autonumber);
       });
-
+console.log(autonumber);
 
                                                                                                                                                                                                                                  
             
