@@ -133,18 +133,27 @@
             </tr>
             <tr>
                  <td>Choose <span class="bold">priority number</span></td>
-                 <td><input type="text" placeholder="Put in a number" id="sprintpriorityNumber" value=""></input></td>
+                 <td><input type="text" placeholder="Put in a number" id="" value=""></input></td>
             </tr>
           </table>                     
         </p>    
         <br />
         <p>
           <md-checkbox
+              ng-model="autonumbercheckbox"
+              ng-click="showAutonumber()"
+              aria-label="Add auto numbering to PDF"
+              class="md-warn md-align-top-left" id="sprintautoNumber" flex>
+              Add auto numbering to PDF
+          </md-checkbox>
+        </p>
+        <p>
+          <md-checkbox
               ng-model="sprintcheckbox"
               aria-label="To many notes on PDF?"
               ng-click="showCheckbox()"
               class="md-warn md-align-top-left" id="sprintchechboxDeleteNotes" flex>
-            To many notes on PDF?
+              To many notes on PDF?
           </md-checkbox>
           <md-button class="md-raised md-primary" id="sprintbtnDeleteNotes" type="submit">Delete all notes from sprint PDF</md-button>
 

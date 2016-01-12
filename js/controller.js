@@ -45,4 +45,7 @@ ahapdfApp.controller('homeController', function ($scope, $interval)
           $("#sprintbtnDeleteNotes").hide();
         }
       }
+
+      
+
 }); // end controller     
