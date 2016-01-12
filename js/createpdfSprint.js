@@ -240,7 +240,7 @@ $("#controlsSprint").submit(function() {
       var autonumber = [];
       $("md-checkbox#sprintautoNumber").click(function(){
         if( $("md-checkbox#sprintautoNumber").hasClass("md-checked") ){
-          for(var i = 1; i <= storyNumber.length; i++){
+          for(var i = 1; i <= storyPosition.length; i++){
             autonumber.push(i);
             console.log(autonumber);
           }
