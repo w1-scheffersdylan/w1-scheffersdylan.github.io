@@ -56,6 +56,9 @@ $("#controlsSprint").submit(function() {
       // get positions of stories in sprint
       var storyPosition = [];
 
+      // priority numbers
+      var autonumber = [];
+
       
       // get all data from all stories in the sprint
       function fectchSprintDataStoryGroomDescription(number){
@@ -174,6 +177,13 @@ $("#controlsSprint").submit(function() {
 
 
              } // end for
+
+
+             // empty numbers
+
+              for(var i = 1; i < storyPosition.length; i++){
+                autonumber.push("");
+              }
         
           
           }, 500 * SprintDataStoryName.length);
@@ -237,15 +247,17 @@ $("#controlsSprint").submit(function() {
         }
       });
 
-      var autonumber = [];
-      for(var i = 1; i < storyPosition.length; i++){
-        autonumber.push("");
-      }
+      
       $("md-checkbox#sprintautoNumber").click(function(){
         autonumber= [];
         if( $("md-checkbox#sprintautoNumber").hasClass("md-checked") ){
           for(var i = 1; i < storyPosition.length; i++){
-            autonumber.push(i).toString;
+            autonumber.push(i).toString();
+          }
+        }
+        else{
+          for(var i = 1; i < storyPosition.length; i++){
+            autonumber.push("");
           }
         }
         console.log(autonumber);
