@@ -218,6 +218,24 @@ $("#controlsSprint").submit(function() {
        });
                 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// EXTRA OPTIONS
+      $("#sprintbtnDeleteNotes").click(function(){
+        notesArraz.splice(0, notesArraz.length);
+        $("#sprintbtnDeleteNotes, #sprintchechboxDeleteNotes").hide();
+        $("#sprintdeleteNotesDone").show();
+      });
+
+      $("#sprintstoryFontSize, #sprintnotesFontSize").change(function(){
+        if( $("#sprintstoryFontSize, #sprintnotesFontSize").val() == "" || isNaN($("#sprintstoryFontSize, #sprintnotesFontSize").val()) ){
+          $("#btnPrintPDFSprint, #btnOpenPDFSprint, #btnSavePDFSprint").hide();
+          $("#sprintfontSizeAlert").show();
+        }
+        else{
+          $("#btnPrintPDFSprint, #btnOpenPDFSprint, #btnSavePDFSprint").show();
+          $("#sprintfontSizeAlert").hide();
+        }
+      });
                                                                                                                                                                                                                                  
             
 //////////////STEP 3: CREATING THE PDF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
