@@ -142,7 +142,7 @@ md-switch.md-checked .md-bar, md-switch.md-checked .md-thumb{
   background-color: #26BF59;
 }
 
-#deleteNotesDone {
+#deleteNotesDone, #fontSizeAlert {
   display: none;
 }
 

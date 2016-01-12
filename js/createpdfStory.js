@@ -112,7 +112,8 @@ $("#controls").submit(function() {
 
       $("#storyFontSize, #notesFontSize").change(function(){
         if( $("#storyFontSize, #notesFontSize").val() == "" ){
-          alert();
+          $("#btnPrintPDF, #btnOpenPDF, #btnSavePDF").hide();
+          $("#fontSizeAlert").show();
         }
       });
 
