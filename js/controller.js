@@ -37,7 +37,7 @@ ahapdfApp.controller('homeController', function ($scope, $interval)
       $scope.sprintcheckbox = false;
       $("#sprintbtnDeleteNotes").hide();
 
-      $scope.showCheckbox = function() {
+      $scope.sprintshowCheckbox = function() {
         if($scope.sprintcheckbox == false){
           $("#sprintbtnDeleteNotes").show();
         }
