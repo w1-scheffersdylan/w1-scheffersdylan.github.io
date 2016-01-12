@@ -187,7 +187,7 @@ $("#controlsSprint").submit(function() {
               console.log(autonumber);
         
           
-          }, 500 * SprintDataStoryName.length);
+          }, 700 * SprintDataStoryName.length);
 
                 
         
