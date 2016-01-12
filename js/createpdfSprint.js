@@ -234,7 +234,7 @@ $("#controlsSprint").submit(function() {
       $("#sprintbtnDeleteNotes").click(function(){
         //SprintDataStoryNotes.splice(0, SprintDataStoryNotes.length, "");
         for(var i=0; i < SprintDataStoryNotes.length; i++){
-          SprintDataStoryNotes.replace(SprintDataStoryNotes[i], "");
+          SprintDataStoryNotes[i] = "";
           console.log(SprintDataStoryNotes[i]);
         }
         $("#sprintbtnDeleteNotes, #sprintchechboxDeleteNotes").hide();
