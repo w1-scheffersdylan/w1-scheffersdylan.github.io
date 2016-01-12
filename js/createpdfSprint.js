@@ -246,6 +246,7 @@ $("#controlsSprint").submit(function() {
             
           }
         }
+        console.log(autonumber);
       });
 
 
