@@ -47,8 +47,27 @@
                <td><input type="text" placeholder="Put in a number" id="priorityNumber" value=""></input></td>
           </tr>
           <tr>
-               <td>To many notes on PDF?</td>
-               <td><md-button class="md-raised md-primary" id="btnDeleteNotes" type="submit">Delete all notes from PDF</md-button></td>
+               <td></td>
+               <td>
+                  <p>
+                    <md-checkbox
+                        ng-model="checkbox"
+                        aria-label="To many notes on PDF?"
+                        ng-true-value="'<md-button class="md-raised md-primary" id="btnDeleteNotes" type="submit">Delete all notes from PDF</md-button>'"
+                        ng-false-value="'nope'"
+                        class="md-warn md-align-top-left" flex>
+                      To many notes on PDF?  <br/>
+                      <span class="ipsum">
+                        Duis placerat lectus et justo mollis, nec sodales orci congue. Vestibulum semper non urna ac suscipit.
+                        Vestibulum tempor, ligula id laoreet hendrerit, massa augue iaculis magna,
+                        sit amet dapibus tortor ligula non nibh.
+                      </span>
+                      <br/>
+                      {{ checkbox }}
+                    </md-checkbox>
+                    
+                  </p>
+               </td>
           </tr>
         </table>                     
       </p>     
