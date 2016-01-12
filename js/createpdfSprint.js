@@ -472,7 +472,7 @@ $("#controlsSprint").submit(function() {
                             body: [
                                 [{ text: [ 'TICKET-ID: \n \n', { text: SprintDataStoryNumber[storyPositionArray], style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
                                  { text: [ 'TITLE: \n \n', { text: SprintDataStoryTitle[storyPositionArray], style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text: [ 'PRIORITY:\n', { text: storyPosition.indexOf(storyPositionArray), style: 'bigNumber', alignment: 'center'} ], colSpan: 3, rowSpan: 2 }, '', ''],
+                                 { text: [ 'PRIORITY:\n', { text: storyPosition[indexOf(storyPositionArray)], style: 'bigNumber', alignment: 'center'} ], colSpan: 3, rowSpan: 2 }, '', ''],
 
                                 [{ text: [ 'EPIC:\n', { text: SprintDataStoryEpic[storyPositionArray], style: 'mediumText', alignment: 'center' }], colSpan: 11 }, '', '', '', '', '', '', '', '', '', '', 
                                  { text: ['GROOM: \n', { text: SprintDataStoryGroom[storyPositionArray], style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
