@@ -21,7 +21,7 @@ $("#controlsSprint").submit(function() {
     $("#step1Container").fadeOut();
     $("#sprintstep2Container").fadeIn();
     // hide buttons + text; so that only logo and loading indicator are visible
-    $("#btnPrintPDFSprint, #btnOpenPDFSprint, #btnSavePDFSprint, #btnNewSprint, .sablonoLogo, h2").hide();
+    $("#btnPrintPDFSprint, #btnOpenPDFSprint, #btnSavePDFSprint, #btnNewSprint, .sablonoLogo, h2, #extraOptions").hide();
               
     // alerts for test
     // alert(JSON.stringify(response.features));
@@ -138,7 +138,7 @@ $("#controlsSprint").submit(function() {
             // this one is important, because it removes the "please wait" text and the stories are not showed twice
             $(".loadingIndicator").remove();
             $("#requirementsDetails, #creatingTime").text("");
-            $("#btnPrintPDFSprint, #btnOpenPDFSprint, #btnSavePDFSprint, #btnNewSprint, .sablonoLogo, h2").show();
+            $("#btnPrintPDFSprint, #btnOpenPDFSprint, #btnSavePDFSprint, #btnNewSprint, .sablonoLogo, h2, #extraOptions").show();
             $("#creatingTime").append("When you click on one of the buttons it will take <b>ca. " + (SprintDataStoryNumber.length + 2) + " seconds </b>to create the PDF.");  
                
             //$("#requirementsDetails").empty();

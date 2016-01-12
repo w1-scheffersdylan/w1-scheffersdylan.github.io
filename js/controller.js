@@ -32,4 +32,17 @@ ahapdfApp.controller('homeController', function ($scope, $interval)
           $("#btnDeleteNotes").hide();
         }
       }
+
+
+      $scope.sprintcheckbox = false;
+      $("#sprintbtnDeleteNotes").hide();
+
+      $scope.showCheckbox = function() {
+        if($scope.sprintcheckbox == false){
+          $("#sprintbtnDeleteNotes").show();
+        }
+        else{
+          $("#sprintbtnDeleteNotes").hide();
+        }
+      }
 }); // end controller     

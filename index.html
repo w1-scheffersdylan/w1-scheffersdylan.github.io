@@ -119,45 +119,47 @@
         <md-button class="md-raised md-primary" type="submit" id="btnNewSprint">New sprint</md-button>
       </p>
       <br />
-      <h2>Extra options</h2>
-      <p>
-        <table>
-          <tr>
-              <td>Change <span class="bold">story</span> font size</td>
-              <td><input type="text" placeholder="Put in a number (required)" id="sprintstoryFontSize" value="19"></input></td>
-          </tr>
-          <tr>
-               <td>Change <span class="bold">notes</span> font size</td>
-               <td><input type="text" placeholder="Put in a number (required)" id="sprintnotesFontSize" value="12"></input></td>
-          </tr>
-          <tr>
-               <td>Choose <span class="bold">priority number</span></td>
-               <td><input type="text" placeholder="Put in a number" id="sprintpriorityNumber" value=""></input></td>
-          </tr>
-        </table>                     
-      </p>    
-      <br />
-      <p>
-        <md-checkbox
-            ng-model="checkbox"
-            aria-label="To many notes on PDF?"
-            ng-click="showCheckbox()"
-            class="md-warn md-align-top-left" id="sprintchechboxDeleteNotes" flex>
-          To many notes on PDF?
-        </md-checkbox>
-        <md-button class="md-raised md-primary" id="sprintbtnDeleteNotes" type="submit">Delete all notes from sprint PDF</md-button>
-
-        <div id="sprintdeleteNotesDone">
+      <div id="extraOptions">
+        <h2>Extra options</h2>
+        <p>
+          <table>
+            <tr>
+                <td>Change <span class="bold">story</span> font size</td>
+                <td><input type="text" placeholder="Put in a number (required)" id="sprintstoryFontSize" value="19"></input></td>
+            </tr>
+            <tr>
+                 <td>Change <span class="bold">notes</span> font size</td>
+                 <td><input type="text" placeholder="Put in a number (required)" id="sprintnotesFontSize" value="12"></input></td>
+            </tr>
+            <tr>
+                 <td>Choose <span class="bold">priority number</span></td>
+                 <td><input type="text" placeholder="Put in a number" id="sprintpriorityNumber" value=""></input></td>
+            </tr>
+          </table>                     
+        </p>    
+        <br />
+        <p>
           <md-checkbox
-            ng-model="checkbox"
-            aria-label="To many notes on PDF?"
-            ng-click="showCheckbox()"
-            class="md-warn md-align-top-left" ng-disabled="true" flex>
-            Done!
+              ng-model="sprintcheckbox"
+              aria-label="To many notes on PDF?"
+              ng-click="showCheckbox()"
+              class="md-warn md-align-top-left" id="sprintchechboxDeleteNotes" flex>
+            To many notes on PDF?
           </md-checkbox>
-          <md-button class="md-raised md-primary" type="submit" ng-disabled="true">All notes are deleted</md-button>
-        </div>
-      </p> 
+          <md-button class="md-raised md-primary" id="sprintbtnDeleteNotes" type="submit">Delete all notes from sprint PDF</md-button>
+
+          <div id="sprintdeleteNotesDone">
+            <md-checkbox
+              ng-model="checkbox"
+              aria-label="To many notes on PDF?"
+              ng-click="showCheckbox()"
+              class="md-warn md-align-top-left" ng-disabled="true" flex>
+              Done!
+            </md-checkbox>
+            <md-button class="md-raised md-primary" type="submit" ng-disabled="true">All notes are deleted</md-button>
+          </div>
+        </p> 
+      </div>
       <br />   
       <br />
       <h2>Sprint details</h2>
