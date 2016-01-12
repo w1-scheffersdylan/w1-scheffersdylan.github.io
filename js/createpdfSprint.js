@@ -253,7 +253,7 @@ $("#controlsSprint").submit(function() {
         autonumber= [];
         if( $("md-checkbox#sprintautoNumber").hasClass("md-checked") ){
           for(var i = 1; i < storyPosition.length; i++){
-            autonumber.push(i).toString();
+            autonumber.push(i.toString());
           }
         }
         else{
