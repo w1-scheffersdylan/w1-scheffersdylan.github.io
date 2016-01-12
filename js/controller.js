@@ -4,6 +4,7 @@ var ahapdfApp = angular.module('ahapdfApp',['ngMaterial']);
 ahapdfApp.controller('homeController', function ($scope, $interval)
 {
 
+
 	  var self = this,  j= 0, counter = 0;
 	  self.mode = 'query';
       self.modes = [ ];
@@ -21,4 +22,10 @@ ahapdfApp.controller('homeController', function ($scope, $interval)
 
 
       $scope.checkbox = false;
+      if($scope.checkbox == true){
+        $("#btnDeleteNotes").show();
+      }
+      else{
+         $("#btnDeleteNotes").hide();
+      }
 }); // end controller     
