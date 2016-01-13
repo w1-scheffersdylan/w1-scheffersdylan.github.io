@@ -238,7 +238,7 @@ $("#controlsSprint").submit(function() {
           SprintDataStoryNotes[i] = "";
           console.log("notes " + SprintDataStoryNotes[0]);
         }
-        var notesCheck = false;
+        notesCheck = false;
         $("#sprintbtnDeleteNotes, #sprintchechboxDeleteNotes, #hideNotesFontSize").hide();
         $("#sprintdeleteNotesDone").show();
       });
