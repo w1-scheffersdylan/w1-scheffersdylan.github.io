@@ -286,17 +286,23 @@ $("#controlsSprint").submit(function() {
       $('#btnPrintPDFSprint').click(function () {
           
 
-        // remove ticket id from array of requirements
-        for(var i = 0; i < SprintDataStoryRequirements.length; i++){
-          SprintDataStoryRequirements[i].shift();
-        }    
+         // EXTRA OPTIONS
+        var storyFontSize = parseFloat($("#sprintstoryFontSize").val());
+        var notesFontSize = parseFloat($("#sprintnotesFontSize").val());
+             
 
-        
+        var checkNotesLength = SprintDataStoryNotes[0];
+        console.log("before if " + SprintDataStoryNotes);
+        if(checkNotesLength.length >= 1){
           // remove ticket id from array of notes
+          console.log("in if " + SprintDataStoryNotes);
           for(var i = 0; i < SprintDataStoryNotes.length; i++){
             SprintDataStoryNotes[i].shift();
+            console.log("for loop " + i + " " + SprintDataStoryNotes);
           } 
-        
+          console.log("after loop " + SprintDataStoryNotes);
+        }
+
 
 
           var docDefinition = {
@@ -308,11 +314,17 @@ $("#controlsSprint").submit(function() {
           content:[],
               // some style for the PDF
               styles: {
+                bigNumber: {
+                  fontSize: 85
+                },
+                notesText: {
+                  fontSize: notesFontSize
+                },
                 mediumText: {
                   fontSize: 19
                 },
                 mediumTextBold: {
-                  fontSize: 19,
+                  fontSize: storyFontSize,
                   bold: true
                 },
                 bigText: {
@@ -325,20 +337,15 @@ $("#controlsSprint").submit(function() {
                 biggerText: {
                   fontSize: 26
                 }
-
               }
               
             }
 
-           
-                
-
-                
-
             // for loop to get all of the stories one by one and show them all on a different page in the PDF
             for( var i = 1; i <= storyPosition.length; i++ ){
 
-              var storyPositionArray = storyPosition.indexOf(i);
+            var storyPositionArray = storyPosition.indexOf(i);
+
 
                docDefinition.content.push({
                     
@@ -366,7 +373,7 @@ $("#controlsSprint").submit(function() {
                             body: [
                                 [{ text: [ 'TICKET-ID: \n \n', { text: SprintDataStoryNumber[storyPositionArray], style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
                                  { text: [ 'TITLE: \n \n', { text: SprintDataStoryTitle[storyPositionArray], style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text: 'PRIORITY:\n' + '\n \n', colSpan: 3, rowSpan: 2 }, '', ''],
+                                 { text: [ 'PRIORITY:\n', { text: autonumber[i-1], style: 'bigNumber', alignment: 'center'} ], colSpan: 3, rowSpan: 2 }, '', ''],
 
                                 [{ text: [ 'EPIC:\n', { text: SprintDataStoryEpic[storyPositionArray], style: 'mediumText', alignment: 'center' }], colSpan: 11 }, '', '', '', '', '', '', '', '', '', '', 
                                  { text: ['GROOM: \n', { text: SprintDataStoryGroom[storyPositionArray], style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
@@ -374,7 +381,7 @@ $("#controlsSprint").submit(function() {
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
                                 [{ text: [ 'STORY: \n \n', { text: SprintDataStoryDescription[storyPositionArray], style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text: ['NOTES:\n \n', { text: SprintDataStoryNotes[storyPositionArray].join("\n") }], colSpan: 6 }, '', '', '', '', ''],
+                                 { text: ['NOTES:\n \n', { text: notesCheck == true ? SprintDataStoryNotes[storyPositionArray].join("\n") : "", style: 'notesText' }], colSpan: 6 }, '', '', '', '', ''],
 
                                 [{ text: 'ACCEPTANCE CRITERIA: \n \n' + SprintDataStoryRequirements[storyPositionArray].join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & Beautify Code \n \n __ Quality assurance by PO \n \n __ Create pull request' , colSpan: 6 }, '', '', '', '', ''],
@@ -384,7 +391,8 @@ $("#controlsSprint").submit(function() {
                   );
 
 
-                }
+                }       
+
             
 
 
@@ -407,11 +415,7 @@ $("#controlsSprint").submit(function() {
         // EXTRA OPTIONS
         var storyFontSize = parseFloat($("#sprintstoryFontSize").val());
         var notesFontSize = parseFloat($("#sprintnotesFontSize").val());
-          
-       // remove ticket id from array of requirements
-        // for(var i = 0; i < SprintDataStoryRequirements.length; i++){
-        //   SprintDataStoryRequirements[i].shift();
-        // }    
+             
 
         var checkNotesLength = SprintDataStoryNotes[0];
         console.log("before if " + SprintDataStoryNotes);
@@ -518,9 +522,6 @@ $("#controlsSprint").submit(function() {
 
           pdfMake.createPdf(docDefinition).open();
 
-
-          console.log("open " + checkNotesLength.length + " " + checkNotesLength)
-
       }); // close btnOpenPDF
 
 
@@ -530,15 +531,22 @@ $("#controlsSprint").submit(function() {
       // create PDF (using PDFmake)
       $('#btnSavePDFSprint').click(function () {
  
-        // remove ticket id from array of requirements
-        for(var i = 0; i < SprintDataStoryRequirements.length; i++){
-          SprintDataStoryRequirements[i].shift();
-        }    
+        // EXTRA OPTIONS
+        var storyFontSize = parseFloat($("#sprintstoryFontSize").val());
+        var notesFontSize = parseFloat($("#sprintnotesFontSize").val());
+             
 
-        // remove ticket id from array of notes
-        for(var i = 0; i < SprintDataStoryNotes.length; i++){
-          SprintDataStoryNotes[i].shift();
-        } 
+        var checkNotesLength = SprintDataStoryNotes[0];
+        console.log("before if " + SprintDataStoryNotes);
+        if(checkNotesLength.length >= 1){
+          // remove ticket id from array of notes
+          console.log("in if " + SprintDataStoryNotes);
+          for(var i = 0; i < SprintDataStoryNotes.length; i++){
+            SprintDataStoryNotes[i].shift();
+            console.log("for loop " + i + " " + SprintDataStoryNotes);
+          } 
+          console.log("after loop " + SprintDataStoryNotes);
+        }
 
 
 
@@ -551,11 +559,17 @@ $("#controlsSprint").submit(function() {
           content:[],
               // some style for the PDF
               styles: {
+                bigNumber: {
+                  fontSize: 85
+                },
+                notesText: {
+                  fontSize: notesFontSize
+                },
                 mediumText: {
                   fontSize: 19
                 },
                 mediumTextBold: {
-                  fontSize: 19,
+                  fontSize: storyFontSize,
                   bold: true
                 },
                 bigText: {
@@ -568,7 +582,6 @@ $("#controlsSprint").submit(function() {
                 biggerText: {
                   fontSize: 26
                 }
-
               }
               
             }
@@ -605,7 +618,7 @@ $("#controlsSprint").submit(function() {
                             body: [
                                 [{ text: [ 'TICKET-ID: \n \n', { text: SprintDataStoryNumber[storyPositionArray], style: 'mediumText', alignment: 'center' }, '\n \n'], colSpan: 3 }, '', '', 
                                  { text: [ 'TITLE: \n \n', { text: SprintDataStoryTitle[storyPositionArray], style: 'bigTextBold', alignment: 'center'  }, '\n \n'], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text: 'PRIORITY:\n' + '\n \n', colSpan: 3, rowSpan: 2 }, '', ''],
+                                 { text: [ 'PRIORITY:\n', { text: autonumber[i-1], style: 'bigNumber', alignment: 'center'} ], colSpan: 3, rowSpan: 2 }, '', ''],
 
                                 [{ text: [ 'EPIC:\n', { text: SprintDataStoryEpic[storyPositionArray], style: 'mediumText', alignment: 'center' }], colSpan: 11 }, '', '', '', '', '', '', '', '', '', '', 
                                  { text: ['GROOM: \n', { text: SprintDataStoryGroom[storyPositionArray], style: 'bigText', alignment: 'center' }, '\n'], colSpan: 2, }, '', 
@@ -613,7 +626,7 @@ $("#controlsSprint").submit(function() {
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
                                 [{ text: [ 'STORY: \n \n', { text: SprintDataStoryDescription[storyPositionArray], style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text: ['NOTES:\n \n', { text: SprintDataStoryNotes[storyPositionArray].join("\n") }], colSpan: 6 }, '', '', '', '', ''],
+                                 { text: ['NOTES:\n \n', { text: notesCheck == true ? SprintDataStoryNotes[storyPositionArray].join("\n") : "", style: 'notesText' }], colSpan: 6 }, '', '', '', '', ''],
 
                                 [{ text: 'ACCEPTANCE CRITERIA: \n \n' + SprintDataStoryRequirements[storyPositionArray].join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & Beautify Code \n \n __ Quality assurance by PO \n \n __ Create pull request' , colSpan: 6 }, '', '', '', '', ''],
@@ -623,7 +636,8 @@ $("#controlsSprint").submit(function() {
                   );
 
 
-                }
+                }       
+
             
 
 
