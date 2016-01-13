@@ -235,7 +235,7 @@ $("#controlsSprint").submit(function() {
         //SprintDataStoryNotes.splice(0, SprintDataStoryNotes.length, "");
         for(var i=0; i < SprintDataStoryNotes.length; i++){
           SprintDataStoryNotes[i] = "";
-          console.log(SprintDataStoryNotes);
+          console.log("notes " + SprintDataStoryNotes);
         }
         $("#sprintbtnDeleteNotes, #sprintchechboxDeleteNotes").hide();
         $("#sprintdeleteNotesDone").show();
@@ -403,15 +403,15 @@ $("#controlsSprint").submit(function() {
         }    
 
         var checkNotesLength = SprintDataStoryNotes[0];
-        console.log("before if " + checkNotesLength);
+        console.log("before if " + SprintDataStoryNotes);
         if(checkNotesLength.length >= 1){
           // remove ticket id from array of notes
-          console.log("in if " + checkNotesLength);
+          console.log("in if " + SprintDataStoryNotes);
           for(var i = 0; i < SprintDataStoryNotes.length; i++){
             SprintDataStoryNotes[i].shift();
-            console.log("for loop " + i + " " + checkNotesLength);
+            console.log("for loop " + i + " " + SprintDataStoryNotes);
           } 
-          console.log("after loop " + checkNotesLength);
+          console.log("after loop " + SprintDataStoryNotes);
         }
 
 
@@ -492,7 +492,7 @@ $("#controlsSprint").submit(function() {
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
                                 [{ text: [ 'STORY: \n \n', { text: SprintDataStoryDescription[storyPositionArray], style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text: ['NOTES:\n \n', { text: 0 == checkNotesLength.length ? "hello" : SprintDataStoryNotes[storyPositionArray].join("\n") }], colSpan: 6 }, '', '', '', '', ''],
+                                 { text: ['NOTES:\n \n', { text: SprintDataStoryNotes.length == 0 ? "hello" : SprintDataStoryNotes[storyPositionArray].join("\n") }], colSpan: 6 }, '', '', '', '', ''],
 
                                 [{ text: 'ACCEPTANCE CRITERIA: \n \n' + SprintDataStoryRequirements[storyPositionArray].join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & Beautify Code \n \n __ Quality assurance by PO \n \n __ Create pull request' , colSpan: 6 }, '', '', '', '', ''],
