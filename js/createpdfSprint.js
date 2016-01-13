@@ -284,11 +284,12 @@ $("#controlsSprint").submit(function() {
           SprintDataStoryRequirements[i].shift();
         }    
 
-        // remove ticket id from array of notes
-        for(var i = 0; i < SprintDataStoryNotes.length; i++){
-          SprintDataStoryNotes[i].shift();
-        } 
-
+        
+          // remove ticket id from array of notes
+          for(var i = 0; i < SprintDataStoryNotes.length; i++){
+            SprintDataStoryNotes[i].shift();
+          } 
+        
 
 
           var docDefinition = {
@@ -401,10 +402,12 @@ $("#controlsSprint").submit(function() {
           SprintDataStoryRequirements[i].shift();
         }    
 
-        // remove ticket id from array of notes
-        for(var i = 0; i < SprintDataStoryNotes.length; i++){
-          SprintDataStoryNotes[i].shift();
-        } 
+        if(SprintDataStoryNotes.length >= 1){
+          // remove ticket id from array of notes
+          for(var i = 0; i < SprintDataStoryNotes.length; i++){
+            SprintDataStoryNotes[i].shift();
+          } 
+        }
 
 
 
