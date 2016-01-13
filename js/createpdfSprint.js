@@ -402,7 +402,7 @@ $("#controlsSprint").submit(function() {
           SprintDataStoryRequirements[i].shift();
         }    
 
-        if(SprintDataStoryNotes.length >= 1){
+        if(SprintDataStoryNotes[0].length > 1){
           // remove ticket id from array of notes
           for(var i = 0; i < SprintDataStoryNotes.length; i++){
             SprintDataStoryNotes[i].shift();
