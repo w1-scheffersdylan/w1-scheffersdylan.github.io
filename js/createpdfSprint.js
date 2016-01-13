@@ -270,6 +270,9 @@ $("#controlsSprint").submit(function() {
 
 
       console.log("length " + SprintDataStoryNotes[0].length);
+      console.log("all " + SprintDataStoryNotes);
+      console.log("all 2 " + SprintDataStoryNotes[0]);
+      console.log("all 3 " + SprintDataStoryNotes[1]);
                                                                                                                                                                                                                                  
             
 //////////////STEP 3: CREATING THE PDF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
