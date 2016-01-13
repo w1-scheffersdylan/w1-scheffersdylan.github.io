@@ -407,7 +407,7 @@ $("#controlsSprint").submit(function() {
         }    
 
         var checkNotesLength = SprintDataStoryNotes[0];
-        if(checkNotesLength.length >= 2){
+        if(checkNotesLength.length >= 1){
           // remove ticket id from array of notes
           for(var i = 0; i < SprintDataStoryNotes.length; i++){
             SprintDataStoryNotes[i].shift();
@@ -492,7 +492,7 @@ $("#controlsSprint").submit(function() {
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
                                 [{ text: [ 'STORY: \n \n', { text: SprintDataStoryDescription[storyPositionArray], style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text: ['NOTES:\n \n', { text: SprintDataStoryNotes[storyPositionArray].join("\n") }], colSpan: 6 }, '', '', '', '', ''],
+                                 { text: ['NOTES:\n \n', { text: SprintDataStoryNotes[storyPositionArray] }], colSpan: 6 }, '', '', '', '', ''],
 
                                 [{ text: 'ACCEPTANCE CRITERIA: \n \n' + SprintDataStoryRequirements[storyPositionArray].join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & Beautify Code \n \n __ Quality assurance by PO \n \n __ Create pull request' , colSpan: 6 }, '', '', '', '', ''],
