@@ -406,7 +406,8 @@ $("#controlsSprint").submit(function() {
           SprintDataStoryRequirements[i].shift();
         }    
 
-        if(SprintDataStoryNotes[0].length > 1){
+        var checkNotesLength = SprintDataStoryNotes[0];
+        if(checkNotesLength.length >= 1){
           // remove ticket id from array of notes
           for(var i = 0; i < SprintDataStoryNotes.length; i++){
             SprintDataStoryNotes[i].shift();
