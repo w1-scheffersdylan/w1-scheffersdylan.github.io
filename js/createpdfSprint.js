@@ -185,6 +185,12 @@ $("#controlsSprint").submit(function() {
                 autonumber.push("");
               }
               console.log(autonumber);
+
+              // remove ticket id from array of requirements
+              for(var i = 0; i < SprintDataStoryRequirements.length; i++){
+                SprintDataStoryRequirements[i].shift();
+              }    
+
         
           
           }, 700 * SprintDataStoryName.length);
@@ -269,7 +275,8 @@ $("#controlsSprint").submit(function() {
         }
         console.log(autonumber);
       });
-                                                                                                                                                                                                                   
+             
+
             
 //////////////STEP 3: CREATING THE PDF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -402,9 +409,9 @@ $("#controlsSprint").submit(function() {
         var notesFontSize = parseFloat($("#sprintnotesFontSize").val());
           
        // remove ticket id from array of requirements
-        for(var i = 0; i < SprintDataStoryRequirements.length; i++){
-          SprintDataStoryRequirements[i].shift();
-        }    
+        // for(var i = 0; i < SprintDataStoryRequirements.length; i++){
+        //   SprintDataStoryRequirements[i].shift();
+        // }    
 
         var checkNotesLength = SprintDataStoryNotes[0];
         console.log("before if " + SprintDataStoryNotes);
