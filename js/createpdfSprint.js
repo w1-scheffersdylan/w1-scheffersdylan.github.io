@@ -269,6 +269,7 @@ $("#controlsSprint").submit(function() {
       });
 
 
+      console.log("length " + SprintDataStoryNotes[0].length);
                                                                                                                                                                                                                                  
             
 //////////////STEP 3: CREATING THE PDF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
