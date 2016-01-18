@@ -109,15 +109,15 @@ button#btnDeleteNotes, button#sprintbtnDeleteNotes {
 }
 
 #step1Container {
-  width: 492px;
+  width: 100%;
   background-color: #E0E0E0;
 }
 
-/*#storyDiv {
+#storyDiv {
   position: absolute;
   top: 25px;
   left: 25px;
-}*/
+}
 
 #controls {
   margin-top: 25px;
@@ -127,11 +127,11 @@ button#btnDeleteNotes, button#sprintbtnDeleteNotes {
   margin-top: 45px;
 }
 
-/*#sprintDiv {
+#sprintDiv {
   position: absolute;
   left: 25px;
   top: 210px;
-}*/
+}
 
  #subdomain {
   display: none;
