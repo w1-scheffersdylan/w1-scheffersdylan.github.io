@@ -108,7 +108,7 @@ button#btnDeleteNotes, button#sprintbtnDeleteNotes {
   display: none;
 }
 
-#step1Container, md-content {
+#step1Container {
   width: 50%;
   background-color: #E0E0E0;
 }
@@ -124,6 +124,10 @@ md-tabs md-ink-bar {
 
 md-ripple-container {
   background-color: #00B4C8 !important;
+}
+
+md-content {
+   background-color: #E0E0E0;
 }
 
 /*#storyDiv {
