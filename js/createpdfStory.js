@@ -2,7 +2,7 @@ $("#controls").submit(function() {
   new AhaApi({
     accountDomain: $("#subdomain").val(),
     // Replace this with your client ID.
-    clientId: "f5bc99e0ae866bc03dd5a49b7bcb0ff3a2686eb216c2b339aa4dd1f44688efd2", 
+    clientId: ["f5bc99e0ae866bc03dd5a49b7bcb0ff3a2686eb216c2b339aa4dd1f44688efd2", "f47858de6eb8675e02f2d785bba706c1827cc49616b9884a4ce85a5f2a70c2e2"], 
     // Replace this with your redirect URL.
     redirectUri: "https://w1-scheffersdylan.github.io/"
   }).authenticate(function(api, success, message) {
@@ -464,7 +464,7 @@ $("#controls").submit(function() {
 
                                 [{ text: [ 'STORY: \n \n', { text: storyDataDescription, style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
                                  { text: ['NOTES:\n \n', { text: notesArraz.join("\n"), style: 'notesText' }], colSpan: 6 }, '', '', '', '', ''],
-                                 
+
                                 [{ text: 'STORY BRANCH: \n', margin: [0, 5, 0, 5], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '',
                                 { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & Beautify Code \n \n __ Quality assurance by PO \n \n __ Create pull request' , colSpan: 6, rowSpan: 2 }, '', '', '', '', ''],
 
