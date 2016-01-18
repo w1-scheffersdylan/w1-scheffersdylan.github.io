@@ -108,6 +108,10 @@ button#btnDeleteNotes, button#sprintbtnDeleteNotes {
   display: none;
 }
 
+#step1Container {
+  width: 50%;
+  background-color: transparent;
+}
 /*#storyDiv {
   position: absolute;
   top: 25px;
