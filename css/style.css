@@ -113,23 +113,6 @@ button#btnDeleteNotes, button#sprintbtnDeleteNotes {
   background-color: #E0E0E0;
 }
 
-md-tabs .md-tab.md-active, md-tabs .md-tab.md-focused {
-  color: #616161;
-}
-
-md-tabs md-ink-bar {
-  color: #00B4C8;
-  background: #00B4C8;
-}
-
-md-ripple-container {
-  background-color: #00B4C8 !important;
-}
-
-md-content {
-   background-color: #E0E0E0;
-}
-
 /*#storyDiv {
   position: absolute;
   top: 25px;
