@@ -46,6 +46,8 @@ ahapdfApp.controller('homeController', function ($scope, $interval)
         }
       }
 
+      $scope.autonumbercheckbox = true;
+
       
 
 }); // end controller     

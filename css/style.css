@@ -147,7 +147,7 @@ button#btnDeleteNotes, button#sprintbtnDeleteNotes {
 }
 
 /* checkbox */
-#deleteNotesDone, #fontSizeAlert, #sprintdeleteNotesDone, #sprintfontSizeAlert {
+#deleteNotesDone, #fontSizeAlert, #sprintdeleteNotesDone, #sprintfontSizeAlert, #areyoueveStory, #areyoueveSprint {
   display: none;
 }
 
