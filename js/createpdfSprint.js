@@ -541,7 +541,7 @@ $("#controlsSprint").submit(function() {
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
                                 [{ text: [ 'STORY: \n \n', { text: SprintDataStoryDescription[storyPositionArray], style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text: ['NOTES:\n \n', { text: notesCheck == true ? SprintDataStoryNotes[storyPositionArray].join("\n") : "", style: 'notesText' }], colSpan: 6 }, '', '', '', '', ''],
+                                 { text: ['NOTES:\n \n', { text: $("md-checkbox#sprintchechboxDeleteNotes").hasClass("md-checked") ? "" : SprintDataStoryNotes[storyPositionArray].join("\n"), style: 'notesText' }], colSpan: 6 }, '', '', '', '', ''],
 
                                 [{ text: 'STORY BRANCH: \n', margin: [0, 5, 0, 5], colSpan: 12 }, '', '', '', '', '', '', '', '', '', '', '',
                                  { text: 'TP: YES / NO', margin: [0, 5, 0, 5], colSpan: 2}, '',
@@ -676,7 +676,7 @@ $("#controlsSprint").submit(function() {
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
                                 [{ text: [ 'STORY: \n \n', { text: SprintDataStoryDescription[storyPositionArray], style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text: ['NOTES:\n \n', { text: notesCheck == true ? SprintDataStoryNotes[storyPositionArray].join("\n") : "", style: 'notesText' }], colSpan: 6 }, '', '', '', '', ''],
+                                 { text: ['NOTES:\n \n', { text: $("md-checkbox#sprintchechboxDeleteNotes").hasClass("md-checked") ? "" : SprintDataStoryNotes[storyPositionArray].join("\n"), style: 'notesText' }], colSpan: 6 }, '', '', '', '', ''],
 
                                 [{ text: 'STORY BRANCH: \n', margin: [0, 5, 0, 5], colSpan: 12 }, '', '', '', '', '', '', '', '', '', '', '',
                                  { text: 'TP: YES / NO', margin: [0, 5, 0, 5], colSpan: 2}, '',
