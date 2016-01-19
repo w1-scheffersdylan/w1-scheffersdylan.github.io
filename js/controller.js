@@ -21,17 +21,17 @@ ahapdfApp.controller('homeController', function ($scope, $interval)
       }, 100, 0, true);
 
 
-      $scope.checkbox = false;
-      $("#btnDeleteNotes").hide();
+      // $scope.checkbox = false;
+      // $("#btnDeleteNotes").hide();
 
-      $scope.showCheckbox = function() {
-        if($scope.checkbox == false){
-          $("#btnDeleteNotes").show();
-        }
-        else{
-          $("#btnDeleteNotes").hide();
-        }
-      }
+      // $scope.showCheckbox = function() {
+      //   if($scope.checkbox == false){
+      //     $("#btnDeleteNotes").show();
+      //   }
+      //   else{
+      //     $("#btnDeleteNotes").hide();
+      //   }
+      // }
 
 
       // $scope.sprintcheckbox = false;
@@ -46,6 +46,7 @@ ahapdfApp.controller('homeController', function ($scope, $interval)
       //   }
       // }
 
+      $scope.checkbox = true;
       $scope.autonumbercheckbox = true;
 
       
