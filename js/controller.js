@@ -34,17 +34,17 @@ ahapdfApp.controller('homeController', function ($scope, $interval)
       }
 
 
-      $scope.sprintcheckbox = false;
-      $("#sprintbtnDeleteNotes").hide();
+      // $scope.sprintcheckbox = false;
+      // $("#sprintbtnDeleteNotes").hide();
 
-      $scope.sprintshowCheckbox = function() {
-        if($scope.sprintcheckbox == false){
-          $("#sprintbtnDeleteNotes").show();
-        }
-        else{
-          $("#sprintbtnDeleteNotes").hide();
-        }
-      }
+      // $scope.sprintshowCheckbox = function() {
+      //   if($scope.sprintcheckbox == false){
+      //     $("#sprintbtnDeleteNotes").show();
+      //   }
+      //   else{
+      //     $("#sprintbtnDeleteNotes").hide();
+      //   }
+      // }
 
       $scope.autonumbercheckbox = true;
 
