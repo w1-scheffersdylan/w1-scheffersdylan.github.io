@@ -260,7 +260,7 @@ $("#controlsSprint").submit(function() {
         }
       });
 
-      
+      // doesn't need, but keep it as comment just in case
       // $("md-checkbox#sprintautoNumber").click(function(){
       //   autonumber= [];
       //   if( $("md-checkbox#sprintautoNumber").hasClass("md-checked") ){
@@ -305,6 +305,19 @@ $("#controlsSprint").submit(function() {
           } 
           console.log("after loop " + SprintDataStoryNotes);
         }
+
+
+      autonumber= [];
+      if( $("md-checkbox#sprintautoNumber").hasClass("md-checked") ){
+        for(var i = 1; i <= storyPosition.length; i++){
+          autonumber.push(i.toString());
+        }
+      }
+      else{
+        for(var i = 1; i <= storyPosition.length; i++){
+          autonumber.push("");
+        }
+      }
 
 
 
@@ -572,6 +585,18 @@ $("#controlsSprint").submit(function() {
           console.log("after loop " + SprintDataStoryNotes);
         }
 
+
+      autonumber= [];
+      if( $("md-checkbox#sprintautoNumber").hasClass("md-checked") ){
+        for(var i = 1; i <= storyPosition.length; i++){
+          autonumber.push(i.toString());
+        }
+      }
+      else{
+        for(var i = 1; i <= storyPosition.length; i++){
+          autonumber.push("");
+        }
+      }
 
 
           var docDefinition = {
