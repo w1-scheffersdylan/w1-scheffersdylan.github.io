@@ -276,21 +276,19 @@ $("#controlsSprint").submit(function() {
         console.log(autonumber);
       });
 
-      $(document).ready(function(){
-        autonumber= [];
-        if( $("md-checkbox#sprintautoNumber").hasClass("md-checked") ){
-          for(var i = 1; i <= storyPosition.length; i++){
-            autonumber.push(i.toString());
-          }
+
+      autonumber= [];
+      if( $("md-checkbox#sprintautoNumber").hasClass("md-checked") ){
+        for(var i = 1; i <= storyPosition.length; i++){
+          autonumber.push(i.toString());
         }
-        else{
-          for(var i = 1; i <= storyPosition.length; i++){
-            autonumber.push("");
-          }
+      }
+      else{
+        for(var i = 1; i <= storyPosition.length; i++){
+          autonumber.push("");
         }
-        console.log(autonumber);
-      });
-             
+      }
+
 
             
 //////////////STEP 3: CREATING THE PDF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
