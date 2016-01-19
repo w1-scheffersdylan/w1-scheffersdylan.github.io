@@ -261,33 +261,23 @@ $("#controlsSprint").submit(function() {
       });
 
       
-      $("md-checkbox#sprintautoNumber").click(function(){
-        autonumber= [];
-        if( $("md-checkbox#sprintautoNumber").hasClass("md-checked") ){
-          for(var i = 1; i <= storyPosition.length; i++){
-            autonumber.push(i.toString());
-          }
-        }
-        else{
-          for(var i = 1; i <= storyPosition.length; i++){
-            autonumber.push("");
-          }
-        }
-        console.log(autonumber);
-      });
+      // $("md-checkbox#sprintautoNumber").click(function(){
+      //   autonumber= [];
+      //   if( $("md-checkbox#sprintautoNumber").hasClass("md-checked") ){
+      //     for(var i = 1; i <= storyPosition.length; i++){
+      //       autonumber.push(i.toString());
+      //     }
+      //   }
+      //   else{
+      //     for(var i = 1; i <= storyPosition.length; i++){
+      //       autonumber.push("");
+      //     }
+      //   }
+      //   console.log(autonumber);
+      // });
 
 
-      autonumber= [];
-      if( $("md-checkbox#sprintautoNumber").hasClass("md-checked") ){
-        for(var i = 1; i <= storyPosition.length; i++){
-          autonumber.push(i.toString());
-        }
-      }
-      else{
-        for(var i = 1; i <= storyPosition.length; i++){
-          autonumber.push("");
-        }
-      }
+
 
 
             
@@ -447,6 +437,18 @@ $("#controlsSprint").submit(function() {
           console.log("after loop " + SprintDataStoryNotes);
         }
 
+
+      autonumber= [];
+      if( $("md-checkbox#sprintautoNumber").hasClass("md-checked") ){
+        for(var i = 1; i <= storyPosition.length; i++){
+          autonumber.push(i.toString());
+        }
+      }
+      else{
+        for(var i = 1; i <= storyPosition.length; i++){
+          autonumber.push("");
+        }
+      }
 
 
           var docDefinition = {
