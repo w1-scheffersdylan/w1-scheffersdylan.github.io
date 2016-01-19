@@ -237,17 +237,18 @@ $("#controlsSprint").submit(function() {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // EXTRA OPTIONS
-      var notesCheck = true;
-      $("#sprintbtnDeleteNotes").click(function(){
-        //SprintDataStoryNotes.splice(0, SprintDataStoryNotes.length, "");
-        for(var i=0; i < SprintDataStoryNotes.length; i++){
-          SprintDataStoryNotes[i] = "";
-          console.log("notes " + SprintDataStoryNotes[0]);
-        }
-        notesCheck = false;
-        $("#sprintbtnDeleteNotes, #sprintchechboxDeleteNotes, #hideNotesFontSize").hide();
-        $("#sprintdeleteNotesDone").show();
-      });
+      // var notesCheck = true;
+      // $("#sprintbtnDeleteNotes").click(function(){
+      //   //SprintDataStoryNotes.splice(0, SprintDataStoryNotes.length, "");
+      //   for(var i=0; i < SprintDataStoryNotes.length; i++){
+      //     SprintDataStoryNotes[i] = "";
+      //     console.log("notes " + SprintDataStoryNotes[0]);
+      //   }
+      //   notesCheck = false;
+      //   $("#sprintbtnDeleteNotes, #sprintchechboxDeleteNotes, #hideNotesFontSize").hide();
+      //   $("#sprintdeleteNotesDone").show();
+
+      // });
 
       $("#sprintstoryFontSize, #sprintnotesFontSize").change(function(){
         if( $("#sprintstoryFontSize, #sprintnotesFontSize").val() == "" || isNaN($("#sprintstoryFontSize, #sprintnotesFontSize").val()) ){
@@ -397,7 +398,7 @@ $("#controlsSprint").submit(function() {
                                  { text: 'REAL: \n' + '\n \n', colSpan: 2 }, '', '', ''],
 
                                 [{ text: [ 'STORY: \n \n', { text: SprintDataStoryDescription[storyPositionArray], style: 'mediumTextBold', alignment: 'center' }, '\n \n'],colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', '', 
-                                 { text: ['NOTES:\n \n', { text: notesCheck == true ? SprintDataStoryNotes[storyPositionArray].join("\n") : "", style: 'notesText' }], colSpan: 6 }, '', '', '', '', ''],
+                                 { text: ['NOTES:\n \n', { text: $("md-checkbox#sprintbtnDeleteNotes").hasClass("md-checked") ? "" : SprintDataStoryNotes[storyPositionArray].join("\n"), style: 'notesText' }], colSpan: 6 }, '', '', '', '', ''],
 
                                 [{ text: 'STORY BRANCH: \n', margin: [0, 5, 0, 5], colSpan: 12 }, '', '', '', '', '', '', '', '', '', '', '',
                                  { text: 'TP: YES / NO', margin: [0, 5, 0, 5], colSpan: 2}, '',
