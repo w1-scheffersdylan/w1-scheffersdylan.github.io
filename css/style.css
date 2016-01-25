@@ -133,9 +133,9 @@ button#btnDeleteNotes, button#sprintbtnDeleteNotes {
   top: 210px;
 }
 
-/* #subdomain {
+ #subdomain {
   display: none;
-}*/
+}
 
 #storyNumber, #sprintNumber,  #storyFontSize, #notesFontSize, #priorityNumber, #sprintstoryFontSize, #sprintnotesFontSize {
   border: 0;
@@ -147,7 +147,7 @@ button#btnDeleteNotes, button#sprintbtnDeleteNotes {
 }
 
 /* checkbox */
-#deleteNotesDone, #fontSizeAlert, #sprintdeleteNotesDone, #sprintfontSizeAlert { /* , #areyoueveStory, #areyoueveSprint */
+#deleteNotesDone, #fontSizeAlert, #sprintdeleteNotesDone, #sprintfontSizeAlert, #areyoueveStory, #areyoueveSprint { /*  */
   display: none;
 }
 
