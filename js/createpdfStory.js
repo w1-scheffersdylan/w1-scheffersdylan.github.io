@@ -2,7 +2,7 @@ $("#controls").submit(function() {
   new AhaApi({
     accountDomain: $("#subdomain").val(),
     // Replace this with your client ID.
-     clientId: $("md-checkbox#areyoueveStory").hasClass("md-checked") ? "f5bc99e0ae866bc03dd5a49b7bcb0ff3a2686eb216c2b339aa4dd1f44688efd2" : "f47858de6eb8675e02f2d785bba706c1827cc49616b9884a4ce85a5f2a70c2e2" , // $('#areyoueveSprint').is(':checked') ? "f5bc99e0ae866bc03dd5a49b7bcb0ff3a2686eb216c2b339aa4dd1f44688efd2" : undefined 
+     clientId: "f5bc99e0ae866bc03dd5a49b7bcb0ff3a2686eb216c2b339aa4dd1f44688efd2", // $("md-checkbox#areyoueveStory").hasClass("md-checked") ? "f5bc99e0ae866bc03dd5a49b7bcb0ff3a2686eb216c2b339aa4dd1f44688efd2" : "f47858de6eb8675e02f2d785bba706c1827cc49616b9884a4ce85a5f2a70c2e2"
     // Replace this with your redirect URL.
     redirectUri: "https://w1-scheffersdylan.github.io/"
   }).authenticate(function(api, success, message) {
