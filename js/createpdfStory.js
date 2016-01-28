@@ -201,6 +201,7 @@ $("#controls").submit(function() {
 
                                 [{ text: 'STORY BRANCH: \n', margin: [0, 5, 0, 5], colSpan: 12 }, '', '', '', '', '', '', '', '', '', '', '',
                                 { text: 'TP: YES / NO', margin: [0, 5, 0, 5], colSpan: 2}, '',
+                                { text: 'RELEASE: when done / end of the sprint / date: ', margin: [0, 5, 0, 5], colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', ''
                                 { text: 'DEFINITION OF DONE:\n \n __ Responsiveness \n \n __ Internationalization \n \n __ Code Review \n \n __ Documentation \n \n __ Testing by ....... \n \n __ Bug-fixing by ....... \n \n __ Linting & Beautify Code \n \n __ Quality assurance by PO \n \n __ Create pull request' , colSpan: 6, rowSpan: 2 }, '', '', '', '', ''],
 
                                 [{ text: 'ACCEPTANCE CRITERIA: \n \n' + requirementsArraz.join("\n"), colSpan: 14 }, '', '', '', '', '', '', '', '', '', '', '', '', ''], 
